@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Building a Kotlin project 2/2</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Kotlin-Month-Post-2-Inheritance-and-Defaults.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Building-a-Kotlin-project-1-2.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://cirorizzo.net/2016/03/04/building-a-kotlin-project-2/">Building a Kotlin project 2/2</a> - <span class="main-title-date">Mar 04, 2016</span>
+      </h1>
+      <h2>by Ciro Rizzo</h2>
+      <h6><em>Part 2</em></h6>
+<p>In the previous <a href="http://www.cirorizzo.net/building-a-kotlin-project/">post</a> we started a new project from scratch, and adjusted the <code>build.gradle</code> for the Kitten App purpose.</p>
+<p>The next steps are going to be the programming of the elements of the app.</p>
+<h4>Data Model</h4>
+<p>One of the main features of the app is to retrieve data through Internet via the <code>http://thecatapi.com/</code></p>
+<blockquote>
+<p><em>The complete API call will be i.e. <code>http://thecatapi.com/api/images/get?format=xml&amp;results_per_page=10</code></em></p>
+</blockquote>
+<p>The API sends back an <code>XML</code> file like this one</p>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xxmlAPI.png.pagespeed.ic.CABTBWB1Ch.png" alt="XML-API"></p>
+<p>It needs to deserialize in order to get the <code>url</code> property containing the location of the Kitten image.</p>
+<p>Kotlin has a very useful class called <code>data class</code> that is perfect for the purpose.</p>
+<p>Let&#x27;s starting to create a new class file in the <code>model.cats</code> package using right click on it and <code>New-&gt;Kotlin File/Class</code> and call it <code>Cats</code> and choose <code>Class</code> as kind.</p>
+<p>In order to structure the class as the <code>XML</code> file received the <code>Cats.kt</code> will be as the following</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cats</span></span>(<span class="hljs-keyword">var</span> <span class="hljs-keyword">data</span>: Data? = <span class="hljs-literal">null</span>)
+
+<span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Data</span></span>(<span class="hljs-keyword">var</span> images: ArrayList&lt;Image&gt;? = <span class="hljs-literal">null</span>)
+
+<span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Image</span></span>(<span class="hljs-keyword">var</span> url: String? = <span class="hljs-string">""</span>, <span class="hljs-keyword">var</span> id: String? = <span class="hljs-string">""</span>, <span class="hljs-keyword">var</span> source_url: String? = <span class="hljs-string">""</span>)</code></pre>
+<p>So far very simple...
+The same class in Java is much longer!</p>
+<p>The Kotlin Data Class has several benefits, some of them are that the compiler generates <code>getter()</code>, <code>setter()</code> and <code>toString()</code> methods, and many more like <code>equals()</code> <code>hashCode()</code> and <code>copy()</code>. So it&#x27;s the perfect class to use to deserialize data</p>
+<h4>API Call</h4>
+<p>There are many ways to retrieve data through the network, and different libraries to handle it. One of these libraries is the <a href="http://square.github.io/retrofit/">Retrofit2</a> library from Square.
+This is a very powerful <code>HTTPClient</code> and easy to set up.</p>
+<p>Let&#x27;s start with the <code>interface</code> and create it under the <code>network</code> package.
+Call it <code>CatAPI</code> as shown</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">CatAPI</span> </span>{
+    <span class="hljs-meta">@GET(<span class="hljs-meta-string">"/api/images/get?format=xml&amp;results_per_page="</span> + BuildConfig.MAX_IMAGES_PER_REQUEST)</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getCatImageURLs</span><span class="hljs-params">()</span></span>: Observable&lt;Cats&gt;
+}</code></pre>
+<p>The <code>interface</code> will manage the <code>Get</code> request to the API Endpoint <code>/api/images/get?format=xml&amp;results_per_page=</code>.
+In this case the param <code>results_per_page</code> retrieve its numerical value from the constant defined in the <code>build.gradle</code> called <code>MAX_IMAGES_PER_REQUEST</code> that will have different values depending on the <code>buildTypes</code> used.</p>
+<pre><code class="hljs language-kotlin">buildTypes {
+    debug {
+        buildConfigField(<span class="hljs-string">"int"</span>, <span class="hljs-string">"MAX_IMAGES_PER_REQUEST"</span>, <span class="hljs-string">"10"</span>)
+        ...</code></pre>
+<blockquote>
+<p>This method is very useful to have different value of constants in case we&#x27;re using <code>debug</code> type or <code>release</code> one i.e. <em>especially in case you need to access to the debug API instead of the production one</em></p>
+</blockquote>
+<p>About the <code>interface CatAPI</code> is very interesting the function called to manage the callback from the API <code>fun getCatImageURLs(): Observable&lt;Cats&gt;</code></p>
+<p>So the next step is its implementation.
+Let&#x27;s create a new class under the same package (<code>network</code>) and call it <code>CatAPINetwork</code> as this</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CatAPINetwork</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getExec</span><span class="hljs-params">()</span></span>: Observable&lt;Cats&gt; {
+        <span class="hljs-keyword">val</span> retrofit = Retrofit.Builder()
+            .baseUrl(<span class="hljs-string">"http://thecatapi.com"</span>)
+            .addConverterFactory(SimpleXmlConverterFactory.create())
+            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+            .build()
+
+        <span class="hljs-keyword">val</span> catAPI: CatAPI = retrofit.create(CatAPI::<span class="hljs-class"><span class="hljs-keyword">class</span>.<span class="hljs-title">java</span>)</span>
+
+        <span class="hljs-keyword">return</span> catAPI.getCatImageURLs().
+            subscribeOn(Schedulers.io()).
+            observeOn(AndroidSchedulers.mainThread())
+    }
+}</code></pre>
+<p>The <code>fun getExec(): Observable&lt;Cats&gt;</code> is implicitly <code>public</code> so that means available to be called by outside this class.</p>
+<p>The line <code>.addConverterFactory(SimpleXmlConverterFactory.create())</code> indicates to use the <code>XML</code> converter to deserialize the result form the API call.</p>
+<p>Then the <code>.addCallAdapterFactory(RxJavaCallAdapterFactory.create())</code> is the call adapter to use on the API Callback</p>
+<p>The <code>return</code> lines referring to the <code>RxJava</code> <code>Observable</code></p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">return</span> catAPI.getCatImageURLs().
+            subscribeOn(Schedulers.io()).
+            observeOn(AndroidSchedulers.mainThread())</code></pre>
+<h4>Presenter</h4>
+<p>The <code>Presenter</code> modules are in charge of managing the logic of the app and to bind data between the <code>View</code> and the <code>Model</code>.</p>
+<p>In our case it will implement the method called by the <code>View</code> to retrieve the API data and send them to the <code>Adapter</code> in charge to show up.</p>
+<p>In order to communicate with the <code>View</code> we&#x27;re starting to create its <code>interface</code> called <code>MasterPresenter</code> under the package <code>presenter</code> as the followed</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">MasterPresenter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">connect</span><span class="hljs-params">(imagesAdapter: <span class="hljs-type">ImagesAdapter</span>)</span></span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getMasterRequest</span><span class="hljs-params">()</span></span>
+}</code></pre>
+<p>The first function <code>fun connect(imagesAdapter: ImagesAdapter)</code> will be used to connect the <code>Adapter interface</code> to show data, and the <code>fun getMasterRequest()</code> will be the one to start the API request.</p>
+<p>Let&#x27;s the implementations in a new class under the same <code>presenter</code> package and call it <code>MasterPresenterImpl</code></p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MasterPresenterImpl</span> : <span class="hljs-type">MasterPresenter {</span></span>
+    lateinit <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> imagesAdapter: ImagesAdapter
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">connect</span><span class="hljs-params">(imagesAdapter: <span class="hljs-type">ImagesAdapter</span>)</span></span> {
+        <span class="hljs-keyword">this</span>.imagesAdapter = imagesAdapter
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getMasterRequest</span><span class="hljs-params">()</span></span> {
+        imagesAdapter.setObservable(getObservableMasterRequest(CatAPINetwork()))
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getObservableMasterRequest</span><span class="hljs-params">(catAPINetwork: <span class="hljs-type">CatAPINetwork</span>)</span></span>: Observable&lt;Cats&gt; {
+        <span class="hljs-keyword">return</span> catAPINetwork.getExec()
+    }
+}</code></pre>
+<p>Interesting line at <code>lateinit private var imagesAdapter: ImagesAdapter</code> where Kotlin give us the chance to declare a Non-Nullable mutable object without initialization thanks to <code>lateinit</code> keyword. So it will be initialize at the first time it will be used at runtime; in our case on calling the <code>fun connect(imagesAdapter: ImagesAdapter)</code>.</p>
+<p>The function <code>fun getMasterRequest()</code> is in charge of starting the API call, just set the <code>Observable</code> in order to be subscribed by the <code>Adapter</code> (i.e. <code>imagesAdapter</code>) after starts the <code>catAPINetwork.getExec()</code> that executes the API call</p>
+<h4>View section</h4>
+<p>In the <code>view</code> package are collected the classes to manage the UI.
+Basically are the <code>View</code> and the <code>Adapter</code> ones; in our case <code>MainActivity</code> and <code>ImagesAdapter</code>.</p>
+<h6>Layouts</h6>
+<p>Before starting with their implementation, let&#x27;s go through the <code>Layout</code> designing.</p>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xkittenApp-1.png.pagespeed.ic.ulo4yWl6Cg.png" alt="Kitten App"> To design it we need basically of two elements the <mark>main container</mark> and the <mark>item container</mark>.</p>
+<p>The <mark>main container</mark> is the element containing the list of the item and we&#x27;re going to place it in the <code>activity_main.xml</code> contained in the <code>res-&gt;layout</code> folder of the project; this one has been automatically created during the initial phase of <a href="http://www.cirorizzo.net/building-a-kotlin-project/">Project Creation</a>.</p>
+<p>For our app we need to inject in a <code>RecyclerView</code> component (a very powerful and optimized component for listing views).</p>
+<p>The <code>activity_main.xml</code> will be like shown</p>
+<pre><code class="hljs language-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"utf-8"</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">RelativeLayout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">"http://schemas.android.com/apk/res/android"</span>
+    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">"http://schemas.android.com/tools"</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+    <span class="hljs-attr">tools:context</span>=<span class="hljs-string">".view.MainActivity"</span>
+    <span class="hljs-attr">android:gravity</span>=<span class="hljs-string">"center"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">android.support.v7.widget.RecyclerView</span>
+        <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/containerRecyclerView"</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:scrollbars</span>=<span class="hljs-string">"vertical"</span>
+        <span class="hljs-attr">android:layout_centerInParent</span>=<span class="hljs-string">"true"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">RelativeLayout</span>&gt;</span></code></pre>
+<p>The component <code>containerRecyclerView</code> represents the <mark>main container</mark> of the list of item</p>
+<p>The <code>row_card_view.xml</code> is the <mark>item container</mark> of our list and basically it appears like this</p>
+<pre><code class="hljs language-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">"1.0"</span> encoding=<span class="hljs-string">"utf-8"</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">android.support.v7.widget.CardView</span>
+    <span class="hljs-attr">xmlns:card_view</span>=<span class="hljs-string">"http://schemas.android.com/apk/res-auto"</span>
+    <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">"http://schemas.android.com/apk/res/android"</span>
+    <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/card_view"</span>
+    <span class="hljs-attr">android:layout_gravity</span>=<span class="hljs-string">"center"</span>
+    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span>
+    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+    <span class="hljs-attr">card_view:cardCornerRadius</span>=<span class="hljs-string">"4dp"</span>
+    <span class="hljs-attr">android:layout_margin</span>=<span class="hljs-string">"16dp"</span>
+    <span class="hljs-attr">android:background</span>=<span class="hljs-string">"@android:color/transparent"</span>
+    <span class="hljs-attr">android:layout_centerInParent</span>=<span class="hljs-string">"true"</span>
+    <span class="hljs-attr">android:elevation</span>=<span class="hljs-string">"4dp"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">RelativeLayout</span>
+        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+        <span class="hljs-attr">android:layout_centerInParent</span>=<span class="hljs-string">"true"</span>
+        <span class="hljs-attr">android:gravity</span>=<span class="hljs-string">"center"</span>
+        <span class="hljs-attr">android:foregroundGravity</span>=<span class="hljs-string">"center"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ImageView</span>
+            <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span>
+            <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span>
+            <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/imgVw_cat"</span>
+            <span class="hljs-attr">android:padding</span>=<span class="hljs-string">"4dp"</span>
+            <span class="hljs-attr">android:layout_centerInParent</span>=<span class="hljs-string">"true"</span>
+            <span class="hljs-attr">android:scaleType</span>=<span class="hljs-string">"fitCenter"</span>
+            <span class="hljs-attr">android:contentDescription</span>=<span class="hljs-string">"@string/cat_image"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">RelativeLayout</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">android.support.v7.widget.CardView</span>&gt;</span></code></pre>
+<p>As you can see the item container is the <code>card_view</code> that basically is composed by a <code>RelativeLayout</code> containing an <code>ImageView</code> (<code>imgVw_cat</code>)</p>
+<h6>Adapter</h6>
+<p>Now we&#x27;ve got basic elements of the <code>Layout</code>, so let&#x27;s move on implementing the <code>MainActivity</code> and the <code>Adapter</code>.</p>
+<p>Starting on <code>Adapter</code> the first thing to create is its <code>interface</code> in order to be invoked by the previous <code>MasterPresenterImpl</code> so let&#x27;s create a new file in the <code>view</code> package and called it <code>ImagesAdapter</code> and write it down like this</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">ImagesAdapter</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">setObservable</span><span class="hljs-params">(observableCats: <span class="hljs-type">Observable</span>&lt;<span class="hljs-type">Cats</span>&gt;)</span></span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">unsubscribe</span><span class="hljs-params">()</span></span>
+}</code></pre>
+<p>The function <code>setObservable(observableCats: Observable&lt;Cats&gt;)</code> is called by <code>MasterPresenterImpl</code> to set the <code>Observable</code> and give the <code>Adapter</code> to subscribe to it.</p>
+<p>The <code>unsubscribe()</code> function will be invoked by the <code>MainActivity</code> to unsubscribe the <code>Adapter</code> from the <code>Observable</code> when the activity is destroyed.</p>
+<p>Now let&#x27;s implement them in a new class under the same package called <code>ImagesAdapterImpl</code> that appears like that</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ImagesAdapterImpl</span> : <span class="hljs-type">RecyclerView.Adapter</span>&lt;<span class="hljs-type">ImagesAdapterImpl.ImagesURLsDataHolder</span>&gt;</span>(), ImagesAdapter {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> TAG = ImagesAdapterImpl::<span class="hljs-class"><span class="hljs-keyword">class</span>.<span class="hljs-title">java</span>.<span class="hljs-title">simpleName</span></span>
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> cats: Cats? = <span class="hljs-literal">null</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> subscriber: Subscriber&lt;Cats&gt; <span class="hljs-keyword">by</span> lazy { getSubscribe() }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreateViewHolder</span><span class="hljs-params">(parent: <span class="hljs-type">ViewGroup</span>, viewType: <span class="hljs-type">Int</span>)</span></span>: ImagesURLsDataHolder {
+        <span class="hljs-keyword">return</span> ImagesURLsDataHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.row_card_view, parent, <span class="hljs-literal">false</span>))
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getItemCount</span><span class="hljs-params">()</span></span>: <span class="hljs-built_in">Int</span> {
+        <span class="hljs-keyword">return</span> cats?.<span class="hljs-keyword">data</span>?.images?.size ?: <span class="hljs-number">0</span>
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onBindViewHolder</span><span class="hljs-params">(holder: <span class="hljs-type">ImagesURLsDataHolder</span>, position: <span class="hljs-type">Int</span>)</span></span> {
+        holder.bindImages(cats?.<span class="hljs-keyword">data</span>?.images?.<span class="hljs-keyword">get</span>(position)?.url ?: <span class="hljs-string">""</span>)
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">setData</span><span class="hljs-params">(cats: <span class="hljs-type">Cats</span>?)</span></span> {
+        <span class="hljs-keyword">this</span>.cats = cats
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">setObservable</span><span class="hljs-params">(observableCats: <span class="hljs-type">Observable</span>&lt;<span class="hljs-type">Cats</span>&gt;)</span></span> {
+        observableCats.subscribe(subscriber)
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">unsubscribe</span><span class="hljs-params">()</span></span> {
+        <span class="hljs-keyword">if</span> (!subscriber.isUnsubscribed) {
+            subscriber.unsubscribe()
+        }
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getSubscribe</span><span class="hljs-params">()</span></span>: Subscriber&lt;Cats&gt; {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">object</span> : Subscriber&lt;Cats&gt;() {
+            <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCompleted</span><span class="hljs-params">()</span></span> {
+                Log.d(TAG, <span class="hljs-string">"onCompleted"</span>)
+                notifyDataSetChanged()
+            }
+
+            <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onNext</span><span class="hljs-params">(cats: <span class="hljs-type">Cats</span>)</span></span> {
+                Log.d(TAG, <span class="hljs-string">"onNextNew"</span>)
+                setData(cats)
+            }
+
+            <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onError</span><span class="hljs-params">(e: <span class="hljs-type">Throwable</span>)</span></span> {
+                <span class="hljs-comment">//TODO : Handle error here</span>
+                Log.d(TAG, <span class="hljs-string">""</span> + e.message)
+            }
+        }
+    }
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ImagesURLsDataHolder</span></span>(view: View) : RecyclerView.ViewHolder(view) {
+
+        <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">bindImages</span><span class="hljs-params">(imgURL: <span class="hljs-type">String</span>)</span></span> {
+            Glide.with(itemView.context).
+                    load(imgURL).
+                    placeholder(R.mipmap.document_image_cancel).
+                    diskCacheStrategy(DiskCacheStrategy.ALL).
+                    centerCrop().
+                    into(itemView.imgVw_cat)
+        }
+    }
+}</code></pre>
+<p>This is the class inflate the <code>row_card_view.xml</code>, basically the <mark>item container</mark> as you can see at function <code>onCreateViewHolder</code></p>
+<p>The function <code>getSubscribe()</code> provide to subscribe the <code>Adapter</code> to the <code>Observable</code> used at line <code>private val subscriber: Subscriber&lt;Cats&gt; by lazy { getSubscribe() }</code> where you can notice the <code>lazy</code> initialization, this is a way to declare an unmutable object (i.e. <code>subscriber</code>) and it&#x27;ll be created through the function enclosed in the braces (i.e. <code>getSubscribe()</code>) at the first invocation at runtime.</p>
+<blockquote>
+<p><em>The Subscriber and Observable concepts comes from <a href="https://github.com/ReactiveX/RxJava">RxJava</a>; We can dig deeper in some next posts</em></p>
+</blockquote>
+<p>At the end, a very interesting piece of code is the inner class called <code>ImagesURLsDataHolder</code> used to fill up the <code>imgVw_cat</code> using the <code>Glide</code> library, that helps to retrieve the image from the passed <code>URL</code> extracted by the API call. This part is wrapped in the function <code>bindImages(imgURL: String)</code> and invoked by the method <code>onBindViewHolder</code> in the same file.</p>
+<h6>Activity</h6>
+<p>Last but not least the the <code>Activity</code> (i.e. <code>MainActivity</code>)</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> : <span class="hljs-type">AppCompatActivity</span></span>() {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> imagesAdapterImpl: ImagesAdapterImpl <span class="hljs-keyword">by</span> lazy { ImagesAdapterImpl() }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> masterPresenterImpl: MasterPresenterImpl
+            <span class="hljs-keyword">by</span> lazy {
+                MasterPresenterImpl()
+            }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: <span class="hljs-type">Bundle</span>?)</span></span> {
+        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        initRecyclerView()
+        connectingToMasterPresenter()
+        getURLs()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onDestroy</span><span class="hljs-params">()</span></span> {
+        imagesAdapterImpl.unsubscribe()
+        <span class="hljs-keyword">super</span>.onDestroy()
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">initRecyclerView</span><span class="hljs-params">()</span></span> {
+        containerRecyclerView.layoutManager = GridLayoutManager(<span class="hljs-keyword">this</span>, <span class="hljs-number">1</span>)
+        containerRecyclerView.adapter = imagesAdapterImpl
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">connectingToMasterPresenter</span><span class="hljs-params">()</span></span> {
+        masterPresenterImpl.connect(imagesAdapterImpl)
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getURLs</span><span class="hljs-params">()</span></span> {
+        masterPresenterImpl.getMasterRequest()
+    }
+}</code></pre>
+<p>Notice the functions</p>
+<ul>
+<li><code>initRecyclerView()</code></li>
+<li><code>connectingToMasterPresenter()</code></li>
+<li><code>getURLs()</code></li>
+</ul>
+<p>Respectively used to</p>
+<ul>
+<li>initialize the <mark>main container</mark> (i.e. <code>RecyclerView</code>)</li>
+<li>connecting the <code>MainActivity</code> to the <code>MasterPresenterImpl</code> and pass to it the <code>interface</code> of the <code>ImagesAdapterImpl</code> (aka <code>Adapter</code>)</li>
+<li><code>getURLs()</code> starts the API request to retrieve the <code>XML</code> data, and so executing the followed tasks (deserialize data, retrieving images through <code>Adapter</code>).</li>
+</ul>
+<p>The Kitten App is now ready to run.
+In any case you can find the entire project on my Github Repository of the <a href="https://github.com/cirorizzo/KShows">KShow</a> project.
+The same project has been written in Java as well <a href="https://github.com/cirorizzo/JShows">JShows</a> so you can comparing them</p>
+<h6><em>Translations</em></h6>
+<p>This post is also available in Chinese on <a href="https://goo.gl/3YpGoR">gold.xitu.io</a>
+A special thanks for the translation to the <strong>gold.xitu.io</strong> Team</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

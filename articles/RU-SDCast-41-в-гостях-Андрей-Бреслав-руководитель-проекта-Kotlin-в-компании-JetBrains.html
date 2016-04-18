@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Feedback-on-the-Josephus-problem.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="https://sdcast.ksdaemon.ru/2016/03/sdcast-41/">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a> - <span class="main-title-date">Mar 11, 2016</span>
+      </h1>
+      <h2>by Андрей Бреслав, Константин Буркалев</h2>
+      <p><img src="https://sdcast.ksdaemon.ru/wp-content/uploads/2014/06/sd-podcast-logo-200x200.png" alt="sd-podcast-logo"> &#x420;&#x430;&#x434; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x432;&#x430;&#x43C; 41-&#x439; &#x432;&#x44B;&#x43F;&#x443;&#x441;&#x43A; &#x43F;&#x43E;&#x434;&#x43A;&#x430;&#x441;&#x442;&#x430;! &#x42D;&#x442;&#x43E;&#x442; &#x44D;&#x43F;&#x438;&#x437;&#x43E;&#x434; &#x43F;&#x43E;&#x441;&#x432;&#x44F;&#x449;&#x435;&#x43D; &#x44F;&#x437;&#x44B;&#x43A;&#x443; Kotlin, &#x443; &#x43C;&#x435;&#x43D;&#x44F; &#x432; &#x433;&#x43E;&#x441;&#x442;&#x44F;&#x445; &#x410;&#x43D;&#x434;&#x440;&#x435;&#x439; &#x411;&#x440;&#x435;&#x441;&#x43B;&#x430;&#x432;, &#x440;&#x443;&#x43A;&#x43E;&#x432;&#x43E;&#x434;&#x438;&#x442;&#x435;&#x43B;&#x44C; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x430; Kotlin &#x432; &#x43A;&#x43E;&#x43C;&#x43F;&#x430;&#x43D;&#x438;&#x438; JetBrains.</p>
+<p>&#x412; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x435; &#x432;&#x44B;&#x43F;&#x443;&#x441;&#x43A;&#x430; &#x43C;&#x44B; &#x43F;&#x43E;&#x433;&#x43E;&#x432;&#x43E;&#x440;&#x438;&#x43B;&#x438; &#x43E; &#x442;&#x43E;&#x43C;, &#x437;&#x430;&#x447;&#x435;&#x43C; &#x432;&#x43E;&#x43E;&#x431;&#x449;&#x435; &#x43D;&#x443;&#x436;&#x435;&#x43D; &#x435;&#x449;&#x435; &#x43E;&#x434;&#x438;&#x43D; &#x44F;&#x437;&#x44B;&#x43A;, &#x410;&#x43D;&#x434;&#x440;&#x435;&#x439; &#x440;&#x430;&#x441;&#x441;&#x43A;&#x430;&#x437;&#x430;&#x43B; &#x43F;&#x440;&#x43E; &#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44E; &#x438; &#x43F;&#x440;&#x435;&#x434;&#x43F;&#x43E;&#x441;&#x44B;&#x43B;&#x43A;&#x438; &#x43F;&#x43E;&#x44F;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; Kotlin, &#x43A;&#x430;&#x43A; &#x432;&#x441;&#x435; &#x43D;&#x430;&#x447;&#x438;&#x43D;&#x430;&#x43B;&#x43E;&#x441;&#x44C; &#x438; &#x440;&#x430;&#x437;&#x432;&#x438;&#x432;&#x430;&#x43B;&#x43E;&#x441;&#x44C;.</p>
+<p>&#x41E;&#x431;&#x441;&#x443;&#x434;&#x438;&#x43B;&#x438; &#x442;&#x430;&#x43A; &#x436;&#x435; &#x43E;&#x431;&#x449;&#x438;&#x435; &#x442;&#x435;&#x43E;&#x440;&#x435;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435; &#x430;&#x441;&#x43F;&#x435;&#x43A;&#x442;&#x44B; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x438; &#x44F;&#x437;&#x44B;&#x43A;&#x43E;&#x432; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F;: &#x447;&#x435;&#x43C; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x430; &#x44F;&#x437;&#x44B;&#x43A;&#x430; &#x43E;&#x442;&#x43B;&#x438;&#x447;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43E;&#x442; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x43A;&#x438; &#x43A;&#x430;&#x43A;&#x438;&#x445;-&#x43B;&#x438;&#x431;&#x43E; &#x434;&#x440;&#x443;&#x433;&#x438;&#x445; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x43D;&#x44B;&#x445; &#x43F;&#x440;&#x43E;&#x434;&#x443;&#x43A;&#x442;&#x43E;&#x432;, &#x43A;&#x430;&#x43A;&#x438;&#x435; &#x43A;&#x43E;&#x43C;&#x43F;&#x43E;&#x43D;&#x435;&#x43D;&#x442;&#x44B; &#x44F;&#x432;&#x43B;&#x44F;&#x44E;&#x442;&#x441;&#x44F; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43E;&#x439; &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x441;&#x442;&#x440;&#x43E;&#x435;&#x43D;&#x438;&#x44F; &#x44F;&#x437;&#x44B;&#x43A;&#x430;, &#x43D;&#x430; &#x43A;&#x430;&#x43A;&#x438;&#x435; &#x430;&#x441;&#x43F;&#x435;&#x43A;&#x442;&#x44B; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x435;&#x442; &#x43E;&#x431;&#x440;&#x430;&#x449;&#x430;&#x442;&#x44C; &#x43E;&#x441;&#x43E;&#x431;&#x43E;&#x435; &#x432;&#x43D;&#x438;&#x43C;&#x430;&#x43D;&#x438;&#x435; &#x438; &#x43A;&#x430;&#x43A; &#x43F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x44C;&#x43D;&#x43E; &#x437;&#x430;&#x43B;&#x43E;&#x436;&#x438;&#x442;&#x44C; &#x430;&#x440;&#x445;&#x438;&#x442;&#x435;&#x43A;&#x442;&#x443;&#x440;&#x443;.</p>
+<p>&#x422;&#x430;&#x43A; &#x436;&#x435; &#x410;&#x43D;&#x434;&#x440;&#x435;&#x439; &#x440;&#x430;&#x441;&#x441;&#x43A;&#x430;&#x437;&#x430;&#x43B;, &#x43F;&#x43E;&#x447;&#x435;&#x43C;&#x443; &#x432; &#x43A;&#x430;&#x447;&#x435;&#x441;&#x442;&#x432;&#x435; &#x43F;&#x43B;&#x430;&#x442;&#x444;&#x43E;&#x440;&#x43C;&#x44B; &#x431;&#x44B;&#x43B;&#x430; &#x432;&#x44B;&#x431;&#x440;&#x430;&#x43D;&#x430; JVM, &#x440;&#x430;&#x441;&#x441;&#x43A;&#x430;&#x437;&#x430;&#x43B; &#x43D;&#x435;&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x442;&#x435;&#x445;&#x43D;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x435; &#x43F;&#x43E;&#x434;&#x440;&#x43E;&#x431;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x440;&#x435;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x430;. &#x41F;&#x43E;&#x434;&#x440;&#x43E;&#x431;&#x43D;&#x43E; &#x440;&#x430;&#x441;&#x441;&#x43A;&#x430;&#x437;&#x430;&#x43B; &#x43F;&#x440;&#x43E; interop &#x441; Java, &#x43E; &#x442;&#x43E;&#x43C;, &#x43A;&#x430;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x43D;&#x430;&#x447;&#x430;&#x442;&#x44C; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; Kotlin &#x432; &#x443;&#x436;&#x435; &#x441;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x443;&#x44E;&#x449;&#x435;&#x43C; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x435; &#x43D;&#x430; Java &#x441;&#x435;&#x439;&#x447;&#x430;&#x441;, &#x438; &#x43A;&#x430;&#x43A; &#x43E;&#x43D;&#x438; &#x443; &#x441;&#x435;&#x431;&#x44F;, &#x432; &#x43A;&#x43E;&#x43C;&#x43F;&#x430;&#x43D;&#x438;&#x438; JetBrains &#x443;&#x436;&#x435; &#x43D;&#x430;&#x447;&#x430;&#x43B;&#x438; &#x44D;&#x442;&#x43E; &#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C;.</p>
+<p>&#x41D;&#x435; &#x43E;&#x431;&#x43E;&#x448;&#x43B;&#x438; &#x43C;&#x44B; &#x441;&#x442;&#x43E;&#x440;&#x43E;&#x439; &#x438; &#x441;&#x43E;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x441;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x443;&#x44E; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x430;. &#x41A;&#x43E;&#x434; &#x44F;&#x437;&#x44B;&#x43A;&#x430; Kotlin &#x432;&#x44B;&#x43B;&#x43E;&#x436;&#x435;&#x43D; &#x432; open source &#x43D;&#x430; github. &#x410;&#x43D;&#x434;&#x440;&#x435;&#x439; &#x440;&#x430;&#x441;&#x441;&#x43A;&#x430;&#x437;&#x430;&#x43B; &#x43F;&#x440;&#x43E; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x441;&#x442;&#x432;&#x43E;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x435; &#x441;&#x444;&#x43E;&#x440;&#x43C;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43B;&#x43E;&#x441;&#x44C; &#x432;&#x43E;&#x43A;&#x440;&#x443;&#x433; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x430;, &#x438; &#x43A;&#x430;&#x43A; &#x43E;&#x43D;&#x438; &#x441; &#x43D;&#x438;&#x43C; &#x432;&#x437;&#x430;&#x438;&#x43C;&#x43E;&#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x443;&#x44E;&#x442;, &#x43E;&#x431;&#x441;&#x443;&#x436;&#x434;&#x430;&#x44E;&#x442; &#x437;&#x430;&#x43F;&#x440;&#x43E;&#x441;&#x44B; &#x43D;&#x430; &#x43D;&#x43E;&#x432;&#x44B;&#x439; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;, &#x431;&#x430;&#x433;-&#x440;&#x435;&#x43F;&#x43E;&#x440;&#x442;&#x44B; &#x438; &#x432;&#x441;&#x435; &#x43F;&#x440;&#x43E;&#x447;&#x435;&#x435;.</p>
+<p>&#x412; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43D;&#x438;&#x435; &#x432;&#x44B;&#x43F;&#x443;&#x441;&#x43A;&#x430;, &#x410;&#x43D;&#x434;&#x440;&#x435;&#x439; &#x43F;&#x43E;&#x434;&#x435;&#x43B;&#x438;&#x43B;&#x441;&#x44F; &#x43F;&#x43B;&#x430;&#x43D;&#x430;&#x43C;&#x438; &#x43F;&#x43E; &#x440;&#x430;&#x437;&#x432;&#x438;&#x442;&#x438;&#x44E; &#x44F;&#x437;&#x44B;&#x43A;&#x430; &#x43A;&#x430;&#x43A; &#x432; &#x431;&#x43B;&#x438;&#x436;&#x430;&#x439;&#x448;&#x435;&#x43C; &#x431;&#x443;&#x434;&#x443;&#x449;&#x435;&#x43C;, &#x442;&#x430;&#x43A; &#x438; &#x432; &#x434;&#x43E;&#x43B;&#x433;&#x43E;&#x441;&#x440;&#x43E;&#x447;&#x43D;&#x43E;&#x439; &#x43F;&#x435;&#x440;&#x441;&#x43F;&#x435;&#x43A;&#x442;&#x438;&#x432;&#x435;.</p>
+<p>&#x421;&#x441;&#x44B;&#x43B;&#x43A;&#x438; &#x43D;&#x430; &#x440;&#x435;&#x441;&#x443;&#x440;&#x441;&#x44B; &#x43F;&#x43E; &#x442;&#x435;&#x43C;&#x430;&#x43C; &#x432;&#x44B;&#x43F;&#x443;&#x441;&#x43A;&#x430;:</p>
+<ul>
+<li>
+<p>&#x410;&#x43D;&#x434;&#x440;&#x435;&#x439; &#x432; &#x441;&#x43E;&#x446; &#x441;&#x435;&#x442;&#x44F;&#x445;:</p>
+<ul>
+<li><a href="https://twitter.com/abreslav">Twitter</a></li>
+<li><a href="https://fb.com/abreslav">Facebook</a></li>
+<li><a href="https://vk.com/abreslav">&#x412;&#x41A;&#x43E;&#x43D;&#x442;&#x430;&#x43A;&#x442;&#x435;</a></li>
+<li><a href="https://www.linkedin.com/in/abreslav">LinkedIn</a></li>
+</ul>
+</li>
+<li><a href="https://kotlinlang.org/">&#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x43E;&#x439; &#x441;&#x430;&#x439;&#x442; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x430; kotlinlang.org</a></li>
+<li><a href="https://github.com/JetBrains/kotlin">&#x420;&#x435;&#x43F;&#x43E;&#x437;&#x438;&#x442;&#x43E;&#x440;&#x438;&#x439; &#x43D;&#x430; github</a></li>
+<li><a href="http://blog.jetbrains.com/kotlin/2016/02/kotlin-1-0-released-pragmatic-language-for-jvm-and-android/">&#x41F;&#x43E;&#x441;&#x442; &#x432; &#x431;&#x43B;&#x43E;&#x433;&#x435; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x430; &#x43E; &#x440;&#x435;&#x43B;&#x438;&#x437;&#x435; 1.0</a></li>
+<li>
+<p>&#x41D;&#x435;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x432;&#x438;&#x434;&#x435;&#x43E; &#x434;&#x43E;&#x43A;&#x43B;&#x430;&#x434;&#x43E;&#x432; &#x43F;&#x440;&#x43E; Kotlin &#x410;&#x43D;&#x434;&#x440;&#x435;&#x44F; &#x411;&#x440;&#x435;&#x441;&#x43B;&#x430;&#x432;&#x430; &#x438; &#x414;&#x43C;&#x438;&#x442;&#x440;&#x438;&#x44F; &#x416;&#x435;&#x43C;&#x435;&#x440;&#x43E;&#x432;&#x430;:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HWyd1gYMkl0">&#x427;&#x442;&#x43E; &#x442;&#x430;&#x43A;&#x43E;&#x435; Kotlin? &#x412;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x435;</a></li>
+<li><a href="https://www.youtube.com/watch?v=LWFx4QWrTyo">Kotlin: &#x441;&#x430;&#x43C;&#x43E;&#x435; &#x441;&#x43B;&#x43E;&#x436;&#x43D;&#x43E;&#x435; &mdash; &#x441;&#x43E;&#x432;&#x43C;&#x435;&#x441;&#x442;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x44C;</a></li>
+<li><a href="https://www.youtube.com/watch?v=VU_L2_XGQ9s">Kotlin &#x434;&#x43B;&#x44F; Android: &#x43A;&#x43E;&#x440;&#x43E;&#x442;&#x43A;&#x43E; &#x438; &#x44F;&#x441;&#x43D;&#x43E;</a></li>
+<li><a href="https://www.youtube.com/watch?v=YOmdOTlhZa8">Kotlin: &#x441;&#x435;&#x441;&#x441;&#x438;&#x44F; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x441;&#x43E;&#x432; &#x438; &#x43E;&#x442;&#x432;&#x435;&#x442;&#x43E;&#x432; &#x441;&#x43E; &#x432;&#x441;&#x442;&#x440;&#x435;&#x447;&#x438; JUG.ru 04.03.2016</a></li>
+</ul>
+</li>
+</ul>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

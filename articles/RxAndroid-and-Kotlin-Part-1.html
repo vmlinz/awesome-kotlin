@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RxAndroid and Kotlin (Part 1)</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Exploring-Kotlin.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Quasar-and-Kotlin-a-Powerful-Match.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="https://medium.com/@ahmedrizwan/rxandroid-and-kotlin-part-1-f0382dc26ed8#.bx3rgamfo">RxAndroid and Kotlin (Part 1)</a> - <span class="main-title-date">Jun 27, 2015</span>
+      </h1>
+      <h2>by Ahmed Rizwan</h2>
+      <p><img src="https://d262ilb51hltx0.cloudfront.net/max/2000/1*bTttcFdSLyvWIPg91OaNEw.png" alt=""></p>
+<h3>RxAndroid and Kotlin (Part 1)</h3>
+<p>I started with <a href="https://github.com/ReactiveX/RxAndroid">RxAndroid</a> about a week ago. At first, I didn&rsquo;t really get it... I mean, I grasped the concept but I didn&rsquo;t understand where I should be using it. But then after going through a few examples and a few really good articles (links at the end)... I just got it! (to a good extent) And my reaction was pretty much:</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*rjlr5GxQIx8o28U5nhtDxg.gif" alt=""></p>
+<h5><em>Such Rx. Much Reactive. Wow!</em></h5>
+<p>In short, you can use Rx almost everywhere&#x200A;&mdash;&#x200A;but <strong>you shouldn&rsquo;t</strong>. You should intelligently figure out where it should go. Because in some instances, Rx can be a 100 times more productive and better than normal imperative programming, and in others, it just isn&rsquo;t necessary.</p>
+<p>I&rsquo;ll demonstrate a few examples in both <strong>Kotlin</strong> and <strong>Java</strong> so that you get an idea of Rx as well as a comparison of the two languages.</p>
+<blockquote>
+<p>Now if you&rsquo;re not familiar with Kotlin, then I suggest that you visit these links</p>
+<p><a href="http://kotlinlang.org">Official Kotlin Website</a></p>
+<p><a href="http://kotlinlang.org/docs/tutorials/kotlin-android.html">Getting Started on Android</a></p>
+<p><a href="https://docs.google.com/document/d/1ReS3ep-hjxWA8kZi0YqDbEhCqTt29hG8P44aA9W0DM8/edit?usp=sharing">Jake Wharton&rsquo;s Paper on Kotlin</a></p>
+<p><a href="https://medium.com/@ahmedrizwan/android-programming-with-kotlin-6ce3f9b0cbe6">My Blog</a> ;)</pre></p>
+<p>Short Summary : Kotlin is an awesometacular alternative to Java, that works amazingly well on Android. And oh, it&#x27;s developed by JetBrains!</p>
+<p>P.S. There are no semicolons in Kotlin. *_*</p>
+</blockquote>
+<h4>Rx: The Concept</h4>
+<p>If you already have a good concept of Rx, then you can skip this topic. Otherwise... read on!</p>
+<p>Ok so what is Rx? Well... It&rsquo;s &ldquo;reactive programming&rdquo;... Reactive programming is, in easy words, a programming pattern closely related to the <strong>Observer</strong> <strong>Pattern</strong>. In which, Subscribers &ldquo;react&rdquo; to the events emmited by the Observable(s).</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*Oa7zxVaeyF4TO6Mres4E5w.png" alt=""></p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/400/1*ATqZ5sek2uAPfZMdmsWHSg.png" alt=""></p>
+<h5><em>Transformations as the subscriber receives data from observable.</em></h5>
+<p>Rx is also a subset of <strong>Functional Programming</strong>. Hence often referred to as Functional Reactive Programming. Because... As the subscribers receive data, they can apply a sequence of <strong>transformations</strong> on them. (Similar to what we can do with Streams in Java 8)</p>
+<p>We can even combine/merge different streams too. It&rsquo;s that <strong>flexible</strong>! So... For now, just remember there are tons of different things we can do with the data we (the subscribers) receive from observables, on the fly!</p>
+<p>Now that the concept is somewhat clear, lets come back to RxJava.</p>
+<p>In Rx, the <strong>subscriber</strong> implements three methods to interact with observable</p>
+<ol>
+<li>onNext(Data) : Receives the data from Observable</li>
+<li>onError(Exception) : Gets called if an exception is thrown</li>
+<li>onCompleted() : Gets called when the data stream ends</li>
+</ol>
+<p>This can be compared to the <strong>Iterables</strong> in Java. The difference is that iterables are <strong>pull</strong>-based, and Rx observables are <strong>push</strong>-based as the Observable pushes out data to its subscribers. Here&rsquo;s the comparison table...</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*6xrzAdP_wa6aR80UrNxiIw.png" alt=""></p>
+<blockquote>
+<p>Another thing to note is that Rx is <strong>asynchronous</strong> in nature, meaning subscribers aren&rsquo;t going to be waiting for other subscribers to finish. They&rsquo;ll &ldquo;asynchronously&rdquo; process the streams.</p>
+</blockquote>
+<p>So... Observables push out <strong>streams of data</strong> to their subscribers, and subscribers can consume those streams (with the help of the methods listed above)<strong>.</strong> We can understand &ldquo;streams&rdquo; a bit better with the help of <a href="http://rxmarbles.com">Marble Diagrams</a>...</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*2-sTf0tHsmDlent1HLIhrg.png" alt=""></p>
+<h5><em>A marble diagram representing two different streams.</em></h5>
+<p>The cirlces on these streams represent <strong>data objects</strong>. And the arrows represent that the data is flowing in one direction (not referring to the boy band), in an orderly fashion! Have a look at this marble diagram...</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*ju5YD8bRZhdCGmptRQdmlw.png" alt=""></p>
+<h5><em>A mapping of a stream.</em></h5>
+<p>Like I mentioned before, we can <strong>transform</strong> the data (as well as streams) using <a href="https://github.com/ReactiveX/RxJava/wiki/Alphabetical-List-of-Observable-Operators"><strong>operators</strong></a> like map, filter, zip etc. The image above represents a simple mapping. So after this transformation, the subscriber to this stream will get the transformed version of the stream. Cool, right?</p>
+<p>I think you should now have a good concept of how things work in Rx, so lets get to the actual implementation.</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*-nTq2bHQbJZctDZZoPnBYQ.png" alt=""></p>
+<h4>Implementing Observables</h4>
+<p>The first thing we have to do is meditate.</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*I6aMRP_WrXdse197zfBh1Q.jpeg" alt=""></p>
+<p>After that, creating an Observable is not that difficult.</p>
+<p>There are a number of ways we can <a href="https://github.com/ReactiveX/RxJava/wiki/Creating-Observables">create observables</a>, I&rsquo;ll list down just three here.</p>
+<ol>
+<li><strong>Observable.from()</strong> : Creates an observable from an Iterable, a Future, or an Array.</li>
+</ol>
+<pre><code class="hljs language-kotlin"><span class="hljs-comment">//Kotlin</span>
+Observable.from(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>))
+<span class="hljs-comment">//Java</span>
+Observable.from(Arrays.asList(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>));
+
+<span class="hljs-comment">//It will emit these numbers in order : 1 - 2 - 3 - 4 - 5</span>
+<span class="hljs-comment">//Which should be pretty obvious I guess.</span></code></pre>
+<p>2. <strong>Observable.just()</strong> : Creates observable from an object or several objects</p>
+<pre><code class="hljs language-kotlin">Observable.just(<span class="hljs-string">"Hello World!"</span>)
+<span class="hljs-comment">//this will emit "Hello World!" to all its subscribers</span></code></pre>
+<p>3. <strong>Observable.create()</strong> : Creates an Observable from scratch by means of a function. We just implement the OnSubscribe interface and tell the observable what it should send to its subscriber(s).</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-comment">//Kotlin</span>
+Observable.create(<span class="hljs-keyword">object</span> : Observable.OnSubscribe&lt;<span class="hljs-built_in">Int</span>&gt; {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">call</span><span class="hljs-params">(subscriber: <span class="hljs-type">Subscriber</span>&lt;<span class="hljs-type">in</span> <span class="hljs-type">Int</span>&gt;)</span></span> {
+        <span class="hljs-keyword">for</span>(i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span> .. <span class="hljs-number">5</span>)
+            subscriber.onNext(i)
+
+        subscriber.onCompleted()
+    }
+})</code></pre>
+<p>And the java version of the same code...</p>
+<pre><code class="hljs language-java"><span class="hljs-comment">//Java</span>
+Observable.create(<span class="hljs-keyword">new</span> Observable.OnSubscribe&lt;Integer&gt;() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">call</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Subscriber&lt;? <span class="hljs-keyword">super</span> Integer&gt; 
+subscriber)</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">5</span>; i++)
+            subscriber.onNext(i);
+
+        subscriber.onCompleted();
+    }
+});
+
+<span class="hljs-comment">//Using the implementation above, we're telling the observer what //it should do when a subscriber subscribes to it. Hence the name //"onSubscribe".</span></code></pre>
+<p>The code I&rsquo;ve written above is equivalent to the example I wrote for Observable.from() but as you can see, we have full control as to what should be emitted and when should the stream end. I can also send caught exceptions with the use of <strong>subscriber.onError(e)</strong>.</p>
+<p>Now we need subscribers!</p>
+<h4>Implementing Subscribers</h4>
+<p>After we have implemented our Observables... All we need is a subscriber! For Android, to subscribe to an observable, we first tell the observable about the threads on which we&rsquo;re going to be subscribing and observing. RxAndroid gives us <a href="https://github.com/ReactiveX/RxJava/wiki/The-RxJava-Android-Module"><strong>Schedulers</strong></a>, through which we can specify the thread<strong>s</strong>. So lets take a simple &ldquo;Hello World&rdquo; observable for example in which I want the subscription to be done on a <strong>worker thread</strong>, and observation on the <strong>main thread</strong>.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-comment">//Kotlin</span>
+Observable.just(<span class="hljs-string">"Hello World"</span>)
+          .subscribeOn(Schedulers.newThread())
+          <span class="hljs-comment">//each subscription is going to be on a new thread.</span>
+          .observeOn(AndroidSchedulers.mainThread()))
+          <span class="hljs-comment">//observation on the main thread</span>
+          <span class="hljs-comment">//Now our subscriber!</span>
+          .subscribe(<span class="hljs-keyword">object</span>:Subscriber&lt;String&gt;(){
+            <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onCompleted</span><span class="hljs-params">()</span></span> {
+             <span class="hljs-comment">//Completed</span>
+            }
+
+            <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onError</span><span class="hljs-params">(e: <span class="hljs-type">Throwable</span>?)</span></span> {
+             <span class="hljs-comment">//TODO : Handle error here</span>
+            }
+
+            <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onNext</span><span class="hljs-params">(t: <span class="hljs-type">String</span>?)</span></span> {
+             Log.e(<span class="hljs-string">"Output"</span>,t);
+            }
+           })</code></pre>
+<pre><code class="hljs language-java"><span class="hljs-comment">//Java </span>
+Observable.just(<span class="hljs-string">"Hello World"</span>)
+        .subscribeOn(Schedulers.newThread())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(<span class="hljs-keyword">new</span> Subscriber&lt;String&gt;() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCompleted</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-comment">//Completion</span>
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Throwable e)</span> </span>{
+                <span class="hljs-comment">//TODO : Handle error here</span>
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onNext</span><span class="hljs-params">(<span class="hljs-keyword">final</span> String s)</span> </span>{
+                Log.e(<span class="hljs-string">"Output"</span>,s);
+            }
+        });
+
+<span class="hljs-comment">//You can get more info about schedulers and threading here.</span></code></pre>
+<p>So... What does it do?</p>
+<p>When you run this code&#x200A;&mdash;&#x200A;It&rsquo;ll display a log message</p>
+<pre><code>Output: Hello World!
+</code></pre>
+<p>And that&rsquo;s it! This is how simple &ldquo;subscription&rdquo; is... You can get more details about subscribe <a href="http://reactivex.io/documentation/operators/subscribe.html">here</a>.</p>
+<h4>A Practical Example : Debounce!</h4>
+<p>Ok by now... You know how to create simple observables, right? So let&rsquo;s do one of my favorite RxExamples... I want to implement this :</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/400/1*lyOcKYAvTjDnArAN4rEDNw.gif" alt=""></p>
+<p>In this example, I enter text into an EditText and against this text, a response is triggered automatically &mdash;in which I print out the text. Now the response could be a call to an API. So if I trigger this call for every character I enter&#x200A;&mdash;&#x200A;that would be a waste because I only need the last one, meaning it should trigger a call only when I stop typing&#x200A;&mdash;&#x200A;let&rsquo;s say after 1 second of typing-inactivity.</p>
+<p>So how do we do this in non-reactive programming?</p>
+<p>Well it ain&rsquo;t pretty!</p>
+<p><strong>Non-Reactive Solution</strong></p>
+<p>I use a Timer, and schedule it to call <strong>run</strong>() method after a 1000 milliseconds delay in <strong>afterTextChanged()</strong> method. Oh and don&rsquo;t forget to add <strong>runOnUiThread</strong>() in there as well. -_-</p>
+<p>Conceptually it&rsquo;s not that difficult but the code becomes very cluttered, even more so in Java!</p>
+<p>Java version</p>
+<pre><code class="hljs language-java"><span class="hljs-comment">//Java</span>
+Timer timer = <span class="hljs-keyword">new</span> Timer();
+
+<span class="hljs-keyword">final</span> TextView textView = (TextView) findViewById(R.id.textView);
+<span class="hljs-keyword">final</span> EditText editText = (EditText) findViewById(R.id.editText);
+
+editText.addTextChangedListener(<span class="hljs-keyword">new</span> TextWatcher() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">beforeTextChanged</span><span class="hljs-params">(CharSequence s, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> count,
+                                  <span class="hljs-keyword">int</span> after)</span> </span>{
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTextChanged</span><span class="hljs-params">(<span class="hljs-keyword">final</span> CharSequence s, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> before,
+                              <span class="hljs-keyword">int</span> count)</span> </span>{
+        <span class="hljs-keyword">if</span> (timer != <span class="hljs-keyword">null</span>)
+            timer.cancel();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">afterTextChanged</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Editable s)</span> </span>{
+        timer = <span class="hljs-keyword">new</span> Timer();
+        timer.schedule(<span class="hljs-keyword">new</span> TimerTask() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                runOnUiThread(<span class="hljs-keyword">new</span> Runnable() {
+                    <span class="hljs-meta">@Override</span>
+                    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+                        textView.setText(<span class="hljs-string">"Output : "</span> + editText.getText());
+                    }
+                });
+            }
+
+        }, <span class="hljs-number">1000</span>);
+    }
+});</code></pre>
+<p>Kotlin</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-comment">//Kotlin</span>
+<span class="hljs-keyword">var</span> timer: Timer? = Timer()
+
+<span class="hljs-keyword">val</span> editTextStop = findViewById(R.id.editText) <span class="hljs-keyword">as</span> EditText
+editTextStop.addTextChangedListener(<span class="hljs-keyword">object</span> : TextWatcher {
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">beforeTextChanged</span><span class="hljs-params">(s: <span class="hljs-type">CharSequence</span>, start: <span class="hljs-type">Int</span>, count: <span class="hljs-type">Int</span>, after: <span class="hljs-type">Int</span>)</span></span> = <span class="hljs-built_in">Unit</span>
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onTextChanged</span><span class="hljs-params">(s: <span class="hljs-type">CharSequence</span>, start: <span class="hljs-type">Int</span>, before: <span class="hljs-type">Int</span>, count: <span class="hljs-type">Int</span>)</span></span> {
+            timer?.cancel()
+    }
+
+    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">afterTextChanged</span><span class="hljs-params">(s: <span class="hljs-type">Editable</span>)</span></span> {
+        timer = Timer()
+        timer!!.schedule(<span class="hljs-keyword">object</span> : TimerTask() {
+            <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span> {
+                runOnUiThread { textView.setText(<span class="hljs-string">"Output : "</span> + editTextStop.getText()) }
+            }
+        }, <span class="hljs-number">1000</span>)
+    }
+})</code></pre>
+<p><strong>Reactive Solution</strong></p>
+<p>Reactive solution is very boilerplate-free. And there are only 3 steps to it.</p>
+<ol>
+<li>Create an observable</li>
+<li>Add Debounce operator with 1000 Milliseconds (1 second) delay</li>
+<li>Subscribe to it</li>
+</ol>
+<p>First the Java code</p>
+<pre><code class="hljs language-java">   Observable.create(<span class="hljs-keyword">new</span> Observable.OnSubscribe&lt;String&gt;() {
+                    <span class="hljs-meta">@Override</span>
+                    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">call</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Subscriber&lt;? <span class="hljs-keyword">super</span> String&gt; subscriber)</span> </span>{
+                        editText.addTextChangedListener(<span class="hljs-keyword">new</span> TextWatcher() {
+                            <span class="hljs-meta">@Override</span>
+                            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">beforeTextChanged</span><span class="hljs-params">(<span class="hljs-keyword">final</span> CharSequence s, <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> count, <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> after)</span> </span>{
+                            }
+
+                            <span class="hljs-meta">@Override</span>
+                            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onTextChanged</span><span class="hljs-params">(<span class="hljs-keyword">final</span> CharSequence s, <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> before, <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> count)</span> </span>{
+                                subscriber.onNext(s.toString());
+                            }
+
+                            <span class="hljs-meta">@Override</span>
+                            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">afterTextChanged</span><span class="hljs-params">(<span class="hljs-keyword">final</span> Editable s)</span> </span>{
+                            }
+                        });
+                    }
+                })
+                .debounce(<span class="hljs-number">1000</span>, TimeUnit.MILLISECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(<span class="hljs-keyword">new</span> Action1&lt;String&gt;() {
+                    <span class="hljs-meta">@Override</span>
+                    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">call</span><span class="hljs-params">(<span class="hljs-keyword">final</span> String s)</span> </span>{
+                        textView.setText(<span class="hljs-string">"Output : "</span> + s);
+                    }
+                });</code></pre>
+<p>Now Kotlin &#x2764;</p>
+<pre><code class="hljs language-kotlin">        Observable.create(Observable.OnSubscribe&lt;String&gt; { subscriber -&gt;
+            editText.addTextChangedListener(<span class="hljs-keyword">object</span> : TextWatcher {
+                <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">afterTextChanged</span><span class="hljs-params">(s: <span class="hljs-type">Editable</span>?)</span></span> = <span class="hljs-built_in">Unit</span>
+
+                <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">beforeTextChanged</span><span class="hljs-params">(s: <span class="hljs-type">CharSequence</span>?, start: <span class="hljs-type">Int</span>, count: <span class="hljs-type">Int</span>, after: <span class="hljs-type">Int</span>)</span></span> = <span class="hljs-built_in">Unit</span>
+
+                <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">onTextChanged</span><span class="hljs-params">(s: <span class="hljs-type">CharSequence</span>, start: <span class="hljs-type">Int</span>, before: <span class="hljs-type">Int</span>, count: <span class="hljs-type">Int</span>)</span></span>
+                        = subscriber.onNext(s.toString())
+            })
+        }).debounce(<span class="hljs-number">1000</span>, TimeUnit.MILLISECONDS)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({
+                    text -&gt;
+                    textView.text = <span class="hljs-string">"Output : "</span> + text
+                })</code></pre>
+<h4>Even Less Boilerplate &rarr;RxBindings!</h4>
+<p>Now for almost no boilerplate, we can use <a href="https://github.com/JakeWharton/RxBinding"><strong>RxBindings</strong></a>which has many super-awesome bindings for UI widgets. And it works on both Java and Kotlin! Using bindings, the code becomes...</p>
+<pre><code class="hljs language-java">    <span class="hljs-comment">//Java with Retrolambda and RxBinding</span>
+    RxTextView.afterTextChangeEvents(editText)
+              .debounce(<span class="hljs-number">1000</span>,TimeUnit.MILLISECONDS)
+              .observeOn(AndroidSchedulers.mainThread())
+              .subscribe(tvChangeEvent -&gt; {
+                 textView.setText(<span class="hljs-string">"Output : "</span> + tvChangeEvent.view()
+                            .getText());
+              });</code></pre>
+<pre><code class="hljs language-kotlin">    <span class="hljs-comment">//Kotlin with RxBinding</span>
+    RxTextView.afterTextChangeEvents(editText)
+              .debounce(<span class="hljs-number">1000</span>, TimeUnit.MILLISECONDS)
+              .observeOn(AndroidSchedulers.mainThread())
+              .subscribe { tvChangeEvent -&gt;
+                        textView.text = <span class="hljs-string">"Output : "</span> + tvChangeEvent.view().text
+              }</code></pre>
+<p>As you would&rsquo;ve noticed, there&rsquo;s very little boilerplate and the code is much more to-the-point. If I were to go back to this code in a few months, it would hardly take me a minute to figure out what&rsquo;s going on. And that is... Priceless!</p>
+<p>Here are some awesome resources for Rx that I recommend. Do check these out! I will further play around with Rx+(Kotlin &amp; Java) and complete part 2, so stay tuned and happy coding!</p>
+<ul>
+<li><a href="http://reactivex.io">Official Rx Page</a></li>
+<li><a href="http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/">Grokking RxJava Series by Dan Lew</a></li>
+<li><a href="http://beust.com/weblog/2015/03/23/android-rx-and-kotlin-a-case-study/">Android Rx, and Kotlin : A case study</a></li>
+<li><a href="http://stablekernel.com/blog/replace-asynctask-asynctaskloader-rx-observable-rxjava-android-patterns/">Replace AsyncTasks with Rx</a></li>
+<li><a href="http://www.philosophicalhacker.com/2015/06/12/an-introduction-to-rxjava-for-android/">PhilosophicalHacker Blog on Rx</a></li>
+<li><a href="http://nerds.weddingpartyapp.com/tech/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/">Implementing EventBus in Rx</a></li>
+<li><a href="https://github.com/ReactiveX/RxKotlin">RxKotlin</a></li>
+</ul>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

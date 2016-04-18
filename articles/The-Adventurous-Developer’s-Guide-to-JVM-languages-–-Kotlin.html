@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Adventurous Developer’s Guide to JVM languages – Kotlin</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Exploring-the-Kotlin-Standard-Library-Part-2.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Exploring-the-Kotlin-Standard-Library-Part-1.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://zeroturnaround.com/rebellabs/the-adventurous-developers-guide-to-jvm-languages-kotlin/">The Adventurous Developer’s Guide to JVM languages – Kotlin</a> - <span class="main-title-date">Jan 23, 2013</span>
+      </h1>
+      <h2>by Simon Maple</h2>
+      <p>In this post we will focus on <a href="http://kotlin.jetbrains.org/">Kotlin</a>, with a simple <a href="https://github.com/sjmaple/Kotlin-HTTP-Server">HTTP Server coding example</a> to showcase the language features and coding syntax.</p>
+<p><a href="http://devnet.jetbrains.net/servlet/JiveServlet/showImage/2-5456865-25537/KotlinLogo.png"><img src="http://devnet.jetbrains.net/servlet/JiveServlet/showImage/2-5456865-25537/KotlinLogo.png" alt=""></a></p>
+<p>The Kotlin HTTP Server example we coded can be found on <a href="https://github.com/sjmaple/Kotlin-HTTP-Server">github</a>. Kotlin is a fairly young, statically-typed language, created by JetBrains and first announced at the JVM language summit in July 2011. The smart folks at JetBrains, creators of IntelliJ IDEA, have integrated many languages into their IDE and are pretty clued up on which requirements a modern-day developer is looking for, as well as the capabilities of the existing JVM languages.</p>
+<p>The IDE support was the first &lsquo;challenge&rsquo; I was faced with. As an Eclipse user, switching to the IntelliJ IDEA environment is always difficult, but it&rsquo;s a necessary step if you want to code in a rich Kotlin environment. It&rsquo;s fairly easy to install the Kotlin plugin, and create Kotlin artifacts, but just a shame the support isn&rsquo;t also being pushed to other IDEs. Maybe we can subtly hint this to the JetBrains team? ;)</p>
+<p><img src="http://zeroturnaround.com/wp-content/uploads/2013/01/kotlin-ide.png" alt="kotlin-ide"></p>
+<h3>Elegant coding</h3>
+<p>Coding in Kotlin really does provide some very elegant code. It removes the need for null checks, uses primary constructors, smart casts, range expressions... the list goes on. Let&rsquo;s take a look at an example.</p>
+<p>From my Java background I did like the combination of the <code>is</code>/<code>as</code> casting with the <code>when</code> structure. In Java terms, consider them as <code>instance of</code>, cast &ndash; <code>(A) obj</code> and <code>case</code> respectively. The <code>is</code> usage will also infer a cast if you go ahead and use the object straight away. E.g: <code>if (stream is Reader) stream.close()</code> In this example, the <code>stream.close()</code> is being called via the <code>Reader</code> interface. This would be the same as saying <code>if (stream is Reader) (stream as Reader).close()</code> but the extra code is not needed. This in combination with when allows you to switch over a variable, but not just using its value as you can get a richer involvement. Consider the following:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">when</span> (stream) {
+    <span class="hljs-keyword">is</span> Reader -&gt; stream.close()
+    <span class="hljs-keyword">is</span> Writer -&gt; stream.close()
+    <span class="hljs-keyword">is</span> InputStream -&gt; stream.close()
+    <span class="hljs-keyword">is</span> OutputStream -&gt; stream.close()
+    <span class="hljs-keyword">is</span> Socket -&gt; stream.close()
+    <span class="hljs-keyword">else</span> -&gt; System.err.println(<span class="hljs-string">"Unable to close object: "</span> + stream)
+}</code></pre>
+<p>This is really clean, elegant code if you consider how you might want to implement this in Java. C# interestingly has a very similar usage of <code>is</code> and <code>as</code>, and also implements nullable types.</p>
+<p>Method calls make use of parameter naming as well as defaults. It can be such a headache when a method takes in 5 booleans as you have to call the method very carefully so you pass <code>true</code> and <code>false</code> in the right order. Parameter naming gets round the confusion by qualifying the parameter name with the parameter itself on the method invocation. Nice. Again, this has been done in the past by other languages and scripting frameworks, but it&rsquo;s a welcome addition to any language, particularly with parameter defaults, which allow the method invocation to omit certain parameters if the user is happy to accept default values. Lets take a look at an example:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">print</span><span class="hljs-params">(<span class="hljs-keyword">out</span> : <span class="hljs-type">PrintWriter</span>, pre : <span class="hljs-type">String</span>, contentType: <span class="hljs-type">String</span> = <span class="hljs-string">"text/html"</span>,
+                  contentLength : <span class="hljs-type">Long</span> = <span class="hljs-number">-1.</span>toLong()</span></span>, title : String, body : () -&gt; <span class="hljs-built_in">Unit</span>)</code></pre>
+<p>Here we have a method with several <code>String</code> parameters as well as a function as input. It is invoked using the following call. Notice that <code>contentType</code> and <code>contentLength</code> are both omitted from the invocation meaning the defaults in the declaration are used.</p>
+<pre><code class="hljs language-kotlin">print(<span class="hljs-keyword">out</span> = <span class="hljs-keyword">out</span>,
+      pre = <span class="hljs-string">"HTTP/1.0 404 Not Found"</span>,
+      title = <span class="hljs-string">"File Not Found"</span>,
+      body = {<span class="hljs-keyword">out</span>.println(<span class="hljs-string">"&lt;H2&gt;404 File Not Found: "</span> + file.getPath() + <span class="hljs-string">"&lt;/H2&gt;"</span>)})</code></pre>
+<p>So what does this mean? Well, there will be much less method overloading! Result! :D Seriously though, it&rsquo;s amazing to think Java gone over 20 years without additions like this? Sometimes it does feel like you&rsquo;re coding in the dark a little. Come on Java, catch up!</p>
+<h3>Kotlin will help you write safe code, unless you don&rsquo;t want to!</h3>
+<p>Let&rsquo;s get geeky. Firstly you can say goodbye to NPEs! Kotlin uses &lsquo;nullable types&rsquo; and &lsquo;non-nullable types&rsquo; to differentiate between vars which could be null, and those which will never be null. Consider the following code:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> a : String = <span class="hljs-string">"a"</span>
+a = <span class="hljs-literal">null</span> <span class="hljs-comment">// compilation error</span></code></pre>
+<p>To allow nulls, the var must be declared as nullable, in this case, written <code>String?</code>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> b : String? = <span class="hljs-string">"b"</span>
+b = <span class="hljs-literal">null</span> <span class="hljs-comment">// valid null assignment</span></code></pre>
+<p>Now, if you call a method on a, it&rsquo;s guaranteed not to cause an NPE, so you can safely say</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> l = a.length()</code></pre>
+<p>But if you want to call the same method on b, that would not be safe, and the compiler reports an error:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> l = b.length() <span class="hljs-comment">// error: variable 'b' can be null</span></code></pre>
+<p>By knowing which vars can be null, the Kotlin compiler mandates that when you dereference a nullable type, you do so using one of the following methods:</p>
+<p>Hmmm, I&rsquo;m half way through writing this blog post and I&rsquo;ve not mentioned anything that&rsquo;s strikingly new or innovative... let&rsquo;s continue and see how we go.</p>
+<p>Safe calls in Kotlin are very similar to those in Groovy, including the notation. By dereferencing a nullable type using &lsquo;<code>.?</code>&lsquo; like in the example below, tells the compiler to call length on object b, unless it is null, in which case do nothing.</p>
+<pre><code class="hljs language-kotlin">b?.length()</code></pre>
+<p>Those of you who are thinking &lsquo;What? Get rid of null? Where&rsquo;s the fun in that?&rdquo;, there is the <code>!!</code> operator which allows for the potential of a NPE to be thrown, if you so wish.</p>
+<p>You can also use the <code>?</code> notation with <code>as</code> to avoid exceptions being thrown if the cast is not possible. This is called a safe cast.</p>
+<h3>Functions</h3>
+<p>Functions can be created inside (member functions) or outside of a class. A function can contain other functions (local functions) and you can use functions to extend existing classes such as the following:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-built_in">Int</span>.<span class="hljs-title">abs</span><span class="hljs-params">()</span></span> : <span class="hljs-built_in">Int</span> = <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span> &gt;= <span class="hljs-number">0</span>) <span class="hljs-keyword">this</span> <span class="hljs-keyword">else</span> -<span class="hljs-keyword">this</span></code></pre>
+<p>This example extends the <code>Int</code> class to return the absolute value it contains.</p>
+<p>Functions are very powerful and are well used on the JVM in many languages (Still not in Java, until Java 8). Kotlin also allows the use of higher order functions which means you can pass a function as an argument to a method call (function literal).</p>
+<p>Almost at the end now, and still nothing that I would call really stand out, knee smackingly amazing. Don&rsquo;t misunderstand my point, I think Kotlin is a very nice language but so far it&rsquo;s been getting that way by extracting pieces of existing languages and putting a new spin on it. Maybe this is to be expected given the exposure the JetBrains team have had to all the existing languages they support, and maybe this is what they intended to produce. Do we need extra languages to please every persons development style in the development community? Maybe... Maybe not.</p>
+<h3>Documentation/Help</h3>
+<p>I found that the documentation for Kotlin was all in the same place. All Google searches led back to the <a href="http://confluence.jetbrains.net/display/Kotlin/Welcome">community site</a>. I think this is a shame, as it would be great to go somewhere else with other examples and resources with which to play around with, but I guess it&rsquo;s still quite young. It would be nice to see more code in github and the like, for others to follow.</p>
+<h3>Summary</h3>
+<p>Overall I really enjoyed using Kotlin. Nothing about Kotlin is particularly groundbreaking, but what makes it great is that it cherry picks some of the best parts of other languages.</p>
+<p><strong>The parts I really liked about the language:</strong></p>
+<ul>
+<li>The use of functions really gives the developer extra options in designing code.</li>
+<li>Parameter names should be mandatory in every language as they&rsquo;re so great! Kotlin uses them well with default values.</li>
+<li>Extending classes is very easy and very useful.</li>
+<li>The documentation is good and there are very interesting discussions in the comments.</li>
+<li>It&rsquo;s a pretty language! The keyword and fluff to useful code ratio is much better in Kotlin using constructs such as <code>when</code>, <code>is</code> and <code>as</code></li>
+<li>Kotlin is enjoyable to write and very easy to readand I would expect maintain, particularly because it&rsquo;s a safe language.</li>
+</ul>
+<p><strong>There were a couple of pain points though:</strong></p>
+<ul>
+<li>
+<p>The error flags in IntelliJ popping up all over the place if there is a single error, because of the knock on effect of the error. It can be hard to find the root cause.</p>
+</li>
+<li>
+<p>I also had a few problems with try-finally for my stream closes, which I didn&rsquo;t have time to resolve. When I added the close in the finally block, it seemed to use the result as part of the return by the look of the exception received:</p>
+<p><em>Exception in thread &ldquo;main&rdquo; java.lang.VerifyError: (class: HttpServer, method: run signature: ()V) Register 9 contains wrong type
+at namespace.main(HTTPServer.kt:169)</em></p>
+</li>
+</ul>
+<p>With milestone releases every 2-3 months, Kotlin may soon be a language which many Scala beginners may turn to, although I don&rsquo;t think the happy Scala users will be too bothered about it. From what I&rsquo;ve read online, some look down on it, but you&rsquo;d expect that from opinionated techies wouldn&rsquo;t you? :) (Not to divert you, but for more on Scala, feel free to check out our super popular <a href="http://zeroturnaround.com/labs/scala-2013-a-pragmatic-guide-to-scala-adoption-in-your-java-organization/">Scala report</a>, featuring an in-depth interview with Martin Odersky)</p>
+<p>I&rsquo;d like to look back in 6 months or a year to see how Kotlin has evolved, and with the JetBrains team driving it, we&rsquo;re certain to be in for a fun ride. My initial impression is that Kotlin is going on a route quite similar to Scala, today. I wouldn&rsquo;t expect anyone who is happy with Scala to migrate across to Kotlin, as the Kotlin folks have also mentioned, but for people who have been frustrated with Scala, it may be worth looking at some time in the future. I think it is sharing a busy market of developers with other languages that are too similar in features and syntax may not help them survive longer term. If you want to have a go yourself you can also play with <a href="http://kotlin-demo.jetbrains.com">Kotlin in a browser</a>. I&rsquo;d love to hear your experiences in the comments!</p>
+<p><strong>Don&rsquo;t forget to check out the <a href="https://github.com/sjmaple/Kotlin-HTTP-Server">HTTP Server sample Kotlin code on Github</a>.</strong></p>
+<p><em>Psst! If you liked this post, <a href="http://zeroturnaround.com/rebellabs/devs/the-adventurous-developers-guide-to-jvm-languages/">we wrote a 50-page RebelLabs report</a> on Java 8, Scala, Groovy, Fantom, Clojure, Ceylon, Kotlin &amp; Xtend.</em></p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

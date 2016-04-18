@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Kotlin-vs-Java-puzzlers.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Exploring-the-Kotlin-Standard-Library-Part-3.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://www.oracle.com/technetwork/articles/java/breslav-1932170.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a> - <span class="main-title-date">Apr 02, 2013</span>
+      </h1>
+      <h2>by Janice J. Heiss</h2>
+      <p><strong>Learn about Kotlin, a new statically typed language for the JVM.</strong></p>
+<p><em>Among the important Java software developments in recent years is the advent of such alternative languages for the JVM as Groovy, Jython, and JRuby&mdash;and, more recently, the rise of Scala. A new statically typed language, Kotlin, named after a Russian island off the coast of St. Petersburg, where Kotlin&#x27;s Andrey Breslav and the Kotlin team reside, has recently been getting attention. A brainchild of the highly lauded Czech software development company JetBrains, maker of the Java IDE IntelliJ IDEA, Kotlin was named Language of the Month in the</em> <a href="http://www.drdobbs.com/jvm/language-of-the-month-kotlin/232600836?pgno=2"><em>January 2012 issue of</em> Dr. Dobb&#x27;s Journal</a>.</p>
+<p><em>The primary purpose of Project Kotlin is to create for developers a general-purpose language that can serve as a useful tool that is safe, concise, flexible, and 100 percent Java-compatible. Both the compiler and the IntelliJ IDEA plug-in are open source under the Apache 2 license, with source code available through <a href="https://github.com/JetBrains/Kotlin">GitHub</a>.</em></p>
+<p><em>Google software engineer Cedric Beust, creator of the Java testing framework TestNG, writing in <a href="http://java.dzone.com/articles/five-reasons-why-you-should-0">Javalobby</a> in July 2011, commented that Kotlin was a cause for rejoicing because of its syntactic innovations; its strong IDE; commercial support from JetBrains, which is building the compiler and the IDEA support together; and its reified generics.</em></p>
+<p><em>Andrey Breslav, the lead language designer for Kotlin, began his career at Borland, where he worked on language implementations for MDA support. After spending a few years as a college teacher, he joined JetBrains in 2010 to lead Project Kotlin and currently serves as a member of the Java Community Process Expert Group for JSR 335, &quot;Project Lambda.&quot; He is a frequent conference speaker at venues such as OSCON, JavaOne, Strange Loop, and Devoxx.</em></p>
+<p><em>We met with him to see what&#x27;s happening with Project Kotlin.</em></p>
+<p><img src="http://www.oracle.com/ocom/groups/public/@otn/documents/digitalasset/1925119.jpg" alt="Andrey Breslav"></p>
+<p><strong>Oracle Technology Network</strong>: You have written that your goal with Kotlin is &quot;to create a language that is 100 percent Java-compatible, safer than Java, more concise and flexible, and not overly complex.&quot; Give us some details about this.</p>
+<p><strong>Breslav:</strong> Every tool comes with a driving use case. We believe that for a new programming language, this use case is gradual migration, when the new language is being introduced little by little into a large code base written in the &quot;old&quot; language. In our case, we pay a lot of attention to making mixed Kotlin/Java projects work smoothly.</p>
+<p>For example, IntelliJ IDEA is written in Java and we are willing to use Kotlin in this project. Of course, we are not going to rewrite the whole 10-year-old code base in another language. Most likely, we will start by writing tests in Kotlin, then new features, then maybe some existing subsystems that will be migrated to Kotlin while under refactoring.</p>
+<blockquote>
+<p>&ldquo;Kotlin relies on Java libraries but makes them better, mostly through extensions but sometimes with compiler-supported techniques (collections, arrays, primitives).&rdquo;</p>
+<p><strong>- Andrey Breslav</strong> JetBrains</p>
+</blockquote>
+<p>All of this means that Kotlin has to behave very well in the existing Java ecosystem: use Java libraries, provide Java APIs, and integrate with Java frameworks. Some other new languages adopt a different approach and aim at abandoning the JDK and building their own better platform. Although this approach involves running on the JVM and is technically Java-compatible, it is practically impossible in the use case I just described.</p>
+<p>As for Kotlin, a good example is our collection library. The experience of Scala shows that having your own collection library&mdash;all nice and shiny&mdash;gives you significant benefits but also has drawbacks when you need to interoperate with Java code: all the data needs to be converted/wrapped, so the code does not look nice and performance is sometimes compromised significantly. This is why Kotlin adopts another strategy: we use vanilla Java collections but make them behave nicely by extracting &quot;virtual&quot; read-only interfaces and introducing declaration-site variance. This way we get both compatibility and a nice library.</p>
+<p>Kotlin relies on Java libraries but makes them better, mostly through extensions but sometimes with compiler-supported techniques (collections, arrays, primitives). This gets us compatibility while keeping the language clean.</p>
+<h2>Kotlin and Scala</h2>
+<p><strong>Oracle Technology Network:</strong> In what ways is Kotlin simpler than Scala?</p>
+<p><strong>Breslav:</strong> It depends on the definition of <em>simpler</em>. Kotlin and Scala have very different approaches: Scala aims to give library designers as much power as possible and relies heavily on a rather elaborate type system, whereas Kotlin&#x27;s goal is to be a good tool for the end user, so we put a lot of effort into keeping the list of features relatively short.</p>
+<p>Here are a few things that Scala has and Kotlin does not:</p>
+<ul>
+<li>Implicit parameters and implicit conversions</li>
+<li>(Path-)dependent types</li>
+<li>Full-scale existential types</li>
+<li>View bounds, context bounds, and all other exotic bounds</li>
+<li>Macros</li>
+</ul>
+<p>This list is very far from complete.</p>
+<blockquote>
+<p>&quot;Kotlin provides more-flexible abstractions than Java (including Java 8).&quot;</p>
+<p><strong>- Andrey Breslav</strong> JetBrains</p>
+</blockquote>
+<p><strong>Oracle Technology Network:</strong> In what ways is Kotlin more concise than Java?</p>
+<p><strong>Breslav:</strong> The less important part is that Kotlin generally requires less ceremony. A few examples:</p>
+<ul>
+<li>Type inference is much stronger, so you don&#x27;t have to repeat yourself, specifying the same types over and over again.</li>
+<li>Class declarations are more concise, thanks to the concepts of properties and primary constructors.</li>
+<li>Delegating overloads are not needed most of the time, thanks to default values for function parameters.</li>
+<li>Static utility classes are not needed, because of top-level functions.</li>
+</ul>
+<p>Of greater importance, Kotlin provides more-flexible abstractions than Java (including Java 8). Here are some examples:</p>
+<ul>
+<li>Extension functions and properties in Kotlin can be added to any class/type without altering the definition of the class (as opposed to Java 8&#x27;s ability to add methods to interfaces by changing their code). This enables us to beautify even existing Java libraries so that the good old JDK looks nice and shiny.</li>
+<li>Higher-order functions (passing code around as values) are a lot more convenient, because Kotlin supports proper function types (as opposed to Java 8&#x27;s SAM conversions that make you create a new interface every time you need a new function signature to be passed around).</li>
+<li>Declaration-site variance, and variant collections in particular, make common data processing much more natural by eliminating the need for ubiquitous wildcards in generic types.</li>
+</ul>
+<p><strong>Oracle Technology Network:</strong> What is the most negative feedback you have received about Kotlin?</p>
+<p><strong>Breslav:</strong> &quot;It&#x27;s not released yet.&quot;</p>
+<p><strong>Oracle Technology Network:</strong> What is the most positive?</p>
+<p><strong>Breslav:</strong> &quot;One language finally got everything right!&quot;</p>
+<h2>The Release Status of Kotlin</h2>
+<p><strong>Oracle Technology Network:</strong> What is the release status of Kotlin? How can developers get involved?</p>
+<p><strong>Breslav:</strong> Kotlin reached the M5 milestone in early February 2013. As for big features, we are mostly stabilizing them and working on performance. Smaller features are being added, too. The project is open to contributions, and we do our best to process pull requests reasonably quickly.</p>
+<p>We do not have a date for the 1.0 release. This is an important part of our philosophy. When the features planned for 1.0 are stable and the compiler is release-quality, we are not going to call it 1.0. It will be a beta, available to everyone to use but with no guarantee of backward compatibility for the updates. The point here is that at the &quot;beta&quot; stage, a language finally gets to be used in production (maybe other companies will refrain from doing so at first, but at least JetBrains will definitely use Kotlin), and extensive production use may reveal problems in the language design that need to be fixed.</p>
+<p>Don&#x27;t get me wrong: we are making all possible efforts to make the language really good. We rely on the experience of our best engineers and on the feedback we are constantly gathering from other companies and individuals. But we know that practice always brings surprises overlooked by theory, so we embrace the need to validate the design before releasing it and committing to keeping it unchanged. This is why we do not have a date for 1.0 and do not guarantee language design stability right after the beta: it&#x27;s hard to predict what changes will be necessary.</p>
+<p>When the design is properly validated and all the problems fixed, we will call it 1.0 and guarantee language stability from that point on.</p>
+<p><strong>Oracle Technology Network:</strong> JetBrains is currently using Kotlin in the production of IntelliJ IDEA and in other projects. Tell us how Kotlin is doing with IntelliJ IDEA. What are some of the challenges?</p>
+<p><strong>Breslav:</strong> First, only very brave souls are using Kotlin for production now. And the bravest among them use the less mature JavaScript back end that compiles Kotlin to run in the browser. There are very many challenges, but the result is awesome: <a href="http://blog.jetbrains.com/webide/2012/08/liveedit-plugin-features-in-detail/">IntelliJ IDEA&#x27;s Live Edit</a>.</p>
+<h2>Enhancing Java Libraries</h2>
+<p><strong>Oracle Technology Network:</strong> Give us some examples of ways in which Kotlin can enhance Java libraries.</p>
+<p><strong>Breslav:</strong> First, the way Kotlin treats collections: it uses standard JDK classes at runtime, but at compile time, it introduces &quot;virtual&quot; read-only interfaces that are covariant, so that a (read-only) <code>List&lt;String&gt;</code> can be passed where a (read-only) <code>List&lt;Object&gt;</code> is expected.</p>
+<p>Also, Kotlin introduces many extension functions for collection classes. For example, the <code>map()</code> and <code>filter()</code> functions allow fluent manipulation with data:</p>
+<pre><code class="hljs language-kotlin">users.filter {u -&gt; u.age &gt;= 21}.map {u -&gt; u.name}</code></pre>
+<p>Many other things are done through extensions: from <code>for</code>-loop support to operator overloading and tuplelike manipulations.</p>
+<h2>Other Alternative Languages</h2>
+<p><strong>Oracle Technology Network:</strong> Where does Kotlin fit in among the proliferated new languages for the JVM? How does it compare to Groovy, Jython, JRuby, Scala, and others? And with so many languages available to us, why do we need Kotlin?</p>
+<p><strong>Breslav:</strong> Groovy, Jython, and Ruby are primarily dynamic, whereas Kotlin is statically typed, which means the ability to catch more errors at compile time (type safety), faster execution, and smarter tools.</p>
+<p>Groovy 2.0&#x27;s static-compilation feature makes the generated code perform comparably to Java, and this is a great improvement for Groovy. But the type system it supports is the one Java uses, meaning that all the abstraction mechanisms are exactly the same&mdash;for example, you get Java generics with all the inconveniences of use site variance and so on.</p>
+<p>Scala is a different story&mdash;it is a statically typed language&mdash;and we&#x27;ve learned a lot from Scala&#x27;s design. Compared to Kotlin, Scala is much more powerful and much harder for people as well as machines to really understand.</p>
+<p><strong>Oracle Technology Network:</strong> Tell us about IDE support in Kotlin.</p>
+<p><strong>Breslav:</strong> We started an IntelliJ IDEA plug-in for Kotlin simultaneously with the compiler, and we reuse a lot of code between the two. This guarantees very accurate analysis in the IDE on the one hand and makes it possible to use IntelliJ IDEA&#x27;s existing infrastructure for Java.</p>
+<p><strong>Oracle Technology Network</strong>: What are the most important features of Kotlin that Java lacks?</p>
+<p><strong>Breslav:</strong> Assuming that by &quot;Java&quot; you mean Java 8, and with the biggest pain of the decade, lambdas (frequently called &quot;closures&quot;), being there already: the most important features are powerful type inference, extensions, declaration-site variance, and read-only interfaces for collections.</p>
+<p>On the library side: type-safe builders are also important.</p>
+<h2>Getting Set Up with Kotlin</h2>
+<p><strong>Oracle Technology Network:</strong> How can developers get set up with Kotlin? What feedback do you want?</p>
+<p><strong>Breslav:</strong> Download the compiler and/or a plug-in for IntelliJ IDEA, and write your cool application. We want feedback about what people like and dislike about Kotlin, what they find hard to understand, and how they use the features the language offers.</p>
+<p><strong>Oracle Technology Network:</strong> What kind of Java developer will benefit most from Kotlin?</p>
+<blockquote>
+<p>&quot;We want feedback about what people like and dislike about Kotlin, what they find hard to understand, and how they use the features the language offers.&quot;</p>
+<p><strong>- Andrey Breslav</strong> JetBrains</p>
+</blockquote>
+<p><strong>Breslav:</strong> A Java developer who has reached the limits of the language (and I believe that many of us did that a long time ago) realizes the need for a new language with benefits such as cleaner abstractions, concise syntax, and type safety.</p>
+<p><strong>Oracle Technology Network:</strong> In what ways is Kotlin safer than Java? What safety problems in Java does Kotlin address?</p>
+<p><strong>Breslav:</strong> Kotlin promotes null safety, though nullable types. It also offers control over data modification through read-only collections and data classes and enables safer runtime checks through smart casts.</p>
+<p><strong>Oracle Technology Network:</strong> What are some Java use problems that Kotlin fixes?</p>
+<p><strong>Breslav:</strong> It fixes half of the issues covered in Joshua Bloch&#x27;s _Java Puzzler_s books: from quirks of implicit conversions of primitives, through problems with static members and their inheritance, all the way to properly variant generics and null safety.</p>
+<p><strong>Oracle Technology Network:</strong> What are the greatest misconceptions you encounter about languages for the JVM and Kotlin in particular?</p>
+<p><strong>Breslav:</strong> We come across the term <em>functional programming</em> all the time, and people often mean different things by this, if anything at all.</p>
+<p>Bigger functional languages such as ML and Haskell impose a certain discipline and beauty that are highly appreciated by some people, but this is clearly not the reason why your coworker in a nearby cubicle will be talking to you about functional programming over lunch.</p>
+<p>The main selling point of &quot;functional programming for the masses&quot; is its usefulness for concurrency that everybody is struggling with today, and the argument for this usefulness usually boils down to &quot;no side effects equals no problems&quot; or &quot;no shared memory equals no problems.&quot;</p>
+<p>By this reasoning, all we need is immutable data or isolation (or both), but that does not necessarily bring any of the beauty and rigor of functional languages. Other things widely used in functional languages would be great to adopt in mainstream programming&mdash;this applies mostly to means of type-safe abstraction, such as higher-order functions (functions that take other functions as arguments) and parametric polymorphism (generics). But these features, again, do not define functional languages.</p>
+<p>My point is: a good language does not need to be functional like Haskell, although it needs some features that are popular in the &quot;functional world.&quot;</p>
+<h2>See Also</h2>
+<ul>
+<li><a href="http://www.drdobbs.com/jvm/language-of-the-month-kotlin/232600836?pgno=2">January 2012 issue of <em>Dr. Dobb&#x27;s Journal</em></a></li>
+<li><a href="https://github.com/JetBrains/Kotlin">GitHub</a></li>
+<li><a href="http://java.dzone.com/articles/five-reasons-why-you-should-0">Javalobby</a></li>
+<li><a href="http://blog.jetbrains.com/webide/2012/08/liveedit-plugin-features-in-detail/">IntelliJ IDEA&#x27;s Live Edit</a></li>
+<li><a href="http://kotlin.jetbrains.org/">Kotlin</a></li>
+<li><a href="http://www.jetbrains.com/">JetBrains</a></li>
+</ul>
+<h2>About the Author</h2>
+<p>Janice J. Heiss is the Java acquisitions editor at Oracle and a technology editor at <em>Java Magazine</em>.</p>
+<h2>Join the Conversation</h2>
+<p>Join the Java community conversation on <a href="https://www.facebook.com/ilovejava">Facebook</a>, <a href="https://twitter.com/#!/java">Twitter</a>, and the <a href="https://blogs.oracle.com/java/">Java Source Blog</a>!</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

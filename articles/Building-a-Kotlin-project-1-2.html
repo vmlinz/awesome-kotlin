@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Building a Kotlin project 1/2</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Building-a-Kotlin-project-2-2.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://cirorizzo.net/2016/03/04/building-a-kotlin-project/">Building a Kotlin project 1/2</a> - <span class="main-title-date">Mar 04, 2016</span>
+      </h1>
+      <h2>by Ciro Rizzo</h2>
+      <h3>Part 1</h3>
+<p>The best way to learn a new language is to use it in a real use case.
+That&#x27;s way this new series of posts are focused on building a proper Android project using Kotlin.</p>
+<h2>Scenario</h2>
+<p>To cover as many scenarios as possible the project will require:</p>
+<ul>
+<li>Accessing to the network</li>
+<li>Retrieving data through out a REST API call</li>
+<li>Deserialize data</li>
+<li>Showing Images in a list</li>
+</ul>
+<p>For this purpose why not have an app showing kittens? ;)
+Using the <a href="http://thecatapi.com/">http://thecatapi.com/</a> API we can retrieve several funny cat images</p>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xkittenApp.png.pagespeed.ic.ulo4yWl6Cg.png" alt="Example"></p>
+<h2>Dependencies</h2>
+<p>It looks like a very good chance to try out some very cool libraries like</p>
+<ul>
+<li><a href="http://square.github.io/retrofit/">Retrofit2</a> for the network access, REST API calls and deserializing data</li>
+<li><a href="https://github.com/bumptech/glide">Glide</a> for showing images</li>
+<li><a href="https://github.com/ReactiveX/RxJava">RxJava</a> to bind data</li>
+<li><a href="http://developer.android.com/training/material/lists-cards.html">RecyclerView CardView</a> as UI</li>
+<li>Everything wrapped in a <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter">MVP</a> pattern</li>
+</ul>
+<h2>Set Up the Project</h2>
+<p>Using <a href="http://developer.android.com/sdk/index.html">Android Studio</a> is extremely simple create a new project from scratch</p>
+<h3>Start a new Android Project</h3>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xAndroidStudio_NewProject.png.pagespeed.ic.7fDR0qSTJd.png" alt="Start a new Android Project"></p>
+<h3>Create a new project</h3>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xAndroidStudio_NewProject_Create_NEW-1.png.pagespeed.ic.rtJ-FIVYiG.png" alt="Create a new project"></p>
+<h3>Select Target Android Device</h3>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xAndroidStudio_NewProject_Target.png.pagespeed.ic.bXlb6fWH62.png" alt="Select Target Android Device"></p>
+<h3>Add an activity</h3>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xAndroidStudio_NewProject_Empty.png.pagespeed.ic.VYxIdhZ3Xk.png" alt="Add an activity"></p>
+<h3>Customize the Activity</h3>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xAndroidStudio_NewProject_Activity.png.pagespeed.ic.3g2X5Gs9Bn.png" alt="Customize the Activity"></p>
+<p>Press on Finish, the new project from the chosen template will be created.</p>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xAndroidStudio_Basic_Template.png.pagespeed.ic.3iX8nv51PP.png" alt="Done"></p>
+<p>This is the starting point of our Kitten App!
+However the code is still in Java, later we&rsquo;re going to see how to convert it.</p>
+<h2>Defining Gradle Build Tool</h2>
+<p>The next step is to adjust the Build Tool and defining which libraries we&#x27;re going to use for the project.</p>
+<blockquote>
+<p>Before starting with this phase, have a look at what you need for an Android Kotlin project on this <a href="http://www.cirorizzo.net/kotlin-code/">post</a></p>
+</blockquote>
+<p>Open the Module App <code>build.gradle</code> (highlighted with a red rectangle in the picture)</p>
+<p><img src="http://cirorizzo.net/content/images/2016/03/xAndroidStudio_Basic_Gradle_High.png.pagespeed.ic.0SHrJn4YZc.png" alt="Gradle"></p>
+<p>It&#x27;s a very good practice collecting all the libraries&#x27; version and Android properties in separate scripts and accessing to them through the <code>ext</code> property object provided by Gradle.</p>
+<p>The easiest way is to add at the beginning of the <code>build.gradle</code> file the following snippet</p>
+<pre><code class="hljs language-groovy">buildscript {
+  ext.compileSdkVersion_ver = <span class="hljs-number">23</span>
+  ext.buildToolsVersion_ver = <span class="hljs-string">'23.0.2'</span>
+
+  ext.minSdkVersion_ver = <span class="hljs-number">21</span>
+  ext.targetSdkVersion_ver = <span class="hljs-number">23</span>
+  ext.versionCode_ver = <span class="hljs-number">1</span>
+  ext.versionName_ver = <span class="hljs-string">'1.0'</span>
+
+  ext.support_ver = <span class="hljs-string">'23.1.1'</span>
+
+  ext.kotlin_ver = <span class="hljs-string">'1.0.0'</span>
+  ext.anko_ver = <span class="hljs-string">'0.8.2'</span>
+
+  ext.glide_ver = <span class="hljs-string">'3.7.0'</span>
+  ext.retrofit_ver = <span class="hljs-string">'2.0.0-beta4'</span>
+  ext.rxjava_ver = <span class="hljs-string">'1.1.1'</span>
+  ext.rxandroid_ver = <span class="hljs-string">'1.1.0'</span>
+
+  ext.junit_ver = <span class="hljs-string">'4.12'</span>
+
+  repositories {
+      mavenCentral()
+  }
+
+  dependencies {
+      classpath <span class="hljs-string">"org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_ver"</span>
+  }
+}</code></pre>
+<p>Then adding the Kotlin plugins as shown</p>
+<pre><code class="hljs language-groovy">apply <span class="hljs-string">plugin:</span> <span class="hljs-string">'com.android.application'</span>
+apply <span class="hljs-string">plugin:</span> <span class="hljs-string">'kotlin-android'</span>
+apply <span class="hljs-string">plugin:</span> <span class="hljs-string">'kotlin-android-extensions'</span></code></pre>
+<p>Before adding the dependencies for the libraries we&#x27;re going to use in the project starting to change all the version numbers of the script with the <code>ext</code> properties added early at the beginning of the file</p>
+<pre><code class="hljs language-groovy">android {
+  compileSdkVersion <span class="hljs-string">"$compileSdkVersion_ver"</span>.toInteger()
+  buildToolsVersion <span class="hljs-string">"$buildToolsVersion_ver"</span>
+
+  defaultConfig {
+    applicationId <span class="hljs-string">"com.github.cirorizzo.kshows"</span>
+    minSdkVersion <span class="hljs-string">"$minSdkVersion_ver"</span>.toInteger()
+    targetSdkVersion <span class="hljs-string">"$targetSdkVersion_ver"</span>.toInteger()
+    versionCode <span class="hljs-string">"$versionCode_ver"</span>.toInteger()
+    versionName <span class="hljs-string">"$versionName_ver"</span>
+}
+...</code></pre>
+<p>One more change to the <code>builTypes</code> section</p>
+<pre><code class="hljs language-groovy">buildTypes {
+    debug {
+        buildConfigField(<span class="hljs-string">"int"</span>, <span class="hljs-string">"MAX_IMAGES_PER_REQUEST"</span>, <span class="hljs-string">"10"</span>)
+        debuggable <span class="hljs-literal">true</span>
+        minifyEnabled <span class="hljs-literal">false</span>
+        proguardFiles getDefaultProguardFile(<span class="hljs-string">'proguard-android.txt'</span>), <span class="hljs-string">'proguard-rules.pro'</span>
+    }
+
+    release {
+        buildConfigField(<span class="hljs-string">"int"</span>, <span class="hljs-string">"MAX_IMAGES_PER_REQUEST"</span>, <span class="hljs-string">"500"</span>)
+        debuggable <span class="hljs-literal">false</span>
+        minifyEnabled <span class="hljs-literal">true</span>
+        shrinkResources <span class="hljs-literal">true</span>
+        proguardFiles getDefaultProguardFile(<span class="hljs-string">'proguard-android.txt'</span>), <span class="hljs-string">'proguard-rules.pro'</span>
+    }
+}
+sourceSets {
+    main.java.srcDirs += <span class="hljs-string">'src/main/kotlin'</span>
+}</code></pre>
+<p>Next step is to declare the Libraries used in the project</p>
+<pre><code class="hljs language-groovy">dependencies {
+  compile fileTree(<span class="hljs-string">dir:</span> <span class="hljs-string">'libs'</span>, <span class="hljs-string">include:</span> [<span class="hljs-string">'*.jar'</span>])
+  testCompile <span class="hljs-string">"junit:junit:$junit_ver"</span>
+
+  compile <span class="hljs-string">"com.android.support:appcompat-v7:$support_ver"</span>
+  compile <span class="hljs-string">"com.android.support:cardview-v7:$support_ver"</span>
+  compile <span class="hljs-string">"com.android.support:recyclerview-v7:$support_ver"</span>
+  compile <span class="hljs-string">"com.github.bumptech.glide:glide:$glide_ver"</span>
+
+  compile <span class="hljs-string">"com.squareup.retrofit2:retrofit:$retrofit_ver"</span>
+  compile (<span class="hljs-string">"com.squareup.retrofit2:converter-simplexml:$retrofit_ver"</span>) {
+    exclude <span class="hljs-string">module:</span> <span class="hljs-string">'xpp3'</span>
+    exclude <span class="hljs-string">group:</span> <span class="hljs-string">'stax'</span>
+}
+
+  compile <span class="hljs-string">"io.reactivex:rxjava:$rxjava_ver"</span>
+  compile <span class="hljs-string">"io.reactivex:rxandroid:$rxandroid_ver"</span>
+  compile <span class="hljs-string">"com.squareup.retrofit2:adapter-rxjava:$retrofit_ver"</span>
+
+  compile <span class="hljs-string">"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_ver"</span>
+  compile <span class="hljs-string">"org.jetbrains.anko:anko-common:$anko_ver"</span>
+}</code></pre>
+<p>Finally the <code>build.gradle</code> is ready to work with the project.</p>
+<p>Just one more thing is to add the <code>uses-permission</code> to access to Internet, so add the following line to the <code>AndroidManifest.xml</code></p>
+<pre><code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">"android.permission.INTERNET"</span> /&gt;</span></code></pre>
+<p>And now we are ready to go to the next step</p>
+<h2>Designing Project Structure</h2>
+<p>Another good practice is to structure the project having different packages and folders for different group of Classes composing our project so we can structure our project as shown below.</p>
+<p><img src="data:image/png;base64,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" alt="Structure"></p>
+<blockquote>
+<p>Right Click on the Root Package <code>com.github.cirorizzo.kshows</code> and then <code>New -&gt; Package</code></p>
+</blockquote>
+<h2>Coding</h2>
+<p>The next <a href="http://www.cirorizzo.net/2016/03/04/building-a-kotlin-project-2/">post</a> is on how to code the elements of the Kitten app</p>
+<h2>Translations</h2>
+<p>This post is also available in Chinese on <a href="https://goo.gl/tBIMn7">gold.xitu.io</a>
+A special thanks for the translation to the gold.xitu.io Team</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kotlin: Practical Experience</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Kotlin-DSL-Anko.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Kotlin’s-killer-features.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://blog.scottlogic.com/2016/04/04/practical-kotlin.html">Kotlin: Practical Experience</a> - <span class="main-title-date">Apr 04, 2016</span>
+      </h1>
+      <h2>by Allen Wallis</h2>
+      <p>Kotlin 1.0.0 was officially released in February this year. Kotlin is a new language from JetBrains (of IntelliJ IDEA and ReSharper fame). It was originally announced in 2011 when a development version was made available to the public. While it can be compiled to JavaScript, the primary target is the JVM, and one of its core goals is 100% Java interoperability.</p>
+<p>I have spent some time recently experimenting with Kotlin. There are many features of the language to enjoy when comparing against Java, terseness being high in the list. However, this post primarily serves to highlight a few gotchas that caught me out in the hopes that others may save some time when dealing with similar issues. While this may seem a slightly negative approach for a blog post, my goal is to offer a more practical take instead of only mentioning all the cool things you can do.</p>
+<p>I really like Kotlin, I think it has a place in Java development regardless of whether you&rsquo;re writing server-side or client-side, and regardless of your Java version. Kotlin&rsquo;s internal API is based on Java 6 which allows Kotlin to be compatible with Android.</p>
+<h2>Java 8 Compatibility</h2>
+<p>As mentioned, Kotlin is internally dependent on Java 6, which places restrictions on what Java library types and language features Kotlin itself can use. This means any new types and methods added in Java 7 or 8 are not available to the Kotlin standard library, however if your target VM is Java 8 then your Kotlin code can make use of the newer Java features.</p>
+<h3>Java 8 Streams</h3>
+<p>A major addition that was introduced by Java 8 was the Stream API. This API typically makes full use of Java 8&rsquo;s lambdas to allow users to write code similar to .NET&rsquo;s LINQ. Since Kotlin is compatible with Java 6, they offer an equivalent through their standard library so that it is available regardless of the underlying version of Java. Below is a simple comparison of the Java 8 stream API and Kotlin&rsquo;s equivalent standard library:</p>
+<pre><code class="hljs language-java">List&lt;Integer&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">50</span>; i++) {
+    list.add(i);
+}
+
+List&lt;Integer&gt; filtered = list.stream()
+        .filter(x -&gt; x % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)
+        .collect(toList());</code></pre>
+<pre><code class="hljs language-java">val list = (0..49).toList()
+val filtered = list
+        .filter( { x -&gt; x % 2 == 0 } )</code></pre>
+<p>There are a few things about Kotlin lambdas that I found confusing at first. Lambdas must always appear between curly brackets. This can make the lambda look like a standard block, but once you get used to it, it starts to make sense. There are a few special cases that can be applied to the code above to simplify it further. If the last argument to a method is a lambda, then the lambda definition can be moved outside of the method parentheses, and if the remaining method parentheses are then empty, they can be removed. Furthermore, if the lambda has a single parameter then the parameter declaration can be removed along with the arrow, and the parameter can be referred to by <code>it</code>. Applying these rules to the code above simplifies it as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> list = (<span class="hljs-number">0.</span><span class="hljs-number">.49</span>).toList()
+<span class="hljs-keyword">val</span> filtered = list
+        .filter { it % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> }</code></pre>
+<p>A key thing to be aware of is that the code shown above is entirely implemented by the Kotlin standard libraries and is therefore independent of Java 8 streams. This is achieved through standard library extension methods.</p>
+<h4>Lazy Streams</h4>
+<p>There are subtle differences between the Java and Kotlin code above. Java is using lazy streams - the filter lambda is only applied once the call to <code>collect</code> is made. The Kotlin example however is eager, which is why the call to filter immediately returns a list.</p>
+<p>There are ways to make Kotlin lazy, the main option would be to first convert the list to a <code>Sequence</code> and apply the lambdas to that instead. Sequences are evaluated lazily allowing a pipeline to be defined before the underlying lambdas are executed. The Kotlin code would then be as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> list = (<span class="hljs-number">0.</span><span class="hljs-number">.49</span>).toList().asSequence()
+    .filter { it % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> }
+    .toList()</code></pre>
+<p>This is only worth considering if the pipeline consists of more than the filter operation.</p>
+<h4>Parallel Streams</h4>
+<p>Something I ran into was the wish to use Java 8&rsquo;s parallel streams. Kotlin&rsquo;s standard library does not include its own parallel stream mechanism, and it is not clear where to start when consulting Kotlin&rsquo;s standard library.</p>
+<p>In Java one would either call <code>List.parallelStream()</code> or call <code>parallel()</code> directly on a stream. The subsequent pipeline will then be applied in parallel, and the results collected at the end. The issue is that typically in Kotlin lists are referenced via the Kotlin collection interfaces, even if the runtime instances are actually plain Java classes. This means the following code would not compile because the Kotlin collection interfaces do not know about the <code>stream()</code> methods or <code>Stream</code> interface.</p>
+<pre><code class="hljs language-kotlin">listOf(<span class="hljs-string">"One"</span>, <span class="hljs-string">"Two"</span>, <span class="hljs-string">"Three"</span>).parallelStream()</code></pre>
+<p>Considering these are Java 8 classes means it&rsquo;s not surprising that there is currently no way for Kotlin to include a stream equivalent in their standard library - doing so would require them to reimplement a Kotlin stream equivalent for supporting Java 6 and 7, and then somehow have it use Java 8&rsquo;s Stream API if running under a Java 8 VM. In fact Kotlin used to have their own <code>Stream</code> type before Java 8, but replaced it with <code>Sequence</code> shortly before finalising the 1.0.0 release.</p>
+<p>One workaround is to implement extension methods for the <code>kotlin.collections.Collection</code> interface as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-type">&lt;T&gt;</span> Collection<span class="hljs-type">&lt;T&gt;</span>.<span class="hljs-title">stream</span><span class="hljs-params">()</span></span>: Stream&lt;T&gt; {
+    <span class="hljs-meta">@Suppress(<span class="hljs-meta-string">"PLATFORM_CLASS_MAPPED_TO_KOTLIN"</span>, <span class="hljs-meta-string">"UNCHECKED_CAST"</span>)</span>
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">this</span> <span class="hljs-keyword">as</span> java.util.Collection&lt;T&gt;).stream()
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-type">&lt;T&gt;</span> Collection<span class="hljs-type">&lt;T&gt;</span>.<span class="hljs-title">parallelStream</span><span class="hljs-params">()</span></span>: Stream&lt;T&gt; {
+    <span class="hljs-meta">@Suppress(<span class="hljs-meta-string">"PLATFORM_CLASS_MAPPED_TO_KOTLIN"</span>, <span class="hljs-meta-string">"UNCHECKED_CAST"</span>)</span>
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">this</span> <span class="hljs-keyword">as</span> java.util.Collection&lt;T&gt;).parallelStream()
+}</code></pre>
+<p>This will allow the <code>stream()</code> and <code>parallelStream()</code> methods to be invoked directly on any Kotlin collection. Note the nasty suppression of warnings though. Firstly IDEA provides a generally good hint that you should probably not be using the <code>java.util.Collection</code> class directly - this is because it is normally hidden behind the Kotlin collection interfaces. The second warning is the unchecked cast which is unavoidable - the main issue is the generic type T which has been erased by Java. It is not possible to use Kotlin&rsquo;s inlined reification feature in these methods either because we&rsquo;re referring to the Java type that is already erased. This workaround is referenced from a <a href="https://youtrack.jetbrains.com/issue/KT-5175">bug-report</a> posted for Java 8 streams on Kotlin&rsquo;s bug tracker. This issue was posted when Kotlin still had its own <code>Stream</code> class. While the issue is not resolved (a subsequent release of Kotlin may see a more elegant solution), the removal of Kotlin&rsquo;s <code>Stream</code> class makes the above workaround possible.</p>
+<p>Another issue arises when collecting the results. In Java I would collect a stream to a list using <code>collect(Collectors.toList())</code>, Java is usually able to infer the types correctly, however because we&rsquo;re using Kotlin which defines its own collection types, things are not as smooth. Here is a function definition that uses the <code>stream()</code> extension method defined above:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">toIntList</span><span class="hljs-params">(strings:<span class="hljs-type">List</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span>:List&lt;<span class="hljs-built_in">Int</span>&gt; {
+    <span class="hljs-keyword">return</span> strings.stream()
+        .map { it.toInt() }
+        .collect(Collectors.toList&lt;<span class="hljs-built_in">Int</span>&gt;())
+}</code></pre>
+<p>The trick is to just make the type explicit when using <code>Collectors.toList</code>. There are some alternative workarounds posted to this <a href="http://stackoverflow.com/questions/35721528/how-can-i-call-collectcollectors-tolist-on-a-java-8-stream-in-kotlin/35722167#35722167">Stack Overflow question</a>. The update message posted claiming the issue is fixed in Kotlin 1.0.1 is not entirely accurate - I still find I need to make the types explicit when using collectors.</p>
+<h3>SAM Types</h3>
+<p>A nice feature demonstrated in the above code is the fact that Kotlin lambdas are compatible with Java&rsquo;s Single Abstract Method (SAM) interfaces. This can be seen above where a Kotlin lambda is supplied directly to Java&rsquo;s <code>Stream.map</code> method. The Kotlin compiler automatically generates an adapter function to convert the Kotlin lambda to the desired SAM interface type. Sometimes however this requires a bit of assistance, especially to resolve ambiguity. An example is when using Java 8&rsquo;s <code>CompletebleFuture</code>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">get</span><span class="hljs-params">(url:<span class="hljs-type">String</span>, ex: <span class="hljs-type">Executor</span>)</span></span>:CompletableFuture&lt;String&gt; {
+    <span class="hljs-keyword">return</span> CompletableFuture.supplyAsync( Supplier { downloadURL(url) }, ex)
+}</code></pre>
+<p>This method takes a string and Java executor, and returns a <code>CompletableFuture</code> containing the URL&rsquo;s content. It assumes there is a synchronous <code>downloadURL</code> method available. Because the <code>supplyAsync</code> Java method takes the lambda as the first parameter, followed by the executor parameter, we can&rsquo;t use the Kotlin shortcut of pushing the lambda outside of the <code>supplyAsync</code> parentheses. To create the correct SAM we prefix the Kotlin lambda with the name of the SAM type we require - in this case a <code>java.util.function.Supplier</code>.</p>
+<h3>Try-with-resources</h3>
+<p>This is actually a Java 7 feature, but still applies when using Java 8. In Java we may do the following to copy from an input stream to an output stream. This example relies on Guava to save some nasty iteration, but demonstrates how in Java we can declare multiple <code>AutoCloseable</code> instances in a single try-with-resources declaration. When the try block completes, <code>AutoCloseable.close()</code> will be called on each reference.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">try</span> (InputStream input = new FileInputStream(<span class="hljs-string">"SourceFile"</span>); OutputStream output = new FileOutputStream(<span class="hljs-string">"TargetFile"</span>)) {
+    ByteStreams.copy(input, output); <span class="hljs-comment">// using Guava</span>
+}</code></pre>
+<p>Kotlin&rsquo;s approach is not to add special language constructs, but instead to provide an API: <code>use()</code> is simply an extension method on <code>Closeable</code>. The following code is the Kotlin equivalent:</p>
+<pre><code class="hljs language-kotlin">FileInputStream(<span class="hljs-string">"SourceFile"</span>).use { input -&gt;
+    FileOutputStream(<span class="hljs-string">"TargetFile"</span>).use { output -&gt;
+        input.copyTo(output)
+    }
+}</code></pre>
+<p>Note that we have to nest the second <code>use</code> method call to include the second resource declaration, which also means we can&rsquo;t use the implicit <code>it</code> parameter because we have to differentiate between <code>input</code> and <code>output</code>.</p>
+<p>We also cannot use <code>AutoCloseable</code> which was only introduced in Java 7, so this restricts the usage to <code>Closeable</code> implementations only. The only workaround for the <code>AutoCloseable</code> case at the moment is to implement one&rsquo;s own <code>use</code> extension method for <code>AutoCloseable</code>. JetBrains have indicated they are looking at this, though this goes back at least to 2014. I guess it wasn&rsquo;t seen as something that had to be fixed by 1.0.0, especially since a proper fix introduces the need for Kotlin to be able to target newer versions of Java as well as keep working for Java 6.</p>
+<p>Another issue is that <code>use</code> is currently not able to use <code>Throwable.addSuppressed(Thowable)</code> for the case where an Exception is being thrown but the close call in the finally block throws its own exception, because this method was also only added in Java 7 specifically for supporting the try-with-resources construct. The source for Kotlin&rsquo;s <code>use</code> includes a TODO item for this and correctly swallows the exception from close so that it doesn&rsquo;t mask the original exception, hopefully a better solution will be forthcoming. This issue is <a href="https://discuss.kotlinlang.org/t/kotlin-needs-try-with-resources/214">discussed here</a>.</p>
+<h2>Java Annotations</h2>
+<p>This is one particular case I encountered when trying to use Java&rsquo;s XML binding API (JAXB), however this would affect other annotation processing libraries as well.</p>
+<p>Consider the following Kotlin class:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-meta">@XmlRootElement(name = <span class="hljs-meta-string">"contact"</span>)</span>
+<span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Contact</span></span>(
+        <span class="hljs-meta">@XmlAttribute</span> <span class="hljs-keyword">var</span> firstName:String? = <span class="hljs-literal">null</span>,
+        <span class="hljs-meta">@XmlAttribute</span> <span class="hljs-keyword">var</span> lastName: String? = <span class="hljs-literal">null</span>
+)</code></pre>
+<p>I have already tried to cover the basics: by making all the fields nullable and providing null as the default argument, the resulting class will have an empty constructor, as required by JAXB. I have also annotated the root element, and the attributes. But when I try and parse an XML file, I see the following trace:</p>
+<pre><code class="hljs language-kotlin">Exception <span class="hljs-keyword">in</span> thread <span class="hljs-string">"main"</span> com.sun.xml.<span class="hljs-keyword">internal</span>.bind.v2.runtime.IllegalAnnotationsException: <span class="hljs-number">2</span> counts of IllegalAnnotationExceptions
+Class has two properties of the same name <span class="hljs-string">"firstName"</span>
+    <span class="hljs-keyword">this</span> problem <span class="hljs-keyword">is</span> related to the following location:
+        at <span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> java.lang.String blog.Contact.getFirstName()
+        at blog.Contact
+    <span class="hljs-keyword">this</span> problem <span class="hljs-keyword">is</span> related to the following location:
+        at <span class="hljs-keyword">private</span> java.lang.String blog.Contact.firstName
+        at blog.Contact
+Class has two properties of the same name <span class="hljs-string">"lastName"</span>
+    <span class="hljs-keyword">this</span> problem <span class="hljs-keyword">is</span> related to the following location:
+        at <span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> java.lang.String blog.Contact.getLastName()
+        at blog.Contact
+    <span class="hljs-keyword">this</span> problem <span class="hljs-keyword">is</span> related to the following location:
+        at <span class="hljs-keyword">private</span> java.lang.String blog.Contact.lastName
+        at blog.Contact</code></pre>
+<p>It looks like the attribute annotation is being applied to both the public getter as well as the private field, for both the <code>firstName</code> and <code>lastName</code> properties. This is primarily fallout from Kotlin&rsquo;s conciseness. In the <code>Contact</code> class above, the parameters are both constructor arguments as well as property declarations. Since a Kotlin property will be compiled into a getter, setter and backing field, the annotations are applied based on a choice from the Target annotation from the underlying annotation implementation. The best workaround here was to be explicit about what the <code>XmlAttribute</code> annotation should apply to - this can be done using annotation use-site targets as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-meta">@XmlRootElement(name = <span class="hljs-meta-string">"contact"</span>)</span>
+<span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Contact</span></span>(
+        <span class="hljs-meta">@get:XmlAttribute</span> <span class="hljs-keyword">var</span> firstName:String? = <span class="hljs-literal">null</span>,
+        <span class="hljs-meta">@get:XmlAttribute</span> <span class="hljs-keyword">var</span> lastName: String? = <span class="hljs-literal">null</span>
+)</code></pre>
+<p>Inserting <code>get:</code> before the annotation name will apply the annotation to the Java getter method, and this resolves the annotation/field clash. The full list of use-site targets can be found <a href="https://kotlinlang.org/docs/reference/annotations.html#annotation-use-site-targets">here</a>.</p>
+<p>One more thing I found - for this simple case it is possible to fix the issue by adding <code>@XmlAccessorType(XmlAccessType.FIELD)</code> to the root element instead, however once I had more complex XML the <code>IllegalAnnotationsException</code> would just be pushed down to one of the deeper classes.</p>
+<h2>Type-Safe Builders</h2>
+<p>One of the features of Kotlin that caught my eye at the start was the concept of type-safe builders. The example included in the <a href="https://kotlinlang.org/docs/reference/type-safe-builders.html">official documentation</a> shows how an HTML document can be built. Once you have the builder code in place, you can use it as follows:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> html = html {
+    head {
+        title { +<span class="hljs-string">"Document Title"</span> }
+    }
+    body {
+        h1 { +<span class="hljs-string">"A Nice H1 Heading"</span> }
+        p {
+            +<span class="hljs-string">"The wordy first paragraph including a "</span>
+            a(href = <span class="hljs-string">"http://kotlinlang.org"</span>) { +<span class="hljs-string">"link"</span> }
+            b { +<span class="hljs-string">" as well as some bold text"</span> }
+        }
+    }
+}</code></pre>
+<p>I liked this because the structure of the resulting document was reflected in the structure of the code. This is made possible by a combination of features:</p>
+<ul>
+<li>Lambdas must always be defined between curly braces.</li>
+<li>If the last argument to a method is a lambda, it can be appended after the method parentheses (which in turn can be omitted when empty).</li>
+<li><em>Function type with receiver</em> lambda arguments.</li>
+</ul>
+<p>Looking at the example code again in light of these 3 features, the code is actually just a set of nested method invocations taking a lambda as a parameter. Each lambda is a function type with receiver, which is similar to an extension function. The receiver (<code>this</code>) can be optionally omitted as it can with an extension method.</p>
+<p>It took me a bit of effort to understand initially, so I suggest reading the official documentation to get a better idea. Once I understood the underlying concepts I was ready to start writing my own set of builders to support creation of a UI. This is where I came up against an issue with the type-safe builder pattern.</p>
+<p>The issue is as follows - each time you define a nested lambda, it collects the scope of its parent invocations - all the way to the root. In the html example above, it means that the following will compile and generate no warnings, but the result will be confusing:</p>
+<pre><code class="hljs language-kotlin">html {
+    head {
+        title { +<span class="hljs-string">"Document Title"</span> }
+    }
+    body {
+        h1 { +<span class="hljs-string">"A Nice H1 Heading"</span> }
+        p {
+            +<span class="hljs-string">"The wordy first paragraph including a "</span>
+            body {
+                h1 { +<span class="hljs-string">"This is unexpected"</span> }
+            }
+            a(href = <span class="hljs-string">"http://kotlinlang.org"</span>) { +<span class="hljs-string">"link"</span> }
+            b { +<span class="hljs-string">" as well as some bold text"</span> }
+        }
+    }
+}</code></pre>
+<p>You can see I&rsquo;ve added an extra <code>body</code> call within the deepest <code>p</code>. From thinking of this as a type-safe builder of an html document, this should not be possible, since it should not be possible to add a body element at that level. It would be nice if compilation failed. However, if we forget about the html side of things, and just think of this as a bunch of nested closures, then it makes sense. A closure has access to the variables of the outer scope in addition to the current scope. This nested closure effectively has implicit access to all the <code>this</code> keywords up the chain. If we explicitly insert the qualified <code>this</code> keywords, it looks as follows:</p>
+<pre><code class="hljs language-kotlin">html {
+    <span class="hljs-keyword">this</span>.head {
+        <span class="hljs-keyword">this</span>.title { +<span class="hljs-string">"Document Title"</span> }
+    }
+    <span class="hljs-keyword">this</span>.body {
+        <span class="hljs-keyword">this</span>.h1 { +<span class="hljs-string">"A Nice H1 Heading"</span> }
+        <span class="hljs-keyword">this</span>.p {
+            +<span class="hljs-string">"The wordy first paragraph including a "</span>
+            <span class="hljs-keyword">this</span><span class="hljs-symbol">@html</span>.body {
+                <span class="hljs-keyword">this</span>.h1 { +<span class="hljs-string">"This is unexpected"</span> }
+            }
+            <span class="hljs-keyword">this</span>.a(href = <span class="hljs-string">"http://kotlinlang.org"</span>) { +<span class="hljs-string">"link"</span> }
+            <span class="hljs-keyword">this</span>.b { +<span class="hljs-string">" as well as some bold text"</span> }
+        }
+    }
+}</code></pre>
+<p>You can see the qualified <code>this@html</code> reference - this is also implicitly available, but the point is that the second <code>body</code> invocation is actually being made against the root html instance, and not against the the paragraph instance that is implied. This leads to the following html document being generated:</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>
+      Document Title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+      This is unexpected
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>
+      A Nice H1 Heading
+    <span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      The wordy first paragraph including a
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://kotlinlang.org"</span>&gt;</span>
+        link
+      <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>
+         as well as some bold text
+      <span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></code></pre>
+<p>The reason the second <code>body</code> actually appears first is because the nested body is completed (and added to the document) before the first <code>body</code> is completed. This is confusing behaviour and is unfortunately simply the result of Kotlin&rsquo;s closures behaving correctly. A workaround may be to prefix all the invocations by the unqualified <code>this</code> keyword. If you do this you will find a compiler error is then generated when you try make a call to <code>this.body</code> from inside <code>p</code>, however the resulting code looks messier, and it is still possible to forget the <code>this</code> prefix.</p>
+<p>I&rsquo;ve only found the following Stack Overflow question and answer <a href="http://stackoverflow.com/questions/34834739/wrong-this-being-used-in-nested-closures#34836287">here</a>, where the principle engineer at JetBrains confirms the issue, and hints that a future Kotlin version may add a modifier to restrict a lambda from having access to enclosing scopes.</p>
+<p>I may wait and see where this goes before embracing type-safe builders. I like the idea - especially how it could be used to implement a DSL for creating a UI, however I think this would cause a usage issue.</p>
+<h2>Conclusion</h2>
+<p>Overall I have had a very positive experience. I quickly adapted to the Kotlin syntax and enjoyed using it. The issues I&rsquo;ve raised in this post should not be viewed in a negative light - for every issue I&rsquo;ve raised here there are countless times I found myself impressed at how Kotlin integrates cohesively with Java. My main reason for creating this post is to collect my experiences for future reference, and hopefully to help people who run into the same issues.</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

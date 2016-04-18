@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kotlin : Retrofit + RxAndroid + Realm</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="https://medium.com/@ahmedrizwan/kotlin-retrofit-rxandroid-realm-39d7be5dc9dc#.w7ufbebxh">Kotlin : Retrofit + RxAndroid + Realm</a> - <span class="main-title-date">Mar 15, 2016</span>
+      </h1>
+      <h2>by Ahmed Rizwan</h2>
+      <h3>Kotlin : Retrofit + RxAndroid + Realm</h3>
+<p>In this article I thought I should cover some of the libraries (that I use regularly), like Retrofit and Realm in the context of Kotlin and Rx.</p>
+<p>If you&rsquo;re new to Retrofit... Then I suggest you visit this <a href="https://medium.com/@ahmedrizwan/rxandroid-and-retrofit-2-0-66dc52725fff#.51syz2rr5">article</a>&#x200A;&mdash;&#x200A;and things will (hopefully) be crystal clear! And if you&rsquo;re new to Rx &amp; Kotlin&#x200A;&mdash;&#x200A;go <a href="https://medium.com/@ahmedrizwan/rxandroid-and-kotlin-part-1-f0382dc26ed8#.i0smhvwlm">here</a>!</p>
+<h4>So let&rsquo;s begin : Kotlin + Rx + Retrofit + Realm</h4>
+<p>If you&rsquo;re anything like me, then you absolutely hate writing unnecessary code. <em>cough Java 6 cough</em>. And in my Android development experience, I&rsquo;ve come across many situations where I was like&#x200A;&mdash;&#x200A;&ldquo;But... Why?!&rdquo;</p>
+<p>In the context of Languages, I think Kotlin is definitely a life-saver. And libraries like Retrofit, Realm and RxAndroid also significantly reduce the amount of unnecessary code.</p>
+<p>Horror story: I once came across a project, which had around <strong>12</strong> model classes aka POJOs. Then there were <strong>12</strong> Database (ORM) Table classes and there were also <strong>12</strong> Model-to-Database-Mapping classes. If you&rsquo;re good at counting, you&rsquo;ll notice... Those are <strong>36</strong> classes right there! And not only that, a change to the a single class meant, changing all 3 classes.</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*j31fbds0p0D_WwDim60TEQ.jpeg" alt=""></p>
+<p><em>Yeah, that was me...</em></p>
+<p>I suppose, even if we don&rsquo;t use any ORMs, we still would be writing code for mapping the Models to the Database! And that&rsquo;s no good!</p>
+<p>So, what was the solution... Well... For me <strong>Realm</strong> + <strong>Retrofit</strong> was it... I added in <strong>RxAndroid</strong> to the mix later on, because Rx makes almost everything better and more delicious! And of course <strong>Kotlin</strong>, because...</p>
+<blockquote>
+<p>Kotlin is love... Kotlin is life...</p>
+</blockquote>
+<p>With the combination of these, those 36 classes would be represented in just 12 (as they should be). And not just that, code will be more concise and expressive because of Kotlin!</p>
+<h3>Simple Example: Getting data from Github API</h3>
+<p>Imagine an app which gets data from an API, stores/persists that data to the database and also displays it. A pretty common scenario, right?</p>
+<p>This is what I&rsquo;d be making... An extremely simple example... Which should hopefully cover the basics!</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*CLjgK7p_Cdro4oh0gu4_Qg.png" alt=""></p>
+<p><em>Nothing fancy&#x200A;&mdash;&#x200A;Just plain old me and my github info!</em></p>
+<p>Let me walk you through on how I would go about creating this app...</p>
+<h4>Creating the Project and Enabling Kotlin</h4>
+<p>The first thing we do is enable Kotlin in the project&#x200A;&mdash;&#x200A;Just make sure the Kotlin Plugin is installed in your Android Studio.</p>
+<p>I created an Empty project with a single MainActivity&#x200A;&mdash;&#x200A;Went straight into the build.gradle file and... Triggered the action...</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*pI9K9b0ww9jAduIrjZ10eg.png" alt=""></p>
+<p><em>Trigger Action and search for Configure Kotlin</em></p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*jMre8FWu_02iHJRnNLaj0w.png" alt=""></p>
+<p><em>Select the modules and click OK</em></p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*w-WHqk_EDQm8uu09fTyTXg.png" alt=""></p>
+<p><em>After clicking OK&#x200A;&mdash;&#x200A;this gets added to the build file&#x200A;&mdash;&#x200A;<em>Sync Changes</em></em></p>
+<p>Cool! Now we can write code in Kotlin!</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*gUTF_1dfhJLGJbQZxiJ-nA.png" alt=""></p>
+<p><em>MainActivity.java at the moment&#x200A;&mdash;&#x200A;Pretty standard stuff</em></p>
+<p>We can (magically) convert the existing java code to Kotlin... By doing the following...</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*8p7TdBtxViZlM50nBGBdww.png" alt=""></p>
+<p><em>Action: Convert Java File to Kotlin File</em></p>
+<p>Now the MainActivity becomes...</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*jtzRyBq1Parb6TYzdsgwVw.png" alt=""></p>
+<p><em>Holy mother of Kotlin!</em></p>
+<h4>Adding Rx&#x200A;&mdash;&#x200A;Retrofit&#x200A;&mdash;&#x200A;Realm Dependencies</h4>
+<p>Time to add some dependencies!</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*CAdkhnWaF0MeqwYHpqKo1Q.png" alt=""></p>
+<p><em>I also use Databinding! Because cool people use Databinding!</em></p>
+<p>Now you might be thinking what the hell is <strong>kapt</strong>? Well it&rsquo;s an annotation processor built for Kotlin.</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/600/1*6MHRyDAF7oqrxhlf2LHwcg.png" alt=""></p>
+<p><em>sudo add this to build.gradle</em></p>
+<p>In our project we&rsquo;ll also have to enable <strong>generateStubs</strong> as well for kapt, in order for it to generate code.</p>
+<p>So... Now we have everything we need! Time to start coding!</p>
+<h4>The Model</h4>
+<p>The endpoint we&rsquo;re dealing with...</p>
+<p><code>https://api.github.com/users/ahmedrizwan</code></p>
+<p>And the response...</p>
+<pre><code class="hljs language-json">{
+  <span class="hljs-attr">"login"</span>: <span class="hljs-string">"ahmedrizwan"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-number">4357275</span>,
+  <span class="hljs-attr">"avatar_url"</span>: <span class="hljs-string">"https://avatars.githubusercontent.com/u/4357275?v=3"</span>,
+  <span class="hljs-attr">"gravatar_id"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan"</span>,
+  <span class="hljs-attr">"html_url"</span>: <span class="hljs-string">"https://github.com/ahmedrizwan"</span>,
+  <span class="hljs-attr">"followers_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/followers"</span>,
+  <span class="hljs-attr">"following_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/following{/other_user}"</span>,
+  <span class="hljs-attr">"gists_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/gists{/gist_id}"</span>,
+  <span class="hljs-attr">"starred_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/starred{/owner}{/repo}"</span>,
+  <span class="hljs-attr">"subscriptions_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/subscriptions"</span>,
+  <span class="hljs-attr">"organizations_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/orgs"</span>,
+  <span class="hljs-attr">"repos_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/repos"</span>,
+  <span class="hljs-attr">"events_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/events{/privacy}"</span>,
+  <span class="hljs-attr">"received_events_url"</span>: <span class="hljs-string">"https://api.github.com/users/ahmedrizwan/received_events"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"User"</span>,
+  <span class="hljs-attr">"site_admin"</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ahmed"</span>,
+  <span class="hljs-attr">"company"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"blog"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"location"</span>: <span class="hljs-string">"Rawalpindi, Pakistan"</span>,
+  <span class="hljs-attr">"email"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"hireable"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"bio"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"public_repos"</span>: <span class="hljs-number">9</span>,
+  <span class="hljs-attr">"public_gists"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"followers"</span>: <span class="hljs-number">5</span>,
+  <span class="hljs-attr">"following"</span>: <span class="hljs-number">9</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2013-05-06T18:32:59Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2015-08-29T18:17:58Z"</span>
+}</code></pre>
+<p>Ok for this example, I just want to extract <em>id</em>, <em>name</em>, <em>avatar_url</em> and <em>public_repos</em> from the response. So my model class (which is also a realm class btw), would look something like</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*XkIxB1PtetctYpuPBMDM3Q.png" alt=""></p>
+<p><em>*_*</em></p>
+<blockquote>
+<p>Note: If you want to extract everything from the JSON response, then I suggest visiting to this awesome <a href="http://www.jsonschema2pojo.org">website</a>, and generate a POJO. Then convert the Java code to Kotlin as described earlier.</p>
+</blockquote>
+<p>Ok, lots of things to cover here... Starting off from the <em>RealmClass</em> annotation... For Realm, this annotation is necessary for Realm&rsquo;s code generation in Kotlin... <em>PrimaryKey</em> annotation is also a Realm annotation, representing the Primary Key field (duh!)... Rest of the annotations are for Gson...</p>
+<p>Now the <strong>open</strong> keyword! In kotlin it&rsquo;s the opposite of <strong>final</strong> in Java. By default, Kotlin classes are final&#x200A;&mdash;&#x200A;that means if you want a class to be inherrited&#x200A;&mdash;&#x200A;we explicitly have to declare it as <strong>open</strong>. Same is the case with properties. Like in our model, <em>name</em> is a property, with an actual getter and a setter (thanks to Kotlin). And in order for the getter/setter to be overridable (which Realm requires them to be), we put the keyword <strong>open</strong> along with the declaration of the property. Which makes sense (to me at least).</p>
+<h4>Retrofit Interface</h4>
+<p>Again the endpoint url is</p>
+<p><code>https://api.github.com/users/[some_user]</code></p>
+<p>So the interface would look something like :-</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*D8ABvZYNBRsw_Ffe5ilS0g.png" alt=""></p>
+<p><em>Simplicity of Retrofit :&rsquo;)</em></p>
+<p>Notice how I&rsquo;m returning Observable of a Github. This is possible because Retrofit allows Rx integration. And that&rsquo;s super-super-cool!</p>
+<h4>Retrofit Builder</h4>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*RAPCtfF_ztT6qB_wHoxLjw.png" alt=""></p>
+<p><em>Yay... Now I can make API calls... ^</em>^_</p>
+<p>Because of Realm we use a special Gson instance, which basically adds an exclusion strategy for skipping Realm generated fields. Otherwise Gson doesn&rsquo;t work with the model.</p>
+<p>Next we create an instance of Retrofit with RxJavaCallAdapter factory which allows Rx integration and we also add the Gson converter using the Gson instance we created before.</p>
+<h4>Rx Magic</h4>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*_fSWqpcqhzNfoJNKc8PMig.png" alt=""></p>
+<p><em>Lambdaaaaaaas! :&rsquo;) Btw binding is my Databinding object!</em></p>
+<p>Now all I do is get the observable, subscribe to it and get our Github object. Once we have the object, it&rsquo;s easy to persist the user to Realm database.</p>
+<h4>Caching</h4>
+<p>Caching is also (sort of) possible, because we can first fetch data from Realm Database (if it has already been saved)... Like this...</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*_31bgwIcMTmcCTJHKv03UQ.png" alt=""></p>
+<p><em>Dayum!</em></p>
+<p>And... That&rsquo;s it! Now if you run the app...</p>
+<p><img src="https://d262ilb51hltx0.cloudfront.net/max/800/1*CLjgK7p_Cdro4oh0gu4_Qg.png" alt=""></p>
+<p><em><em>slow clap</em></em></p>
+<p>You can find the full code example <a href="https://github.com/ahmedrizwan/RxRealmRetroKotlin/tree/master">here</a>. Hope the article was somewhat useful!</p>
+<p>Happy coding!</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

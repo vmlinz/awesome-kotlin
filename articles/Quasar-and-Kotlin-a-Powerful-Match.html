@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quasar and Kotlin - a Powerful Match</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="RxAndroid-and-Kotlin-Part-1.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Kotlin-New-Hope-in-a-Java-6-Wasteland.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://blog.paralleluniverse.co/2015/06/04/quasar-kotlin/">Quasar and Kotlin - a Powerful Match</a> - <span class="main-title-date">Jun 04, 2015</span>
+      </h1>
+      <h2>by Fabio</h2>
+      <p>June 04, 2015</p>
+<p>Following the release of <a href="http://blog.jetbrains.com/kotlin/2015/05/kotlin-m12-is-out/">Kotlin M12</a> and of <a href="http://blog.paralleluniverse.co/2015/05/29/quasar-pulsar-0-7-0/">Quasar 0.7.0</a> introducing support for it, let&rsquo;s now have a closer look at how Kotlin and Quasar work together.</p>
+<p><a href="http://kotlinlang.org/">Kotlin</a> is JetBrains&rsquo; fun, statically-typed, safe, interoperable and expressive language targeting the JVM, Android and JavaScript. Pragmatic and efficient, it also features an excellent <a href="https://www.jetbrains.com/idea/">IntelliJ Idea</a> integration from the start (which is my own and many other folks&rsquo; favourite IDE BTW). Finally our joint work with the Kotlin team has made Quasar on Kotlin smooth, natural and fast.</p>
+<p>Enabling Quasar support for Kotlin in your project is as easy as adding <code>quasar-kotlin</code> as a dependency and using one of Kotlin plugins for build systems, for example <a href="http://kotlinlang.org/docs/reference/using-gradle.html">Gradle&rsquo;s</a>. We&rsquo;ll start from a bird&rsquo;s-eye view of our <a href="https://github.com/puniverse/quasar/blob/master/quasar-kotlin/src/test/kotlin/co/paralleluniverse/kotlin/actors/PingPong.kt">ping-pong actor test</a> and then we&rsquo;ll zoom in:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Msg</span></span>(<span class="hljs-keyword">val</span> txt: String, <span class="hljs-keyword">val</span> from: ActorRef&lt;Any?&gt;)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ping</span></span>(<span class="hljs-keyword">val</span> n: <span class="hljs-built_in">Int</span>) : Actor() {
+    Suspendable <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doRun</span><span class="hljs-params">()</span></span> {
+        <span class="hljs-keyword">val</span> pong = ActorRegistry.getActor&lt;Any?&gt;(<span class="hljs-string">"pong"</span>)
+        <span class="hljs-keyword">for</span>(i <span class="hljs-keyword">in</span> <span class="hljs-number">1.</span>.n) {
+            pong.send(Msg(<span class="hljs-string">"ping"</span>, self()))          <span class="hljs-comment">// Fiber-blocking</span>
+            receive {                               <span class="hljs-comment">// Fiber-blocking</span>
+                <span class="hljs-keyword">when</span> (it) {
+                    <span class="hljs-string">"pong"</span> -&gt; println(<span class="hljs-string">"Ping received pong"</span>)
+                    <span class="hljs-keyword">else</span> -&gt; <span class="hljs-literal">null</span>                    <span class="hljs-comment">// Discard</span>
+                }
+            }
+        }
+        pong.send(<span class="hljs-string">"finished"</span>)                       <span class="hljs-comment">// Fiber-blocking</span>
+        println(<span class="hljs-string">"Ping exiting"</span>)
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pong</span></span>() : Actor() {
+    Suspendable <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doRun</span><span class="hljs-params">()</span></span> {
+        <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+            <span class="hljs-comment">// snippet Kotlin Actors example</span>
+            receive(<span class="hljs-number">1000</span>, TimeUnit.MILLISECONDS) {  <span class="hljs-comment">// Fiber-blocking</span>
+                <span class="hljs-keyword">when</span> (it) {
+                    <span class="hljs-keyword">is</span> Msg -&gt; {
+                        <span class="hljs-keyword">if</span> (it.txt == <span class="hljs-string">"ping"</span>)
+                            it.from.send(<span class="hljs-string">"pong"</span>)    <span class="hljs-comment">// Fiber-blocking</span>
+                    }
+                    <span class="hljs-string">"finished"</span> -&gt; {
+                        println(<span class="hljs-string">"Pong received 'finished', exiting"</span>)
+                        <span class="hljs-keyword">return</span>                      <span class="hljs-comment">// Non-local return, exit actor</span>
+                    }
+                    <span class="hljs-keyword">is</span> Timeout -&gt; {
+                        println(<span class="hljs-string">"Pong timeout in 'receive', exiting"</span>)
+                        <span class="hljs-keyword">return</span>                      <span class="hljs-comment">// Non-local return, exit actor</span>
+                    }
+                    <span class="hljs-keyword">else</span> -&gt; defer()
+                }
+            }
+            <span class="hljs-comment">// end of snippet</span>
+        }
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tests</span> </span>{
+    Test <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testActors</span><span class="hljs-params">()</span></span> {
+        spawn(register(<span class="hljs-string">"pong"</span>, Pong()))
+        spawn(Ping(<span class="hljs-number">3</span>))
+    }
+}</code></pre>
+<h2>Data</h2>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Msg</span></span>(<span class="hljs-keyword">val</span> txt: String = <span class="hljs-string">"Hello"</span>, <span class="hljs-keyword">val</span> from: ActorRef&lt;Any?&gt;)</code></pre>
+<p>Yes, Kotlin supports <a href="http://kotlinlang.org/docs/reference/data-classes.html">data classes</a>. This means that when you need a one-liner to hold some info, it can be a one-liner for real. Kotlin will generate sensible <code>equals</code>, <code>hashCode</code>, <code>toString</code> as well as deconstruction support, so that you can easily write:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> myMsg = Msg(txt = <span class="hljs-string">"Hi"</span>, from = me)
+<span class="hljs-comment">// ...</span>
+<span class="hljs-keyword">val</span> (txt, from) = myMsg</code></pre>
+<p>Add to that type inference, a shorter construction syntax for class instances (no <code>new</code> needed), default parameter values, invocation with named arguments and support for immutability with <code>val</code> declarations and you&rsquo;ve got a full toolbox for your message-crafting actor needs (and more). Should you need to copy your message in full or in part:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> myNewMsg = myMsg.copy(txt = <span class="hljs-string">"Howdy"</span>)</code></pre>
+<p><code>Pair</code> and <code>Triple</code> are included in the standard library, too <sup id="fnref:bigger-tuples"><a href="#fn:bigger-tuples">1</a></sup>.</p>
+<p><code>ActorRef&lt;Any?&gt;</code> represents a reference to a Quasar actor whose <code>send</code> can accept values of any type, including <code>null</code>s. <code>Any</code> is the utmost super-type in Kotlin and the question mark specifies that it is <em>nullable</em> here (the default in Kotlin is non-nullable). If a value is of a non-nullable type, Kotlin will check against nulls at compile time for Kotlin code, and at runtime for values produced by Java invocations <sup id="fnref:java-interop"><a href="#fn:java-interop">2</a></sup>.</p>
+<h2>Classes</h2>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ping</span></span>(<span class="hljs-keyword">val</span> n: <span class="hljs-built_in">Int</span>) : Actor()</code></pre>
+<p><code>Ping</code> inherits from the base <code>Actor</code> Kotlin class <sup id="fnref:untyped-actors"><a href="#fn:untyped-actors">3</a></sup> and it is <em>final</em>. This is the default in Kotlin because designing for inheritance is difficult and control over class hierarchies is important, so inheritance support must be declared explicitly through the <code>open</code> class modifier.</p>
+<p>In Kotlin you can define your primary constructor without specifying a body and declare its parameters as properties by prefixing <code>val</code> (immutable) or <code>var</code> (mutable), which you need to do if you plan to use them not only during initialization but in methods too. A parent class&rsquo; constructor invocation is inline with inheritance declaration, and a short <code>:</code> is enough to specify that.</p>
+<p>We declare <code>n</code> as a property because our actor is going to use it in its <code>doRun</code> execution body:</p>
+<pre><code class="hljs language-kotlin">Suspendable <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doRun</span><span class="hljs-params">()</span></span> {
+      <span class="hljs-comment">// ...</span>
+}</code></pre>
+<p>The <code>override</code> modifier is mandatory and the <code>Suspendable</code> annotation allows our actor&rsquo;s fiber to invoke fiber-blocking calls such as <code>send</code> and <code>receive</code>. <a href="http://kotlinlang.org/docs/reference/annotations.html">Kotlin annotations</a> don&rsquo;t need to be preceded by <code>@</code> in most situations, which allow them to appear naturally as user-defined modifiers. Kotlin also supports <a href="http://blog.jetbrains.com/kotlin/2015/05/kapt-annotation-processing-for-kotlin/">JSR-269 annotation processing</a>.</p>
+<h2>Fiber-blocking Kotlin actors</h2>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> pong = ActorRegistry.getActor&lt;Any?&gt;(<span class="hljs-string">"pong"</span>)
+<span class="hljs-keyword">for</span>(i <span class="hljs-keyword">in</span> <span class="hljs-number">1.</span>.n) {
+    pong.send(Msg(<span class="hljs-string">"ping"</span>, self()))          <span class="hljs-comment">// Fiber-blocking</span>
+    receive {                               <span class="hljs-comment">// Fiber-blocking</span>
+        <span class="hljs-keyword">when</span> (it) {
+            <span class="hljs-string">"pong"</span> -&gt; println(<span class="hljs-string">"Ping received pong"</span>)
+            <span class="hljs-keyword">else</span> -&gt; <span class="hljs-literal">null</span>                    <span class="hljs-comment">// Discard</span>
+        }
+    }
+}
+pong.send(<span class="hljs-string">"finished"</span>)                       <span class="hljs-comment">// Fiber-blocking</span></code></pre>
+<p><code>Ping</code> leads the game here: it gets a reference to <code>Pong</code> from the global registry, then <code>send</code>s and <code>receive</code>s ping pongs <code>n</code> times, after which it tells <code>Pong</code> to bail out before quitting itself. It&rsquo;s once again as simple as it was with regular threads: just straightforward imperative constructs and blocking calls, only much more efficient thanks to fibers.</p>
+<p>Kotlin makes it even sweeter though. Apart from the nice looping construct with <a href="http://kotlinlang.org/docs/reference/ranges.html">ranges</a>, let&rsquo;s have a deeper look at the <a href="http://docs.paralleluniverse.co/quasar/#sending-and-receiving-messages-actorref"><em>selective receive</em></a> block:</p>
+<pre><code class="hljs language-kotlin">receive {                               <span class="hljs-comment">// Fiber-blocking</span>
+    <span class="hljs-keyword">when</span> (it) {
+        <span class="hljs-string">"pong"</span> -&gt; println(<span class="hljs-string">"Ping received pong"</span>)
+        <span class="hljs-keyword">else</span> -&gt; <span class="hljs-literal">null</span>                    <span class="hljs-comment">// Discard</span>
+    }
+}</code></pre>
+<p>It feels like a new construct, doesn&rsquo;t it? This neat small DSL employs no less than 3 advanced Kotlin features: <a href="http://kotlinlang.org/docs/reference/lambdas.html">lambdas</a> with <a href="http://kotlinlang.org/docs/reference/inline-functions.html">inline functions</a> and the type-safe <a href="http://kotlinlang.org/docs/reference/control-flow.html#when-expression">matching <code>when</code> expression</a>.</p>
+<p>The block following <code>receive</code> is actually a single-argument <em>lambda</em> for which Kotlin provides an extremely compact syntax. You can even avoid naming the argument: it&rsquo;ll be called <code>it</code> as in this case, and of course you can skip brackets along the way. This is <code>receive</code>&rsquo;s Kotlin signature:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">protected</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">receive</span><span class="hljs-params">(proc: (<span class="hljs-type">Any</span>)</span></span> -&gt; Any?)</code></pre>
+<p><code>proc</code> is a selection and transformation function: it can accept (and possibly transform), discard or delay an incoming message. If a message is accepted, it is returned by the <code>receive</code> call.</p>
+<p>Here <code>proc</code> contains only a matching <code>when</code> expression, which is type-checked for matching exhaustiveness and, of course, type correctness <sup id="fnref:when"><a href="#fn:when">4</a></sup>. Yielding <code>null</code> in <code>proc</code> discards the value and <em>doesn&rsquo;t</em> return from <code>receive</code>; calling <code>defer()</code> will skip the message in the current <code>receive</code> call, leaving it in the mailbox, while producing any other value (even <code>Unit</code> like the <code>println</code> statement in the <code>&quot;pong&quot;</code> branch) will make the <code>receive</code> call return and control flow will proceed to the next iteration in the <code>for</code> loop.</p>
+<p>Let&rsquo;s take a glance at <code>Pong</code>&rsquo;s main loop:</p>
+<pre><code class="hljs language-kotlin">receive(<span class="hljs-number">1000</span>, TimeUnit.MILLISECONDS) {  <span class="hljs-comment">// Fiber-blocking</span>
+    <span class="hljs-keyword">when</span> (it) {
+        <span class="hljs-keyword">is</span> Msg -&gt; {
+            <span class="hljs-keyword">if</span> (it.txt == <span class="hljs-string">"ping"</span>)
+                it.from.send(<span class="hljs-string">"pong"</span>)    <span class="hljs-comment">// Fiber-blocking</span>
+        }
+        <span class="hljs-string">"finished"</span> -&gt; {
+            println(<span class="hljs-string">"Pong received 'finished', exiting"</span>)
+            <span class="hljs-keyword">return</span>                      <span class="hljs-comment">// Non-local return, exit actor</span>
+        }
+        <span class="hljs-keyword">is</span> Timeout -&gt; {
+            println(<span class="hljs-string">"Pong timeout in 'receive', exiting"</span>)
+            <span class="hljs-keyword">return</span>                      <span class="hljs-comment">// Non-local return, exit actor</span>
+        }
+        <span class="hljs-keyword">else</span> -&gt; defer()
+    }
+}</code></pre>
+<p>In this case we&rsquo;re calling a selective receive with a timeout <sup id="fnref:receive"><a href="#fn:receive">5</a></sup>. Two more notable Kotlin features and two API features work together here to make this code short, readable and powerful. As for Kotlin:</p>
+<ul>
+<li><code>is Msg</code> is a type check that performs a <em>smart cast</em>, so that <code>it</code> acquires the <code>Msg</code> type in its clause and properties can be accessed as simply as <code>it.txt</code> and <code>it.from</code>.</li>
+<li><code>return</code> in the <em>inline lambda</em> performs a <em>non-local return</em>, that is it makes the <code>doRun</code> invocation return, after which the actor will quit <sup id="fnref:only-inline"><a href="#fn:only-inline">6</a></sup>.</li>
+</ul>
+<p>The Kotlin Actors API adds the following:</p>
+<ul>
+<li><code>defer()</code> implements <em>selective receive</em> by skipping messages in the current <code>receive</code> call.</li>
+<li>A <code>Timeout</code> message can be used to handle timeouts directly in the processing lambda if you so wish, without even returning from the <code>receive</code> call.</li>
+</ul>
+<h2>Now with plain, healthy fibers</h2>
+<p>There&rsquo;s now a neat Kotlin port of the <code>quasar-gradle-template</code> in the <code>kotlin</code> branch. I built it very quickly by copying and pasting the previous Java source to a new Kotlin file in IntelliJ Idea and confirming Kotlin conversion! Of course then I polished it to my tastes and added the semantics that were missing in Java, and here&rsquo;s the result:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">package</span> testgrp
+
+<span class="hljs-comment">// ...</span>
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doAll</span><span class="hljs-params">()</span></span>: <span class="hljs-built_in">Int</span>? {
+    <span class="hljs-keyword">val</span> increasingToEcho = Channels.newIntChannel(<span class="hljs-number">0</span>) <span class="hljs-comment">// Synchronizing channel (buffer = 0)</span>
+    <span class="hljs-keyword">val</span> echoToIncreasing = Channels.newIntChannel(<span class="hljs-number">0</span>) <span class="hljs-comment">// Synchronizing channel (buffer = 0)</span>
+
+    <span class="hljs-keyword">val</span> increasing = Fiber(SuspendableCallable(<span class="hljs-meta">@Suspendable</span> {
+        <span class="hljs-keyword">var</span> curr = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">0.</span><span class="hljs-number">.9</span>) {
+            Fiber.sleep(<span class="hljs-number">1000</span>)
+            println(<span class="hljs-string">"INCREASER sending: "</span> + curr)
+            increasingToEcho.send(curr)
+            curr = echoToIncreasing.receive()
+            println(<span class="hljs-string">"INCREASER received: "</span> + curr)
+            curr++
+            println(<span class="hljs-string">"INCREASER now: "</span> + curr)
+        }
+        println(<span class="hljs-string">"INCREASER closing channel and exiting"</span>)
+        increasingToEcho.close()
+        curr;
+    })).start()
+
+    <span class="hljs-keyword">val</span> echo = Fiber(SuspendableCallable(<span class="hljs-meta">@Suspendable</span> {
+        <span class="hljs-keyword">val</span> curr: <span class="hljs-built_in">Int</span>?
+        <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+            Fiber.sleep(<span class="hljs-number">1000</span>)
+            curr = increasingToEcho.receive()
+            println(<span class="hljs-string">"ECHO received: "</span> + curr)
+
+            <span class="hljs-keyword">if</span> (curr != <span class="hljs-literal">null</span>) {
+                println(<span class="hljs-string">"ECHO sending: "</span> + curr)
+                echoToIncreasing.send(curr)
+            } <span class="hljs-keyword">else</span> {
+                println(<span class="hljs-string">"ECHO detected closed channel, closing and exiting"</span>)
+                echoToIncreasing.close()
+                <span class="hljs-keyword">break</span>
+            }
+        }
+    })).start()
+
+    increasing.join()
+    echo.join()
+
+    <span class="hljs-keyword">return</span> increasing.<span class="hljs-keyword">get</span>()
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span> {
+    doAll()
+}</code></pre>
+<p>Wait, where are the classes? Functions can be toplevel in Kotlin: a class is generated for each package with static methods corresponding to toplevel functions. We&rsquo;re not doing real OOP here, so we won&rsquo;t define classes and Kotlin allows us to skip them altogether if we don&rsquo;t need them. That makes sense and eliminates boilerplate, doesn&rsquo;t it?</p>
+<p>As for the packages, they are completely <em>disjoint</em> from source files organization in directories and that allows freedom and convenience. Of course with great powers comes great responsibility but why should I bother creating directories only in order to use packages, when my project is made of a single source file (or a handful of them)? And since Kotlin is very concise, this situation will arise more often than you think.</p>
+<p>Now, where are the types instead? This example is strongly typed but most of the types are inferred. There are only a handful of them:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">doAll</span><span class="hljs-params">()</span></span>: <span class="hljs-built_in">Int</span>?</code></pre>
+<p>In Kotlin, <code>public</code> and <code>protected</code> functions need to be <em>explicitly typed</em> both in the argument and return type because they <em>are public API</em> and we don&rsquo;t want to alter it by mistake because we changed the body (and type inference has adjusted types consequently without us noticing) <sup id="fnref:public-api"><a href="#fn:public-api">7</a></sup>.</p>
+<p>In this case though, this function has <em>module-level</em> access (&ldquo;internal&rdquo;). Why does it still need to be fully typed? Because it has a block body which can have complex control flow and type inference could easily confuse the reader (and hinder maintainability).</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> increasing = Fiber(SuspendableCallable(<span class="hljs-meta">@Suspendable</span> {</code></pre>
+<p>What&rsquo;s happening here? We&rsquo;re passing a <code>Suspendable</code>-annotated lambda instead of a full blown object expression (which is more pleasant than Java&rsquo;s anonymous classes anyway), similarly to what we&rsquo;d do with Java 8 lambdas. The <code>SuspendableCallable</code> constructor helps Kotlin&rsquo;s type inference engine to interoperate with Java functional interfaces (this will be simplified very soon so that there&rsquo;ll be no need to explicitly mention <code>SuspendableCallable</code>). Finally we don&rsquo;t need to declare actual type parameters for <code>Fiber</code> (no ugly <em>diamonds</em> either, sorry for people that like them) and of course not even for the <code>increasing</code> local.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> curr: <span class="hljs-built_in">Int</span>?</code></pre>
+<p>Since we know that the value of the <code>curr</code> mutable local value will come from Java, we know it could become <code>null</code> (and at some point it actually needs to, in order to represent a closed Quasar channel). We&rsquo;re telling Kotlin that in advance, so that it won&rsquo;t emit fail-fast runtime checks that will trigger an exception when <code>curr</code> gets assigned a <code>null</code> value.</p>
+<p>By contrast no type declaration is needed by the <code>curr</code> mutable local in the <code>increasing</code> fiber, because it will be inferred to be <code>Int</code> and since it will be managed completely within Kotlin code, the compiler will check statically that it will never become <code>null</code>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> curr = <span class="hljs-number">0</span> <span class="hljs-comment">// Int</span></code></pre>
+<h2>What else is there?</h2>
+<p>Kotlin has loads of other advanced and convenient features that make it a pleasure to use not just with Quasar but in every occasion:</p>
+<ul>
+<li>Type-checking covers <a href="http://kotlinlang.org/docs/reference/null-safety.html">null safety</a> and allows <a href="http://kotlinlang.org/docs/reference/typecasts.html">smart type casts</a>; imperative programmers will enjoy <a href="http://kotlinlang.org/docs/reference/returns.html">returns and jumps</a> and <a href="http://kotlinlang.org/docs/reference/ranges.html">ranges</a> as well as <a href="http://kotlinlang.org/docs/reference/java-interop.html">excellent Java interoperability</a> and <a href="http://kotlinlang.org/docs/reference/exceptions.html#checked-exceptions">unchecked exceptions</a>.</li>
+<li>Functional guys will appreciate <a href="http://kotlinlang.org/docs/reference/functions.html">higher-order functions and local functions</a> as well as <a href="http://kotlinlang.org/docs/reference/reflection.html#function-references">first-class method</a> and <a href="http://kotlinlang.org/docs/reference/reflection.html#property-references">property accessor</a> references.</li>
+<li>DSL craftpeople will make good use of functional features, convenient syntax shortcuts and <a href="http://kotlinlang.org/docs/reference/type-safe-builders.html">type-safe builders</a>.</li>
+<li>OOP has no shortage of tools either: <a href="http://kotlinlang.org/docs/reference/extensions.html">extension functions</a>, <a href="http://kotlinlang.org/docs/reference/interfaces.html">trait-like interfaces</a>, <a href="http://kotlinlang.org/docs/reference/classes.html">compact and common sense inheritance with sensible defaults</a>, <a href="http://kotlinlang.org/docs/reference/object-declarations.html#object-expressions">singleton objects</a>, <a href="http://kotlinlang.org/docs/reference/object-declarations.html#object-expressions">object expressions</a>, <a href="http://kotlinlang.org/docs/reference/generics.html">generics with declaration-site variance and type projections</a>, <a href="http://kotlinlang.org/docs/reference/enum-classes.html">feature-rich enums</a>, <a href="http://kotlinlang.org/docs/reference/delegation.html">delegation</a>, <a href="http://kotlinlang.org/docs/reference/properties.html#getters-and-setters">properties accessors</a> and <a href="http://kotlinlang.org/docs/reference/delegated-properties.html">delegated properties</a>.</li>
+</ul>
+<hr>
+<ol>
+<li>If you need bigger tuples it&rsquo;s probably an hint that you&rsquo;d better give them a more specific name for readability&rsquo;s sake. <a href="#fnref:bigger-tuples">&#x21A9;</a></li>
+<li>See <a href="http://kotlinlang.org/docs/reference/java-interop.html">Java interoperability, platform types</a> and <a href="http://kotlinlang.org/docs/reference/null-safety.html">null safety</a>. <a href="#fnref:java-interop">&#x21A9;</a></li>
+<li>Kotlin actors are always untyped because typed actors are useful only in very simple cases, like short-lived transient actors, but not so much in more complex situations. <a href="#fnref:untyped-actors">&#x21A9;</a></li>
+<li><code>when</code> supports type maching, value matching against arbitrary expressions and range matching; see <a href="http://kotlinlang.org/docs/reference/control-flow.html">control flow</a>. <a href="#fnref:when">&#x21A9;</a></li>
+<li>The timeout overload is <code>inline protected fun receive(timeout: Long, unit: TimeUnit?, proc: (Any) -&gt; Any?)</code> and it is non-blocking if the timeout is 0. <a href="#fnref:receive">&#x21A9;</a></li>
+<li>This is possible only with inline lambdas. <a href="#fnref:only-inline">&#x21A9;</a></li>
+<li>This is likely to become only a warning in the future. <a href="#fnref:public-api">&#x21A9;</a></li>
+</ol>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

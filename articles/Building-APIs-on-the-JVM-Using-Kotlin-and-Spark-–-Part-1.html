@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Building APIs on the JVM Using Kotlin and Spark – Part 1</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="JVMLS-2015-Flexible-Types-in-Kotlin.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://nordicapis.com/building-apis-on-the-jvm-using-kotlin-and-spark-part-1/">Building APIs on the JVM Using Kotlin and Spark – Part 1</a> - <span class="main-title-date">Aug 06, 2015</span>
+      </h1>
+      <h2>by Travis Spencer</h2>
+      <p><img src="http://nordicapis.com/wp-content/uploads/Building-APIs-JVM-kotlin-spark-java-nordic-apis-pt-1.png" alt="Building-APIs-JVM-kotlin-spark-java-nordic-apis-pt-1"></p>
+<p>When you start a new API project, one of the first questions to answer is what programming language to use. Picking the right one can make all the difference. Some languages help solve certain problems while others inhibit solutions. Even after a language is chosen and tens-of-thousands of lines of code have been written, there is the possibility of reducing complexity by using new languages on the same <strong>runtime</strong>.</p>
+<p>In this two-part blog series, we&rsquo;ll explain why the <strong>JVM</strong> provides a strong basis on which to run your APIs, and how to simplify their construction using a framework called <strong>Spark</strong> and a new programming language called <strong>Kotlin</strong>. In this first part, we will introduce you to the JVM and how it can execute code written in many programming languages, including Kotlin. We&rsquo;ll discuss a number of Kotlin&rsquo;s features and show them in the context of APIs.</p>
+<p>In our <a href="http://nordicapis.com/building-apis-on-the-jvm-using-kotlin-and-spark-part-2/">second post</a>, we explore the Spark framework in detail, and how to complement this toolkit with additional components like Inversion of Control (IoC). During the series, we&rsquo;ll develop a boilerplate that you can use to <strong>create robust APIs with Kotlin and Spark</strong>. The code can be <a href="https://github.com/travisspencer/kotlin-spark-demo/">found on Github</a>, so refer to it there as you read through the snippets below.</p>
+<p>Watch Travis Spencer present on this topic at the Stockholm Java Meetup <iframe src="https://www.youtube.com/embed/eDHUabQMRb4" allowfullscreen="allowfullscreen" height="315" frameborder="0" width="560"></iframe></p>
+<h2>Introducing the JVM</h2>
+<p>The <strong>Java Virtual Machine (JVM)</strong> is a runtime that offers a range of language choices. Adoption of Clojure, Groovy, Scala, Jython, and other JVM-based languages are widespread. Aside from the broad range of language choices, another uncommon aspect of the JVM is its openness. You can get an implementation of the JVM not just from Oracle but also from an <a href="https://en.wikipedia.org/wiki/List_of_Java_virtual_machines">expansive list of other providers</a>. Many distributions of Linux come preloaded with <a href="https://en.wikipedia.org/wiki/OpenJDK">OpenJDK</a>, which is the reference implementation of Java, allowing API developers to host their service with very little cost and hassle.</p>
+<p>One of the core tenants of Java is that each new version is <strong>backward compatible</strong> with previous ones. This has caused the Java programming language to evolve more slowly than others like C#, where major changes in the language come with massive upgrade efforts. <img src="http://combineoverwiki.net/images/thumb/d/dc/Lambda_logo.svg/365px-Lambda_logo.svg.png" alt="">This has improved a lot over the years, and <a href="http://www.oracle.com/technetwork/java/javase/overview/java8-2100321.html">Java 8</a> has removed a lot of cruft in the language with the introduction of <strong>lambdas</strong>. Regardless of the pace of Java&rsquo;s evolution, this commitment to backward compatibility has resulted in a <strong>very stable base</strong>.</p>
+<p>The openness and ongoing compatibility of the JVM offers a number of very compelling reason to build APIs on this platform:</p>
+<ul>
+<li><strong>Return on Investment (ROI)</strong>: Code that continues to run can continue to produce a return on the investment made to write it.</li>
+<li><strong>Knowledge remains relevant</strong>: Since old code continues to run, all the knowledge gained to write that code continues to be useful. With new versions of the JVM, you can keep writing old-style code. You don&rsquo;t have to retrain yourself when the runtime&rsquo;s vendor upgrades the platform.</li>
+<li><strong>Ecosystem</strong>: These factors have caused a very large ecosystem to flourish around the JVM. This system includes massive corporations and some of the biggest open source communities that will work hard to ensure its longevity.</li>
+</ul>
+<p>Probably one of the biggest drawbacks of selecting Java to code up your API is that it is <em><strong>so</strong></em> verbose. Who would use it if they didn&rsquo;t have to?! ROI is often enough of a reason for companies to select it even for greenfield work, putting programmers through the pains of its verbosity even with the advent of alternatives like Node.js and <a href="http://nordicapis.com/writing-microservices-in-go/">Golang</a>.</p>
+<p>But what if you had the most sugary syntax you could ever dream of without having to change anything else? What if you could retain your build system, packaging, dependencies, existing code and performance, <em>and</em> get the language you&rsquo;ve been longing for?</p>
+<h1>Enter Kotlin</h1>
+<p><strong><img src="https://upload.wikimedia.org/wikipedia/en/b/b5/Kotlin-logo.png" alt="">Kotlin</strong> is a new programming language from Jetbrains, the makers of some of the best programming tools in the business, including <a href="https://www.jetbrains.com/idea/">Intellij IDEA</a>, an IDE for Java and other languages. As a leader in the Java community, Jetbrains understands the pains of Java and the many benefits of the JVM. Not wanting to throw the baby out with the bathwater, Jetbrains designed Kotlin to run on the JVM to get the best out of that platform.</p>
+<p>They didn&rsquo;t constrain it to this runtime, however &mdash; developers can also compile their Kotlin code into <strong>JavaScript</strong>, allowing it to be used in environments like <strong>Node.js</strong>. To work with untyped and typed environments like these, Kotlin is statically typed by default, but allows developers to define dynamic types as well. This balance provides great power and many opportunities.</p>
+<h2>Why Kotlin?</h2>
+<p><a href="https://twitter.com/OctSkyward">Mike Hearn</a> does a spectacular job explaining <a href="https://medium.com/@octskyward/why-kotlin-is-my-next-programming-language-c25c001e26e3">why you should consider using Kotlin</a>. In his article, he lists the following reasons:</p>
+<ul>
+<li>Kotlin compiles to JVM bytecode and JavaScript</li>
+<li>Kotlin comes from industry, not academia</li>
+<li>Kotlin is open source and costs nothing to adopt</li>
+<li>Kotlin programs can use existing Java or JavaScript frameworks</li>
+<li>The learning curve is very low</li>
+<li>Kotlin doesn&rsquo;t require any particular style of programming (OO or functional)</li>
+<li>Kotlin can be used in Android development in addition to others where Java and JavaScript work</li>
+<li>There is already excellent IDE support (Intellij and Eclipse)</li>
+<li>Kotlin is highly suitable for enterprise Java shops</li>
+<li>It has the strong commercial support of an established software company</li>
+</ul>
+<p>Read through <a href="https://medium.com/@octskyward/why-kotlin-is-my-next-programming-language-c25c001e26e3">Mike&rsquo;s article</a> for more on the rationale for using Kotlin. Hopefully though, this list is enough to convince you to seriously consider Kotlin for your next API. To see how easy this can be, we&rsquo;ll explain how to use Kotlin with a <a href="http://www.sparkjava.com/">micro-services framework called Spark</a>. We&rsquo;ll delve deep into Spark in the next part of this series, but now we&rsquo;ll explain some of the great Kotlin language features with some <a href="https://github.com/travisspencer/kotlin-spark-demo/commit/3ebce75345c6a4ac08710578de42bbc7a5a1d297#diff-600376dffeb79835ede4a0b285078036">sample code</a>.</p>
+<h1>Examples of Kotlin&rsquo;s Syntax</h1>
+<p>To see how Kotlin can be used to <a href="http://nordicapis.com/top-5-development-tips-for-a-killer-api/">create killer APIs</a>, we&rsquo;ll walk through a sample that demonstrates many of the language&rsquo;s features in the context of APIs. You can find the <a href="https://github.com/travisspencer/kotlin-spark-demo/">entire code on Github</a>, and it&rsquo;s all open source.</p>
+<p>To start, here&rsquo;s the API&rsquo;s entry point:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>)</span></span> = api(composer = ContainerComposer()) {
+    route(path(<span class="hljs-string">"/login"</span>, to = LoginController::<span class="hljs-class"><span class="hljs-keyword">class</span>, <span class="hljs-type">renderWith = "login.vm")</span>,
+          <span class="hljs-type">path</span></span>(<span class="hljs-string">"/authorize"</span>, to = AuthorizeController::<span class="hljs-class"><span class="hljs-keyword">class</span>, <span class="hljs-type">renderWith = "authorize.vm")</span>,
+          <span class="hljs-type">path</span></span>(<span class="hljs-string">"/token"</span>, to = TokenController::<span class="hljs-class"><span class="hljs-keyword">class</span>))</span>
+}</code></pre>
+<p>Note that what we have is very readable even with zero knowledge of Kotlin. <strong>This snippet starts an API that exposes various paths that are routed to controllers, some of which are rendered by a template and others that are not.</strong> Easy. Kotlin lends itself to creating fluent APIs like this one, making for very readable code and approachable frameworks.</p>
+<h2>Functions and Constructors</h2>
+<p>To create our Domain Specific Language (<a href="https://en.wikipedia.org/wiki/Domain-specific_language">DSL</a>) for hosting APIs, we&rsquo;re using several of Kotlin&rsquo;s syntactic novelties and language features. Firstly:</p>
+<ul>
+<li><strong>Constructors</strong>: In Kotlin, you do not use the <code>new</code> keyword to instantiate objects; instead, you use the class name together with parenthesis, as if you were invoking the class as a function (a la Python). In the above snippet, a new <code>ContainerComposer</code> object is being created by invoking its <a href="http://kotlinlang.org/docs/reference/classes.html#constructors">default constructor</a>.</li>
+<li><strong>Functions</strong>: <a href="http://kotlinlang.org/docs/reference/functions.html#function-declarations">Functions</a>, which begin with the <code>fun</code> keyword, can be defined in a class or outside of one (like we did above). This syntax means that we can write Object Oriented (OO) code or not. This will give you more options and potentially remove lots of boilerplate classes.</li>
+<li><strong>Single expression functions</strong>: The fluent API allows us to wire up all our routes in a single expression. When a <a href="http://kotlinlang.org/docs/reference/functions.html#single-expression-functions">function consists of a single expression</a> like this, we can drop the curly braces and specify the body of our function after an equals symbol.</li>
+<li><strong>Omitting the return type</strong>: When a function does not return a value (i.e., when it&rsquo;s &ldquo;void&rdquo;), the return type is <code>Unit</code>. In Kotlin, <a href="http://kotlinlang.org/docs/reference/functions.html#unit-returning-functions">you do not have to specify this</a>; it&rsquo;s implied.</li>
+</ul>
+<p>If we weren&rsquo;t to use these last two features, the slightly more verbose version of our main function would be this:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>)</span></span> : <span class="hljs-built_in">Unit</span> {
+    <span class="hljs-comment">// ...</span>
+}</code></pre>
+<p>The difference is only a few characters, but the result is less noisy.</p>
+<h2>Named Arguments and Passing Function Literals</h2>
+<p>The next part of this main method is the call to the <code>api</code> function. This function uses a few other interesting features:</p>
+<ul>
+<li>
+<p><strong>Named arguments</strong>: When calling the <code>path</code> function, we&rsquo;re <a href="http://kotlinlang.org/docs/reference/functions.html#named-arguments">specifying certain arguments by name</a> (e.g., <code>to</code> and <code>renderWith</code>). Doing so makes the code more fluid.</p>
+</li>
+<li>
+<p><strong>Passing function literals outside the argument list</strong>: When a function, like our <code>api</code> function, expects an argument that is itself a function, you can pass it after closing the argument list. This cleans up the code a lot. To see what we mean by this, observe the <code>api</code> function definition:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">api</span><span class="hljs-params">(composer: <span class="hljs-type">Composable</span>, routes: ()</span></span> -&gt; List&lt;Controllable&gt;) {
+    <span class="hljs-comment">// ...</span>
+}</code></pre>
+</li>
+</ul>
+<p>This function takes two arguments:</p>
+<ol>
+<li>The composer (more on that in the next part of this series)</li>
+<li>The routes as a function that takes no arguments and produces a list</li>
+</ol>
+<p>The second argument is the interesting one. It is a <a href="http://kotlinlang.org/docs/reference/lambdas.html">lambda expression</a>. In Kotlin, <strong>lambdas</strong> are written as <code>() -&gt; T</code> where the parentheses contain the possibly-empty list of arguments and their types, an arrow symbol (i.e., <code>-&gt;</code> or &ldquo;produces&rdquo;), and the return type. Our <code>api</code> function uses this syntax to define it&rsquo;s last argument. In Kotlin, when the last argument of a function is also a function, we can pass the lambda expression <em>outside</em> of the call. Without this capability, calling the <code>api</code> method would look like this:</p>
+<pre><code class="hljs language-kotlin">api(ContainerComposer(), {
+    <span class="hljs-comment">// ...</span>
+})</code></pre>
+<p>See the difference? If you&rsquo;re a jQuery programmer, you&rsquo;re probably numb to it. Have a look at this contrived example that shows the difference more clearly:</p>
+<pre><code class="hljs language-kotlin">a({
+    b({
+        c({
+        })
+    })
+})</code></pre>
+<p>See it now? When a method takes a function literal as an argument, you end of with a grotesque interchange of parentheses and braces. Instead, Kotlin allows us to pass the body of the function literal after the method call. JQuery programmers unite! This is your way out of the flip-flopping trap of delimiters you&rsquo;ve found yourself in! Instead, Kotlin allows you write this sort of oscillation like this:</p>
+<pre><code class="hljs language-kotlin">a() {
+    b() {
+        c()
+    }
+}</code></pre>
+<p>So clear. So easy to understand. This convention is what we&rsquo;re using in the call to the <code>api</code> function. Our routes are defined in a lambda that returns a list of <a href="http://kotlinlang.org/docs/reference/data-classes.html">data objects</a> (which we&rsquo;ll explain shortly). The result is <a href="https://github.com/travisspencer/kotlin-spark-demo/blob/master/src/main/kotlin/com/nordicapis/kotlin_spark_sample/main.kt">half a dozen lines of code</a> that start a Web server which hosts our API, sets up three routes, maps them to controllers, and associates templates to certain endpoints. That&rsquo;s the powerful triad we mentioned early &mdash; <strong>language, runtime, and JVM-based frameworks</strong> &mdash; that allow us to quickly start serving up APIs!</p>
+<h2>Generics</h2>
+<p>As you saw in the definition of the of the <code>api</code> function, Kotlin has support for <strong>generics</strong> (i.e., function templates). In Kotlin, generics aren&rsquo;t confusing like they are in Java. The thing that makes Java&rsquo;s generics so tricky is <a href="http://www.angelikalanger.com/GenericsFAQ/FAQSections/ParameterizedTypes.html#WIldcard%20Instantiations">wildcard parameterized types</a>. These were needed to ensure backward compatibility with older Java code. Kotlin doesn&rsquo;t have wildcards, making it much easier to use generics in this new language. In fact, generics are so easy for Java and C# developers that there&rsquo;s very little to say.</p>
+<p>One aspect of Kotlin&rsquo;s generics that may be unclear at first is the use of the <code>out</code> annotation on some template parameters. This is seen in the definition of the <code>RouteData</code> class <a href="https://github.com/travisspencer/kotlin-spark-demo/commit/3ebce75345c6a4ac08710578de42bbc7a5a1d297#diff-600376dffeb79835ede4a0b285078036">included in the sample code</a>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RouteData</span></span>(
+    <span class="hljs-keyword">val</span> path: String,
+    <span class="hljs-keyword">val</span> controllerClass: Class,
+    <span class="hljs-keyword">val</span> template: String? = <span class="hljs-literal">null</span>)</code></pre>
+<p>This class is parameterized along with the constructor argument; <code>controllerClass</code>. Both have this extra modifier on <code>T</code> though. What does this mean? It means that the output type <code>T</code> will not be passed in as input; instead, the <code>RouteData</code> class will only produce objects of type <code>T</code> as output. This is what is referred to as <a href="http://kotlinlang.org/docs/reference/generics.html#declaration-site-variance">declaration-site variance</a>. Because the <code>RouteData</code> class does not consume any values of type <code>T</code> but only produces them as return values, the compiler knows that it is safe for any class that extends <code>Controllable</code> to be used as a parameter value, since they can always safely be upcast at runtime to the <code>Controllable</code> interface.</p>
+<p>If <code>T</code> were not an output-only type, a potentially unsafe downcast would be required at run-time. By providing this extra bit of info to the compiler, we can avoid wildcards (i.e., something like <code>RouteData&lt;? extends Controllable&gt;</code> in Java) and end up with safer, more easy-to-use generics.</p>
+<h2>Data Classes</h2>
+<p><a href="http://kotlinlang.org/docs/reference/data-classes.html">The <code>data</code> annotation</a> is another interesting feature of Kotlin that we&rsquo;re using in the <code>RouteData</code> class. This modifier tells the compiler that objects of this type will only hold data. This allows it to synthesize a bunch of boilerplate code for us. Specifically, the compiler will implement the following methods for us:</p>
+<ul>
+<li><code>equals</code></li>
+<li><code>hashCode</code></li>
+<li><code>toString</code></li>
+<li><code>copy</code>; and</li>
+<li>Getters and setters for each constructor parameter that is marked with <code>val</code> (i.e., read-only variables).</li>
+</ul>
+<p>After we define a data class we can also use it to <a href="http://kotlinlang.org/docs/reference/data-classes.html#data-classes-and-multi-declarations">declare and set the values of multiple variables simultaneously</a> like this:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> (path, controllerClass, template) = routeData</code></pre>
+<p>Given a data object of type <code>RouteData</code>, we can sort of pull it apart into constituent parts, where each property of the class is assigned to respective variables. This can help you write self-documenting code, and can also be used to return more than one value from a function.</p>
+<h3>Multiple Return Values from Functions</h3>
+<p>One attractive language feature of <a href="http://nordicapis.com/writing-microservices-in-go/">Golang</a> is its syntax that allows developers to define multiple return values for a function. In Go, you can write very descriptive code like this:</p>
+<pre><code class="hljs language-kotlin">func (file *File) Write(b []byte) (n int, err error) {
+    <span class="hljs-comment">// ...</span>
+}</code></pre>
+<p>This says that the function <code>Write</code> returns two values: an integer called <code>n</code> and <code>err</code>, an <code>error</code> object. This unique language construct obviates the need to pass references to objects that the function will modify when an additional return value is also needed. This is what one has to do in Java, which you can see in a <a href="https://github.com/travisspencer/stockholm-java-meetup-java-spark-demo/blob/master/src/main/java/java_meetup_spark_demo/Example08/Controllable.java">Java-based version of our <code>Controllable</code> type</a>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Controllable</span> </span>{
+    <span class="hljs-keyword">default</span> boolean <span class="hljs-keyword">get</span>(Request request, Response response,
+        <span class="hljs-keyword">final</span> Map&lt;String, Object&gt; model) { <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; }
+
+    <span class="hljs-keyword">default</span> boolean post(Request request, Response response,
+        <span class="hljs-keyword">final</span> Map&lt;String, Object&gt; model) { <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; }
+
+    <span class="hljs-keyword">default</span> boolean put(Request request, Response response,
+        <span class="hljs-keyword">final</span> Map&lt;String, Object&gt; model) { <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; }
+
+<span class="hljs-comment">// ...</span>
+}</code></pre>
+<p>We want to return two things from <code>get</code>, <code>post</code>, <code>put</code>, etc. &mdash; a Boolean flag that will be used to abort routing if <code>false</code>, and the model that contains the template values (if templating is used by the view). Here the Java language is actually working against us, forcing us to write unclear code. Google Go would help us write this more clearly, and so does Kotlin.</p>
+<p>In Kotlin, our <code>Controllable</code> type is defined like this:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Controllable</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">get</span><span class="hljs-params">(request: <span class="hljs-type">Request</span>, response: <span class="hljs-type">Response</span>)</span></span>:
+        ControllerResult = ControllerResult()
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">post</span><span class="hljs-params">(request: <span class="hljs-type">Request</span>, response: <span class="hljs-type">Response</span>)</span></span>:
+        ControllerResult = ControllerResult()
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">put</span><span class="hljs-params">(request: <span class="hljs-type">Request</span>, response: <span class="hljs-type">Response</span>)</span></span>:
+        ControllerResult = ControllerResult()
+
+    <span class="hljs-comment">// ...</span>
+}</code></pre>
+<p>Kotlin allows us to say that our controller&rsquo;s methods return a <code>ControllerResult</code> type. Like <code>RouteData</code> described above, <code>ControllerResult</code> is a data class:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ControllerResult</span></span>(
+        <span class="hljs-keyword">val</span> continueProcessing: <span class="hljs-built_in">Boolean</span> = <span class="hljs-literal">true</span>,
+        <span class="hljs-keyword">val</span> model: Map&lt;String, Any&gt; = emptyMap())</code></pre>
+<p>With this one line, we can easily define a result type that we can use in the <code>Router</code> to control the flow of processing requests and provide views with model data.</p>
+<p>Big deal, you may say. Create a class in Java and do the same. Sure. With Java though, our <code>ControllerResult</code> class becomes 50 annoying lines of code after we implement <code>equals</code>, <code>toString</code>, <code>hashCode</code>, a copy constructor, getters, and setters. As we described above, data classes include all these in <strong>one line of code</strong>. Take that in like a cool refreshing drink after a long day&rsquo;s work in the hot summer sun!</p>
+<p>Using data classes, our controllers can override methods in the <code>Controllable</code> class like this:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">get</span><span class="hljs-params">(request: <span class="hljs-type">Request</span>, response: <span class="hljs-type">Response</span>)</span></span>: ControllerResult =
+    ControllerResult(model = mapOf(
+        <span class="hljs-string">"user"</span> to request.session(<span class="hljs-literal">false</span>).attribute(<span class="hljs-string">"username"</span>),
+        <span class="hljs-string">"data"</span> to mapOf(
+                <span class="hljs-string">"e1"</span> to <span class="hljs-string">"e1 value"</span>,
+                <span class="hljs-string">"e2"</span> to <span class="hljs-string">"e2 value"</span>,
+                <span class="hljs-string">"e3"</span> to <span class="hljs-string">"e3 value"</span>)))</code></pre>
+<p>Using the <code>to</code> keyword and a read-only map produced by the standard Kotlin library&rsquo;s <code>mapOf</code> function, we end up with a very succinct yet readable implementation of this method. Refer to the Kotlin docs for more info about <a href="http://kotlinlang.org/docs/reference/idioms.html#read-only-map">creating maps with the <code>to</code> keyword</a>, <a href="http://kotlinlang.org/api/latest/jvm/stdlib/kotlin/map-of.html">the <code>mapOf</code> function</a>, and <a href="http://kotlinlang.org/docs/reference/classes.html#overriding-members">overriding methods defined in a base class</a>. For now though, let&rsquo;s see how we can use the <code>ControllerResult</code> objects in a safe and intuitive manner using one of the coolest Kotlin language features.</p>
+<h2>Smart Casts</h2>
+<p>As we&rsquo;ll discuss more in the next part of this blog series, the methods of our Controllers are invoked dynamically depending on the HTTP method used by the client. This is done in <a href="https://github.com/travisspencer/kotlin-spark-demo/blob/master/src/main/kotlin/com/nordicapis/kotlin_spark_sample/Router.kt">the <code>Router</code> class</a> like this:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> httpMethod = request.requestMethod().toLowerCase()
+<span class="hljs-keyword">val</span> method = controllerClass.getMethod(httpMethod, javaClass(), javaClass())
+<span class="hljs-keyword">val</span> result = method.invoke(controller, request, response)
+
+<span class="hljs-keyword">if</span> (result <span class="hljs-keyword">is</span> ControllerResult &amp;&amp; result.continueProcessing) {
+   controller.after(request, response)
+
+   model = result.model
+}</code></pre>
+<p>In the first three lines, we are using reflection to invoke a method on the controller that has the same name as the HTTP method specified by our API consumer. <code>Invoke</code> is defined in the Java runtime to return an <code>Object</code> which Kotlin represents as <code>Any</code>. This is helpful because two of our <code>Controllable</code>&rsquo;s methods, <code>before</code> and <code>after</code>, do not return <code>ControllerResult</code> objects while the bulk of them do. Using <a href="http://kotlinlang.org/docs/reference/typecasts.html#smart-casts">Kotlin&rsquo;s smart casting language feature</a>, we can write <strong>very clear and safe code</strong> to handle this discrepancy.</p>
+<p>In the snippet above, we check at run time to see if the <code>Any</code> object is of type <code>ControllerResult</code>. This is done using <a href="http://kotlinlang.org/docs/reference/typecasts.html#smart-casts">Kotlin&rsquo;s is operator</a> in the if statement. If it is, we also check to see if the data object&rsquo;s <code>continueProcessing</code> property returns <code>true</code>. We do this <em>without</em> casting it. On the right side of the logical <code>&amp;&amp;</code> operator, Kotlin treats the <code>result</code> object not as type <code>Any</code> but as type <code>ControllerResult</code>. Without having to write code to perform the cast, we can access the object&rsquo;s <code>ContinueProcessing</code> property. Without smart casting and without properties, we&rsquo;d have to write this conditional statement verbosely in Java like this:</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">if</span> (result <span class="hljs-keyword">instanceof</span> ControllerResult) {
+    ControllerResult controllerResult = (ControllerResult)result;
+
+    <span class="hljs-keyword">if</span> (controllerResult.getContinueProcessing()) {
+        <span class="hljs-comment">// ...</span>
+    }
+}</code></pre>
+<p>Even with C#&rsquo;s <code>as</code> operator, we end up with code that isn&rsquo;t as clear as Kotlin&rsquo;s. In C#, we&rsquo;d have to write this:</p>
+<pre><code class="hljs language-kotlin">ControllerResult controllerResult = result <span class="hljs-keyword">as</span> ControllerResult
+
+<span class="hljs-keyword">if</span> (controllerResult != <span class="hljs-literal">null</span> &amp;&amp; controllerResult.continueProcessing) {
+    <span class="hljs-comment">// ...</span>
+}</code></pre>
+<p>Kotlin lets us avoid all this confusing, verbose code. This will ensure that our intent is more clear, and help us find and fix bugs in our APIs more quickly.</p>
+<p><a href="http://www.meetup.com/Stockholm-Java-User-Group/events/224295980/"><img src="http://nordicapis.com/wp-content/uploads/Java-Meetup-Medium-CTA-01.png" alt="Java Meetup Medium CTA-01"></a></p>
+<h1>Using Kotlin</h1>
+<p>Because of its interoperability with other tools in the Java ecosystem, it is very easy to start using Kotlin. You can leverage all of the same tools and knowledge that you are using today in your Java development. Building with Ant or Maven? Those work with Kotlin. Writing code in Intellij IDEA, Eclipse, or Sublime? Keep using them!</p>
+<p>To get started using your favorite tools with Kotlin, here&rsquo;s some helpful links:</p>
+<ul>
+<li><a href="http://kotlinlang.org/docs/tutorials/getting-started.html">Intellij IDEA</a></li>
+<li><a href="https://github.com/vkostyukov/kotlin-sublime-package">Kotlin Sublime Text 2 Package</a></li>
+<li><a href="http://kotlinlang.org/docs/tutorials/getting-started-eclipse.html">Eclipse</a></li>
+<li><a href="http://kotlinlang.org/docs/reference/using-maven.html">Maven usage guide</a></li>
+<li><a href="http://kotlinlang.org/docs/reference/using-gradle.html">Using Gradle with Kotlin</a></li>
+<li><a href="http://kotlinlang.org/docs/reference/using-ant.html">Ant integration</a></li>
+</ul>
+<h2>Converting Existing Code</h2>
+<p>When you start using Kotlin, it can help to convert an existing Java project to this new language. Then, you can see how familiar code looks using Kotlin. To convert existing code, you have to use <a href="http://kotlinlang.org/docs/tutorials/getting-started.html">Intellij</a>, <a href="http://kotlinlang.org/docs/tutorials/getting-started-eclipse.html">Eclipse</a>, or (if you only have a snippet) the <a href="http://try.kotlinlang.org/">Kotlin on-line console</a>. In the end, you will probably rewrite a lot of the converted code to use more idioms and Kotlinic styles, but converting existing code is a great starting point.</p>
+<h2>Compiling Kotlin</h2>
+<p>Whether you convert your code or write it from scratch, you are going to need to compile it. The IDE plug-ins make this easy while you&rsquo;re working. In order to use this language in larger projects, however, you are going to need to automate those builds. This will require integration with Maven, Ant, or Gradle. Jetbrains and the Kotlin community provides these out of the box, and usage is as you would expect. For an existing Java-based project using one of these, switching to Kotlin can be done by replacing just a few lines in your build script. For instance, the sample project accompanying this series was converted to compile Kotlin code instead of Java <a href="https://github.com/travisspencer/kotlin-spark-demo/commit/3ebce75345c6a4ac08710578de42bbc7a5a1d297#diff-600376dffeb79835ede4a0b285078036">with just a few dozen lines</a>.</p>
+<h2>Debugging</h2>
+<p>Compiling code isn&rsquo;t necessarily working code. To make your software functional, you can use one of the many JVM-based logging frameworks to print out debug statements. You can see this in the sample project that uses SLF4J and Log4j to print statements about API requests and responses. Here&rsquo;s an indicative sample from the <code>AuthorizationController</code>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AuthorizeController</span> : <span class="hljs-type">Controllable</span></span>() {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> _logger = LoggerFactory.getLogger(javaClass())
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">before</span><span class="hljs-params">(request: <span class="hljs-type">Request</span>, response: <span class="hljs-type">Response</span>)</span></span>: <span class="hljs-built_in">Boolean</span> {
+        _logger.trace(<span class="hljs-string">"before on Authorize controller invoked"</span>)
+
+        <span class="hljs-keyword">if</span> (request.session(<span class="hljs-literal">false</span>) == <span class="hljs-literal">null</span>) {
+            _logger.debug(<span class="hljs-string">"No session exists. Redirecting to login"</span>)
+
+            response.redirect(<span class="hljs-string">"/login"</span>)
+
+            <span class="hljs-comment">// Return false to abort any further processing</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+        }
+
+        _logger.debug(<span class="hljs-string">"Session exists"</span>)
+
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    }
+
+    <span class="hljs-comment">// ...</span>
+}</code></pre>
+<p>A few things to note about that snippet before we move on:</p>
+<ul>
+<li>It&rsquo;s normal SLF4J stuff, so there&rsquo;s no learning curve for Java devs.</li>
+<li>The SLF4J <code>LoggerFactory</code> requires a static class to initialize it. This is a Java class, so we use Kotlin&rsquo;s <code>::class</code> syntax to get <a href="http://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/">a <code>KClass</code> object</a> and then call its <code>java</code> extension property. Voila! Java interop :)</li>
+</ul>
+<p>Basic instrumentation will only take you so far; sometimes you need to roll up your sleeves and dive into the running code though. You can do this <em>easily</em> in Intellij and Eclipse using those tools&rsquo; debuggers just as you would with your Java code. In these environments, you have all the same tools you have come to rely on when debugging other JVM-based code. For instance, the <strong>call stack</strong>, list of <strong>running threads</strong>, <strong>expression evaluation</strong>, and of course <strong>breakpoints</strong>, are all available to you! Here&rsquo;s a screenshot of the above code running in Intellij with the debugger attached:</p>
+<p><img src="http://nordicapis.com/wp-content/uploads/debugging.png" alt="debugging"></p>
+<p>Finding bugs will be <del>easy</del> <em>easier</em> with that. This is a <em>very</em> compelling example of why Kotlin is a better choice for creating large-scale APIs than some other languages (e.g., Go). (<a href="http://golang.org/doc/gdb">Golang can be debugged using GDB</a>, but that tool is not nearly as user-friendly as Intellij&rsquo;s and Eclipse&rsquo;s debuggers.)</p>
+<h1>Conclusion</h1>
+<p>Unlike other programming environments, the JVM gives you both language and vendor choices that can help you create incredible API. On the JVM you can choose between <strong>dynamic</strong> languages like Groovy, <strong>functional</strong> ones like Scala and Clojure, and now another rival &mdash; <a href="http://kotlinlang.org/">Kotlin</a>. We talked through a number of reasons to use this language, and showed some of the features this new JVM upstart delivers.</p>
+<p>All this is great, you may be saying, but what&rsquo;s the catch? There are <a href="https://medium.com/@octskyward/why-kotlin-is-my-next-programming-language-c25c001e26e3#5cef">some drawbacks</a>, but they are minor. The strongest argument against Kotlin is its immaturity &mdash; it isn&rsquo;t at v1 yet. This is a problem that will inevitably be fixed with a bit more time. Even now at milestone 12, the compiler gives you warnings about the use of deprecated language features that will not be included in the initial release. This makes it easy to pivot and prepare.</p>
+<p><a href="https://2015.battlehack.org/stockholm"><img src="http://nordicapis.com/wp-content/uploads/battlehack.png" alt="battlehack"></a>In <a href="http://nordicapis.com/building-apis-on-the-jvm-using-kotlin-and-spark-part-2/">part 2</a> of this series, we delve deeper into <a href="http://www.sparkjava.com/">Spark</a> and explain it more using the <a href="https://github.com/travisspencer/kotlin-spark-demo/">sample Kotlin code</a> we started developing in this post. In the meantime, be sure to <a href="http://www.meetup.com/Stockholm-Java-User-Group/events/224295980/">register for our upcoming event in Stockholm</a> where we&rsquo;ll be discussing Kotlin, Clojure, Groovy, and building APIs on the JVM. Learning more about Kotlin could also give you the edge you&rsquo;ll need if you plan to participate in PayPal&rsquo;s upcoming hackathon, <a href="https://2015.battlehack.org/stockholm">BattleHack</a>, which is happening on November 14th and 15th in Stockholm.</p>
+<p>Continue to Part 2: <a href="http://nordicapis.com/building-apis-on-the-jvm-using-kotlin-and-spark-part-2/">Building APIs on the JVM Using Kotlin and Spark &ndash; Part 2</a></p>
+<h2>Kotlin Resources</h2>
+<p>If you aren&rsquo;t going to be in Stockholm this month for the meetup, you can also learn more about this new language from these resources:</p>
+<ul>
+<li><a href="http://kotlinlang.org/docs/reference/">Kotlin language reference</a> (start here)</li>
+<li><a href="https://gist.github.com/dodyg/5823184">Kotlin programming language cheat sheet</a></li>
+<li><a href="http://blog.jetbrains.com/kotlin/2011/10/dsls-in-kotlin-part-1-whats-in-the-toolbox-builders/">Designing DSLs in Kotlin</a></li>
+<li><a href="https://www.reddit.com/r/programming/comments/3chgp3/why_kotlin_is_my_next_programming_language/?submit_url=https%253A%252F%252Fmedium.com%252F%2540octskyward%252Fwhy-kotlin-is-my-next-programming-language-c25c001e26e3&amp;already_submitted=true&amp;submit_title=%22Why+Kotlin+is+my+next+programming+language%22+by+Mike+Hearn">RE: Why Kotlin is my next programming language &ndash; SubReddit discussion</a></li>
+<li><a href="https://github.com/travisspencer/kotlin-spark-demo/commit/3ebce75345c6a4ac08710578de42bbc7a5a1d297#diff-600376dffeb79835ede4a0b285078036">Sample Web API project using Kotlin and Spark</a></li>
+<li><a href="http://www.meetup.com/Stockholm-Java-User-Group/events/224295980/">Getting the most from the JVM using Java, Clojure, Kotlin &amp; Groovy meetup in Stockholm</a></li>
+<li><a href="http://nordicapis.com/building-apis-on-the-jvm-using-kotlin-and-spark-part-2/">Building APIs on the JVM Using Kotlin and Spark &ndash; Part 2</a></li>
+</ul>
+<p><em>[Disclosure: PayPal is a sponsor of the Java Stockholm meetup being produced by Nordic APIs]</em></p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

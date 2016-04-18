@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exploring the Kotlin Standard Library - Part 1</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Exercises-in-Kotlin-Part-1-Getting-Started.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://jamie.mccrindle.org/2013/01/exploring-kotlin-standard-library-part-1.html">Exploring the Kotlin Standard Library - Part 1</a> - <span class="main-title-date">Jan 22, 2013</span>
+      </h1>
+      <h2>by Jamie McCrindle</h2>
+      <p>Exploring the API docs and source code for a language&#x27;s standard library is usually illuminating and Kotlin is no different. In this series, I thought I&#x27;d look at some of the highlights of the Kotlin stdlib. In Part 1, I&#x27;ll be going over the default Kotlin namespace.</p>
+<p>Both the <a href="http://jetbrains.github.com/kotlin/versions/snapshot/apidocs/index.html">API docs</a> and the <a href="https://github.com/JetBrains/kotlin/tree/master/libraries/stdlib">source code</a> for the stdlib are available on github.</p>
+<p>First up, the iterate method creates an iterator from a stateful function that returns either a value if it has more data or a null if not. For infinite iterators, just never return null. The following code will create an infinite iterator over the integers 0, 1, 2, 3...:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">var</span> iterator = iterate { i++ }</code></pre>
+<p>To do something useful with the iterator, we can use some of the other methods from the standard library e.g. filter, take, forEach etc. The following code will print all the integers between 0 and 100 that are divisible by 3 and 5.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;
+iterate { i++ } filter { it % <span class="hljs-number">3</span> == <span class="hljs-number">0</span> || it % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>} take <span class="hljs-number">100</span> forEach { println(it) }</code></pre>
+<p>Next up, the stdlib makes it easy to construct read only collections as follows:</p>
+<pre><code class="hljs language-kotlin">listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>) <span class="hljs-comment">// constructs a read only list of Int's</span>
+mapOf(<span class="hljs-number">1</span> to <span class="hljs-string">"A"</span>, <span class="hljs-number">2</span> to <span class="hljs-string">"B"</span>) <span class="hljs-comment">// constructs a read only map of Int to String</span>
+setOf(<span class="hljs-string">"Hello"</span>, <span class="hljs-string">"World"</span>) <span class="hljs-comment">// constructs a read only map of Int to String</span></code></pre>
+<p>Or more specific / mutable collections like this:</p>
+<pre><code class="hljs language-kotlin">arrayListOf(<span class="hljs-string">"Hello"</span>, <span class="hljs-string">"World"</span>) <span class="hljs-comment">// constructs an array list of Strings</span>
+linkedListOf(<span class="hljs-string">"Hello"</span>, <span class="hljs-string">"World"</span>) <span class="hljs-comment">// constructs a linked list of Strings</span>
+hashMapOf(<span class="hljs-number">1</span> to <span class="hljs-string">"A"</span>, <span class="hljs-number">2</span> to <span class="hljs-string">"B"</span>) <span class="hljs-comment">// constructs a hash map of Ints to Strings</span>
+linkedMapOf(<span class="hljs-number">1</span> to <span class="hljs-string">"A"</span>, <span class="hljs-number">2</span> to <span class="hljs-string">"B"</span>) <span class="hljs-comment">// constructs a linked map</span>
+sortedMapOf(<span class="hljs-number">1</span> to <span class="hljs-string">"A"</span>, <span class="hljs-number">2</span> to <span class="hljs-string">"B"</span>) <span class="hljs-comment">// constructs a sorted map</span>
+sortedSetOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) <span class="hljs-comment">// constructs a sorted set</span></code></pre>
+<p>All of the arrays, collections, lists and iterators share a similar set of methods: all, any, appendString, contains, count, drop, dropWhile, dropWhileTo, filter, filterNot, filterNotNull, filterNotNullTo, filterNotTo, filterTo, find, flatMap, flatMapTo, fold, foldRight, forEach, groupBy, groupByTo, makeString, map, mapTo, partition, plus, reduce, reduceRight, requireNoNulls, reverse, sort, sortBy, take, takeWhile, takeWhileTo, toArray, toCollection, toLinkedList, toList, toSet, toSortedList, toSortedSet.
+Here are examples of using most of the above methods:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-comment">// all</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// check that all values from 0 to 100 are positive</span>
+assertTrue((<span class="hljs-number">1.</span><span class="hljs-number">.100</span>).all{ it &gt; <span class="hljs-number">0</span> })
+
+<span class="hljs-comment">// any</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// check that any of the words hello and world contain the letter h</span>
+assertTrue(array(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>).any{ it.contains(<span class="hljs-string">"h"</span>) })
+
+<span class="hljs-comment">// contains</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// check that the list of hello and world contains world</span>
+assertTrue(listOf(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>).contains(<span class="hljs-string">"world"</span>))
+
+<span class="hljs-comment">// count</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// check that the number of values between 1 and 100 inclusive is 100</span>
+assertTrue((<span class="hljs-number">1.</span><span class="hljs-number">.100</span>).count() == <span class="hljs-number">100</span>)
+
+<span class="hljs-comment">// drop</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// check that dropping the first string results in only the second</span>
+assertEquals(listOf(<span class="hljs-string">"world"</span>), listOf(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>).drop(<span class="hljs-number">1</span>))
+
+<span class="hljs-comment">// dropWhile</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// check that dropping values from the range 1 to 100 while</span>
+<span class="hljs-comment">// the value is less than 90 results in the values 90 to 100</span>
+<span class="hljs-comment">// remaining</span>
+assertEquals((<span class="hljs-number">90.</span><span class="hljs-number">.100</span>).toList(), (<span class="hljs-number">1.</span><span class="hljs-number">.100</span>).dropWhile{ it &lt; <span class="hljs-number">90</span> })
+
+<span class="hljs-comment">// dropWhileTo</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// check that dropping values from the range 1 to 100 while</span>
+<span class="hljs-comment">// the value is less than 90 results in the values 90 to 100</span>
+<span class="hljs-comment">// remaining, using an existing, mutable list</span>
+<span class="hljs-keyword">val</span> dropWhileToList = arrayListOf&lt;<span class="hljs-built_in">Int</span>&gt;()
+assertEquals((<span class="hljs-number">90.</span><span class="hljs-number">.100</span>).toList(), (<span class="hljs-number">1.</span><span class="hljs-number">.100</span>).dropWhileTo(dropWhileToList) { it &lt; <span class="hljs-number">90</span> })
+
+<span class="hljs-comment">// filter</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// filter the values 0 to 10 to a list containing only even numbers</span>
+assertEquals(listOf(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>), (<span class="hljs-number">0.</span><span class="hljs-number">.10</span>).filter { it % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> })
+
+<span class="hljs-comment">// filterTo</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// filter the values 0 to 10 to a list containing only even numbers</span>
+<span class="hljs-keyword">val</span> filterToList = arrayListOf&lt;<span class="hljs-built_in">Int</span>&gt;()
+assertEquals(listOf(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>), (<span class="hljs-number">0.</span><span class="hljs-number">.10</span>).filterTo(filterToList) { it % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> })
+
+<span class="hljs-comment">// filterNot</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// filter the values 0 to 10 to a list containing only odd numbers</span>
+assertEquals(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>), (<span class="hljs-number">0.</span><span class="hljs-number">.10</span>).filterNot { it % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> })
+
+<span class="hljs-comment">// filterNot</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// filter the values 0 to 10 to a list containing only odd numbers</span>
+<span class="hljs-keyword">val</span> filterNotToList = arrayListOf&lt;<span class="hljs-built_in">Int</span>&gt;()
+assertEquals(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>), (<span class="hljs-number">0.</span><span class="hljs-number">.10</span>).filterNotTo(filterNotToList) { it % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> })
+
+<span class="hljs-comment">// filterNotNull</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// filter out null values</span>
+assertEquals(listOf(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>), array(<span class="hljs-literal">null</span>, <span class="hljs-string">"hello"</span>, <span class="hljs-literal">null</span>, <span class="hljs-string">"world"</span>).filterNotNull())
+
+<span class="hljs-comment">// filterNotNullTo</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// filter out null values</span>
+<span class="hljs-keyword">val</span> filterNotNullTo = arrayListOf&lt;String&gt;()
+assertEquals(listOf(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>), array(<span class="hljs-literal">null</span>, <span class="hljs-string">"hello"</span>, <span class="hljs-literal">null</span>, <span class="hljs-string">"world"</span>).filterNotNullTo(filterNotNullTo))
+
+<span class="hljs-comment">// find</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// find the first element in hello world that starts with "h"</span>
+assertEquals(<span class="hljs-string">"hello"</span>, array(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>).find{ it.startsWith(<span class="hljs-string">"h"</span>) })
+
+<span class="hljs-comment">// first</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// get the first element of hello and world</span>
+assertEquals(<span class="hljs-string">"hello"</span>, listOf(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>).first())
+
+<span class="hljs-comment">// flatMap</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// map over the values 1, 2 and 3, creating a list of lists of it and it + 1</span>
+<span class="hljs-comment">// for each element and then flatten them into a single list</span>
+assertEquals(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>), listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>).flatMap{ listOf(it, it + <span class="hljs-number">1</span>) })
+
+<span class="hljs-comment">// flatMapTo</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// map over the values 1, 2 and 3, creating a list of lists of it and it + 1</span>
+<span class="hljs-comment">// for each element and then flatten them into a single list</span>
+<span class="hljs-keyword">val</span> flatMapToList = arrayListOf&lt;<span class="hljs-built_in">Int</span>&gt;()
+assertEquals(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>).flatMapTo(flatMapToList) { listOf(it, it + <span class="hljs-number">1</span>) }, listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>))
+
+<span class="hljs-comment">// fold</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take the numbers 1 to 4. start with 0 and add each number to a running total and</span>
+<span class="hljs-comment">// return the result</span>
+assertEquals(<span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span>, listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>).fold(<span class="hljs-number">0</span>) { total, next -&gt; total + next })
+
+<span class="hljs-comment">// foldRight</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take the numbers 1 to 4. add each of them together in turn from the right</span>
+assertEquals(<span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span>, listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>).foldRight(<span class="hljs-number">0</span>) { a, b -&gt; a + b })
+
+<span class="hljs-comment">// forEach</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// for each of the values in the range 1..10, print out the value on a new line</span>
+(<span class="hljs-number">1.</span><span class="hljs-number">.10</span>) forEach { println(it) }
+
+<span class="hljs-comment">// groupBy</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take the values 0, 1 and 2 and turn them into a map of the characters to lists of integers</span>
+<span class="hljs-comment">// where A = 0, B = 1, C = 3 etc.</span>
+assertEquals(mapOf(<span class="hljs-string">'A'</span> to listOf(<span class="hljs-number">0</span>), <span class="hljs-string">'B'</span> to listOf(<span class="hljs-number">1</span>), <span class="hljs-string">'C'</span> to listOf(<span class="hljs-number">2</span>)),
+        array(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>).groupBy{ (it + <span class="hljs-string">'A'</span>.toInt()).toChar() })
+
+<span class="hljs-comment">// groupByTo</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take the values 0, 1 and 2 and turn them into a map of the characters to lists of integers</span>
+<span class="hljs-comment">// where A = 0, B = 1, C = 3 etc.</span>
+<span class="hljs-keyword">val</span> groupByToMap = hashMapOf&lt;<span class="hljs-built_in">Char</span>, MutableList&lt;<span class="hljs-built_in">Int</span>&gt;&gt;()
+assertEquals(mapOf(<span class="hljs-string">'A'</span> to listOf(<span class="hljs-number">0</span>), <span class="hljs-string">'B'</span> to listOf(<span class="hljs-number">1</span>), <span class="hljs-string">'C'</span> to listOf(<span class="hljs-number">2</span>)),
+        array(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>).groupByTo(groupByToMap) { (it + <span class="hljs-string">'A'</span>.toInt()).toChar() })
+
+<span class="hljs-comment">// last</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// get the last element of hello and world</span>
+assertEquals(<span class="hljs-string">"world"</span>, listOf(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>).last())
+
+<span class="hljs-comment">// makeString</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// turn a list into a string using a space as a separator</span>
+assertEquals(<span class="hljs-string">"hello world"</span>, listOf(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"world"</span>).makeString(separator = <span class="hljs-string">" "</span>))
+
+<span class="hljs-comment">// map</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// go through the range of integers from 1 to 5 and multiply each one by 2</span>
+assertEquals(listOf(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>), (<span class="hljs-number">1.</span><span class="hljs-number">.5</span>).map{ it * <span class="hljs-number">2</span> })
+
+<span class="hljs-comment">// mapTo</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// go through the range of integers from 1 to 5 and multiply each one by 2</span>
+<span class="hljs-keyword">val</span> mapToList = arrayListOf&lt;<span class="hljs-built_in">Int</span>&gt;()
+assertEquals(listOf(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>), (<span class="hljs-number">1.</span><span class="hljs-number">.5</span>).mapTo(mapToList) { it * <span class="hljs-number">2</span> })
+
+<span class="hljs-comment">// partition</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// partition the values 1 to 10 into a pair of lists of even and odd numbers</span>
+assertEquals(Pair(listOf(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>), listOf(<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <span class="hljs-number">9</span>)), (<span class="hljs-number">1.</span><span class="hljs-number">.10</span>).partition{ it % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> })
+
+<span class="hljs-comment">// plus</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// add 4 onto the end of an array</span>
+assertEquals(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>), array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>).plus(<span class="hljs-number">4</span>))
+
+<span class="hljs-comment">// reduce</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take the values 1 to 4 and add them together using a running total</span>
+assertEquals(<span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span>, (<span class="hljs-number">1.</span><span class="hljs-number">.4</span>) reduce { total, next -&gt; total + next })
+
+<span class="hljs-comment">// reduceRight</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take the values 1 to 4 and add them together using a running total</span>
+assertEquals(<span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span>, (<span class="hljs-number">1.</span><span class="hljs-number">.4</span>) reduceRight { a, b -&gt; a + b })
+
+<span class="hljs-comment">// requireNoNulls</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// require that a collection doesn't contain nulls</span>
+array&lt;String?&gt;(<span class="hljs-string">"one"</span>, <span class="hljs-string">"two"</span>, <span class="hljs-string">"three"</span>).requireNoNulls()
+
+<span class="hljs-comment">// reverse</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// reverse a collection</span>
+assertEquals(array(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>), (<span class="hljs-number">1.</span><span class="hljs-number">.4</span>).reverse())
+
+<span class="hljs-comment">// sort</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// sort a mutable collection</span>
+assertEquals(array(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>), linkedListOf(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>).sort())
+
+<span class="hljs-comment">// sortBy</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// sort a mutable collection in reverse</span>
+assertEquals(array(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>), linkedListOf(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>).sortBy{ -it })
+
+<span class="hljs-comment">// take</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take 5 numbers from the front of a range of 1 to a 100</span>
+assertEquals(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>), (<span class="hljs-number">1.</span><span class="hljs-number">.100</span>) take <span class="hljs-number">5</span>)
+
+<span class="hljs-comment">// takeWhile</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take numbers while they're less then 5 from a range of 1 to a 100</span>
+assertEquals(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>), (<span class="hljs-number">1.</span><span class="hljs-number">.100</span>) takeWhile { it &lt;= <span class="hljs-number">5</span> })
+
+<span class="hljs-comment">// takeWhileTo</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// take numbers while they're less then 5 from a range of 1 to a 100</span>
+<span class="hljs-keyword">val</span> takeWhileToList = arrayListOf&lt;<span class="hljs-built_in">Int</span>&gt;()
+assertEquals(listOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>), (<span class="hljs-number">1.</span><span class="hljs-number">.100</span>).takeWhileTo(takeWhileToList) { it &lt;= <span class="hljs-number">5</span> })</code></pre>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kotlin & Android: A Brass Tacks Experiment, Part 6</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="A-DSL-Workbench-with-Gradle-and-Kotlin.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Solving-the-Josephus-problem-in-Kotlin.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="https://medium.com/@CodingDoug/kotlin-android-a-brass-tacks-experiment-part-6-49fea0ed3a7#.53axmkcxt">Kotlin & Android: A Brass Tacks Experiment, Part 6</a> - <span class="main-title-date">Mar 08, 2016</span>
+      </h1>
+      <h2>by Doug Stevenson</h2>
+      <p><img src="https://d262ilb51hltx0.cloudfront.net/max/1600/1*UN-S8ELMC2kpHf4tJKfbLQ.png" alt=""></p>
+<p><em>Disclaimer: I am a Google employee, but the views expressed in this article are not those of my employer.</em></p>
+<h3>Kotlin &amp; Android: A Brass Tacks Experiment, Part 6</h3>
+<p>Alright! We&rsquo;re nearing the end of this series about experimenting with Kotlin to make view creation easier during Android app development. (Please <a href="https://medium.com/p/kotlin-android-a-brass-tacks-experiment-part-1-3e5028491bcc">jump back to the beginning</a> if you landed here prematurely.) So far we&rsquo;ve learned a bunch of features of the Kotlin&reg; language that help implement the type-safe builder pattern, including:</p>
+<ul>
+<li>Lambda with receiver &amp; reified types (<a href="https://medium.com/p/kotlin-android-a-brass-tacks-experiment-part-2-c67661cfdf5f">part 2</a>)</li>
+<li>Extension functions (<a href="https://medium.com/p/kotlin-android-a-brass-tacks-experiment-part-4-4b7b501fa457">part 4</a>)</li>
+<li>Extension properties (<a href="https://medium.com/p/kotlin-android-a-brass-tacks-experiment-part-5-bd79eb9c85d4">part 5</a>)</li>
+</ul>
+<p>These have all been instrumental in creating a &ldquo;domain specific language&rdquo; for expressing the programmatic creation of view hierarchies in a declarative fashion. For example, using all these techniques combined, we can write this to create two TextViews stacked on top of each other with some padding:</p>
+<pre><code class="hljs language-kotlin">v&lt;LinearLayout&gt; {
+    layoutParams = LayoutParams(MATCH_PARENT, WRAP_CONTENT)
+    orientation = VERTICAL
+    padLeft = dp_i(<span class="hljs-number">16</span>f)
+
+    v&lt;TextView&gt; {
+        layoutParams = LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+        text = <span class="hljs-string">"Hello"</span>
+    }
+    v&lt;TextView&gt; {
+        layoutParams = LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+        text = <span class="hljs-string">"World"</span>
+    }
+}</code></pre>
+<p>This is pretty good on its own, and it definitely beats writing out all these view creations and associations traditionally. Now, to wrap up the coding part of this experiment, let&rsquo;s do a couple more things to tighten up the syntax <em>even more!</em></p>
+<p><strong>How do we assign values to specialized layout parameter properties?</strong></p>
+<p>It&rsquo;s not immediately evident from the code above, but there is a problem if you want to assign some attributes of the layout parameters specific to LinearLayout. Up until now we have only specified the height and width of a view using the <a href="http://developer.android.com/reference/android/widget/LinearLayout.LayoutParams.html">LinearLayout.LayoutParams</a> class constructor, and assigned that new object to the layoutParams synthetic property of a view. But what if we also wanted to assign values to the &ldquo;gravity&rdquo; property of the layout parameters? It might make sense to try it like this:</p>
+<pre><code class="hljs language-kotlin">layoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+layoutParams.gravity = Gravity.CENTER  <span class="hljs-comment">// oops, compiler says no</span></code></pre>
+<p>But the compiler won&rsquo;t allow that because the layoutParams property of View is of type ViewGroup.LayoutParams, the superclass of all other LayoutParams. In order to use layoutParams as a LinearLayout.LayoutParams, it will need to be downcast.</p>
+<p>Instead of casting and assigning to another value as you would in the Java&reg; language, we can use a Kotlin stdlib function called &ldquo;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/with.html">with</a>&rdquo; to make it easier to deal with layoutParams. The &ldquo;with&rdquo; function takes an object parameter along with lambda with receiver and executes that lambda against the given object. This description may not sound interesting, but it allows a syntax like this:</p>
+<pre><code class="hljs language-kotlin">v&lt;TextView&gt; {
+    with(layoutParams <span class="hljs-keyword">as</span> LinearLayout.LayoutParams) {
+        width = WRAP_CONTENT
+        height = WRAP_CONTENT
+        gravity = CENTER
+    }
+    text = <span class="hljs-string">"Hello"</span>
+}</code></pre>
+<p>Notice how we&rsquo;re able to simultaneously cast layoutParams to LinearLayout.LayoutParams, then use that as the receiver inside the lambda for abbreviated access to its properties.</p>
+<p>Another subtle thing to be aware of here is that an Android view container will automatically create and assign a correctly typed layout parameter object to layoutParams when a child view is added to it. In our case, adding a TextView child to a LinearLayout will <em>automatically</em> create and assign a LinearLayout.LayoutParams to the TextView&rsquo;s layoutParams property. This means we don&rsquo;t actually need to create a new LayoutParams object&#x200A;&mdash;&#x200A;we can just access the one that&rsquo;s already provided by the parent LinearLayout. Please remember that this only happens when adding a child view to a parent ViewGroup. The outermost ViewGroup will not have layout parameters assigned automatically because it&rsquo;s not yet attached to its own parent!</p>
+<p>All that said, this is not exactly the <em>most</em> desirable syntax for layout parameters, but it&rsquo;s the most straightforward way I could find to specify specialized layout parameters inside the lambdas we have for creating views.</p>
+<p><strong>And now, for my last trick, I&rsquo;ll make the &ldquo;v&rdquo; functions disappear!</strong></p>
+<p>The &ldquo;v&rdquo; functions we&rsquo;ve been using so far are pretty convenient, but what if we want to further shortcut their syntax? It would be even more convenient to take the layout from above and pattern it like this:</p>
+<pre><code class="hljs language-kotlin">linearLayout {
+    textView {
+        <span class="hljs-comment">// properties...</span>
+    }
+    textView {
+        <span class="hljs-comment">// properties...</span>
+    }
+}</code></pre>
+<p>This looks even more natural, and makes for easy reading. It also looks very similar to the Android Gradle configuration language. The trick to getting a syntax like this is to effectively create a sort of alias for each type of view we want to use. So, to create a structure like above, we need a function called &ldquo;linearLayout&rdquo; that works like &ldquo;v<LinearLayout>&rdquo; and a function called &ldquo;textView&rdquo; that works like &ldquo;v<TextView>&rdquo;. Kotlin makes this pretty easy to set up:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> ViewGroup.<span class="hljs-title">linearLayout</span><span class="hljs-params">(init: <span class="hljs-type">LinearLayout</span>.()</span></span> -&gt; <span class="hljs-built_in">Unit</span>) = v(init)
+<span class="hljs-function"><span class="hljs-keyword">fun</span> Context.<span class="hljs-title">linearLayout</span><span class="hljs-params">(init: <span class="hljs-type">LinearLayout</span>.()</span></span> -&gt; <span class="hljs-built_in">Unit</span>) = v(init)
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> ViewGroup.<span class="hljs-title">textView</span><span class="hljs-params">(init: <span class="hljs-type">TextView</span>.()</span></span> -&gt; <span class="hljs-built_in">Unit</span>) = v(init)
+<span class="hljs-function"><span class="hljs-keyword">fun</span> Context.<span class="hljs-title">textView</span><span class="hljs-params">(init: <span class="hljs-type">TextView</span>.()</span></span> -&gt; <span class="hljs-built_in">Unit</span>) = v(init)</code></pre>
+<p>Here, I defined two functions for each type of view in order to account for the different v functions that could be invoked, depending on the starting point of a Context or a ViewGroup parent. The Kotlin language feature that makes these declarations possible is called <em>single expression function</em>. This is a special syntax for functions that allows you to:</p>
+<ol>
+<li>Omit the usual curly braces for the function body.</li>
+<li>Infer the return type based on the return type of the expression.</li>
+<li>Omit the return keyword.</li>
+</ol>
+<p>Now, let&rsquo;s use these convenience functions to recreate the view hierarchy from the beginning of this article:</p>
+<pre><code class="hljs language-kotlin">linearLayout {
+    layoutParams = LayoutParams(MATCH_PARENT, WRAP_CONTENT)
+    orientation = VERTICAL
+    padLeft = dp_i(<span class="hljs-number">16</span>f)
+
+    textView {
+        layoutParams = LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+        text = <span class="hljs-string">"Hello"</span>
+    }
+    textView {
+        layoutParams = LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+        text = <span class="hljs-string">"World"</span>
+    }
+}</code></pre>
+<p>Wow, we&rsquo;ve come a long way since our humble beginnings in part 2! (As long as you&rsquo;re willing to define alias functions for each type of view you want to build.)</p>
+<p><strong>But the novelty of this technique is not all that novel after all!</strong></p>
+<p>Some readers of this series have pointed out that this method using the type-safe builder pattern for building view hierarchies is really close to that of a project called <a href="https://github.com/Kotlin/anko">Anko</a>. I actually set out on this series without having any knowledge of it, and it wasn&rsquo;t until I was finished with the first two parts of this series that one of my colleagues pointed this out to me. Anko provides a more comprehensive solution for building views than what I&rsquo;ve been experimenting with here. Even after seeing it, I was still pretty interested in going through the process of discovering Kotlin language features and how they could be applied to Android development. If you&rsquo;ve been following this series, I hope you&rsquo;ve also enjoyed discovering these things!</p>
+<p><strong>So, are we really any better off with this technique?</strong></p>
+<p>You might be wondering now if it&rsquo;s better in general to create your Android views programmatically like this in Kotlin than the traditional XML layout resources. Up till now, it certainly seems like a big win to use Kotlin in this way. So, for the next part in this series, I&rsquo;ll compare the two techniques with each other to see how they compare to each other. Also, I&rsquo;ll provide a sample project that you can use to easily compare equivalent implementations.</p>
+<p>Don&rsquo;t forget that you can follow me <a href="https://medium.com/@CodingDoug">here on Medium</a> to get <a href="https://medium.com/p/kotlin-android-a-brass-tacks-experiment-wrap-up-2b37e3ac8957">the next part to this series</a> (in addition to future blogs and series!). And for even faster updates, <a href="https://twitter.com/CodingDoug">follow me on Twitter</a>!</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

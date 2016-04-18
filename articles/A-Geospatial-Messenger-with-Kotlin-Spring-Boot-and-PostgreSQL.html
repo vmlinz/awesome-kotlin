@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Algebraic-Data-Types-In-Kotlin.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="https://spring.io/blog/2016/03/20/a-geospatial-messenger-with-kotlin-spring-boot-and-postgresql">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a> - <span class="main-title-date">Mar 20, 2016</span>
+      </h1>
+      <h2>by Sébastien Deleuze</h2>
+      <p>Following my first <a href="https://spring.io/blog/2016/02/15/developing-spring-boot-applications-with-kotlin">Kotlin blog post</a>, today I want introduce the new Spring Boot + Kotlin application I have developed for my upcoming <a href="http://www.springio.net/">Spring I/O 2016 conference</a> talk &ldquo;Developing Geospatial Web Services with Kotlin and Spring Boot&rdquo;.</p>
+<h1>Dealing with native database functionalities</h1>
+<p>One of the goal of this application is to see how to take advantage of native database functionalities like we do in NoSQL world. Here we want to use Geospatial support provided by <a href="http://postgis.net/">PostGIS</a>, the spatial database extender for <a href="http://postgresql.org/">PostgreSQL</a>. <a href="https://www.compose.io/articles/is-postgresql-your-next-json-database/">Native JSON support</a> could also be a good use case.</p>
+<p>This Geospatial Messenger sample application is <a href="https://github.com/sdeleuze/geospatial-messenger">available on GitHub</a> in 2 flavors:</p>
+<ul>
+<li>The <code>master</code> branch uses <a href="https://github.com/JetBrains/Exposed">Exposed</a>, a Kotlin SQL library with a typesafe API created by JetBrains. It could be compared to <a href="https://github.com/querydsl/querydsl/tree/master/querydsl-sql">Query DSL SQL</a> or <a href="http://www.jooq.org/">jOOQ</a> but provides an idiomatic Kotlin API and does not require code generation.</li>
+<li>The <a href="https://github.com/sdeleuze/geospatial-messenger/tree/spring-data-jdbc-repository"><code>spring-data-jdbc-repository</code></a> branch is using <code>spring-data-jdbc-repository</code>, a community project that allows to use Spring Data <a href="https://docs.spring.io/spring-data/data-commons/docs/current/api/org/springframework/data/repository/PagingAndSortingRepository.html"><code>PagingAndSortingRepository</code></a> API with raw SQL queries without JPA. I am using <a href="https://github.com/jirutka/spring-data-jdbc-repository/">this Jakub Jirutka fork</a> which is an improved version of <a href="https://github.com/nurkiewicz/spring-data-jdbc-repository">Tomasz Nurkiewicz original project</a>.</li>
+</ul>
+<p>A <a href="https://github.com/sebastianperruolo/spring-gis">Spring Data JPA + Hibernate Spatial variant</a> would be interesting, so feel free to contribute it with a pull request ;-) Kotlin Query DSL support would be also nice but this is currently not supported (please comment on <a href="https://github.com/querydsl/querydsl/issues/1828">this issue</a> if you are interested). In this blog post I will focus on the <a href="https://github.com/JetBrains/Exposed">Exposed</a> variant.</p>
+<h1>A tour of Geospatial Messenger code</h1>
+<p>Our domain model is described easily thanks to these 2 <a href="https://kotlinlang.org/docs/reference/data-classes.html">Kotlin data classes</a>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Message</span></span>(
+    <span class="hljs-keyword">var</span> content  : String,
+    <span class="hljs-keyword">var</span> author   : String,
+    <span class="hljs-keyword">var</span> location : Point? = <span class="hljs-literal">null</span>,
+    <span class="hljs-keyword">var</span> id       : <span class="hljs-built_in">Int</span>?   = <span class="hljs-literal">null</span>
+)
+
+<span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span></span>(
+    <span class="hljs-keyword">var</span> userName  : String,
+    <span class="hljs-keyword">var</span> firstName : String,
+    <span class="hljs-keyword">var</span> lastName  : String,
+    <span class="hljs-keyword">var</span> location  : Point? = <span class="hljs-literal">null</span>
+)</code></pre>
+<p>Exposed allows us to describe the structure of our tables with a type-safe SQL API quite handy to use (autocomplete, refactoring and error prone):</p>
+<pre><code class="hljs language-kotlin">    <span class="hljs-keyword">object</span> Messages : Table() {
+        <span class="hljs-keyword">val</span> id       = integer(<span class="hljs-string">"id"</span>).autoIncrement().primaryKey()
+        <span class="hljs-keyword">val</span> content  = text(<span class="hljs-string">"content"</span>)
+        <span class="hljs-keyword">val</span> author   = reference(<span class="hljs-string">"author"</span>, Users.userName)
+        <span class="hljs-keyword">val</span> location = point(<span class="hljs-string">"location"</span>).nullable()
+    }
+
+    <span class="hljs-keyword">object</span> Users : Table() {
+        <span class="hljs-keyword">val</span> userName  = text(<span class="hljs-string">"user_name"</span>).primaryKey()
+        <span class="hljs-keyword">val</span> firstName = text(<span class="hljs-string">"first_name"</span>)
+        <span class="hljs-keyword">val</span> lastName  = text(<span class="hljs-string">"last_name"</span>)
+        <span class="hljs-keyword">val</span> location  = point(<span class="hljs-string">"location"</span>).nullable()
+    }</code></pre>
+<p>It is interesting to notice that Exposed does not support natively PostGIS functionalities like geometry types or geospatial requests. That&rsquo;s where <a href="https://kotlinlang.org/docs/reference/extensions.html">Kotlin extensions</a> shine, and allow with a few lines of code to add such support without requiring to use extended classes:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> Table.<span class="hljs-title">point</span><span class="hljs-params">(name: <span class="hljs-type">String</span>, srid: <span class="hljs-type">Int</span> = <span class="hljs-number">4326</span>)</span></span>: Column&lt;Point&gt;
+  = registerColumn(name, PointColumnType())
+
+<span class="hljs-keyword">infix</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> ExpressionWithColumnType<span class="hljs-type">&lt;*&gt;</span>.<span class="hljs-title">within</span><span class="hljs-params">(box: <span class="hljs-type">PGbox2d</span>)</span></span> : Op&lt;<span class="hljs-built_in">Boolean</span>&gt;
+  = WithinOp(<span class="hljs-keyword">this</span>, box)</code></pre>
+<p>Our repository is also quite short and very flexible, since it allows you to write any kind of SQL request even with complex <code>WHERE</code> clause with a type-safe SQL API. Currently we need to use <code>db.transaction{ }</code> wrapper, I have created Exposed issue <a href="https://github.com/JetBrains/Exposed/issues/25">#25</a> to be able to use regular <a href="http://docs.spring.io/autorepo/docs/spring/4.2.x/spring-framework-reference/html/transaction.html">Spring transaction management</a> with <a href="http://docs.spring.io/autorepo/docs/spring/4.2.x/spring-framework-reference/html/transaction.html#transaction-declarative-annotations"><code>@Transactional</code></a> annotation, feel free to add your +1 ;-)</p>
+<p>Please notice that since we are using Spring Framework 4.3, we <a href="https://spring.io/blog/2016/03/04/core-container-refinements-in-spring-framework-4-3#implicit-constructor-injection-for-single-constructor-scenarios">no longer need to specify an <code>@Autowired</code> annotation in such single-constructor class</a>.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-meta">@Repository</span>
+<span class="hljs-keyword">open</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserRepository</span></span>(<span class="hljs-keyword">val</span> db: Database) {
+
+    <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">createTable</span><span class="hljs-params">()</span></span> = db.transaction {
+        create(Users)
+    }
+
+    <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">create</span><span class="hljs-params">(user: <span class="hljs-type">User</span>)</span></span> = db.transaction {
+        Users.insert( toRow(user) )
+    }
+
+    <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">updateLocation</span><span class="hljs-params">(u:<span class="hljs-type">String</span>, l: <span class="hljs-type">Point</span>)</span></span> = db.transaction {
+        location.srid = <span class="hljs-number">4326</span>
+        Users.update({Users.userName eq u}) { it[Users.location] = l}
+    }
+
+    <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">findAll</span><span class="hljs-params">()</span></span> = db.transaction {
+        Users.selectAll().map { fromRow(it) }
+    }
+
+    <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">findByBoundingBox</span><span class="hljs-params">(box: <span class="hljs-type">PGbox2d</span>)</span></span> = db.transaction {
+        Users.select { Users.location within box }.map { fromRow(it) }
+    }
+
+    <span class="hljs-keyword">open</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">deleteAll</span><span class="hljs-params">()</span></span> = db.transaction {
+        Users.deleteAll()
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">toRow</span><span class="hljs-params">(u: <span class="hljs-type">User</span>)</span></span>: Users.(UpdateBuilder&lt;*&gt;) -&gt; <span class="hljs-built_in">Unit</span> = {
+        it[userName] = u.userName
+        it[firstName] = u.firstName
+        it[lastName] = u.lastName
+        it[location] = u.location
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">fromRow</span><span class="hljs-params">(r: <span class="hljs-type">ResultRow</span>)</span></span> =
+        User(r[Users.userName],
+             r[Users.firstName],
+             r[Users.lastName],
+             r[Users.location])
+}</code></pre>
+<p>Controllers are also very concise and use Spring Framework 4.3 upcoming <code>@GetMapping</code> / <code>@PostMapping</code> annotations which are just method-specific shortcuts for <code>@RequestMapping</code> annotations:</p>
+<pre><code class="hljs language-kotlin">    <span class="hljs-meta">@RestController</span>
+    <span class="hljs-meta">@RequestMapping(<span class="hljs-meta-string">"/user"</span>)</span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserController</span></span>(<span class="hljs-keyword">val</span> repo: UserRepository) {
+
+        <span class="hljs-meta">@PostMapping</span>
+        <span class="hljs-meta">@ResponseStatus(CREATED)</span>
+        <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">create</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> u: <span class="hljs-type">User</span>)</span></span> { repo.create(u) }
+
+        <span class="hljs-meta">@GetMapping</span>
+        <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">list</span><span class="hljs-params">()</span></span> = repo.findAll()
+
+        <span class="hljs-meta">@GetMapping(<span class="hljs-meta-string">"/bbox/{xMin},{yMin},{xMax},{yMax}"</span>)</span>
+        <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">findByBoundingBox</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable</span> xMin:<span class="hljs-type">Double</span>,
+                              <span class="hljs-meta">@PathVariable</span> yMin:<span class="hljs-type">Double</span>,
+                              <span class="hljs-meta">@PathVariable</span> xMax:<span class="hljs-type">Double</span>,
+                              <span class="hljs-meta">@PathVariable</span> yMax:<span class="hljs-type">Double</span>)</span></span>
+                = repo.findByBoundingBox(
+                            PGbox2d(Point(xMin, yMin), Point(xMax, yMax)))
+
+        <span class="hljs-meta">@PutMapping(<span class="hljs-meta-string">"/{userName}/location/{x},{y}"</span>)</span>
+        <span class="hljs-meta">@ResponseStatus(NO_CONTENT)</span>
+        <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">updateLocation</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable</span> userName:<span class="hljs-type">String</span>,
+                           <span class="hljs-meta">@PathVariable</span> x: <span class="hljs-type">Double</span>,
+                           <span class="hljs-meta">@PathVariable</span> y: <span class="hljs-type">Double</span>)</span></span>
+                = repo.updateLocation(userName, Point(x, y))
+    }</code></pre>
+<p>The client side is a pure HTML + Javascript application developed with <a href="http://openlayers.org/">OpenLayers</a> mapping library (see <a href="https://github.com/sdeleuze/geospatial-messenger/blob/master/src/main/resources/static/index.html">index.html</a> and <a href="https://github.com/sdeleuze/geospatial-messenger/blob/master/src/main/resources/static/map.js">map.js</a> for more details) that geolocalizes you and creates geolocalized messages sent/received to/from other users thanks to Server-Sent Events.</p>
+<p><img src="https://raw.githubusercontent.com/sdeleuze/geospatial-messenger/master/screenshot.png" alt="Screenshot"></p>
+<p>And last but not least, the REST API is fully tested and documented thanks to the awesome <a href="http://projects.spring.io/spring-restdocs/">Spring REST docs</a> project, see <a href="https://github.com/sdeleuze/geospatial-messenger/blob/master/src/test/kotlin/io/spring/messenger/MessageControllerTests.kt">MessageControllerTests</a> and <a href="https://github.com/sdeleuze/geospatial-messenger/blob/master/src/main/resources/static/index.html">index.adoc</a> for more details.</p>
+<h1>Conclusion</h1>
+<p>The main impression I had developing this application is that it was fun, efficient, with a high level of flexibility and safety provided by the SQL API and Kotlin type system and <a href="https://kotlinlang.org/docs/reference/null-safety.html">null safety</a>. The resulting Spring Boot application is a 18 MBytes self-contained executable jar with low memory consumption (the app can run with <code>-Xmx32m</code>!!!). Using Spring REST docs was also a pleasure, demonstrating again Kotlin nice Java interoperability.</p>
+<p>The few pain points I have encountered (<a href="https://youtrack.jetbrains.com/issue/KT-11235">array annotation attributes</a>, <a href="https://youtrack.jetbrains.com/issue/KT-5175">Java 8 Stream support</a>, <a href="https://youtrack.jetbrains.com/issue/KT-6947">full callable reference support</a>), are planned to be fixed in Kotlin 1.1. Exposed library is still young and need to mature, but from my point of view it is promising and shows how Kotlin could be used for building type-safe DSL API (<a href="https://kotlinlang.org/docs/reference/type-safe-builders.html">this HTML type-safe builder</a> is also a good example).</p>
+<p>And keep in mind that officially supported <a href="http://projects.spring.io/spring-data/">Spring Data projects</a> works well with Kotlin as shown in the <a href="https://github.com/sdeleuze/spring-boot-kotlin-demo">spring-boot-kotlin-demo</a> project in my <a href="https://spring.io/blog/2016/02/15/developing-spring-boot-applications-with-kotlin">previous blog post</a>.</p>
+<p>If you happen to be in Barcelona mid May (never a bad time to be in Barcelona anyway!), don&rsquo;t miss the chance to join the <a href="http://www.springio.net/">Spring I/O conference</a>. Also, the registration for <a href="http://springoneplatform.io/">SpringOne Platform</a> (early August, Las Vegas) has opened recently, in case you want to benefit from early bird ticket pricing. The latter is also still open for talk proposals. So if you&rsquo;re interested to give a talk about Spring or Pivotal-related technologies, feel free to submit!</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

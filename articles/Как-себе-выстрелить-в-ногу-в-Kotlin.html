@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Как себе выстрелить в ногу в Kotlin</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Kotlin-and-Ceylon.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="https://habrahabr.ru/post/278169/">Как себе выстрелить в ногу в Kotlin</a> - <span class="main-title-date">Feb 29, 2016</span>
+      </h1>
+      <h2>by @ov7a</h2>
+      <blockquote>
+<p>&#x41F;&#x43E;&#x441;&#x442;-&#x43D;&#x430;&#x431;&#x440;&#x43E;&#x441;</p>
+</blockquote>
+<h2>&#x41A;&#x430;&#x43A; &#x441;&#x435;&#x431;&#x435; &#x432;&#x44B;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x438;&#x442;&#x44C; &#x432; &#x43D;&#x43E;&#x433;&#x443; &#x432; Kotlin</h2>
+<p>&#x421;&#x43E;&#x432;&#x441;&#x435;&#x43C; &#x43D;&#x435;&#x434;&#x430;&#x432;&#x43D;&#x43E; &#x432;&#x44B;&#x448;&#x435;&#x43B; <a href="http://blog.jetbrains.com/kotlin/2016/02/kotlin-1-0-released-pragmatic-language-for-jvm-and-android/">&#x440;&#x435;&#x43B;&#x438;&#x437;</a> Kotlin, &#x430; &#x435;&#x433;&#x43E; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x430; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x447;&#x438;&#x43A;&#x43E;&#x432; &#x43F;&#x440;&#x435;&#x434;&#x43B;&#x430;&#x433;&#x430;&#x43B;&#x430; <a href="https://habrahabr.ru/company/JetBrains/blog/277573/">&#x437;&#x430;&#x434;&#x430;&#x432;&#x430;&#x442;&#x44C; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x441;&#x44B;</a> &#x43F;&#x440;&#x43E; &#x44F;&#x437;&#x44B;&#x43A;. &#x41E;&#x43D; &#x441;&#x435;&#x439;&#x447;&#x430;&#x441; &#x43D;&#x430; &#x441;&#x43B;&#x443;&#x445;&#x443; &#x438;, &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E;, &#x43C;&#x43D;&#x43E;&#x433;&#x438;&#x43C; &#x445;&#x43E;&#x447;&#x435;&#x442;&#x441;&#x44F; &#x435;&#x433;&#x43E; &#x43F;&#x43E;&#x43F;&#x440;&#x43E;&#x431;&#x43E;&#x432;&#x430;&#x442;&#x44C;.</p>
+<p>&#x41F;&#x430;&#x440;&#x443; &#x43D;&#x435;&#x434;&#x435;&#x43B;&#x44C; &#x43D;&#x430;&#x437;&#x430;&#x434; &#x442;&#x438;&#x43C;&#x43B;&#x438;&#x434; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x43B; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x43C;&#x43F;&#x430;&#x43D;&#x438;&#x438; &#x43F;&#x440;&#x435;&#x437;&#x435;&#x43D;&#x442;&#x430;&#x446;&#x438;&#x44E; &#x43E; &#x442;&#x43E;&#x43C;, &#x447;&#x442;&#x43E; &#x432; &#x41A;&#x43E;&#x442;&#x43B;&#x438;&#x43D;&#x435; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x43E;. &#x41E;&#x434;&#x43D;&#x438;&#x43C; &#x438;&#x437; &#x441;&#x430;&#x43C;&#x44B;&#x445; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x435;&#x441;&#x43D;&#x44B;&#x445; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x441;&#x43E;&#x432; &#x431;&#x44B;&#x43B; &laquo;&#x410; &#x43A;&#x430;&#x43A; &#x432; &#x41A;&#x43E;&#x442;&#x43B;&#x438;&#x43D;&#x435; &#x432;&#x44B;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x438;&#x442;&#x44C; &#x441;&#x435;&#x431;&#x435; &#x432; &#x43D;&#x43E;&#x433;&#x443;?&raquo; &#x422;&#x430;&#x43A; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x43B;&#x43E;&#x441;&#x44C;, &#x447;&#x442;&#x43E; &#x43E;&#x442;&#x432;&#x435;&#x442;&#x438;&#x43B; &#x43D;&#x430; &#x44D;&#x442;&#x43E;&#x442; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x441; &#x44F;.</p>
+<p>Disclaimer:
+&#x41D;&#x435; &#x441;&#x442;&#x43E;&#x438;&#x442; &#x432;&#x43E;&#x441;&#x43F;&#x440;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x442;&#x44C; &#x44D;&#x442;&#x443; &#x441;&#x442;&#x430;&#x442;&#x44C;&#x44E; &#x43A;&#x430;&#x43A; &laquo;Kotlin &mdash; &#x43E;&#x442;&#x441;&#x442;&#x43E;&#x439;&raquo;. &#x425;&#x43E;&#x442;&#x44F; &#x44F; &#x43E;&#x442;&#x43D;&#x43E;&#x448;&#x443;&#x441;&#x44C; &#x441;&#x43A;&#x43E;&#x440;&#x435;&#x435; &#x43A; &#x43A;&#x430;&#x442;&#x435;&#x433;&#x43E;&#x440;&#x438;&#x438; &#x442;&#x435;&#x445;, &#x43A;&#x43E;&#x43C;&#x443; &#x438; &#x441;&#x43E; Scala &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x43E;, &#x44F; &#x441;&#x447;&#x438;&#x442;&#x430;&#x44E;, &#x447;&#x442;&#x43E; &#x44F;&#x437;&#x44B;&#x43A; &#x43D;&#x435;&#x43F;&#x43B;&#x43E;&#x445;&#x43E;&#x439;.
+&#x412;&#x441;&#x435; &#x43F;&#x443;&#x43D;&#x43A;&#x442;&#x44B; &#x441;&#x43F;&#x43E;&#x440;&#x43D;&#x44B;&#x435;, &#x43D;&#x43E; &#x440;&#x430;&#x437; &#x432; &#x433;&#x43E;&#x434; &#x438; &#x43F;&#x430;&#x43B;&#x43A;&#x430; &#x441;&#x442;&#x440;&#x435;&#x43B;&#x44F;&#x435;&#x442;. &#x41A;&#x43E;&#x433;&#x434;&#x430;-&#x442;&#x43E; &#x432;&#x44B; &#x441;&#x435;&#x431;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x438;&#x442;&#x435; &#x437;&#x430;&#x43E;&#x434;&#x43D;&#x43E; &#x438; &#x431;&#x430;&#x448;&#x43A;&#x443;, &#x430; &#x43A;&#x43E;&#x433;&#x434;&#x430;-&#x442;&#x43E; &#x443; &#x432;&#x430;&#x441; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x442;&#x441;&#x44F; &#x432;&#x44B;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x438;&#x442;&#x44C; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x432; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x447;&#x44C; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x43B;&#x443;&#x43D;&#x438;&#x44F;, &#x435;&#x441;&#x43B;&#x438; &#x432;&#x44B; &#x43F;&#x440;&#x435;&#x434;&#x432;&#x430;&#x440;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E; &#x441;&#x43E;&#x432;&#x435;&#x440;&#x448;&#x438;&#x442;&#x435; &#x447;&#x435;&#x440;&#x43D;&#x44B;&#x439; &#x440;&#x438;&#x442;&#x443;&#x430;&#x43B; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x44F; &#x43F;&#x43B;&#x43E;&#x445;&#x43E;&#x433;&#x43E; &#x43A;&#x43E;&#x434;&#x430;.</p>
+<p>&#x41D;&#x430;&#x448;&#x430; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x430; &#x43D;&#x435;&#x434;&#x430;&#x432;&#x43D;&#x43E; &#x437;&#x430;&#x43A;&#x43E;&#x43D;&#x447;&#x438;&#x43B;&#x430; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x43E;&#x439; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442; &#x43D;&#x430; Scala, &#x441;&#x435;&#x439;&#x447;&#x430;&#x441; &#x434;&#x435;&#x43B;&#x430;&#x435;&#x43C; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442; &#x43F;&#x43E;&#x43C;&#x435;&#x43B;&#x44C;&#x447;&#x435; &#x43D;&#x430; Kotlin, &#x43F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x432; &#x441;&#x43F;&#x43E;&#x439;&#x43B;&#x435;&#x440;&#x430;&#x445; &#x431;&#x443;&#x434;&#x435;&#x442; &#x441;&#x440;&#x430;&#x432;&#x43D;&#x435;&#x43D;&#x438;&#x435; &#x441;&#x43E; Scala. &#x42F; &#x431;&#x443;&#x434;&#x443; &#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C;, &#x447;&#x442;&#x43E; Nullable &#x432; Kotlin &mdash; &#x44D;&#x442;&#x43E; &#x44D;&#x43A;&#x432;&#x438;&#x432;&#x430;&#x43B;&#x435;&#x43D;&#x442; Option, &#x445;&#x43E;&#x442;&#x44F; &#x44D;&#x442;&#x43E; &#x441;&#x43E;&#x432;&#x441;&#x435;&#x43C; &#x43D;&#x435; &#x442;&#x430;&#x43A;, &#x43D;&#x43E;, &#x441;&#x43A;&#x43E;&#x440;&#x435;&#x435; &#x432;&#x441;&#x435;&#x433;&#x43E;, &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x438;&#x43D;&#x441;&#x442;&#x432;&#x43E; &#x438;&#x437; &#x442;&#x435;&#x445;, &#x43A;&#x442;&#x43E; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43B; &#x441; Option, &#x431;&#x443;&#x434;&#x443;&#x442; &#x432;&#x43C;&#x435;&#x441;&#x442;&#x43E; &#x43D;&#x435;&#x433;&#x43E; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; Nullable.</p>
+<h4>1. &#x41F;&#x43E;&#x441;&#x442;-&#x438;&#x43D;&#x43A;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x438; &#x43F;&#x440;&#x435;&#x438;&#x43D;&#x43A;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x43A;&#x430;&#x43A; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F;</h4>
+<p>&#x426;&#x438;&#x442;&#x438;&#x440;&#x443;&#x44E; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x448;&#x430;&#x432;&#x448;&#x435;&#x433;&#x43E;: &laquo;&#x424;&#x443;, &#x44D;&#x442;&#x43E; &#x436; &#x431;&#x430;&#x44F;&#x43D;, &#x441;&#x43A;&#x443;&#x447;&#x43D;&#x43E;&raquo;. &#x421;&#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x43A;&#x43E;&#x43F;&#x438;&#x439; &#x441;&#x43B;&#x43E;&#x43C;&#x430;&#x43D;&#x43E;, &#x43C;&#x438;&#x43B;&#x43B;&#x438;&#x43E;&#x43D; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x441;&#x43E;&#x432; &#x43D;&#x430; &#x441;&#x43E;&#x431;&#x435;&#x441;&#x435;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F;&#x445; C++... &#x415;&#x441;&#x43B;&#x438; &#x435;&#x441;&#x442;&#x44C; &#x43F;&#x440;&#x438;&#x432;&#x44B;&#x447;&#x43A;&#x430;, &#x442;&#x43E; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x431;&#x44B;&#x43B;&#x43E; &#x435;&#x433;&#x43E; &#x43E;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x438;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x446;&#x438;&#x435;&#x439; (statement&#x27;&#x43E;&#x43C;). &#x421;&#x43F;&#x440;&#x430;&#x432;&#x435;&#x434;&#x43B;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x438; &#x440;&#x430;&#x434;&#x438;, &#x434;&#x440;&#x443;&#x433;&#x438;&#x435; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x44B;, &#x432;&#x440;&#x43E;&#x434;&#x435; +=, &#x44F;&#x432;&#x43B;&#x44F;&#x44E;&#x442;&#x441;&#x44F; &#x438;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x446;&#x438;&#x44F;&#x43C;&#x438;.
+<a href="https://habrahabr.ru/company/JetBrains/blog/277573/#comment_8784811">&#x426;&#x438;&#x442;&#x438;&#x440;&#x443;&#x44E;</a> &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x437; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x447;&#x438;&#x43A;&#x43E;&#x432;, <a href="https://habrahabr.ru/users/abreslav/">abreslav</a>:</p>
+<blockquote>
+<p>&#x421;&#x43C;&#x43E;&#x442;&#x440;&#x435;&#x43B;&#x438; &#x43D;&#x430; &#x44E;&#x437;&#x43A;&#x435;&#x439;&#x441;&#x44B;, &#x443;&#x432;&#x438;&#x434;&#x435;&#x43B;&#x438;, &#x447;&#x442;&#x43E; &#x43F;&#x43E;&#x43B;&#x43E;&#x43C;&#x430;&#x435;&#x442;&#x441;&#x44F;, &#x440;&#x435;&#x448;&#x438;&#x43B;&#x438; &#x43E;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x44C;.</p>
+<p>&#x417;&#x430;&#x43C;&#x435;&#x447;&#x443;, &#x447;&#x442;&#x43E; &#x443; &#x43D;&#x430;&#x441; &#x442;&#x443;&#x442; &#x43D;&#x435; &#x421;++, &#x438; &#x43D;&#x430; &#x441;&#x43E;&#x431;&#x435;&#x441;&#x435;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x438; &#x43F;&#x440;&#x43E; &#x438;&#x43D;&#x43A;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x442; &#x441;&#x43F;&#x440;&#x43E;&#x441;&#x438;&#x442;&#x44C; &#x43E;&#x441;&#x43E;&#x431;&#x43E; &#x43D;&#x435;&#x447;&#x435;&#x433;&#x43E;. &#x420;&#x430;&#x437;&#x432;&#x435; &#x447;&#x442;&#x43E; &#x440;&#x430;&#x437;&#x43D;&#x438;&#x446;&#x443; &#x43C;&#x435;&#x436;&#x434;&#x443; &#x43F;&#x440;&#x435;&#x444;&#x438;&#x43A;&#x441;&#x43D;&#x44B;&#x43C; &#x438; &#x43F;&#x43E;&#x441;&#x442;&#x444;&#x438;&#x43A;&#x441;&#x43D;&#x44B;&#x43C;.</p>
+</blockquote>
+<p>&#x41D;&#x430; &#x43D;&#x435;&#x442; &#x438; &#x441;&#x443;&#x434;&#x430; &#x43D;&#x435;&#x442;. &#x420;&#x430;&#x437;&#x443;&#x43C;&#x435;&#x435;&#x442;&#x441;&#x44F;, &#x432; &#x437;&#x434;&#x440;&#x430;&#x432;&#x43E;&#x43C; &#x443;&#x43C;&#x435; &#x43D;&#x438;&#x43A;&#x442;&#x43E; &#x442;&#x430;&#x43A; &#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442;, &#x43D;&#x43E; &#x441;&#x43B;&#x443;&#x447;&#x430;&#x439;&#x43D;&#x43E; &mdash; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C;.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> i = <span class="hljs-number">5</span>
+i = i++ + i++
+println(i)</code></pre>
+<blockquote>
+<p><strong>&#x41D;&#x438;&#x43A;&#x430;&#x43A;&#x43E;&#x433;&#x43E; undefined behaviour, &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;, &#x43E;&#x447;&#x435;&#x432;&#x438;&#x434;&#x43D;&#x43E;, 12</strong></p>
+<p>11</p>
+</blockquote>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> a = <span class="hljs-number">5</span>
+a = ++a + ++a
+println(a)</code></pre>
+<blockquote>
+<p><strong>&#x422;&#x443;&#x442; &#x432;&#x441;&#x435; &#x43F;&#x440;&#x43E;&#x449;&#x435;, &#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x43E;, 14</strong></p>
+<p>13</p>
+</blockquote>
+<blockquote>
+<p><strong>&#x411;&#x43E;&#x43B;&#x44C;&#x448;&#x435; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;&#x43E;&#x432;</strong></p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> b = <span class="hljs-number">5</span>
+b = ++b + b++
+println(b)</code></pre>
+<blockquote>
+<p><strong>&#x411;&#x430;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x43B;&#x43E;&#x433;&#x438;&#x43A;&#x430; &#x433;&#x43E;&#x432;&#x43E;&#x440;&#x438;&#x442;, &#x447;&#x442;&#x43E; &#x43E;&#x442;&#x432;&#x435;&#x442; &#x434;&#x43E;&#x43B;&#x436;&#x435;&#x43D; &#x431;&#x44B;&#x442;&#x44C; &#x43C;&#x435;&#x436;&#x434;&#x443; 11 &#x438; 13</strong></p>
+<p>&#x434;&#x430;, 12</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> c = <span class="hljs-number">5</span>
+c = c++ + ++c
+println(c)</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>&#x41E;&#x442; &#x43F;&#x435;&#x440;&#x435;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x438; &#x43C;&#x435;&#x441;&#x442; &#x441;&#x43B;&#x430;&#x433;&#x430;&#x435;&#x43C;&#x44B;&#x445; &#x441;&#x443;&#x43C;&#x43C;&#x430; &#x43D;&#x435; &#x43C;&#x435;&#x43D;&#x44F;&#x435;&#x442;&#x441;&#x44F;</strong></p>
+<p>&#x440;&#x430;&#x437;&#x443;&#x43C;&#x435;&#x435;&#x442;&#x441;&#x44F;, 12</p>
+</blockquote>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">var</span> d = <span class="hljs-number">5</span>
+d = d + d++ + ++d + ++d
+println(d)
+
+<span class="hljs-keyword">var</span> e = <span class="hljs-number">5</span>
+e = ++e + ++e + e++ + e
+println(e)</code></pre>
+<blockquote>
+<p><strong>&#x41E;&#x442; &#x43F;&#x435;&#x440;&#x435;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x438; &#x43C;&#x435;&#x441;&#x442; &#x441;&#x43B;&#x430;&#x433;&#x430;&#x435;&#x43C;&#x44B;&#x445; &#x441;&#x443;&#x43C;&#x43C;&#x430; &#x43D;&#x435; &#x43C;&#x435;&#x43D;&#x44F;&#x435;&#x442;&#x441;&#x44F;!</strong></p>
+<p>&#x420;&#x430;&#x437;&#x443;&#x43C;&#x435;&#x435;&#x442;&#x441;&#x44F;:
+25
+28</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<p>&#x41D;&#x438;&#x447;&#x435;&#x433;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x435;&#x441;&#x43D;&#x43E;&#x433;&#x43E;, &#x432; Scala &#x438;&#x43D;&#x43A;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x432; &#x43D;&#x435;&#x442;. &#x41A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440; &#x441;&#x43A;&#x430;&#x436;&#x435;&#x442;, &#x447;&#x442;&#x43E; &#x43D;&#x435;&#x442; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430; ++ &#x434;&#x43B;&#x44F; Int. &#x41D;&#x43E; &#x435;&#x441;&#x43B;&#x438; &#x43E;&#x447;&#x435;&#x43D;&#x44C; &#x437;&#x430;&#x445;&#x43E;&#x442;&#x435;&#x442;&#x44C;, &#x435;&#x433;&#x43E;, &#x43A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x43E;, &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x44C;.</p>
+</blockquote>
+<h4>2. &#x41E;&#x434;&#x43E;&#x431;&#x440;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;</h4>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> foo: <span class="hljs-built_in">Int</span>? = <span class="hljs-literal">null</span>
+<span class="hljs-keyword">val</span> bar = foo!! + <span class="hljs-number">5</span></code></pre>
+<blockquote>
+<p><strong>&#x427;&#x442;&#x43E; &#x445;&#x43E;&#x442;&#x435;&#x43B;&#x438;, &#x442;&#x43E; &#x438; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x43B;&#x438;</strong></p>
+<p>Exception in thread &laquo;main&raquo; kotlin.KotlinNullPointerException</p>
+</blockquote>
+<p>&#x412; &#x434;&#x43E;&#x43A;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x446;&#x438;&#x438; &#x433;&#x43E;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x441;&#x44F;, &#x447;&#x442;&#x43E; &#x442;&#x430;&#x43A; &#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x441;&#x442;&#x43E;&#x438;&#x442; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x435;&#x441;&#x43B;&#x438; &#x432;&#x44B; &#x43E;&#x447;&#x435;&#x43D;&#x44C; &#x445;&#x43E;&#x442;&#x438;&#x442;&#x435; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x442;&#x44C; NullPointerException. &#x42D;&#x442;&#x43E; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x438;&#x439; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x432;&#x44B;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x438;&#x442;&#x44C; &#x441;&#x435;&#x431;&#x435; &#x432; &#x43D;&#x43E;&#x433;&#x443;: !! &#x440;&#x435;&#x436;&#x435;&#x442; &#x433;&#x43B;&#x430;&#x437; &#x438; &#x43F;&#x440;&#x438; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x43C; &#x432;&#x437;&#x433;&#x43B;&#x44F;&#x434;&#x435; &#x43D;&#x430; &#x43A;&#x43E;&#x434; &#x432;&#x441;&#x435; &#x43F;&#x43E;&#x43D;&#x44F;&#x442;&#x43D;&#x43E;. &#x420;&#x430;&#x437;&#x443;&#x43C;&#x435;&#x435;&#x442;&#x441;&#x44F;, &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; !! &#x43F;&#x440;&#x435;&#x434;&#x43F;&#x43E;&#x43B;&#x430;&#x433;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x442;&#x43E;&#x433;&#x434;&#x430;, &#x43A;&#x43E;&#x433;&#x434;&#x430; &#x434;&#x43E; &#x44D;&#x442;&#x43E;&#x433;&#x43E; &#x432;&#x44B; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x438;&#x43B;&#x438; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x430; null &#x438; smart cast &#x43F;&#x43E; &#x43A;&#x430;&#x43A;&#x43E;&#x439;-&#x43D;&#x438;&#x431;&#x443;&#x434;&#x44C; &#x43F;&#x440;&#x438;&#x447;&#x438;&#x43D;&#x435; &#x43D;&#x435; &#x441;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43B;. &#x418;&#x43B;&#x438; &#x43A;&#x43E;&#x433;&#x434;&#x430; &#x432;&#x44B; &#x43F;&#x43E;&#x447;&#x435;&#x43C;&#x443;-&#x442;&#x43E; &#x443;&#x432;&#x435;&#x440;&#x435;&#x43D;&#x44B;, &#x447;&#x442;&#x43E; &#x442;&#x430;&#x43C; &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; null.</p>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<pre><code class="hljs language-scala"><span class="hljs-keyword">val</span> foo: <span class="hljs-type">Option</span>[<span class="hljs-type">Int</span>] = <span class="hljs-type">None</span>
+<span class="hljs-keyword">val</span> bar = foo.get + <span class="hljs-number">5</span></code></pre>
+<blockquote>
+<p><strong>&#x427;&#x442;&#x43E; &#x445;&#x43E;&#x442;&#x435;&#x43B;&#x438;, &#x442;&#x43E; &#x438; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x43B;&#x438;</strong></p>
+<p>Exception in thread &laquo;main&raquo; java.util.NoSuchElementException: None.get</p>
+</blockquote>
+</blockquote>
+<h4>3. &#x41F;&#x435;&#x440;&#x435;&#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x438;&#x435; invoke()</h4>
+<p>&#x41D;&#x430;&#x447;&#x43D;&#x435;&#x43C; &#x441; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x433;&#x43E;: &#x447;&#x442;&#x43E; &#x434;&#x435;&#x43B;&#x430;&#x435;&#x442; &#x44D;&#x442;&#x43E;&#x442; &#x43A;&#x443;&#x441;&#x43E;&#x43A; &#x43A;&#x43E;&#x434;&#x430; &#x438; &#x43A;&#x430;&#x43A;&#x43E;&#x439; &#x442;&#x438;&#x43F; &#x443; a?</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span></span>(){...}
+<span class="hljs-keyword">val</span> a = A()</code></pre>
+<blockquote>
+<p><strong>&#x41D;&#x430; &#x433;&#x43B;&#x443;&#x43F;&#x44B;&#x439; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x441; - &#x433;&#x43B;&#x443;&#x43F;&#x44B;&#x439; &#x43E;&#x442;&#x432;&#x435;&#x442;</strong></p>
+<p>&#x41F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x44C;&#x43D;&#x43E;, &#x441;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x442; &#x43D;&#x43E;&#x432;&#x44B;&#x439; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; &#x442;&#x438;&#x43F;&#x430; A, &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x44F; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440; &#x43F;&#x43E; &#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E;.</p>
+</blockquote>
+<p>&#x410; &#x437;&#x434;&#x435;&#x441;&#x44C; &#x447;&#x442;&#x43E; &#x431;&#x443;&#x434;&#x435;&#x442;?</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> В <span class="hljs-keyword">private</span> <span class="hljs-keyword">constructor</span></span>(){...}
+<span class="hljs-keyword">val</span> b = B()</code></pre>
+<blockquote>
+<p><strong>&#x41D;&#x443;, &#x43D;&#x430;&#x432;&#x435;&#x440;&#x43D;&#x43E;, &#x43E;&#x448;&#x438;&#x431;&#x43A;&#x430; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x446;&#x438;&#x438; &#x431;&#x443;&#x434;&#x435;&#x442;...</strong></p>
+<p>&#x410; &#x432;&#x43E;&#x442; &#x438; &#x43D;&#x435;&#x442;!</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">constructor</span></span>(){
+    <span class="hljs-keyword">var</span> param = <span class="hljs-number">6</span>
+
+    <span class="hljs-keyword">constructor</span>(a: <span class="hljs-built_in">Int</span>): <span class="hljs-keyword">this</span>(){
+        param = a
+    }
+
+    <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span>{
+        <span class="hljs-keyword">operator</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">invoke</span><span class="hljs-params">()</span></span> = B(<span class="hljs-number">7</span>)
+    }
+}</code></pre>
+<p>&#x414;&#x43B;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x430; &#x444;&#x430;&#x431;&#x440;&#x438;&#x43A;&#x430;. &#x410; &#x435;&#x441;&#x43B;&#x438; &#x431;&#x44B; &#x43E;&#x43D;&#x430; &#x431;&#x44B;&#x43B;&#x430; &#x432; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x435; A, &#x442;&#x43E; &#x442;&#x430;&#x43C; &#x432;&#x441;&#x435; &#x440;&#x430;&#x432;&#x43D;&#x43E; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x43B;&#x441;&#x44F; &#x431;&#x44B; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;.</p>
+</blockquote>
+<p>&#x422;&#x435;&#x43F;&#x435;&#x440;&#x44C; &#x432;&#x44B; &#x43A;&#x43E; &#x432;&#x441;&#x435;&#x43C;&#x443; &#x433;&#x43E;&#x442;&#x43E;&#x432;&#x44B;:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> С <span class="hljs-keyword">private</span> <span class="hljs-keyword">constructor</span></span>(){...}
+<span class="hljs-keyword">val</span> c = C()</code></pre>
+<blockquote>
+<p><strong>&#x422;&#x443;&#x442; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; &#x421; &#x447;&#x435;&#x440;&#x435;&#x437; &#x444;&#x430;&#x431;&#x440;&#x438;&#x43A;&#x443;, &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x43D;&#x443;&#x44E; &#x432; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x435;-&#x43A;&#x43E;&#x43C;&#x43F;&#x430;&#x43D;&#x44C;&#x43E;&#x43D;&#x435; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; &#x421;.</strong></p>
+<p>&#x41A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x43E; &#x436;&#x435; &#x43D;&#x435;&#x442;!</p>
+<pre><code class="hljs language-kotlin">    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">constructor</span></span>(){
+        ...
+        <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span>{
+            <span class="hljs-keyword">operator</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">invoke</span><span class="hljs-params">()</span></span> = A(<span class="hljs-number">9</span>)
+        }
+    }</code></pre>
+<p>&#x423; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439; c &#x431;&#x443;&#x434;&#x435;&#x442; &#x442;&#x438;&#x43F; A. &#x417;&#x430;&#x43C;&#x435;&#x442;&#x44C;&#x442;&#x435;, &#x447;&#x442;&#x43E; A &#x438; &#x421; &#x43D;&#x435; &#x441;&#x432;&#x44F;&#x437;&#x430;&#x43D;&#x44B; &#x440;&#x43E;&#x434;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x443;&#x437;&#x430;&#x43C;&#x438;.</p>
+</blockquote>
+<p><strong>&#x41F;&#x43E;&#x43B;&#x43D;&#x44B;&#x439; &#x43A;&#x43E;&#x434;</strong></p>
+<blockquote>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span></span>(){
+    <span class="hljs-keyword">var</span> param = <span class="hljs-number">5</span>
+
+    <span class="hljs-keyword">constructor</span>(a: <span class="hljs-built_in">Int</span>): <span class="hljs-keyword">this</span>(){
+        param = a
+    }
+
+    <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span>{
+        <span class="hljs-keyword">operator</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">invoke</span><span class="hljs-params">()</span></span>= A(<span class="hljs-number">10</span>)
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">constructor</span></span>(){
+    <span class="hljs-keyword">var</span> param = <span class="hljs-number">6</span>
+
+    <span class="hljs-keyword">constructor</span>(a: <span class="hljs-built_in">Int</span>): <span class="hljs-keyword">this</span>(){
+        param = a
+    }
+
+    <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span>{
+        <span class="hljs-keyword">operator</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">invoke</span><span class="hljs-params">()</span></span> = B(<span class="hljs-number">7</span>)
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span> <span class="hljs-keyword">private</span> <span class="hljs-keyword">constructor</span></span>(){
+    <span class="hljs-keyword">var</span> param = <span class="hljs-number">8</span>
+
+    <span class="hljs-keyword">constructor</span>(a: <span class="hljs-built_in">Int</span>): <span class="hljs-keyword">this</span>(){
+        param = a
+    }
+
+    <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span>{
+        <span class="hljs-keyword">operator</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">invoke</span><span class="hljs-params">()</span></span> = A(<span class="hljs-number">9</span>)
+    }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">D</span></span>(){
+    <span class="hljs-keyword">var</span> param = <span class="hljs-number">10</span>
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">constructor</span>(a: <span class="hljs-built_in">Int</span>): <span class="hljs-keyword">this</span>(){
+        param = a
+    }
+
+    <span class="hljs-keyword">companion</span> <span class="hljs-keyword">object</span>{
+        <span class="hljs-keyword">operator</span> <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">invoke</span><span class="hljs-params">(a: <span class="hljs-type">Int</span> = <span class="hljs-number">25</span>)</span></span> = D(a)
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span> {
+    <span class="hljs-keyword">val</span> a = A()
+    <span class="hljs-keyword">val</span> b = B()
+    <span class="hljs-keyword">val</span> c = C()
+    <span class="hljs-keyword">val</span> d = D()
+    println(<span class="hljs-string">"<span class="hljs-subst">${a.javaClass}</span>, <span class="hljs-subst">${a.param}</span>"</span>)
+    println(<span class="hljs-string">"<span class="hljs-subst">${b.javaClass}</span>, <span class="hljs-subst">${b.param}</span>"</span>)
+    println(<span class="hljs-string">"<span class="hljs-subst">${c.javaClass}</span>, <span class="hljs-subst">${c.param}</span>"</span>)
+    println(<span class="hljs-string">"<span class="hljs-subst">${d.javaClass}</span>, <span class="hljs-subst">${d.param}</span>"</span>)
+}</code></pre>
+<p>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x44F;:</p>
+<p>class A, 5
+class B, 7
+class A, 9
+class D, 10</p>
+</blockquote>
+<p>&#x41A; &#x441;&#x43E;&#x436;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x44E;, &#x43F;&#x440;&#x438;&#x434;&#x443;&#x43C;&#x430;&#x442;&#x44C; &#x43A;&#x43E;&#x440;&#x43E;&#x442;&#x43A;&#x438;&#x439; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;, &#x433;&#x434;&#x435; &#x443; &#x432;&#x430;&#x441; &#x440;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x432;&#x441;&#x435; &#x43F;&#x43E;&#x43B;&#x43E;&#x43C;&#x430;&#x435;&#x442;&#x441;&#x44F;, &#x44F; &#x43D;&#x435; &#x441;&#x43C;&#x43E;&#x433;. &#x41D;&#x43E; &#x43F;&#x43E;&#x444;&#x430;&#x43D;&#x442;&#x430;&#x437;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43D;&#x435;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x436;&#x43D;&#x43E;. &#x415;&#x441;&#x43B;&#x438; &#x432;&#x44B; &#x432;&#x435;&#x440;&#x43D;&#x435;&#x442;&#x435; &#x43B;&#x435;&#x432;&#x44B;&#x439; &#x43A;&#x43B;&#x430;&#x441;&#x441;, &#x43A;&#x430;&#x43A; &#x432; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;&#x435; &#x441; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x43E;&#x43C; C, &#x442;&#x43E; &#x441;&#x43A;&#x43E;&#x440;&#x435;&#x435; &#x432;&#x441;&#x435;&#x433;&#x43E;, &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440; &#x432;&#x430;&#x441; &#x43E;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;. &#x41D;&#x43E; &#x435;&#x441;&#x43B;&#x438; &#x432;&#x44B; &#x43D;&#x438;&#x43A;&#x443;&#x434;&#x430; &#x43D;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x435;&#x442;&#x435; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;, &#x442;&#x43E; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x441;&#x44B;&#x43C;&#x438;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x443;&#x442;&#x438;&#x43D;&#x443;&#x44E; &#x442;&#x438;&#x43F;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44E;, &#x43A;&#x430;&#x43A; &#x432; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;&#x435;. &#x41D;&#x438;&#x447;&#x435;&#x433;&#x43E; &#x43A;&#x440;&#x438;&#x43C;&#x438;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E;, &#x43D;&#x43E; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x43A;, &#x447;&#x438;&#x442;&#x430;&#x44E;&#x449;&#x438;&#x439; &#x43A;&#x43E;&#x434;, &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x441;&#x43E;&#x439;&#x442;&#x438; &#x441; &#x443;&#x43C;&#x430; &#x438; &#x437;&#x430;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x438;&#x442;&#x44C;&#x441;&#x44F;, &#x435;&#x441;&#x43B;&#x438; &#x443; &#x43D;&#x435;&#x433;&#x43E; &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; &#x438;&#x441;&#x445;&#x43E;&#x434;&#x43D;&#x438;&#x43A;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430;.</p>
+<p>&#x415;&#x441;&#x43B;&#x438; &#x443; &#x432;&#x430;&#x441; &#x435;&#x441;&#x442;&#x44C; &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x438; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x438; &#x434;&#x43B;&#x44F; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x441; &#x431;&#x430;&#x437;&#x43E;&#x432;&#x44B;&#x43C; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x43E;&#x43C; (Animal), &#x430; invoke() &#x43E;&#x442; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x438;&#x43A;&#x430; (Dog) &#x432;&#x435;&#x440;&#x43D;&#x435;&#x442; &#x432;&#x430;&#x43C; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x433;&#x43E; &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x43D;&#x438;&#x43A;&#x430; (Duck), &#x442;&#x43E; &#x442;&#x43E;&#x433;&#x434;&#x430; &#x43F;&#x440;&#x438; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x435; &#x442;&#x438;&#x43F;&#x43E;&#x432; (Animal as Dog) &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43D;&#x430;&#x43A;&#x440;&#x44F;&#x43A;&#x430;&#x442;&#x44C; &#x441;&#x435;&#x431;&#x435; &#x431;&#x435;&#x434;&#x443;.</p>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<p>&#x412; Scala &#x43F;&#x440;&#x43E;&#x449;&#x435; &mdash; &#x435;&#x441;&#x442;&#x44C; new, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x432;&#x441;&#x435;&#x433;&#x434;&#x430; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;. &#x415;&#x441;&#x43B;&#x438; &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; new, &#x442;&#x43E; &#x432;&#x441;&#x435;&#x433;&#x434;&#x430; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x43C;&#x435;&#x442;&#x43E;&#x434; apply &#x443; &#x43A;&#x43E;&#x43C;&#x43F;&#x430;&#x43D;&#x44C;&#x43E;&#x43D;&#x430; (&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x442;&#x43E;&#x436;&#x435; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x44C; &#x43B;&#x435;&#x432;&#x44B;&#x439; &#x442;&#x438;&#x43F;). &#x420;&#x430;&#x437;&#x443;&#x43C;&#x435;&#x435;&#x442;&#x441;&#x44F;, &#x435;&#x441;&#x43B;&#x438; &#x447;&#x442;&#x43E;-&#x442;&#x43E; &#x432;&#x430;&#x43C; &#x43D;&#x435; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E; &#x438;&#x437;-&#x437;&#x430; private, &#x442;&#x43E; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440; &#x440;&#x443;&#x433;&#x43D;&#x435;&#x442;&#x441;&#x44F;. &#x412;&#x441;&#x435; &#x442;&#x43E; &#x436;&#x435; &#x441;&#x430;&#x43C;&#x43E;&#x435;, &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x43E;&#x447;&#x435;&#x432;&#x438;&#x434;&#x43D;&#x435;&#x435;.</p>
+</blockquote>
+<h4>4. lateinit</h4>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SlowPoke</span></span>(){
+    lateinit <span class="hljs-keyword">var</span> value: String
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">if</span> (value == <span class="hljs-literal">null</span>){ <span class="hljs-comment">//компилятор здесь говорит, что проверка не нужна (и правильно делает)</span>
+            println(<span class="hljs-string">"null"</span>)
+            <span class="hljs-keyword">return</span>
+        }
+        <span class="hljs-keyword">if</span> (value == <span class="hljs-string">"ololo"</span>)
+            println(<span class="hljs-string">"ololo!"</span>)
+        <span class="hljs-keyword">else</span>
+            println(<span class="hljs-string">"alala!"</span>)
+    }
+}
+SlowPoke().test()</code></pre>
+<blockquote>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x43A;&#x430;&#x437;&#x443;&#x435;&#x43C;</strong></p>
+<p>Exception in thread &laquo;main&raquo; kotlin.UninitializedPropertyAccessException: lateinit property value has not been initialized</p>
+</blockquote>
+<blockquote>
+<p><strong>&#x410; &#x43A;&#x430;&#x43A; &#x43F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x44C;&#x43D;&#x43E;?</strong></p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SlowBro</span></span>(){
+    <span class="hljs-keyword">val</span> value: String? = <span class="hljs-literal">null</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">if</span> (value == <span class="hljs-literal">null</span>) {
+            println(<span class="hljs-string">"null"</span>)
+            <span class="hljs-keyword">return</span>
+        }
+        <span class="hljs-keyword">if</span> (value == <span class="hljs-string">"ololo"</span>)
+            println(<span class="hljs-string">"ololo!"</span>)
+        <span class="hljs-keyword">else</span>
+            println(<span class="hljs-string">"alala!"</span>)
+    }
+}
+SlowBro().test()</code></pre>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;</strong></p>
+<p>null</p>
+</blockquote>
+<p>&#x42F; &#x431;&#x44B; &#x441;&#x43A;&#x430;&#x437;&#x430;&#x43B;, &#x447;&#x442;&#x43E; &#x44D;&#x442;&#x43E; &#x442;&#x43E;&#x436;&#x435; &#x43E;&#x434;&#x43E;&#x431;&#x440;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;, &#x43D;&#x43E; &#x43F;&#x440;&#x438; &#x447;&#x442;&#x435;&#x43D;&#x438;&#x438; &#x43A;&#x43E;&#x434;&#x430; &#x44D;&#x442;&#x43E; &#x43D;&#x435;&#x43E;&#x447;&#x435;&#x432;&#x438;&#x434;&#x43D;&#x43E;, &#x432; &#x43E;&#x442;&#x43B;&#x438;&#x447;&#x438;&#x435; &#x43E;&#x442; !!. &#x412; &#x434;&#x43E;&#x43A;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x446;&#x438;&#x438; &#x43D;&#x435;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x437;&#x430;&#x432;&#x443;&#x430;&#x43B;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x43E; &#x433;&#x43E;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x441;&#x44F;, &#x447;&#x442;&#x43E;, &#x43C;&#x43E;&#x43B;, &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x44F;&#x442;&#x44C; &#x43D;&#x435; &#x43D;&#x430;&#x434;&#x43E;, &#x435;&#x441;&#x43B;&#x438; &#x447;&#x442;&#x43E;, &#x43C;&#x44B; &#x43A;&#x438;&#x43D;&#x435;&#x43C; &#x442;&#x435;&#x431;&#x435; Exception. &#x41F;&#x43E; &#x438;&#x434;&#x435;&#x435;, &#x44D;&#x442;&#x43E;&#x442; &#x43C;&#x43E;&#x434;&#x438;&#x444;&#x438;&#x43A;&#x430;&#x442;&#x43E;&#x440; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x442;&#x43E;&#x433;&#x434;&#x430;, &#x43A;&#x43E;&#x433;&#x434;&#x430; &#x432;&#x44B; &#x442;&#x43E;&#x447;&#x43D;&#x43E; &#x443;&#x432;&#x435;&#x440;&#x435;&#x43D;&#x44B;, &#x447;&#x442;&#x43E; &#x43F;&#x43E;&#x43B;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; &#x438;&#x43D;&#x438;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x437;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x43E; &#x43A;&#x435;&#x43C;-&#x442;&#x43E; &#x434;&#x440;&#x443;&#x433;&#x438;&#x43C;. &#x422;&#x43E; &#x435;&#x441;&#x442;&#x44C; &#x43D;&#x438;&#x43A;&#x43E;&#x433;&#x434;&#x430;. &#x41F;&#x43E; &#x43C;&#x43E;&#x435;&#x43C;&#x443; &#x43E;&#x43F;&#x44B;&#x442;&#x443;, &#x432;&#x441;&#x435; &#x43F;&#x43E;&#x43B;&#x44F;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x431;&#x44B;&#x43B;&#x438; lateinit, &#x440;&#x430;&#x43D;&#x43E; &#x438;&#x43B;&#x438; &#x43F;&#x43E;&#x437;&#x434;&#x43D;&#x43E; &#x441;&#x442;&#x430;&#x43B;&#x438; Nullable. &#x41D;&#x435;&#x43F;&#x43B;&#x43E;&#x445;&#x43E; &#x44D;&#x442;&#x43E; &#x43F;&#x43E;&#x43B;&#x435; &#x432;&#x43F;&#x438;&#x441;&#x430;&#x43B;&#x43E;&#x441;&#x44C; &#x432; &#x43A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x43B;&#x435;&#x440; JavaFX &#x43F;&#x440;&#x438;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F;, &#x433;&#x434;&#x435; Gui &#x433;&#x440;&#x443;&#x437;&#x438;&#x442;&#x441;&#x44F; &#x438;&#x437; FXML, &#x43D;&#x43E; &#x434;&#x430;&#x436;&#x435; &#x44D;&#x442;&#x43E; &laquo;&#x436;&#x435;&#x43B;&#x435;&#x437;&#x43E;&#x431;&#x435;&#x442;&#x43E;&#x43D;&#x43D;&#x43E;&#x435;&raquo; &#x440;&#x435;&#x448;&#x435;&#x43D;&#x438;&#x435; &#x431;&#x44B;&#x43B;&#x43E; &#x441;&#x432;&#x435;&#x440;&#x433;&#x43D;&#x443;&#x442;&#x43E; &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x442;&#x43E;&#x433;&#x43E;, &#x43A;&#x430;&#x43A; &#x43F;&#x43E;&#x44F;&#x432;&#x438;&#x43B;&#x441;&#x44F; &#x430;&#x43B;&#x44C;&#x442;&#x435;&#x440;&#x43D;&#x430;&#x442;&#x438;&#x432;&#x43D;&#x44B;&#x439; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442; &#x431;&#x435;&#x437; &#x43F;&#x430;&#x440;&#x44B; &#x43A;&#x43D;&#x43E;&#x43F;&#x43E;&#x43A;. &#x41E;&#x434;&#x438;&#x43D; &#x440;&#x430;&#x437; &#x442;&#x430;&#x43A; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x43B;&#x43E;&#x441;&#x44C;, &#x447;&#x442;&#x43E; &#x432; SceneBuilder &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x438;&#x43B; fx:id, &#x430; &#x432; &#x43A;&#x43E;&#x434;&#x435; &#x437;&#x430;&#x431;&#x44B;&#x43B;. &#x412; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x435; &#x434;&#x43D;&#x438; &#x43A;&#x43E;&#x434;&#x438;&#x43D;&#x433;&#x430; &#x43D;&#x430; Kotlin &#x43D;&#x435;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x437;&#x431;&#x435;&#x441;&#x438;&#x43B;&#x43E;, &#x447;&#x442;&#x43E; &#x43D;&#x435;&#x43B;&#x44C;&#x437;&#x44F; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; lateinit Int. &#x42F; &#x43C;&#x43E;&#x433;&#x443; &#x43F;&#x440;&#x438;&#x434;&#x443;&#x43C;&#x430;&#x442;&#x44C;, &#x43F;&#x43E;&#x447;&#x435;&#x43C;&#x443; &#x442;&#x430;&#x43A; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x43B;&#x438;, &#x43D;&#x43E; &#x441;&#x43E;&#x43C;&#x43D;&#x435;&#x432;&#x430;&#x44E;&#x441;&#x44C;, &#x447;&#x442;&#x43E; &#x441;&#x43E;&#x432;&#x441;&#x435;&#x43C; &#x43D;&#x435;&#x442; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x430; &#x43E;&#x431;&#x43E;&#x439;&#x442;&#x438; &#x44D;&#x442;&#x438; &#x43F;&#x440;&#x438;&#x447;&#x438;&#x43D;&#x44B; (&#x447;&#x438;&#x442;&#x430;&#x439;: &#x441;&#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x43A;&#x43E;&#x441;&#x442;&#x44B;&#x43B;&#x44C;).</p>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<p>&#x410; &#x442;&#x430;&#x43C; &#x430;&#x43D;&#x430;&#x43B;&#x43E;&#x433;&#x430; lateinit &#x43A;&#x430;&#x43A; &#x442;&#x430;&#x43A;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x438; &#x43D;&#x435;&#x442;. &#x41F;&#x43E; &#x43A;&#x440;&#x430;&#x439;&#x43D;&#x435;&#x439; &#x43C;&#x435;&#x440;&#x435;, &#x44F; &#x43D;&#x435; &#x43E;&#x431;&#x43D;&#x430;&#x440;&#x443;&#x436;&#x438;&#x43B;.</p>
+</blockquote>
+<h4>5. &#x41A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;</h4>
+<blockquote>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IAmInHurry</span></span>(){
+    <span class="hljs-keyword">val</span> param = initSecondParam()
+    <span class="hljs-comment">/*tons of code*/</span>
+    <span class="hljs-keyword">val</span> twentySecondParam = <span class="hljs-number">10</span>
+    <span class="hljs-comment">/*tons of code*/</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">initSecondParam</span><span class="hljs-params">()</span></span>: <span class="hljs-built_in">Int</span>{
+        println(<span class="hljs-string">"Initializing by default with <span class="hljs-subst">$twentySecondParam</span>"</span>)
+        <span class="hljs-keyword">return</span> twentySecondParam
+    }
+
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IAmInHurryWithStrings</span></span>(){
+    <span class="hljs-keyword">val</span> param = initSecondParam()
+    <span class="hljs-comment">/*tons of code*/</span>
+    <span class="hljs-keyword">val</span> twentySecondParam = <span class="hljs-string">"Default value of param"</span>
+    <span class="hljs-comment">/*tons of code*/</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">initSecondParam</span><span class="hljs-params">()</span></span>: String{
+        println(<span class="hljs-string">"Initializing by default with <span class="hljs-subst">$twentySecondParam</span>"</span>)
+        <span class="hljs-keyword">return</span> twentySecondParam
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span>{
+    IAmInHurry()
+    IAmInHurryWithStrings()
+}</code></pre>
+</blockquote>
+<blockquote>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;</strong></p>
+<p>Initializing by default with 0
+Initializing by default with null</p>
+</blockquote>
+<p>&#x412;&#x441;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &mdash; &#x43A; &#x43F;&#x43E;&#x43B;&#x44E; &#x438;&#x434;&#x435;&#x442; &#x43E;&#x431;&#x440;&#x430;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x434;&#x43E; &#x442;&#x43E;&#x433;&#x43E;, &#x43A;&#x430;&#x43A; &#x43E;&#x43D;&#x43E; &#x431;&#x44B;&#x43B;&#x43E; &#x438;&#x43D;&#x438;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x437;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43E;. &#x412;&#x438;&#x434;&#x438;&#x43C;&#x43E;, &#x442;&#x443;&#x442; &#x441;&#x442;&#x43E;&#x438;&#x442; &#x43D;&#x435;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x434;&#x43E;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x442;&#x44C; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440;. &#x41F;&#x43E; &#x438;&#x434;&#x435;&#x435;, &#x435;&#x441;&#x43B;&#x438; &#x432;&#x44B; &#x43F;&#x438;&#x448;&#x435;&#x442;&#x435; &#x43A;&#x43E;&#x434; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x43E;, &#x442;&#x430;&#x43A;&#x430;&#x44F; &#x43F;&#x440;&#x43E;&#x431;&#x43B;&#x435;&#x43C;&#x430; &#x443; &#x432;&#x430;&#x441; &#x43D;&#x435; &#x434;&#x43E;&#x43B;&#x436;&#x43D;&#x430; &#x432;&#x43E;&#x437;&#x43D;&#x438;&#x43A;&#x43D;&#x443;&#x442;&#x44C;, &#x43D;&#x43E; &#x432;&#x441;&#x44F;&#x43A;&#x43E;&#x435; &#x431;&#x44B;&#x432;&#x430;&#x435;&#x442;, &#x43D;&#x435; &#x441; &#x43F;&#x43E;&#x442;&#x43E;&#x43B;&#x43A;&#x430; &#x436;&#x435; &#x44F; &#x432;&#x437;&#x44F;&#x43B; &#x44D;&#x442;&#x43E;&#x442; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440; (&#x43A;&#x43E;&#x43B;&#x43B;&#x435;&#x433;&#x430; &#x441;&#x435;&#x431;&#x435; &#x442;&#x430;&#x43A; &#x432;&#x44B;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x438;&#x43B; &#x432; &#x43D;&#x43E;&#x433;&#x443;, &#x441;&#x43B;&#x443;&#x447;&#x430;&#x439;&#x43D;&#x43E; &#x447;&#x435;&#x440;&#x435;&#x437; &#x446;&#x435;&#x43F;&#x43E;&#x447;&#x43A;&#x443; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x432; &#x432; &#x440;&#x435;&#x434;&#x43A;&#x43E; &#x441;&#x440;&#x430;&#x431;&#x430;&#x442;&#x44B;&#x432;&#x430;&#x44E;&#x449;&#x435;&#x43C; &#x43A;&#x43E;&#x434;&#x435; &#x432;&#x44B;&#x437;&#x432;&#x430;&#x43B; &#x43F;&#x43E;&#x43B;&#x435;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x435; &#x431;&#x44B;&#x43B;&#x43E; &#x43D;&#x435; &#x438;&#x43D;&#x438;&#x446;&#x438;&#x430;&#x43B;&#x438;&#x437;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43E;).</p>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<p>&#x412;&#x441;&#x435; &#x442;&#x43E; &#x436;&#x435; &#x441;&#x430;&#x43C;&#x43E;&#x435;.</p>
+<p>object Initializer extends App{
+class IAmInHurry(){
+val param = initSecondParam()
+/<em>tons of code</em>/
+val twentySecondParam = 10
+/<em>tons of code</em>/
+def initSecondParam(): Int = {
+println(s&quot;Initializing by default with $twentySecondParam&quot;)
+twentySecondParam
+}</p>
+<p>}</p>
+<p>class IAmInHurryWithStrings(){
+val param = initSecondParam()
+/<em>tons of code</em>/
+val twentySecondParam = &quot;Default value of param&quot;
+/<em>tons of code</em>/
+def initSecondParam(): String = {
+println(s&quot;Initializing by default with $twentySecondParam&quot;)
+twentySecondParam
+}</p>
+<p>}</p>
+<p>override def main(args: Array[String]){
+new IAmInHurry()
+new IAmInHurryWithStrings()
+}
+}</p>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;</strong></p>
+<p>Initializing by default with 0
+Initializing by default with null</p>
+</blockquote>
+<h4>6. &#x412;&#x437;&#x430;&#x438;&#x43C;&#x43E;&#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x438;&#x435; &#x441; Java</h4>
+<p>&#x414;&#x43B;&#x44F; &#x432;&#x44B;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x430; &#x442;&#x443;&#x442; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x440; &#x434;&#x43E;&#x441;&#x442;&#x430;&#x442;&#x43E;&#x447;&#x43D;&#x43E; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x43E;&#x439;. &#x41E;&#x447;&#x435;&#x432;&#x438;&#x434;&#x43D;&#x43E;&#x435; &#x440;&#x435;&#x448;&#x435;&#x43D;&#x438;&#x435; &mdash; &#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C; &#x432;&#x441;&#x435;, &#x447;&#x442;&#x43E; &#x43F;&#x440;&#x438;&#x448;&#x43B;&#x43E; &#x438;&#x437; Java, Nullable. &#x41D;&#x43E; &#x442;&#x443;&#x442; &#x435;&#x441;&#x442;&#x44C; &#x434;&#x43E;&#x43B;&#x433;&#x430;&#x44F; &#x438; &#x43F;&#x43E;&#x443;&#x447;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; <a href="http://blog.jetbrains.com/kotlin/2015/04/upcoming-change-more-null-safety-for-java/">&#x438;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44F;</a>. &#x41A;&#x430;&#x43A; &#x44F; &#x43F;&#x43E;&#x43D;&#x44F;&#x43B;, &#x43E;&#x43D;&#x430; &#x441;&#x432;&#x44F;&#x437;&#x430;&#x43D;&#x430; &#x432; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x43E;&#x43C; &#x441; &#x448;&#x430;&#x431;&#x43B;&#x43E;&#x43D;&#x430;&#x43C;&#x438;, &#x43D;&#x430;&#x441;&#x43B;&#x435;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;&#x43C;, &#x438; &#x446;&#x435;&#x43F;&#x43E;&#x447;&#x43A;&#x43E;&#x439; Java-Kotlin-Java. &#x418; &#x43F;&#x440;&#x438; &#x442;&#x430;&#x43A;&#x438;&#x445; &#x441;&#x446;&#x435;&#x43D;&#x430;&#x440;&#x438;&#x44F;&#x445; &#x43F;&#x440;&#x438;&#x445;&#x43E;&#x434;&#x438;&#x43B;&#x43E;&#x441;&#x44C; &#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x43A;&#x43E;&#x441;&#x442;&#x44B;&#x43B;&#x435;&#x439;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x437;&#x430;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43B;&#x43E;. &#x41F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x440;&#x435;&#x448;&#x438;&#x43B;&#x438; &#x43E;&#x442; &#x438;&#x434;&#x435;&#x438; &laquo;&#x432;&#x441;&#x435; Nullable&raquo; &#x43E;&#x442;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C;&#x441;&#x44F;.
+&#x41D;&#x43E; &#x432;&#x440;&#x43E;&#x434;&#x435; &#x43A;&#x430;&#x43A; &#x43E;&#x434;&#x438;&#x43D; &#x438;&#x437; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x44B;&#x445; &#x441;&#x446;&#x435;&#x43D;&#x430;&#x440;&#x438;&#x435;&#x432; &mdash; &#x441;&#x432;&#x43E;&#x439; &#x43A;&#x43E;&#x434; &#x43F;&#x438;&#x448;&#x435;&#x43C; &#x43D;&#x430; Kotlin, &#x431;&#x438;&#x431;&#x43B;&#x438;&#x43E;&#x442;&#x435;&#x43B;&#x438; &#x431;&#x435;&#x440;&#x435;&#x43C; Java (&#x43A;&#x430;&#x43A; &#x432;&#x438;&#x434;&#x438;&#x442;&#x441;&#x44F; &#x43C;&#x43D;&#x435;, &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x43C;&#x443; &#x43A;&#x440;&#x435;&#x441;&#x442;&#x44C;&#x44F;&#x43D;&#x438;&#x43D;&#x443;-&#x43A;&#x43E;&#x434;&#x435;&#x440;&#x443;). &#x418; &#x43F;&#x440;&#x438; &#x442;&#x430;&#x43A;&#x43E;&#x43C; &#x440;&#x430;&#x441;&#x43A;&#x43B;&#x430;&#x434;&#x435;, &#x43B;&#x443;&#x447;&#x448;&#x435; &#x431;&#x435;&#x437;&#x43E;&#x43F;&#x430;&#x441;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x432; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435;&#x439; &#x447;&#x430;&#x441;&#x442;&#x438; &#x43A;&#x43E;&#x434;&#x430; &#x438; &#x44F;&#x432;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x441;&#x442;&#x44B;&#x43B;&#x438; &#x432; &#x43D;&#x435;&#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x43E;&#x439; &#x447;&#x430;&#x441;&#x442;&#x438; &#x43A;&#x43E;&#x434;&#x430;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x432;&#x438;&#x434;&#x43D;&#x43E;, &#x447;&#x435;&#x43C; &laquo;&#x43A;&#x440;&#x430;&#x441;&#x438;&#x432;&#x43E; &#x438; &#x443;&#x434;&#x43E;&#x431;&#x43D;&#x43E;&raquo; + &#x432;&#x43D;&#x435;&#x437;&#x430;&#x43F;&#x43D;&#x44B;&#x435; &#x433;&#x440;&#x430;&#x431;&#x43B;&#x438; &#x432; &#x440;&#x430;&#x43D;&#x442;&#x430;&#x439;&#x43C;&#x435; (&#x438;&#x43B;&#x438; &#x44F;&#x43C;&#x430; &#x441; &#x43A;&#x43E;&#x43B;&#x44C;&#x44F;&#x43C;&#x438;, &#x43A;&#x430;&#x43A; &#x43F;&#x43E;&#x432;&#x435;&#x437;&#x435;&#x442;). &#x41D;&#x43E; &#x443; &#x440;&#x430;&#x437;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x447;&#x438;&#x43A;&#x43E;&#x432; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x435; <a href="https://habrahabr.ru/company/JetBrains/blog/277573/#comment_8784731">&#x43C;&#x43D;&#x435;&#x43D;&#x438;&#x435;</a>:</p>
+<blockquote>
+<p>&#x41E;&#x434;&#x43D;&#x430; &#x438;&#x437; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x44B;&#x445; &#x43F;&#x440;&#x438;&#x447;&#x438;&#x43D; &#x431;&#x44B;&#x43B;&#x430; &#x432; &#x442;&#x43E;&#x43C;, &#x447;&#x442;&#x43E; &#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; &#x43D;&#x430; &#x442;&#x430;&#x43A;&#x43E;&#x43C; &#x44F;&#x437;&#x44B;&#x43A;&#x435; &#x431;&#x44B;&#x43B;&#x43E; &#x43D;&#x435;&#x443;&#x434;&#x43E;&#x431;&#x43D;&#x43E;, &#x430; &#x447;&#x438;&#x442;&#x430;&#x442;&#x44C; &#x435;&#x433;&#x43E; &mdash; &#x43D;&#x435;&#x43F;&#x440;&#x438;&#x44F;&#x442;&#x43D;&#x43E;. &#x41F;&#x43E;&#x432;&#x441;&#x44E;&#x434;&#x443; &#x432;&#x43E;&#x43F;&#x440;&#x43E;&#x441;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x438; &#x432;&#x43E;&#x441;&#x43A;&#x43B;&#x438;&#x446;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x437;&#x43D;&#x430;&#x43A;&#x438;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43D;&#x435; &#x43E;&#x447;&#x435;&#x43D;&#x44C;-&#x442;&#x43E; &#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x430;&#x44E;&#x442; &#x438;&#x437;-&#x437;&#x430; &#x442;&#x43E;&#x433;&#x43E;, &#x447;&#x442;&#x43E; &#x440;&#x430;&#x441;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x442;&#x441;&#x44F; &#x432; &#x43E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x43E;&#x43C;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x443;&#x434;&#x43E;&#x432;&#x43B;&#x435;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x44C; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440;, &#x430; &#x43D;&#x435; &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43A;&#x43E;&#x440;&#x440;&#x435;&#x43A;&#x442;&#x43D;&#x43E; &#x43E;&#x431;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x442;&#x44C; &#x441;&#x43B;&#x443;&#x447;&#x430;&#x438;, &#x43A;&#x43E;&#x433;&#x434;&#x430; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x432;&#x44B;&#x447;&#x438;&#x441;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x432; null. &#x41E;&#x441;&#x43E;&#x431;&#x435;&#x43D;&#x43D;&#x43E; &#x431;&#x43E;&#x43B;&#x44C;&#x43D;&#x43E; &#x432; &#x441;&#x43B;&#x443;&#x447;&#x430;&#x435; &#x434;&#x436;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x43A;&#x43E;&#x432;: &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;, Map&lt;String?, String?&gt;?..</p>
+</blockquote>
+<p>&#x421;&#x434;&#x435;&#x43B;&#x430;&#x435;&#x43C; &#x43D;&#x435;&#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x43E;&#x439; &#x43A;&#x43B;&#x430;&#x441;&#x441; &#x43D;&#x430; Java:</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaCopy</span> </span>{
+    <span class="hljs-keyword">private</span> String a = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">JavaCopy</span><span class="hljs-params">()</span></span>{};
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">JavaCopy</span><span class="hljs-params">(String s)</span></span>{
+        a = s;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">get</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> a;
+    }
+}</code></pre>
+<p>&#x418; &#x43F;&#x43E;&#x43F;&#x440;&#x43E;&#x431;&#x443;&#x435;&#x43C; &#x435;&#x433;&#x43E; &#x432;&#x44B;&#x437;&#x432;&#x430;&#x442;&#x44C; &#x438;&#x437; Kotlin:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">printString</span><span class="hljs-params">(s: <span class="hljs-type">String</span>)</span></span> {
+    println(s)
+}
+
+<span class="hljs-keyword">val</span> j1 = JavaCopy()
+<span class="hljs-keyword">val</span> j1Got = j1.<span class="hljs-keyword">get</span>()
+printString(j1Got)</code></pre>
+<blockquote>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;</strong></p>
+<p>Exception in thread &laquo;main&raquo; java.lang.IllegalStateException: j1Got must not be null</p>
+</blockquote>
+<p>&#x422;&#x438;&#x43F; &#x443; j1 &mdash; String! &#x438; &#x438;&#x441;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x43C;&#x44B; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x43C; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x442;&#x43E;&#x433;&#x434;&#x430;, &#x43A;&#x43E;&#x433;&#x434;&#x430; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x435;&#x43C; printString. &#x41E;&#x43A;, &#x434;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x44F;&#x432;&#x43D;&#x43E; &#x437;&#x430;&#x434;&#x430;&#x434;&#x438;&#x43C; &#x442;&#x438;&#x43F;:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> j2 = JavaCopy(<span class="hljs-string">"Test"</span>)
+<span class="hljs-keyword">val</span> j3 = JavaCopy(<span class="hljs-literal">null</span>)
+
+<span class="hljs-keyword">val</span> j2Got: String = j2.<span class="hljs-keyword">get</span>()
+<span class="hljs-keyword">val</span> j3Got: String = j3.<span class="hljs-keyword">get</span>()
+
+printString(j2Got)
+printString(j3Got)</code></pre>
+<blockquote>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;</strong></p>
+<p>Exception in thread &laquo;main&raquo; java.lang.IllegalStateException: j3.get() must not be null</p>
+</blockquote>
+<p>&#x412;&#x441;&#x435; &#x43B;&#x43E;&#x433;&#x438;&#x447;&#x43D;&#x43E;. &#x41A;&#x43E;&#x433;&#x434;&#x430; &#x43C;&#x44B; &#x44F;&#x432;&#x43D;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C;, &#x447;&#x442;&#x43E; &#x43D;&#x430;&#x43C; &#x43D;&#x443;&#x436;&#x435;&#x43D; NotNullable, &#x442;&#x43E;&#x433;&#x434;&#x430; &#x438; &#x43B;&#x43E;&#x432;&#x438;&#x43C; &#x438;&#x441;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x435;. &#x41A;&#x430;&#x437;&#x430;&#x43B;&#x43E;&#x441;&#x44C; &#x431;&#x44B;, &#x443;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x439; &#x443; &#x432;&#x441;&#x435;&#x445; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x445; Nullable, &#x438; &#x432;&#x441;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x43E;. &#x41D;&#x43E; &#x435;&#x441;&#x43B;&#x438; &#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x442;&#x430;&#x43A;:</p>
+<pre><code class="hljs language-kotlin">printString(j2.<span class="hljs-keyword">get</span>())</code></pre>
+<p>&#x442;&#x43E; &#x43E;&#x448;&#x438;&#x431;&#x43A;&#x443; &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43E;&#x431;&#x43D;&#x430;&#x440;&#x443;&#x436;&#x438;&#x442;&#x44C; &#x43D;&#x435;&#x441;&#x43A;&#x43E;&#x440;&#x43E;.</p>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<p>&#x41D;&#x438;&#x43A;&#x430;&#x43A;&#x438;&#x445; &#x433;&#x430;&#x440;&#x430;&#x43D;&#x442;&#x438;&#x439;, NPE &#x441;&#x43B;&#x43E;&#x432;&#x438;&#x442;&#x44C; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x44D;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x440;&#x43D;&#x43E;. &#x420;&#x435;&#x448;&#x435;&#x43D;&#x438;&#x435; &mdash; &#x43E;&#x431;&#x43E;&#x440;&#x430;&#x447;&#x438;&#x432;&#x430;&#x442;&#x44C; &#x432;&#x441;&#x435; &#x432; Option, &#x443; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E;, &#x43D;&#x430;&#x43F;&#x43E;&#x43C;&#x43D;&#x44E;, &#x435;&#x441;&#x442;&#x44C; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x435;&#x435; &#x441;&#x432;&#x43E;&#x439;&#x441;&#x442;&#x432;&#x43E;, &#x447;&#x442;&#x43E; Option(null) = None. &#x421; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x439; &#x441;&#x442;&#x43E;&#x440;&#x43E;&#x43D;&#x44B;, &#x442;&#x443;&#x442; &#x43D;&#x435;&#x442; &#x438;&#x43B;&#x43B;&#x44E;&#x437;&#x438;&#x439;, &#x447;&#x442;&#x43E; java interop &#x431;&#x435;&#x437;&#x43E;&#x43F;&#x430;&#x441;&#x435;&#x43D;.</p>
+</blockquote>
+<h4>7. infix &#x43D;&#x43E;&#x442;&#x430;&#x446;&#x438;&#x44F; &#x438; &#x43B;&#x44F;&#x43C;&#x431;&#x434;&#x44B;</h4>
+<p>&#x421;&#x434;&#x435;&#x43B;&#x430;&#x435;&#x43C; &#x446;&#x435;&#x43F;&#x43E;&#x447;&#x43A;&#x443; &#x438;&#x437; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x432; &#x438; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x435;&#x43C; &#x435;&#x435;:</p>
+<pre><code class="hljs language-kotlin">    <span class="hljs-function"><span class="hljs-keyword">fun</span><span class="hljs-type">&lt;R&gt;</span> <span class="hljs-title">first</span><span class="hljs-params">(func: ()</span></span> -&gt; R): R{
+        println(<span class="hljs-string">"calling first"</span>)
+        <span class="hljs-keyword">return</span> func()
+    }
+
+    <span class="hljs-keyword">infix</span> <span class="hljs-function"><span class="hljs-keyword">fun</span><span class="hljs-type">&lt;R, T&gt;</span> R.<span class="hljs-title">second</span><span class="hljs-params">(func: (<span class="hljs-type">R</span>)</span></span> -&gt; T): T{
+        println(<span class="hljs-string">"calling second"</span>)
+        <span class="hljs-keyword">return</span> func(<span class="hljs-keyword">this</span>)
+    }
+
+    first {
+        println(<span class="hljs-string">"calling first body"</span>)
+    }
+    second {
+        println(<span class="hljs-string">"calling second body"</span>)
+    }</code></pre>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;</strong></p>
+<pre><code class="hljs language-kotlin">calling first
+calling first body
+Oops!
+calling second body</code></pre>
+<p>&#x41F;&#x43E;&#x434;&#x43E;&#x436;&#x434;&#x438;&#x442;&#x435;-&#x43A;&#x430;... &#x442;&#x443;&#x442; &#x43A;&#x430;&#x43A;&#x430;&#x44F;-&#x442;&#x43E; &#x43F;&#x43E;&#x434;&#x441;&#x442;&#x430;&#x432;&#x430;! &#x418; &#x43F;&#x440;&#x430;&#x432;&#x434;&#x430;, &laquo;&#x437;&#x430;&#x431;&#x44B;&#x43B;&raquo; &#x43E;&#x434;&#x438;&#x43D; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x432;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x44C;:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span><span class="hljs-type">&lt;T&gt;</span> <span class="hljs-title">second</span><span class="hljs-params">(func: ()</span></span> -&gt; T): T{
+    println(<span class="hljs-string">"Oops!"</span>)
+    <span class="hljs-keyword">return</span> func()
+}</code></pre>
+<p>&#x418; &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x437;&#x430;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x43B;&#x43E; &laquo;&#x43A;&#x430;&#x43A; &#x43D;&#x430;&#x434;&#x43E;&raquo;, &#x43D;&#x443;&#x436;&#x43D;&#x43E; &#x431;&#x44B;&#x43B;&#x43E; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; &#x442;&#x430;&#x43A;:</p>
+<pre><code class="hljs language-kotlin">first {
+    println(<span class="hljs-string">"calling first body"</span>)
+} second {
+    println(<span class="hljs-string">"calling second body"</span>)
+}</code></pre>
+<blockquote>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;</strong></p>
+<p>calling first
+calling first body
+calling second
+calling second body</p>
+</blockquote>
+<p>&#x412;&#x441;&#x435;&#x433;&#x43E; &#x43E;&#x434;&#x438;&#x43D; &#x43F;&#x435;&#x440;&#x435;&#x43D;&#x43E;&#x441; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x43B;&#x435;&#x433;&#x43A;&#x43E; &#x43F;&#x440;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x438; &#x443;&#x434;&#x430;&#x43B;&#x438;&#x442;&#x44C;/&#x434;&#x43E;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x435;&#x43A;&#x43B;&#x44E;&#x447;&#x430;&#x435;&#x442; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x435;. &#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x430;&#x43D;&#x43E; &#x43D;&#x430; &#x440;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x441;&#x43E;&#x431;&#x44B;&#x442;&#x438;&#x44F;&#x445;: &#x431;&#x44B;&#x43B;&#x430; &#x446;&#x435;&#x43F;&#x43E;&#x447;&#x43A;&#x430; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x432; &laquo;&#x441;&#x434;&#x435;&#x43B;&#x430;&#x439; &#x432; background&raquo; &#x438; &laquo;&#x43F;&#x43E;&#x442;&#x43E;&#x43C; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x439; &#x432; ui &#x442;&#x440;&#x435;&#x434;&#x435;&raquo;. &#x418; &#x431;&#x44B;&#x43B; &#x43C;&#x435;&#x442;&#x43E;&#x434; &laquo;&#x441;&#x434;&#x435;&#x43B;&#x430;&#x439; &#x432; ui&raquo; &#x441; &#x442;&#x430;&#x43A;&#x438;&#x43C; &#x436;&#x435; &#x438;&#x43C;&#x435;&#x43D;&#x435;&#x43C;.</p>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<p>&#x421;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x43D;&#x435;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x442;&#x43B;&#x438;&#x447;&#x430;&#x435;&#x442;&#x441;&#x44F;, &#x43F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x442;&#x430;&#x43A; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x442;&#x443;&#x442; &#x441;&#x435;&#x431;&#x435; &#x43D;&#x435; &#x432;&#x44B;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x438;&#x448;&#x44C;:</p>
+<pre><code class="hljs language-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Infix</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">App</span></span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">first</span></span>[<span class="hljs-type">R</span>](func: () =&gt; <span class="hljs-type">R</span>): <span class="hljs-type">R</span> = {
+    println(<span class="hljs-string">"calling first"</span>)
+    func()
+  }
+
+  <span class="hljs-keyword">implicit</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Second</span>[<span class="hljs-type">R</span>](<span class="hljs-params">val value: <span class="hljs-type">R</span></span>) <span class="hljs-keyword">extends</span> <span class="hljs-title">AnyVal</span></span>{
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">second</span></span>[<span class="hljs-type">T</span>](func: (<span class="hljs-type">R</span>) =&gt; <span class="hljs-type">T</span>): <span class="hljs-type">T</span> = {
+      println(<span class="hljs-string">"calling second"</span>)
+      func(value)
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">second</span></span>[<span class="hljs-type">T</span>](func: () =&gt; <span class="hljs-type">T</span>): <span class="hljs-type">T</span> = {
+    println(<span class="hljs-string">"Oops!"</span>)
+    func()
+  }
+
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]) {
+    first { () =&gt;
+      println(<span class="hljs-string">"calling first body"</span>)
+    } second { () =&gt; <span class="hljs-comment">//&lt;--------type mismach</span>
+      println(<span class="hljs-string">"calling second body"</span>)
+    }
+  }
+}</code></pre>
+<p>&#x417;&#x430;&#x442;&#x43E;, &#x43F;&#x44B;&#x442;&#x430;&#x44F;&#x441;&#x44C; &#x43F;&#x43E;&#x434;&#x43E;&#x433;&#x43D;&#x430;&#x442;&#x44C; &#x441;&#x43A;&#x430;&#x43B;&#x43E;&#x432;&#x441;&#x43A;&#x438;&#x439; &#x43A;&#x43E;&#x434; &#x445;&#x43E;&#x442;&#x44F; &#x431;&#x44B; &#x434;&#x43B;&#x44F; &#x43D;&#x435;&#x43E;&#x447;&#x435;&#x432;&#x438;&#x434;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x437;&#x430;&#x441;&#x447;&#x435;&#x442; implicit/underscore, &#x44F; &#x432;&#x437;&#x43E;&#x440;&#x432;&#x430;&#x43B; &#x432;&#x441;&#x435; &#x432;&#x43E;&#x43A;&#x440;&#x443;&#x433;.</p>
+<blockquote>
+<p><strong>&#x41E;&#x441;&#x442;&#x43E;&#x440;&#x43E;&#x436;&#x43D;&#x43E;! &#x41A;&#x440;&#x43E;&#x432;&#x44C;, &#x43A;&#x438;&#x448;&#x43A;&#x438; &#x438; &#x440;&#x430;&#x441;&#x447;&#x43B;&#x435;&#x43D;&#x435;&#x43D;&#x43A;&#x430;...</strong></p>
+<pre><code>object Infix2 extends App{
+  def first(func: (Unit) =&gt; Unit): Unit = {
+    println(&quot;calling first&quot;)
+    func()
+  }
+
+  implicit class Second(val value: Unit) extends AnyVal{
+    def second(func: (Unit) =&gt; Unit): Unit = {
+      println(&quot;calling second&quot;)
+      func(value)
+    }
+  }
+
+  def second(func: (Unit) =&gt; Unit): Unit = {
+    println(&quot;Oops!&quot;)
+    func()
+  }
+
+  override def main(args: Array[String]) {
+    first { _ =&gt;
+      println(&quot;calling first body&quot;)
+    } second { _ =&gt;
+      println(&quot;calling second body&quot;)
+    }
+  }
+}
+</code></pre>
+<p>&#x418; &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;:</p>
+<pre><code class="hljs language-scala"><span class="hljs-type">Exception</span> in thread <span class="hljs-string">"main"</span> java.lang.<span class="hljs-type">VerifyError</span>: <span class="hljs-type">Operand</span> stack underflow
+<span class="hljs-type">Exception</span> <span class="hljs-type">Details</span>:
+  <span class="hljs-type">Location</span>:
+    <span class="hljs-type">Infix2</span>$<span class="hljs-type">Second</span>$.equals$extension(<span class="hljs-type">Lscala</span>/runtime/<span class="hljs-type">BoxedUnit</span>;<span class="hljs-type">Ljava</span>/lang/<span class="hljs-type">Object</span>;)<span class="hljs-type">Z</span> @<span class="hljs-number">40</span>: pop
+  <span class="hljs-type">Reason</span>:
+    <span class="hljs-type">Attempt</span> to pop empty stack.
+  <span class="hljs-type">Current</span> <span class="hljs-type">Frame</span>:
+    bci: @<span class="hljs-number">40</span>
+    flags: { }
+    locals: { <span class="hljs-symbol">'Infix2</span>$<span class="hljs-type">Second</span>/pre&gt;, <span class="hljs-symbol">'scala</span>/runtime/<span class="hljs-type">BoxedUnit</span>', <span class="hljs-symbol">'java</span>/lang/<span class="hljs-type">Object</span>', <span class="hljs-symbol">'java</span>/lang/<span class="hljs-type">Object</span>', integer }
+    stack: { }
+  <span class="hljs-type">Bytecode</span>:
+    <span class="hljs-number">0000000</span>: <span class="hljs-number">2</span>c4e <span class="hljs-number">2</span>dc1 <span class="hljs-number">0033</span> <span class="hljs-number">9900</span> <span class="hljs-number">0904</span> <span class="hljs-number">3604</span> a700 <span class="hljs-number">0603</span>
+    <span class="hljs-number">0000010</span>: <span class="hljs-number">3604</span> <span class="hljs-number">1504</span> <span class="hljs-number">9900</span> <span class="hljs-number">4</span>d2c c700 <span class="hljs-number">0901</span> <span class="hljs-number">5701</span> a700
+    <span class="hljs-number">0000020</span>: <span class="hljs-number">102</span>c c000 <span class="hljs-number">33</span>b6 <span class="hljs-number">0036</span> <span class="hljs-number">57</span>bb <span class="hljs-number">0038</span> <span class="hljs-number">59</span>bf <span class="hljs-number">3</span>a05
+    <span class="hljs-number">0000030</span>: b200 <span class="hljs-number">1</span>f57 b200 <span class="hljs-number">1</span>fb2 <span class="hljs-number">001</span>f <span class="hljs-number">57</span>b2 <span class="hljs-number">001</span>f <span class="hljs-number">3</span>a06
+    <span class="hljs-number">0000040</span>: <span class="hljs-number">59</span>c7 <span class="hljs-number">000</span>c <span class="hljs-number">5719</span> <span class="hljs-number">06</span>c6 <span class="hljs-number">000</span>e a700 <span class="hljs-number">0</span>f19 <span class="hljs-number">06</span>b6
+    <span class="hljs-number">0000050</span>: <span class="hljs-number">003</span>c <span class="hljs-number">9900</span> <span class="hljs-number">0704</span> a700 <span class="hljs-number">0403</span> <span class="hljs-number">9900</span> <span class="hljs-number">0704</span> a700
+    <span class="hljs-number">0000060</span>: <span class="hljs-number">0403</span> ac
+  <span class="hljs-type">Stackmap</span> <span class="hljs-type">Table</span>:
+    append_frame(@<span class="hljs-number">15</span>,<span class="hljs-type">Object</span>[#<span class="hljs-number">4</span>])
+    append_frame(@<span class="hljs-number">18</span>,<span class="hljs-type">Integer</span>)
+    same_frame(@<span class="hljs-number">33</span>)
+    same_locals_1_stack_item_frame(@<span class="hljs-number">46</span>,<span class="hljs-type">Null</span>)
+    full_frame(@<span class="hljs-number">77</span>,{<span class="hljs-type">Object</span>[#<span class="hljs-number">2</span>],<span class="hljs-type">Object</span>[#<span class="hljs-number">27</span>],<span class="hljs-type">Object</span>[#<span class="hljs-number">4</span>],<span class="hljs-type">Object</span>[#<span class="hljs-number">4</span>],<span class="hljs-type">Integer</span>,<span class="hljs-type">Null</span>,<span class="hljs-type">Object</span>[#<span class="hljs-number">27</span>]},{<span class="hljs-type">Object</span>[#<span class="hljs-number">27</span>]})
+    same_frame(@<span class="hljs-number">85</span>)
+    same_frame(@<span class="hljs-number">89</span>)
+    same_locals_1_stack_item_frame(@<span class="hljs-number">90</span>,<span class="hljs-type">Integer</span>)
+    chop_frame(@<span class="hljs-number">97</span>,<span class="hljs-number">2</span>)
+    same_locals_1_stack_item_frame(@<span class="hljs-number">98</span>,<span class="hljs-type">Integer</span>)
+
+    at <span class="hljs-type">Infix2</span>$.main(<span class="hljs-type">Infix</span>.scala)</code></pre>
+</blockquote>
+</blockquote>
+<h4>8. &#x41F;&#x435;&#x440;&#x435;&#x433;&#x440;&#x443;&#x437;&#x43A;&#x430; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x432; &#x438; it</h4>
+<p>&#x42D;&#x442;&#x43E;, &#x441;&#x43A;&#x43E;&#x440;&#x435;&#x435;, &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x43F;&#x43E;&#x434;&#x433;&#x430;&#x434;&#x438;&#x442;&#x44C; &#x434;&#x440;&#x443;&#x433;&#x438;&#x43C;. &#x41F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x44C;&#x442;&#x435;, &#x447;&#x442;&#x43E; &#x432;&#x44B; &#x43F;&#x438;&#x448;&#x438;&#x442;&#x435; &#x431;&#x438;&#x431;&#x43B;&#x438;&#x43E;&#x442;&#x435;&#x43A;&#x443;, &#x438; &#x432; &#x43D;&#x435;&#x439; &#x435;&#x441;&#x442;&#x44C; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44F;</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">applier</span><span class="hljs-params">(x: <span class="hljs-type">String</span>, func: (<span class="hljs-type">String</span>)</span></span> -&gt; <span class="hljs-built_in">Unit</span>){
+    func(x)
+}</code></pre>
+<p>&#x420;&#x430;&#x437;&#x443;&#x43C;&#x435;&#x435;&#x442;&#x441;&#x44F;, &#x43D;&#x430;&#x440;&#x43E;&#x434; &#x435;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x442; &#x434;&#x43E;&#x432;&#x43E;&#x43B;&#x44C;&#x43D;&#x43E; &#x43F;&#x440;&#x43E;&#x437;&#x440;&#x430;&#x447;&#x43D;&#x44B;&#x43C; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x43E;&#x43C;:</p>
+<pre><code class="hljs language-kotlin">applier (<span class="hljs-string">"arg"</span>) {
+    println(it)
+}
+applier (<span class="hljs-string">"no arg"</span>) {
+    println(<span class="hljs-string">"ololo"</span>)
+}</code></pre>
+<p>&#x41A;&#x43E;&#x434; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x438;&#x440;&#x443;&#x435;&#x442;&#x441;&#x44F;, &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x435;&#x442;, &#x432;&#x441;&#x435; &#x434;&#x43E;&#x432;&#x43E;&#x43B;&#x44C;&#x43D;&#x44B;. &#x410; &#x43F;&#x43E;&#x442;&#x43E;&#x43C; &#x432;&#x44B; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x435; &#x43C;&#x435;&#x442;&#x43E;&#x434;</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">applier</span><span class="hljs-params">(x: <span class="hljs-type">String</span>, func: ()</span></span> -&gt; <span class="hljs-built_in">Unit</span>){
+    println(<span class="hljs-string">"not applying <span class="hljs-subst">$x</span>"</span>)
+    func()
+}</code></pre>
+<p>&#x418; &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440; &#x43D;&#x435; &#x440;&#x443;&#x433;&#x430;&#x43B;&#x441;&#x44F;, &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;&#x43C; &#x43F;&#x440;&#x438;&#x434;&#x435;&#x442;&#x441;&#x44F; &#x432;&#x435;&#x437;&#x434;&#x435; &#x43E;&#x442;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C;&#x441;&#x44F; &#x43E;&#x442; it (&#x447;&#x438;&#x442;&#x430;&#x439;: &#x43F;&#x435;&#x440;&#x435;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; &#x43A;&#x443;&#x447;&#x443; &#x43A;&#x43E;&#x434;&#x430;):</p>
+<pre><code class="hljs language-kotlin">applier (<span class="hljs-string">"arg"</span>) { it -&gt; <span class="hljs-comment">//FIXED</span>
+    println(it)
+}
+applier (<span class="hljs-string">"no arg"</span>) { -&gt; <span class="hljs-comment">//yes, explicit!</span>
+    println(<span class="hljs-string">"ololo"</span>)
+}</code></pre>
+<p>&#x425;&#x43E;&#x442;&#x44F;, &#x442;&#x435;&#x43E;&#x440;&#x435;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;, &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440; &#x43C;&#x43E;&#x433; &#x431;&#x44B; &#x438; &#x443;&#x433;&#x430;&#x434;&#x430;&#x442;&#x44C;, &#x447;&#x442;&#x43E; &#x435;&#x441;&#x43B;&#x438; &#x435;&#x441;&#x442;&#x44C; it, &#x442;&#x43E; &#x44D;&#x442;&#x43E; &#x43B;&#x44F;&#x43C;&#x431;&#x434;&#x430; &#x441; 1 &#x432;&#x445;&#x43E;&#x434;&#x43D;&#x44B;&#x43C; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x43C;. &#x414;&#x443;&#x43C;&#x430;&#x44E;, &#x447;&#x442;&#x43E; &#x441; &#x440;&#x430;&#x437;&#x432;&#x438;&#x442;&#x438;&#x435;&#x43C; &#x44F;&#x437;&#x44B;&#x43A;&#x430; &#x438; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440; &#x43F;&#x43E;&#x443;&#x43C;&#x43D;&#x435;&#x435;&#x442;, &#x438; &#x44D;&#x442;&#x43E;&#x442; &#x43F;&#x443;&#x43D;&#x43A;&#x442; &mdash; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x439;.</p>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<p>&#x411;&#x435;&#x437; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x432; &#x43F;&#x440;&#x438;&#x434;&#x435;&#x442;&#x441;&#x44F; &#x44F;&#x432;&#x43D;&#x43E; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C;, &#x447;&#x442;&#x43E; &#x44D;&#x442;&#x43E; &#x43B;&#x44F;&#x43C;&#x431;&#x434;&#x430;. &#x410; &#x43F;&#x440;&#x438; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x438; &#x43D;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x435; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x438;&#x442;&#x441;&#x44F;.</p>
+<pre><code class="hljs language-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">Its</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">App</span></span>{
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">applier</span></span>(x: <span class="hljs-type">String</span>, func: (<span class="hljs-type">String</span>) =&gt; <span class="hljs-type">Unit</span>){
+    func(x)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">applier</span></span>(x: <span class="hljs-type">String</span>, func: () =&gt; <span class="hljs-type">Unit</span>){
+    println(<span class="hljs-string">"not applying $x"</span>)
+    func()
+  }
+
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]) {
+    applier(<span class="hljs-string">"arg"</span>, println(_))
+    applier(<span class="hljs-string">"no arg"</span>, _ =&gt; println(<span class="hljs-string">"ololo"</span>))
+  }
+}</code></pre>
+</blockquote>
+<h4>9. &#x41F;&#x43E;&#x447;&#x435;&#x43C;&#x443; &#x43D;&#x435; &#x441;&#x442;&#x43E;&#x438;&#x442; &#x434;&#x443;&#x43C;&#x430;&#x442;&#x44C; &#x43E; Nullable &#x43A;&#x430;&#x43A; &#x43E;&#x431; Option</h4>
+<p>&#x41F;&#x443;&#x441;&#x442;&#x44C; &#x443; &#x43D;&#x430;&#x441; &#x435;&#x441;&#x442;&#x44C; &#x43E;&#x431;&#x435;&#x440;&#x442;&#x43A;&#x430; &#x434;&#x43B;&#x44F; &#x43A;&#x44D;&#x448;&#x430;:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cache</span>&lt;<span class="hljs-type">T</span>&gt;</span>(){
+    <span class="hljs-keyword">val</span> elements: MutableMap&lt;String, T&gt; = HashMap()
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">put</span><span class="hljs-params">(key: <span class="hljs-type">String</span>, elem: <span class="hljs-type">T</span>)</span></span> = elements.put(key, elem)
+
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">get</span><span class="hljs-params">(key: <span class="hljs-type">String</span>)</span></span> = elements[key]
+}</code></pre>
+<p>&#x418; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x439; &#x441;&#x446;&#x435;&#x43D;&#x430;&#x440;&#x438;&#x439; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F;:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> cache = Cache&lt;String&gt;()
+cache.put(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getter</span><span class="hljs-params">(key: <span class="hljs-type">String</span>)</span></span> {
+    cache.<span class="hljs-keyword">get</span>(key)?.let {
+        println(<span class="hljs-string">"Got <span class="hljs-subst">$key</span> from cache: <span class="hljs-subst">$it</span>"</span>)
+    } ?: println(<span class="hljs-string">"<span class="hljs-subst">$key</span> is not in cache!"</span>)
+}
+
+getter(<span class="hljs-string">"foo"</span>)
+getter(<span class="hljs-string">"baz"</span>)</code></pre>
+<blockquote>
+<p><strong>&#x420;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; &#x434;&#x43E;&#x432;&#x43E;&#x43B;&#x44C;&#x43D;&#x43E; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x43A;&#x430;&#x437;&#x443;&#x435;&#x43C;</strong></p>
+<p>Got foo from cache: bar
+baz is not in cache!</p>
+</blockquote>
+<p>&#x41D;&#x43E; &#x435;&#x441;&#x43B;&#x438; &#x43C;&#x44B; &#x432;&#x434;&#x440;&#x443;&#x433; &#x437;&#x430;&#x445;&#x43E;&#x442;&#x438;&#x43C; &#x43A; &#x43A;&#x44D;&#x448;&#x435; &#x445;&#x440;&#x430;&#x43D;&#x438;&#x442;&#x44C; Nullable...</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> cache = Cache&lt;String?&gt;()
+cache.put(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">getter</span><span class="hljs-params">(key: <span class="hljs-type">String</span>)</span></span> {
+    cache.<span class="hljs-keyword">get</span>(key)?.let {
+        println(<span class="hljs-string">"Got <span class="hljs-subst">$key</span> from cache: <span class="hljs-subst">$it</span>"</span>)
+    } ?: println(<span class="hljs-string">"<span class="hljs-subst">$key</span> is not in cache!"</span>)
+}
+
+getter(<span class="hljs-string">"foo"</span>)
+getter(<span class="hljs-string">"baz"</span>)
+
+cache.put(<span class="hljs-string">"IAmNull"</span>, <span class="hljs-literal">null</span>)
+getter(<span class="hljs-string">"IAmNull"</span>)</code></pre>
+<blockquote>
+<p><strong>&#x422;&#x43E; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x442;&#x441;&#x44F; &#x43D;&#x435; &#x43E;&#x447;&#x435;&#x43D;&#x44C; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x43E;</strong></p>
+<p>Got foo from cache: bar
+baz is not in cache!
+IAmNull is not in cache!</p>
+</blockquote>
+<p>&#x417;&#x430;&#x447;&#x435;&#x43C; &#x445;&#x440;&#x430;&#x43D;&#x438;&#x442;&#x44C; null? &#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x43E;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C;, &#x447;&#x442;&#x43E; &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; &#x43D;&#x435; &#x432;&#x44B;&#x447;&#x438;&#x441;&#x43B;&#x438;&#x43C;. &#x41A;&#x43E;&#x43D;&#x435;&#x447;&#x43D;&#x43E;, &#x442;&#x443;&#x442; &#x431;&#x44B;&#x43B;&#x43E; &#x431;&#x44B; &#x43F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x44C;&#x43D;&#x435;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; Option &#x438;&#x43B;&#x438; Either, &#x43D;&#x43E;, &#x43A; &#x441;&#x43E;&#x436;&#x430;&#x43B;&#x435;&#x43D;&#x438;&#x44E;, &#x43D;&#x438; &#x442;&#x43E;&#x433;&#x43E;, &#x43D;&#x438; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x433;&#x43E; &#x432; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x43E;&#x439; &#x431;&#x438;&#x431;&#x43B;&#x438;&#x43E;&#x442;&#x435;&#x43A;&#x435; &#x43D;&#x435;&#x442; (&#x43D;&#x43E; &#x435;&#x441;&#x442;&#x44C;, &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;, &#x432; <a href="https://github.com/MarioAriasC/funKTionale/wiki">funKTionale</a>). &#x411;&#x43E;&#x43B;&#x435;&#x435; &#x442;&#x43E;&#x433;&#x43E;, &#x43A;&#x430;&#x43A; &#x440;&#x430;&#x437; &#x43F;&#x440;&#x438; &#x440;&#x435;&#x430;&#x43B;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438; Either, &#x44F; &#x43D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x438;&#x43B; &#x43D;&#x430; &#x433;&#x440;&#x430;&#x431;&#x43B;&#x438; &#x44D;&#x442;&#x43E;&#x433;&#x43E; &#x43F;&#x443;&#x43D;&#x43A;&#x442;&#x430; &#x438; &#x43F;&#x440;&#x435;&#x434;&#x44B;&#x434;&#x443;&#x449;&#x435;&#x433;&#x43E;. &#x420;&#x435;&#x448;&#x438;&#x442;&#x44C; &#x44D;&#x442;&#x443; &#x43F;&#x440;&#x43E;&#x431;&#x43B;&#x435;&#x43C;&#x443; &#x441; &laquo;&#x434;&#x432;&#x43E;&#x439;&#x43D;&#x44B;&#x43C; Nullable&raquo; &#x43C;&#x43E;&#x436;&#x43D;&#x43E;, &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;, &#x432;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x442;&#x43E;&#x43C; Pair &#x438;&#x43B;&#x438; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; data class.</p>
+<blockquote>
+<p><strong>&#x427;&#x451; &#x442;&#x430;&#x43C; &#x432; Scala?</strong></p>
+<p>&#x41D;&#x438;&#x43A;&#x442;&#x43E; &#x43D;&#x435; &#x437;&#x430;&#x43F;&#x440;&#x435;&#x442;&#x438;&#x442; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; Option &#x43E;&#x442; Option. &#x41D;&#x430;&#x434;&#x435;&#x44E;&#x441;&#x44C;, &#x43F;&#x43E;&#x43D;&#x44F;&#x442;&#x43D;&#x43E;, &#x447;&#x442;&#x43E; &#x442;&#x430;&#x43A; &#x432;&#x441;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x43E;. &#x414;&#x430; &#x438; &#x441; null &#x442;&#x43E;&#x436;&#x435;:</p>
+<pre><code class="hljs language-scala"><span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">doubleNull</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">App</span></span>{
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cache</span>[<span class="hljs-type">T</span>]</span>{
+    <span class="hljs-keyword">val</span> elements =  mutable.<span class="hljs-type">Map</span>.empty[<span class="hljs-type">String</span>, <span class="hljs-type">T</span>]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">put</span></span>(key: <span class="hljs-type">String</span>, elem: <span class="hljs-type">T</span>) = elements.put(key, elem)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get</span></span>(key: <span class="hljs-type">String</span>) = elements.get(key)
+  }
+
+  <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span></span>(args: <span class="hljs-type">Array</span>[<span class="hljs-type">String</span>]) {
+    <span class="hljs-keyword">val</span> cache = <span class="hljs-keyword">new</span> <span class="hljs-type">Cache</span>[<span class="hljs-type">String</span>]()
+    cache.put(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getter</span></span>(key: <span class="hljs-type">String</span>) {
+      cache.get(key) <span class="hljs-keyword">match</span> {
+        <span class="hljs-keyword">case</span> <span class="hljs-type">Some</span>(value) =&gt; println(<span class="hljs-string">s"Got <span class="hljs-subst">$key</span> from cache: <span class="hljs-subst">$value</span>"</span>)
+        <span class="hljs-keyword">case</span> <span class="hljs-type">None</span> =&gt; println(<span class="hljs-string">s"<span class="hljs-subst">$key</span> is not in cache!"</span>)
+      }
+    }
+
+    getter(<span class="hljs-string">"foo"</span>)
+    getter(<span class="hljs-string">"baz"</span>)
+
+    cache.put(<span class="hljs-string">"IAmNull"</span>, <span class="hljs-literal">null</span>)
+    getter(<span class="hljs-string">"IAmNull"</span>)
+  }</code></pre>
+<blockquote>
+<p><strong>&#x412;&#x441;&#x435; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x43E;</strong></p>
+<p>Got foo from cache: bar
+baz is not in cache!
+Got IAmNull from cache: null</p>
+</blockquote>
+</blockquote>
+<h4>10. &#x41E;&#x431;&#x44A;&#x44F;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x432;</h4>
+<p>&#x411;&#x43E;&#x43D;&#x443;&#x441; &#x434;&#x43B;&#x44F; &#x442;&#x435;&#x445;, &#x43A;&#x442;&#x43E; &#x440;&#x430;&#x43D;&#x44C;&#x448;&#x435; &#x43F;&#x438;&#x441;&#x430;&#x43B; &#x43D;&#x430; Scala. &#x421;&#x43F;&#x43E;&#x43D;&#x441;&#x43E;&#x440; &#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x443;&#x43D;&#x43A;&#x442;&#x430; &mdash; <a href="https://habrahabr.ru/users/lgorsl/">lgorSL</a>.
+<a href="https://habrahabr.ru/post/277479/#comment_8779645">&#x426;&#x438;&#x442;&#x438;&#x440;&#x443;&#x44E;:</a></p>
+<blockquote>
+<p>...
+&#x418;&#x43B;&#x438;, &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;, &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x43E;&#x431;&#x44A;&#x44F;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430;:
+&#x412; scala: def methodName(...) = {...}
+&#x412; kotlin &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x44B; &#x434;&#x432;&#x430; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x430; &mdash; &#x43A;&#x430;&#x43A; &#x432; scala (&#x441;&#x43E; &#x437;&#x43D;&#x430;&#x43A;&#x43E;&#x43C; =) &#x438; &#x43A;&#x430;&#x43A; &#x432; java (&#x431;&#x435;&#x437; &#x43D;&#x435;&#x433;&#x43E;), &#x43D;&#x43E; &#x44D;&#x442;&#x438; &#x434;&#x432;&#x430; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x430; &#x43E;&#x431;&#x44A;&#x44F;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x43D;&#x435;&#x44D;&#x43A;&#x432;&#x438;&#x432;&#x430;&#x43B;&#x435;&#x43D;&#x442;&#x43D;&#x44B; &#x434;&#x440;&#x443;&#x433; &#x434;&#x440;&#x443;&#x433;&#x443; &#x438; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x44E;&#x442; &#x43D;&#x435;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;-&#x440;&#x430;&#x437;&#x43D;&#x43E;&#x43C;&#x443;, &#x44F; &#x43E;&#x434;&#x43D;&#x430;&#x436;&#x434;&#x44B; &#x43A;&#x443;&#x447;&#x443; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x438; &#x43F;&#x43E;&#x442;&#x440;&#x430;&#x442;&#x438;&#x43B; &#x43D;&#x430; &#x43F;&#x43E;&#x438;&#x441;&#x43A; &#x442;&#x430;&#x43A;&#x43E;&#x439; &laquo;&#x43E;&#x441;&#x43E;&#x431;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x438;&raquo; &#x432; &#x43A;&#x43E;&#x434;&#x435;.
+...</p>
+</blockquote>
+<blockquote>
+<p>&#x42F; &#x43F;&#x43E;&#x434;&#x440;&#x430;&#x437;&#x443;&#x43C;&#x435;&#x432;&#x430;&#x43B; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x435;&#x435;:</p>
+<p>fun test(){ println(&laquo;it works&raquo;) }
+fun test2() = println(&laquo;it works too&raquo;)
+fun test3() = {println(&laquo;surprise!&raquo;)}</p>
+<p>&#x427;&#x442;&#x43E;&#x431;&#x44B; &#x432;&#x44B;&#x432;&#x435;&#x441;&#x442;&#x438; &laquo;surprise&raquo;, &#x43F;&#x440;&#x438;&#x434;&#x451;&#x442;&#x441;&#x44F; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; test3()(). &#x412;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x430; test3() &#x442;&#x43E;&#x436;&#x435; &#x43D;&#x43E;&#x440;&#x43C;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x438;&#x440;&#x443;&#x435;&#x442;&#x441;&#x44F;, &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x441;&#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x435;&#x442; &#x43D;&#x435; &#x442;&#x430;&#x43A;, &#x43A;&#x430;&#x43A; &#x43E;&#x436;&#x438;&#x434;&#x430;&#x43B;&#x43E;&#x441;&#x44C; &mdash; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &laquo;&#x43B;&#x438;&#x448;&#x43D;&#x438;&#x445;&raquo; &#x441;&#x43A;&#x43E;&#x431;&#x43E;&#x447;&#x435;&#x43A; &#x43A;&#x430;&#x440;&#x434;&#x438;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x43C;&#x435;&#x43D;&#x44F;&#x435;&#x442; &#x43B;&#x43E;&#x433;&#x438;&#x43A;&#x443; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x44B;.</p>
+<p>&#x418;&#x437;-&#x437;&#x430; &#x44D;&#x442;&#x438;&#x445; &#x433;&#x440;&#x430;&#x431;&#x43B;&#x435;&#x439; &#x43F;&#x435;&#x440;&#x435;&#x445;&#x43E;&#x434; &#x441;&#x43E; &#x441;&#x43A;&#x430;&#x43B;&#x44B; &#x43D;&#x430; &#x43A;&#x43E;&#x442;&#x43B;&#x438;&#x43D; &#x43E;&#x43A;&#x430;&#x437;&#x430;&#x43B;&#x441;&#x44F; &#x43D;&#x435;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x431;&#x43E;&#x43B;&#x435;&#x437;&#x43D;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &mdash; &#x438;&#x43D;&#x43E;&#x433;&#x434;&#x430; &laquo;&#x43F;&#x43E; &#x43F;&#x440;&#x438;&#x432;&#x44B;&#x447;&#x43A;&#x435;&raquo; &#x432; &#x43E;&#x431;&#x44A;&#x44F;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x438; &#x43A;&#x430;&#x43A;&#x43E;&#x433;&#x43E;-&#x43D;&#x438;&#x431;&#x443;&#x434;&#x44C; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430; &#x43F;&#x438;&#x448;&#x443; &#x437;&#x43D;&#x430;&#x43A; &#x440;&#x430;&#x432;&#x435;&#x43D;&#x441;&#x442;&#x432;&#x430;, &#x430; &#x43F;&#x43E;&#x442;&#x43E;&#x43C; &#x43F;&#x440;&#x438;&#x445;&#x43E;&#x434;&#x438;&#x442;&#x441;&#x44F; &#x438;&#x441;&#x43A;&#x430;&#x442;&#x44C; &#x43E;&#x448;&#x438;&#x431;&#x43A;&#x438;.</p>
+</blockquote>
+<h4>&#x417;&#x430;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x435;</h4>
+<p>&#x41D;&#x430; &#x44D;&#x442;&#x43E;&#x43C; &#x441;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x43D;&#x430;&#x432;&#x435;&#x440;&#x43D;&#x44F;&#x43A;&#x430; &#x43D;&#x435; &#x438;&#x441;&#x447;&#x435;&#x440;&#x43F;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F;, &#x43F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x434;&#x435;&#x43B;&#x438;&#x442;&#x435;&#x441;&#x44C; &#x432; &#x43A;&#x43E;&#x43C;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x440;&#x438;&#x44F;&#x445;, &#x43A;&#x430;&#x43A; &#x432;&#x44B; &#x448;&#x43B;&#x438; &#x434;&#x43E;&#x440;&#x43E;&#x433;&#x43E;&#x439; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x439;, &#x43D;&#x43E; &#x43F;&#x43E;&#x442;&#x43E;&#x43C; &#x447;&#x442;&#x43E;-&#x442;&#x43E; &#x43F;&#x43E;&#x448;&#x43B;&#x43E; &#x43D;&#x435; &#x442;&#x430;&#x43A;...
+&#x423; &#x44F;&#x437;&#x44B;&#x43A;&#x430; &#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x43B;&#x43E;&#x436;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x447;&#x435;&#x440;&#x442;, &#x43E; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x445; &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43F;&#x440;&#x43E;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C; &#x43D;&#x430; <a href="http://kotlinlang.org/">&#x43E;&#x444;&#x438;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x43C; &#x441;&#x430;&#x439;&#x442;&#x435;</a>, &#x432; <a href="https://habrahabr.ru/post/277479/">&#x441;&#x442;&#x430;&#x442;&#x44C;&#x44F;&#x445;</a> <a href="https://habrahabr.ru/post/268463/">&#x43D;&#x430;</a> <a href="https://habrahabr.ru/post/274997/">&#x445;&#x430;&#x431;&#x440;&#x435;</a> &#x438; &#x435;&#x449;&#x435; &#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x433;&#x434;&#x435;. &#x41D;&#x43E; &#x43B;&#x438;&#x447;&#x43D;&#x43E; &#x44F; &#x43D;&#x435; &#x441;&#x43E;&#x433;&#x43B;&#x430;&#x441;&#x435;&#x43D; &#x441; &#x43D;&#x435;&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x43C;&#x438; &#x430;&#x440;&#x445;&#x438;&#x442;&#x435;&#x43A;&#x442;&#x443;&#x440;&#x43D;&#x44B;&#x43C;&#x438; &#x440;&#x435;&#x448;&#x435;&#x43D;&#x438;&#x44F;&#x43C;&#x438; (&#x43A;&#x43B;&#x430;&#x441;&#x441;&#x44B; final by default, java interop) &#x438; &#x438;&#x43D;&#x43E;&#x433;&#x434;&#x430; &#x447;&#x443;&#x432;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442;&#x441;&#x44F;, &#x447;&#x442;&#x43E; &#x44F;&#x437;&#x44B;&#x43A;&#x443; &#x43D;&#x435;&#x445;&#x432;&#x430;&#x442;&#x430;&#x435;&#x442; &#x435;&#x434;&#x438;&#x43D;&#x43E;&#x43E;&#x431;&#x440;&#x430;&#x437;&#x438;&#x44F;, &#x43A;&#x43E;&#x43D;&#x441;&#x438;&#x441;&#x442;&#x435;&#x43D;&#x442;&#x43D;&#x43E;&#x441;&#x442;&#x438;. &#x41A;&#x440;&#x43E;&#x43C;&#x435; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;&#x430; &#x441; lateinit Int &#x43F;&#x440;&#x438;&#x432;&#x435;&#x434;&#x443; &#x435;&#x449;&#x435; &#x434;&#x432;&#x430;. &#x412;&#x43D;&#x443;&#x442;&#x440;&#x438; &#x431;&#x43B;&#x43E;&#x43A;&#x43E;&#x432; let &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x43C; it, &#x432;&#x43D;&#x443;&#x442;&#x440;&#x438; with &mdash; this, &#x430; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x438; run, <a href="http://beust.com/weblog/2015/10/30/exploring-the-kotlin-standard-library/">&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x43A;&#x43E;&#x43C;&#x431;&#x438;&#x43D;&#x430;&#x446;&#x438;&#x435;&#x439; let &#x438; this</a> &#x447;&#x442;&#x43E; &#x43D;&#x430;&#x434;&#x43E; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C;? &#x410; &#x443; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; String! &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x432;&#x44B;&#x437;&#x432;&#x430;&#x442;&#x44C; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x44B; isBlank(), isNotBlank(), isNullOrBlank(), &#x430; &laquo;&#x434;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x44E;&#x449;&#x435;&#x433;&#x43E;&raquo; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430; &#x432;&#x440;&#x43E;&#x434;&#x435; isNotNullOrBlank &#x43D;&#x435;&#x442;:( &#x41F;&#x43E;&#x441;&#x43B;&#x435; Scala &#x43D;&#x435;&#x445;&#x432;&#x430;&#x442;&#x430;&#x435;&#x442; &#x43D;&#x435;&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x445; &#x432;&#x435;&#x449;&#x435;&#x439; &mdash; Option, Either, matching, &#x43A;&#x430;&#x440;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F;. &#x41D;&#x43E; &#x432; &#x446;&#x435;&#x43B;&#x43E;&#x43C; &#x44F;&#x437;&#x44B;&#x43A; &#x43E;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x43F;&#x440;&#x438;&#x44F;&#x442;&#x43D;&#x43E;&#x435; &#x432;&#x43F;&#x435;&#x447;&#x430;&#x442;&#x43B;&#x435;&#x43D;&#x438;&#x435;, &#x43D;&#x430;&#x434;&#x435;&#x44E;&#x441;&#x44C;, &#x447;&#x442;&#x43E; &#x43E;&#x43D; &#x43F;&#x440;&#x43E;&#x434;&#x43E;&#x43B;&#x436;&#x438;&#x442; &#x434;&#x43E;&#x441;&#x442;&#x43E;&#x439;&#x43D;&#x43E; &#x440;&#x430;&#x437;&#x432;&#x438;&#x432;&#x430;&#x442;&#x44C;&#x441;&#x44F;.</p>
+<p>P.S. &#x425;&#x430;&#x431;&#x440;&#x43E;&#x432;&#x441;&#x43A;&#x430;&#x44F; &#x43F;&#x43E;&#x434;&#x441;&#x432;&#x435;&#x442;&#x43A;&#x430; Kotlin &#x445;&#x440;&#x43E;&#x43C;&#x430;&#x435;&#x442;, &#x43D;&#x430;&#x434;&#x435;&#x44E;&#x441;&#x44C;, &#x447;&#x442;&#x43E; &#x430;&#x434;&#x43C;&#x438;&#x43D;&#x438;&#x441;&#x442;&#x440;&#x430;&#x446;&#x438;&#x44F; <a href="https://habrahabr.ru/users/habrahabr/">habrahabr</a> &#x44D;&#x442;&#x43E; &#x43A;&#x43E;&#x433;&#x434;&#x430;-&#x43D;&#x438;&#x431;&#x443;&#x434;&#x44C; &#x43F;&#x43E;&#x43F;&#x440;&#x430;&#x432;&#x438;&#x442;...</p>
+<h4>UPD: &#x412;&#x44B;&#x441;&#x442;&#x440;&#x435;&#x43B;&#x44B; &#x43E;&#x442; &#x43A;&#x43E;&#x43C;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x442;&#x43E;&#x440;&#x43E;&#x432; (&#x431;&#x443;&#x434;&#x443; &#x43E;&#x431;&#x43D;&#x43E;&#x432;&#x43B;&#x44F;&#x442;&#x44C;)</h4>
+<p><a href="https://habrahabr.ru/post/278169/#comment_8786835">&#x41D;&#x435;&#x43E;&#x447;&#x435;&#x432;&#x438;&#x434;&#x43D;&#x44B;&#x439; &#x43F;&#x440;&#x438;&#x43E;&#x440;&#x438;&#x442;&#x435;&#x442; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430; elvis</a>. &#x410;&#x432;&#x442;&#x43E;&#x440; &mdash; <a href="https://habrahabr.ru/users/senia/">senia</a>.</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

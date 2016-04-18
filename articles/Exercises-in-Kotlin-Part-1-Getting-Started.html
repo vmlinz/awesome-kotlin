@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercises in Kotlin: Part 1 - Getting Started</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Exploring-the-Kotlin-Standard-Library-Part-1.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Code-improvements-with-Kotlin.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://blog.dhananjaynene.com/2016/04/exercises-in-kotlin-part-1-getting-started/">Exercises in Kotlin: Part 1 - Getting Started</a> - <span class="main-title-date">Apr 18, 2016</span>
+      </h1>
+      <h2>by Dhananjay Nene</h2>
+      <p>Kotlin is an exciting new language I have been working with for a couple of months now. I believe it has a lot of features going for it, and I think many will be benefited from learning a bit more about it. Hence this series of posts.</p>
+<p>This post helps you with getting the necessary software installed on your desktop for compiling and running kotlin code</p>
+<h2>Presumed Audience :</h2>
+<p>The reader is presumed to have a reasonable working knowledge of Java. While one of the reasons Kotlin is particularly exciting is because it is such a useful language for the Android platform, the early parts of this series shall focus on the desktop based JVMs. Since those learnings are common irrespective of whether you wish to use Kotlin for desktop/server or Android programming.</p>
+<p>It is also assumed that the reader has working java development kit installed on his desktop. Most or all of the discussion about syntax will also likely compare Kotlin with Java.</p>
+<h2>Information :</h2>
+<p>Some of the useful sites for Kotlin are</p>
+<ul>
+<li><a href="https://kotlinlang.org/">Kotlin Programming Language</a> : Language Home page.</li>
+<li><a href="https://kotlinlang.org/docs/reference/">Kotlin Reference</a> : Reference - Kotlin Programming Language</li>
+<li><a href="https://www.jetbrains.com/idea/">Intellij Idea</a> : IDE with built in kotlin support. From the same authors who bring you kotlin, ie. JetBrains</li>
+<li><a href="https://github.com/JetBrains/kotlin-eclipse">Kotlin Eclipse Plugin</a> : Kotlin plugin for eclipse. <em>Note: I haven&#x27;t used it myself</em></li>
+</ul>
+<h2>Getting started using an IDE</h2>
+<p><em>Note: if you do not prefer to use an IDE and are likely to code using text editors and build and run using command line, you can skip this section entirely and go to <a href="#cmdline">Command Line Usage</a></em></p>
+<p>Go to the Intellij idea page above and download the latest version. You can choose to download the community version. It has the necessary support for Kotlin. You may alternatively choose to use the Eclipse plugin described above, but I haven&#x27;t used it so cannot help with getting it to work. Install the intellij idea ide and launch it. In case unsure how to do so, consult the <a href="https://www.jetbrains.com/help/idea/2016.1/installing-and-launching.html">official guide</a> for downloading, installing and launching the ide.</p>
+<p>Start a new project. Click on gradle in the left hand column. You should reach the new project dialog box as follows</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-1-new-project.png" alt="Intellij Idea New Project Dialog"></p>
+<p>I always use the gradle build tool, so I end up making the selections as shown. Select any appropriate JVM between 1.6 and 1.8 (built in one should do). You could use the dialog as shown above. You should next see a dialog box for groupid/artifactid as required by gradle (these mean the same thing as they do for maven, so fill up some group id eg. <code>com.example.kotlin</code> and artifactid eg. <code>learning</code>). The rest of this post assumes these two values, so if you use different values, please replace them appropriately in the code as necessary.</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-3-groupid-artifactid.png" alt="Specify groupid and artifactid"></p>
+<p>On the next two screens you could choose the defaults or customise as necessary</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-4-project-config.png" alt="Project Configuration"></p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-5-project-configuration-2.png" alt="Project Configuration 2"></p>
+<p>Since gradle defaults to maven like directory structures, let us create the directory necessary for our work using the groupid/artifactid used earlier and maven conventions. Select the &quot;<em>learning</em>&quot; folder at the top of the left pane, and select from main or right click menu, File -&gt; New Directory and specify the directory as follows. (If the menu options File -&gt; New Directory do not appear, you have selected the wrong &quot;<em>learning</em>&quot;, select the one at the top of the left pane, not the one in the toolbar above it).</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-6-create-directory.png" alt="Create source directory"></p>
+<p>Similarly also create another directory for writing our test cases</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-7-create-test-directory.png" alt="Create test directory"></p>
+<p>You should see the appropriate packages for the main and test areas appear in the left hand pane as follows</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-8-ide-view.png" alt="IDE View"></p>
+<p>Right click on the package name under the src/main/kotlin directory and select &quot;New Kotlin File/Class&quot;. It will pop up a dialog where you can enter helloworld</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-9-new-file-dialog.png" alt="New file dialog"></p>
+<p>This will create a new file &quot;<em>helloworld.kt</em>&quot; and open it into your ide</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-10-new-file.png" alt="New file"></p>
+<p>Enter the following code in the just opened file</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">package</span> com.example.kotlin.learning
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span> {
+    println(<span class="hljs-string">"Hello World!"</span>)
+}</code></pre>
+<p>Run the program using &quot;Run -&gt; Run&quot;. It will pop up a very small dialog box, select HelloWorldKt from it. (You could also use Alt-Shift-F10 instead of Run -&gt; Run, though not sure if the same key bindings work across operating systems, though thats what it is on Linux). This is the canonical Hello World program for Kotlin. Don&#x27;t worry about understanding the syntax yet. We will get to it in the very next post, this post is to get you started.</p>
+<p>One more thing to do is to get a sample test case running. So, let us add a function to the file we just created that we shall be testing, as follows</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">greetings</span><span class="hljs-params">()</span></span> = <span class="hljs-string">"Hello World!"</span></code></pre>
+<p>Next, select the package in the src/test/kotlin directory, and after a right click select &quot;New -&gt; Kotlin File/Class&quot;. This time select the name as &quot;<em>testgreet</em>&quot;, which will create a new file called <em>testgreet.kt</em>. Add the following code to the file.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">package</span> com.example.kotlin.learning
+
+<span class="hljs-keyword">import</span> org.junit.Test
+<span class="hljs-keyword">import</span> org.junit.Assert.assertEquals
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestGreet</span></span>() {
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testGreetings</span><span class="hljs-params">()</span></span> {
+        assertEquals(<span class="hljs-string">"Greeting should be 'Hello World!'"</span>,
+                <span class="hljs-string">"Hello World!"</span>, greetings())
+    }
+}</code></pre>
+<p>Again select &quot;Run -&gt; Run...&quot; or (Alt-Shift-F10 or equivalent). This will pop up a small dialog box. Select TestGreet. This will run the test case and should show an all green bar near the bottom of your IDE as shown in the image below.</p>
+<p><img src="http://blog.dhananjaynene.com/images/kotlin/kotlin-11-run-test.png" alt="Kotlin Run Test"></p>
+<p>Now, we shall repeat the exercise using text editors and command line for building and running the program. Even if you <em>always</em> use IDEs, I very much recommend that you at least do the remainder of the activities described on this post at least once. It is always helpful to have a general sense of what is happening at a command line level. However if you skip it, or it doesn&#x27;t work for you for whatever reason, it won&#x27;t constrain you from being able to continue with the rest of this series.</p>
+<p>In either case, I shall not be covering the Intellij Idea IDE any further. If you are new to it or to the Eclipse plugin, learning it is beyond the scope of this series of posts, so I encourage you to play around with them, since that is likely to be useful as we go further along in this series.</p>
+<h2>Installation for command line usage</h2>
+<p>The instructions for working with Kotlin from the command line are documented on the page <a href="https://kotlinlang.org/docs/tutorials/command-line.html">Working with the Command Line Compiler</a></p>
+<p>Goto <a href="https://github.com/JetBrains/kotlin/releases/latest">Kotlin latest release</a> to download the Kotlin compiler. It will likely be a file called <code>kotlin-compiler-&lt;version&gt;.zip</code>. The current version is 1.0.1-2 at the point in time this post was written. Unzip the file into an appropriate directory. And ensure that the executables kotlin and kotlinc (or their windows equivalent with the .bat extensions) are in your path.</p>
+<p>Create a work directory for this exercise and change directory to it.</p>
+<p>Create a file <em>helloworld.kt</em> with the following content.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">package</span> com.example.kotlin.learning
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">main</span><span class="hljs-params">(args: <span class="hljs-type">Array</span>&lt;<span class="hljs-type">String</span>&gt;)</span></span> {
+    println(<span class="hljs-string">"Hello World!"</span>)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">greetings</span><span class="hljs-params">()</span></span> = <span class="hljs-string">"Hello World!"</span></code></pre>
+<p>Compile it using the command</p>
+<pre><code class="hljs language-bash">$ kotlinc helloworld.kt</code></pre>
+<p>Notice that it will have created a file <em>com/example/kotlin/learning/HelloworldKt.class</em>. This is the compiled <em>.class</em> file. It is Java byte code though you wouldn&#x27;t be able to run it as you might be used to just yet. In fact go ahead and try to run it as follows</p>
+<pre><code class="hljs language-bash">$ java com.example.kotlin.learning.HelloworldKt</code></pre>
+<p>It will fail because you do not have the necessary kotlin runtime jar in your classpath. You should&#x27;ve seen an error message similar to the one below</p>
+<pre><code class="hljs language-kotlin">Exception <span class="hljs-keyword">in</span> thread <span class="hljs-string">"main"</span> java.lang.NoClassDefFoundError: kotlin/jvm/<span class="hljs-keyword">internal</span>/Intrinsics
+        at com.example.kotlin.learning.HelloworldKt.main(helloworld.kt)
+Caused <span class="hljs-keyword">by</span>: java.lang.ClassNotFoundException: kotlin.jvm.<span class="hljs-keyword">internal</span>.Intrinsics
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:<span class="hljs-number">381</span>)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:<span class="hljs-number">424</span>)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:<span class="hljs-number">331</span>)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:<span class="hljs-number">357</span>)
+        ... <span class="hljs-number">1</span> more</code></pre>
+<p>That runtime is located in the kotlin zip you had just downloaded. Let us point the classpath to it and attempt to run the program again. (Replace <code>&lt;folder_where_you_unzipped_kotlin_zip&gt;</code> below with the appropriate directory where you had unzipped the file you downloaded)</p>
+<pre><code class="hljs language-bash">$ java -cp &lt;folder_<span class="hljs-built_in">where</span>_you_unzipped_kotlin_zip&gt;/kotlinc/lib/kotlin-runtime.jar:. com.example.kotlin.learning.HelloworldKt</code></pre>
+<p>You should see &quot;Hello World!&quot; getting printed to the console. Kotlin provides an easier way to do this as well, so let us repeat the process, just a little differently.</p>
+<p>Compile the source again, but this time create a .jar file</p>
+<pre><code class="hljs language-bash">$ kotlinc helloworld.kt -include-runtime <span class="hljs-_">-d</span> helloworld.jar</code></pre>
+<p>Now run it as follows</p>
+<pre><code class="hljs language-bash">$ java -jar helloworld.jar</code></pre>
+<p>The program should run and &quot;Hello World!&quot; should get printed to the console.</p>
+<p>Now let us run the test case. Create a file <em>testgreet.kt</em> as follows</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">package</span> com.example.kotlin.learning
+
+<span class="hljs-keyword">import</span> org.junit.Test
+<span class="hljs-keyword">import</span> org.junit.Assert.assertEquals
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestGreet</span></span>() {
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">testGreetings</span><span class="hljs-params">()</span></span> {
+        assertEquals(<span class="hljs-string">"Greeting should be 'Hello World!'"</span>,
+                <span class="hljs-string">"Hello World!"</span>, greetings())
+    }
+}</code></pre>
+<p>Now for compiling and running this you will need the jar for junit (which in turn requires hamcrest). The instructions for that are provided on the <a href="https://github.com/junit-team/junit4/wiki/Download-and-Install">Download and Install - junit4 wiki</a> page. For now just go ahead and download the two following jars for junit and hamcrest.</p>
+<ul>
+<li><a href="http://search.maven.org/remotecontent?filepath=junit/junit/4.12/junit-4.12.jar">junit jar</a></li>
+<li><a href="http://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar">hamcrest jar</a></li>
+</ul>
+<p>You will have downloaded <em>junit-4.12.jar</em> and <em>hamcrest-all-1.3.jar</em>. Move both of them into your current directory after download.</p>
+<pre><code class="hljs language-bash">$ kotlinc helloworld.kt -cp junit-4.12.jar -include-runtime <span class="hljs-_">-d</span> helloworld.jar</code></pre>
+<pre><code class="hljs language-bash">$ java -cp junit-4.12.jar:hamcrest-all-1.3.jar:helloworld.jar org.junit.runner.JUnitCore com.example.kotlin.learning.TestGreet</code></pre>
+<p>You should see something like the follows (the time obviously could vary) that indicates success.</p>
+<pre><code class="hljs language-kotlin">JUnit version 4.12
+.
+Time: 0.004
+
+OK (1 test)</code></pre>
+<p>You should also be aware that Kotlin has a REPL that you can run using the command <code>kotlinc-jvm</code> as follows</p>
+<pre><code class="hljs language-kotlin">$ kotlinc-jvm
+Welcome to Kotlin version <span class="hljs-number">1.0</span><span class="hljs-number">.1</span><span class="hljs-number">-2</span> (JRE <span class="hljs-number">1.8</span><span class="hljs-number">.0</span>_77-b03)
+Type :help <span class="hljs-keyword">for</span> help, :quit <span class="hljs-keyword">for</span> quit
+&gt;&gt;&gt; println(<span class="hljs-string">"Hello World!"</span>)
+Hello World!
+&gt;&gt;&gt;</code></pre>
+<p>Congratulations you are now able to compile and run Kotlin programs. In the next post in this series, we shall attempt to understand the code that we just wrote, and explore the Kotlin language further.</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

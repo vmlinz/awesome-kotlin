@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10 Features I Wish Java Would Steal From the Kotlin Language</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="Experimental-Kotlin-and-mutation-testing.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="http://blog.jooq.org/2016/03/31/10-features-i-wish-java-would-steal-from-the-kotlin-language/">10 Features I Wish Java Would Steal From the Kotlin Language</a> - <span class="main-title-date">Mar 31, 2016</span>
+      </h1>
+      <h2>by Lukas Eder</h2>
+      <p>This article is overdue. After the hype around the <a href="https://blog.jetbrains.com/kotlin/2016/02/kotlin-1-0-released-pragmatic-language-for-jvm-and-android/">release of Kotlin 1.0</a> has settled, let&rsquo;s have a serious look at some Kotlin language features that we should have in Java as well.</p>
+<p>In this article, I&rsquo;m not going to wish for unicorns. But there are some low hanging fruit (as far as I naively can see), which could be introduced into the Java language without great risk. While you&rsquo;re reading this article, be sure to copy paste examples to <a href="http://try.kotlinlang.org">http://try.kotlinlang.org</a>, an online REPL for Kotlin</p>
+<h2>1. Data class</h2>
+<p>Language designers hardly ever agree on the necessity and the feature scope of what a class is. In Java, curiously, every class always has <em>identity</em> a concept that is not really needed in 80% &ndash; 90% of all real world Java classes. Likewise, <a href="http://blog.jooq.org/2016/01/12/if-java-were-designed-today-the-synchronizable-interface/">a Java class always has a monitor on which you can synchronize</a>.</p>
+<p>In most cases, when you write a class, you really just want to group values, like Strings, ints, doubles. For instance:</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+    <span class="hljs-keyword">final</span> String firstName;
+    <span class="hljs-keyword">final</span> String lastName;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">JavaPerson</span><span class="hljs-params">(...)</span> </span>{
+        ...
+    }
+    <span class="hljs-comment">// Getters</span>
+    ...
+ 
+    <span class="hljs-comment">// Hashcode / equals</span>
+    ...
+ 
+    <span class="hljs-comment">// Tostring</span>
+    ...
+ 
+    <span class="hljs-comment">// Egh...</span>
+}</code></pre>
+<p>By the time you&rsquo;ve finished typing all of the above, your fingers will no longer be. Java developers have implemented ugly workarounds for the above, like IDE code generation, or <a href="https://projectlombok.org">lombok</a>, which is the biggest of all hacks. In a better Java, nothing in Lombok would really be needed.</p>
+<p>As, for instance, if Java had Kotlin&rsquo;s <a href="https://kotlinlang.org/docs/reference/data-classes.html">data classes</a>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">data</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>(
+  <span class="hljs-keyword">val</span> firstName: String,
+  <span class="hljs-keyword">val</span> lastName: String
+)</code></pre>
+<p>The above is all we need to declare the equivalent of the previous Java code. Because a data class is used to store data (duh), i.e. values, the implementation of things like <code>hashCode()</code>, <code>equals()</code>, <code>toString()</code> is obvious and can be provided by default. Furthermore, data classes are first class tuples, so they can be used as such, e.g. to destructure them again in individual references:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> jon = Person(<span class="hljs-string">"Jon"</span>, <span class="hljs-string">"Doe"</span>) 
+<span class="hljs-keyword">val</span> (firstName, lastName) = jon</code></pre>
+<p>In this case, we may hope. <a href="https://en.wikipedia.org/wiki/Project_Valhalla_(Java_language)">Valhalla / Java 10</a> is being designed and with it, <a href="http://cr.openjdk.java.net/~jrose/values/values-0.html">value types</a>. We&rsquo;ll see how many features will be provided on the JVM directly, and in the Java language. This will certainly be an exciting addition.</p>
+<p>Notice how <code>val</code> is possible in Kotlin: <a href="http://blog.jooq.org/2016/03/10/java-as-new-local-variable-type-inference/">Local variable type inference. This is being discussed for a future Java version right now</a>.</p>
+<h2>2. Defaulted parameters</h2>
+<p>How many times do you overload an API like the following:</p>
+<pre><code class="hljs language-java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Stream</span>&lt;<span class="hljs-title">T</span>&gt; </span>{
+    <span class="hljs-function">Stream&lt;T&gt; <span class="hljs-title">sorted</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function">Stream&lt;T&gt; <span class="hljs-title">sorted</span><span class="hljs-params">(Comparator&lt;? <span class="hljs-keyword">super</span> T&gt; comparator)</span></span>;
+}</code></pre>
+<p>The above are exactly the same JDK <code>Stream</code> operations. The first one simply applies <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#naturalOrder--"><code>Comparator.naturalOrder()</code></a> to the second one. <a href="https://kotlinlang.org/docs/reference/functions.html">So we could write the following, in Kotlin</a>:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">sorted</span><span class="hljs-params">(comparator : <span class="hljs-type">Comparator</span>&lt;<span class="hljs-type">T</span>&gt;
+         = Comparator.naturalOrder()</span></span>) : Stream&lt;T&gt;</code></pre>
+<p>The advantage of this isn&rsquo;t immediately visible, when there is only one defaulted parameter. But imagine a function with tons of optional parameters:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">reformat</span><span class="hljs-params">(str: <span class="hljs-type">String</span>,
+             normalizeCase: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>,
+             upperCaseFirstLetter: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">true</span>,
+             divideByCamelHumps: <span class="hljs-type">Boolean</span> = <span class="hljs-literal">false</span>,
+             wordSeparator: <span class="hljs-type">Char</span> = <span class="hljs-string">' '</span>)</span></span> {
+...
+}</code></pre>
+<p>Which can be called in any of the following ways:</p>
+<pre><code class="hljs language-kotlin">reformat(str)
+reformat(str, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>, <span class="hljs-string">'_'</span>)
+reformat(str,
+  normalizeCase = <span class="hljs-literal">true</span>,
+  upperCaseFirstLetter = <span class="hljs-literal">true</span>,
+  divideByCamelHumps = <span class="hljs-literal">false</span>,
+  wordSeparator = <span class="hljs-string">'_'</span>
+)</code></pre>
+<p>The power of defaulted parameters is that they are especially useful when passing arguments by name, rather than by index. This is currently not supported in the JVM, which until Java 8, doesn&rsquo;t retain the parameter name at all (<a href="https://docs.oracle.com/javase/tutorial/reflect/member/methodparameterreflection.html">in Java 8, you can turn on a JVM flag for this</a>, but with all of Java&rsquo;s legacy, you shouldn&rsquo;t rely on this yet).</p>
+<p>Heck, this feature is something I&rsquo;m using in PL/SQL every day. Of course, <a href="http://blog.jooq.org/2016/02/11/dear-api-designer-are-you-sure-you-want-to-return-a-primitive/">in Java, you can work around this limitation by passing a parameter object</a>.</p>
+<h2>3. Simplified instanceof checks</h2>
+<p>If you will, this is really an instanceof switch. Some people may claim that this stuff is evil, bad OO design. Nja nja. I say, this happens every now and then. And apparently, in Java 7, string switches were considered sufficiently common to modify the language to allow them. Why not instanceof switches?</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> hasPrefix = <span class="hljs-keyword">when</span>(x) {
+  <span class="hljs-keyword">is</span> String -&gt; x.startsWith(<span class="hljs-string">"prefix"</span>)
+  <span class="hljs-keyword">else</span> -&gt; <span class="hljs-literal">false</span>
+}</code></pre>
+<p>Not only is this doing an instanceof switch, it is doing it in the form of an assignable expression. <a href="https://kotlinlang.org/docs/reference/control-flow.html">Kotlin&rsquo;s version of this <code>when</code> expression is powerful</a>. You can mix any sort of predicate expressions, similar to SQL&rsquo;s <code>CASE</code> expression. For instance, this is possible as well:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">when</span> (x) {
+  <span class="hljs-keyword">in</span> <span class="hljs-number">1.</span><span class="hljs-number">.10</span> -&gt; print(<span class="hljs-string">"x is in the range"</span>)
+  <span class="hljs-keyword">in</span> validNumbers -&gt; print(<span class="hljs-string">"x is valid"</span>)
+  !<span class="hljs-keyword">in</span> <span class="hljs-number">10.</span><span class="hljs-number">.20</span> -&gt; print(<span class="hljs-string">"x is outside the range"</span>)
+  <span class="hljs-keyword">else</span> -&gt; print(<span class="hljs-string">"none of the above"</span>)
+}</code></pre>
+<p>Compare to SQL (not implemented in all dialects):</p>
+<pre><code class="hljs language-sql">CASE x
+  WHEN BETWEEN 1 AND 10 THEN 'x is in the range'
+  WHEN IN (<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> validNumbers) <span class="hljs-keyword">THEN</span> <span class="hljs-string">'x is valid'</span>
+  <span class="hljs-keyword">WHEN</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">BETWEEN</span> <span class="hljs-number">10</span> <span class="hljs-keyword">AND</span> <span class="hljs-number">20</span> <span class="hljs-string">'x is outside the range'</span>
+  <span class="hljs-keyword">ELSE</span> <span class="hljs-string">'none of the above'</span>
+<span class="hljs-keyword">END</span></code></pre>
+<p>As you can see, only SQL is more powerful than Kotlin.</p>
+<h2>4. Map key / value traversal</h2>
+<p>Now this could really be done very easily only with syntax sugar. Granted, having <a href="http://blog.jooq.org/2016/03/10/java-as-new-local-variable-type-inference/">local variable type inference</a> would already be a plus, but check this out</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> map: Map&lt;String, <span class="hljs-built_in">Int</span>&gt; = ...</code></pre>
+<p>And now, you can do:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">for</span> ((k, v) <span class="hljs-keyword">in</span> map) {
+    ...
+}</code></pre>
+<p>After all, most of the time when traversing a map, it&rsquo;ll be by <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html#entrySet--"><code>Map.entrySet()</code></a>. Map could have been enhanced to extend <code>Iterable&lt;Entry&lt;K, V&gt;&gt;</code> in Java 5, but hasn&rsquo;t. That&rsquo;s really a pity. After all, it has been enhanced in Java 8 to allow for internal iteration over the entry set in Java 8 via <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html#forEach-java.util.function.BiConsumer-"><code>Map.forEach()</code></a>:</p>
+<pre><code class="hljs language-kotlin">map.forEach((k, v) -&gt; {
+    ...
+});</code></pre>
+<p>It&rsquo;s not too late, JDK gods. You can still let <code>Map&lt;K, V&gt; extend Iterable&lt;Entry&lt;K, V&gt;&gt;</code></p>
+<h2>5. Map access literals</h2>
+<p>This one is something that would add tons and tons of value to the Java language. We have arrays, like most other languages. And like most other languages, we can access array elements by using square brackets:</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">int</span>[] array = { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> };
+<span class="hljs-keyword">int</span> value = array[<span class="hljs-number">0</span>];</code></pre>
+<p>Note also the fact that we have array initialiser literals in Java, which is great. So, why not also allow for accessing map elements with the same syntax?</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> map = hashMapOf&lt;String, <span class="hljs-built_in">Int</span>&gt;()
+map.put(<span class="hljs-string">"a"</span>, <span class="hljs-number">1</span>)
+println(map[<span class="hljs-string">"a"</span>])</code></pre>
+<p>In fact, <code>x[y]</code> is just syntax sugar for a method call backed by <code>x.get(y)</code>. This is so great, we have immediately proceeded with renaming our <code>Record.getValue()</code> methods in jOOQ to <code>Record.get()</code> (leaving the old ones as synonyms, of course), such that you can now dereference your database record values as such, in Kotlin</p>
+<pre><code class="hljs language-kotlin">ctx.select(a.FIRST_NAME, a.LAST_NAME, b.TITLE)
+   .from(a)
+   .join(b).on(a.ID.eq(b.AUTHOR_ID))
+   .orderBy(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+   .forEach {
+       println(<span class="hljs-string">"""<span class="hljs-subst">${it[b.TITLE]}</span>
+               by <span class="hljs-subst">${it[a.FIRST_NAME]}</span> <span class="hljs-subst">${it[a.LAST_NAME]}</span>"""</span>)
+   }</code></pre>
+<p>Since jOOQ holds all column type information on individual record columns, you can actually know in advance that <code>it[b.TITLE]</code> is a String expression. Great, huh? So, not only can this syntax be used with JDK maps, it can be used with any library that exposes the basic <code>get()</code> and <code>set()</code> methods.</p>
+<p>Stay tuned for more jOOQ and Kotlin examples here:
+<a href="https://github.com/jOOQ/jOOQ/blob/master/jOOQ-examples/jOOQ-kotlin-example/src/main/kotlin/org/jooq/example/kotlin/FunWithKotlinAndJOOQ.kt">https://github.com/jOOQ/jOOQ/blob/master/jOOQ-examples/jOOQ-kotlin-example/src/main/kotlin/org/jooq/example/kotlin/FunWithKotlinAndJOOQ.kt</a></p>
+<h2>6. Extension functions</h2>
+<p>This one is a controversial topic, and I can perfectly understand when language designers stay clear of it. But every now and then, <a href="https://kotlinlang.org/docs/reference/extensions.html">extension functions</a> are very useful. The Kotlin syntax here is actually just for a function to pretend to be part of the receiver type:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> MutableList<span class="hljs-type">&lt;Int&gt;</span>.<span class="hljs-title">swap</span><span class="hljs-params">(index1: <span class="hljs-type">Int</span>, index2: <span class="hljs-type">Int</span>)</span></span> {
+  <span class="hljs-keyword">val</span> tmp = <span class="hljs-keyword">this</span>[index1] <span class="hljs-comment">// 'this' corresponds to the list</span>
+  <span class="hljs-keyword">this</span>[index1] = <span class="hljs-keyword">this</span>[index2]
+  <span class="hljs-keyword">this</span>[index2] = tmp
+}</code></pre>
+<p>This will now allow for swapping elements in a list:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> l = mutableListOf(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+l.swap(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>)</code></pre>
+<p>This would be very useful for libraries like <a href="https://github.com/jOOQ/jOOL">jOO&lambda;</a>, which extends the Java 8 <code>Stream</code> API by wrapping it in a jOO&lambda; type (<a href="https://github.com/amaembo/streamex">another such library is StreamEx</a>, with a slightly different focus). The jOO&lambda; <code>Seq</code> wrapper type is not really important, as it pretends to be a <code>Stream</code> on steroids. It would be great, if jOO&lambda; methods could be put onto <code>Stream</code> artificially, just by importing them:</p>
+<pre><code class="hljs language-java">list.stream()
+    .zipWithIndex()
+    .forEach(System.out::println);</code></pre>
+<p>The <code>zipWithIndex()</code> method isn&rsquo;t really there. The above would just translate to the following, less readable code:</p>
+<pre><code class="hljs language-java">seq(list.stream())
+    .zipWithIndex()
+    .forEach(System.out::println);</code></pre>
+<p>In fact, extension methods would even allow to bypass wrapping everything explicitly in a <code>stream()</code>. For instance, you could then do:</p>
+<pre><code class="hljs language-java">list.zipWithIndex()
+    .forEach(System.out::println);</code></pre>
+<p>As all of jOO&lambda;&rsquo;s method could be designed to also be applied to <code>Iterable</code>.</p>
+<p>Again, this is a controversial topic. For instance, because</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/lukaseder">@lukaseder</a> that does not allow for virtual dispatch. Extension methods are not virtual.</p>&mdash; Rafael Winterhalter (@rafaelcodes) <a href="https://twitter.com/rafaelcodes/status/692652876959711232">January 28, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>While giving the illusion of being virtual, extension functions really are just sugared static methods. It&rsquo;s a significant risk for object oriented application design to engage in that trickery, which is why this feature probably won&rsquo;t make it into Java.</p>
+<h2>7. Elvis operator</h2>
+<p>Optional is meh. It&rsquo;s understandable that an <code>Optional</code> type needed to be introduced in order to abstract over the absence of primitive type values, which cannot be null. We now have things like <a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalInt.html"><code>OptionalInt</code></a>, e.g. to model things like:</p>
+<pre><code class="hljs language-kotlin">OptionalInt result =
+IntStream.of(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+         .filter(i -&gt; i &gt; <span class="hljs-number">3</span>)
+         .findFirst();
+ 
+<span class="hljs-comment">// Agressive programming ahead</span>
+result.orElse(OR_ELSE);</code></pre>
+<p>Optional is a monad</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Also Google seems to be a bit confused about what a Monad is ... <a href="http://t.co/eJp9jY9cwG">pic.twitter.com/eJp9jY9cwG</a></p>&mdash; Mario Fusco (@mariofusco) <a href="https://twitter.com/mariofusco/status/389450525466296320">October 13, 2013</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Yes. It allows you to <code>flatMap()</code> the absent value.</p>
+<p><img src="http://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/o_O.svg" alt="o_O"></p>
+<p>Sure, if you want to do sophisticated functional programming, you&rsquo;ll start typing <code>map()</code> and <code>flatMap()</code> everywhere. Like today, when we&rsquo;re typing getters and setters. Along will come lombok generating flatmapping calls, and Spring will add some <a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/core/annotation/AliasFor.html"><code>@AliasFor</code> style annotation</a> for flatmapping. And only the enlightened will be able to decipher your code.</p>
+<p>When all we needed was just a <a href="https://kotlinlang.org/docs/reference/null-safety.html">simple null safety operator</a> before getting back to daily business. Like:</p>
+<pre><code class="hljs language-kotlin">String name = bob?.department?.head?.name</code></pre>
+<p>I really like this type of pragmatism in Kotlin. Or do you prefer (flat)mapping?</p>
+<pre><code class="hljs language-java">Optional&lt;String&gt; name = bob
+    .flatMap(Person::getDepartment)
+    .map(Department::getHead)
+    .flatMap(Person::getName);</code></pre>
+<p>Can you read this? I cannot. Neither can I write this. If you get this wrong, you&rsquo;ll get boxoxed.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">“<a href="https://twitter.com/EmrgencyKittens">@EmrgencyKittens</a>: cat in a box, in a box. <a href="http://t.co/ta976gqiQs">pic.twitter.com/ta976gqiQs</a>”   And I think flatMap</p>&mdash; Channing Walton (@channingwalton) <a href="https://twitter.com/channingwalton/status/447778554114502657">March 23, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Of course, <a href="http://blog.jooq.org/2016/03/15/ceylon-might-just-be-the-only-language-that-got-nulls-right/">Ceylon is the only language that got nulls right</a>. But Ceylon has tons of features that Java will not get before version 42, and I&rsquo;m not wishing for unicorns. I&rsquo;m wishing for the elvis operator, which could be implemented in Java too. The above expression is just syntax sugar for:</p>
+<pre><code class="hljs language-java">String name = <span class="hljs-keyword">null</span>;
+<span class="hljs-keyword">if</span> (bob != <span class="hljs-keyword">null</span>) {
+    Department d = bob.<span class="hljs-function">department
+    <span class="hljs-title">if</span> <span class="hljs-params">(d != <span class="hljs-keyword">null</span>)</span> </span>{
+        Person h = d.head;
+        <span class="hljs-keyword">if</span> (h != <span class="hljs-keyword">null</span>)
+            name = h.name;
+    }
+}</code></pre>
+<p>What can possibly be wrong with that simplification?</p>
+<h2>8. Everything is an expression</h2>
+<p>Now this might just be a unicorn. I don&rsquo;t know if there is a JLS / parser limitation that will forever keep us in the misery of prehistoric distinction between statement and expression.</p>
+<p>At some point in time, people have started using statements for things that yield side-effects, and expressions for more functional-ish things. It is thus not surprising, that all <code>String</code> methods are really expressions, operating on an immutable string, returning a new string all the time.</p>
+<p>This doesn&rsquo;t seem to go well with, for instance, <code>if-else</code> in Java, which is expected to contain blocks and statements, each possibly yielding side-effects.</p>
+<p>But is that really a requirement? Can&rsquo;t we write something like this in Java as well?</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> max = <span class="hljs-keyword">if</span> (a &gt; b) a <span class="hljs-keyword">else</span> b</code></pre>
+<p>OK, we have this weird conditional expression using <code>?:</code>. But what about Kotlin&rsquo;s <code>when</code> (i.e. Java&rsquo;s <code>switch</code>)?</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> hasPrefix = <span class="hljs-keyword">when</span>(x) {
+  <span class="hljs-keyword">is</span> String -&gt; x.startsWith(<span class="hljs-string">"prefix"</span>)
+  <span class="hljs-keyword">else</span> -&gt; <span class="hljs-literal">false</span>
+}</code></pre>
+<p>Isn&rsquo;t that much more useful than the following equivalent?</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">boolean</span> hasPrefix;
+ 
+<span class="hljs-keyword">if</span> (x <span class="hljs-keyword">instanceof</span> String)
+    hasPrefix = x.startsWith(<span class="hljs-string">"prefix"</span>);
+<span class="hljs-keyword">else</span>
+    hasPrefix = <span class="hljs-keyword">false</span>;</code></pre>
+<p>(yes, I know about <code>?:</code>. I just find <code>if-else</code> easier to read, and I don&rsquo;t see why that should be a statement, not an expression. Heck, in Kotlin, even <code>try</code> is an expression, not a statement:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">val</span> result = <span class="hljs-keyword">try</span> {
+    count()
+} <span class="hljs-keyword">catch</span> (e: ArithmeticException) {
+    <span class="hljs-keyword">throw</span> IllegalStateException(e)
+}</code></pre>
+<p>Beautiful!</p>
+<h2>9. Single expression functions</h2>
+<p>Now this. This would save so much time reading and writing simple glue code. And in fact, we already have the syntax in annotations. Check out Spring&rsquo;s magical <a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/core/annotation/AliasFor.html">@AliasFor</a> annotation, for instance. It yields:</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> AliasFor {
+    <span class="hljs-meta">@AliasFor</span>(<span class="hljs-string">"attribute"</span>)
+    <span class="hljs-function">String <span class="hljs-title">value</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> ""</span>;
+    <span class="hljs-meta">@AliasFor</span>(<span class="hljs-string">"value"</span>)
+    <span class="hljs-function">String <span class="hljs-title">attribute</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> ""</span>;
+}</code></pre>
+<p>Now, if you squint really hard, these are just methods yielding constant values, because annotations are just interfaces with generated byte code for their implementations. We can discuss syntax. Of course, this irregular usage of <code>default</code> is weird, given that it was not re-used in Java 8 for default methods, but I guess Java always needs the extra syntax so developers feel alive as they can better feel their typing fingers. That&rsquo;s OK. We can live with that. But then again, why do we have to? Why not just converge to the following?</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> AliasFor {
+    <span class="hljs-function">String <span class="hljs-title">value</span><span class="hljs-params">()</span> </span>= <span class="hljs-string">""</span>;
+    <span class="hljs-function">String <span class="hljs-title">attribute</span><span class="hljs-params">()</span> </span>= <span class="hljs-string">""</span>;
+}</code></pre>
+<p>And the same also for class / interface default methods?</p>
+<pre><code class="hljs language-java"><span class="hljs-comment">// Stop pretending this isn't an interface</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AliasFor</span> </span>{
+    <span class="hljs-function">String <span class="hljs-title">value</span><span class="hljs-params">()</span> </span>= <span class="hljs-string">""</span>;
+    <span class="hljs-function">String <span class="hljs-title">attribute</span><span class="hljs-params">()</span> </span>= <span class="hljs-string">""</span>;
+}</code></pre>
+<p>Now <em>that</em> would look nice. But given Java&rsquo;s existing syntax, this might just be a unicorn, so let&rsquo;s move on to...</p>
+<h2>10. Flow-sensitive typing</h2>
+<p>Now <em>this</em>. THIS!</p>
+<p><a href="http://blog.jooq.org/2016/02/16/an-ingenious-workaround-to-emulate-sum-types-in-java/">We&rsquo;ve blogged about sum types before.</a> Java has sum types with exceptions since Java 7:</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">try</span> {
+    ...
+}
+<span class="hljs-keyword">catch</span> (IOException | SQLException e) {
+    <span class="hljs-comment">// e can be of type IOException and/or SQLException</span>
+    <span class="hljs-comment">// within this scope</span>
+}</code></pre>
+<p>But Java, unfortunately, doesn&rsquo;t have flow-sensitive typing. Flow-sensitive typing is of the essence in a language that supports sum types, but it is also useful otherwise. For instance, in Kotlin:</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-keyword">when</span> (x) {
+    <span class="hljs-keyword">is</span> String -&gt; println(x.length)
+}</code></pre>
+<p>We don&rsquo;t need to cast, obviously, because we already checked that <code>x is String</code>. Conversely, in Java:</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">if</span> (x <span class="hljs-keyword">instanceof</span> String)
+    System.out.println(((String) x).length());</code></pre>
+<p>Aaagh, all this typing. IDE autocompletion is smart enough to offer a contextual type&rsquo;s methods already and then generate the unnecessary cast for you. But it would be great if this was never needed, every time we explicitly narrow a type using control flow structures.</p>
+<p><a href="https://en.wikipedia.org/wiki/Flow-sensitive_typing">For more info, see this wikipedia entry about flow sensitive typing</a>. A feature that could absolutely be added to the Java language. After all, we already got flow-sensitive final local variables since Java 8.</p>
+<h2>11. (Bonus) Declaration site variance</h2>
+<p><a href="https://kotlinlang.org/docs/reference/generics.html">Last but not least, better generics via declaration site variance</a>. Many other languages know this, for instance also C#&rsquo;s <a href="https://msdn.microsoft.com/en-us/library/9eekhta0(v=vs.110).aspx"><code>IEnumerable</code></a>:</p>
+<p>public interface IEnumerable<out T> : IEnumerable</p>
+<p>The keyword <code>out</code> here means that the generic type <code>T</code> is <em>produced</em> from the type <code>IEnumerable</code> (as opposed to <code>in</code>, which stands for consumption). In C#, Scala, Ceylon, Kotlin, and many other languages, we can declare this on the type declaration, rather than on its usage (although, many languages allow for both). In this case, we say that <code>IEnumerable</code> is covariant with its type <code>T</code>, which means again that <code>IEnumerable&lt;Integer&gt;</code> is a subtype of <code>IEnumerable&lt;Object&gt;</code></p>
+<p>In Java, this isn&rsquo;t possible, which is why we have a <a href="http://stackoverflow.com/q/4288084/521799">bazillion question by Java newbies on Stack Overflow</a>. Why can&rsquo;t I...</p>
+<pre><code class="hljs language-java">Iterable&lt;String&gt; strings = Arrays.asList(<span class="hljs-string">"abc"</span>);
+Iterable&lt;Object&gt; objects = strings; <span class="hljs-comment">// boom</span></code></pre>
+<p>In languages like Kotlin, the above would be possible. After all, why shouldn&rsquo;t it? A thing that can produce strings can also produce objects, and we can even use it in this way in Java:</p>
+<pre><code class="hljs language-java">Iterable&lt;String&gt; strings = Arrays.asList(<span class="hljs-string">"abc"</span>);
+<span class="hljs-keyword">for</span> (Object o : strings) {
+    <span class="hljs-comment">// Works!</span>
+}</code></pre>
+<p>The lack of declaration site variance has made a lot of APIs very intelligible. Consider <code>Stream</code>:</p>
+<pre><code class="hljs language-java">&lt;R&gt; <span class="hljs-function">Stream&lt;R&gt; <span class="hljs-title">flatMap</span><span class="hljs-params">(Function&lt;? <span class="hljs-keyword">super</span> T, ? extends Stream&lt;? extends R&gt;&gt; mapper)</span></span>;</code></pre>
+<p>This is just noise. A function is contravariant with its argument type and covariant with its result type <em>by nature</em> a better definition of <code>Function</code> or <code>Stream</code> would be:</p>
+<pre><code class="hljs language-java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Function</span>&lt;<span class="hljs-title">in</span> <span class="hljs-title">T</span>, <span class="hljs-title">out</span> <span class="hljs-title">R</span>&gt; </span>{}
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Stream</span>&lt;<span class="hljs-title">out</span> <span class="hljs-title">T</span>&gt; </span>{}</code></pre>
+<p>If this were possible, all that <code>? super</code> and <code>? extends</code> garbage could be removed without losing any functionality.</p>
+<p>In case you&rsquo;re wondering what I&rsquo;m even talking about?<img src="http://s1.wp.com/wp-content/mu-plugins/wpcom-smileys/simple-smile.svg" alt=":)"></p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Covariance and contravariance explained. Source: <a href="https://t.co/2S4ChNeAvq">https://t.co/2S4ChNeAvq</a> <a href="https://t.co/BfOME8puj2">pic.twitter.com/BfOME8puj2</a></p>&mdash; Lukas Eder (@lukaseder) <a href="https://twitter.com/lukaseder/status/686917793472753665">January 12, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>The great news is, this is being discussed for a (near) future version of Java:
+<a href="http://openjdk.java.net/jeps/8043488">http://openjdk.java.net/jeps/8043488</a></p>
+<h2>Conclusion</h2>
+<p>Kotlin is a promising language, even if it is very late to a game that already seems to have been decided, not in favour of alternative languages on the JVM. Nonetheless, it is a very interesting language to learn from, and with a lot of very good decisions made about some simple things.</p>
+<p>Some of these decisions will hopefully be picked up by the Java language gods and integrated into Java. This list here shows some features that might be &ldquo;easy&rdquo; to add.</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/shipilev">@shipilev</a> <a href="https://twitter.com/lukaseder">@lukaseder</a> And then it&#39;s yacc-shaving from there!</p>&mdash; Brian Goetz (@BrianGoetz) <a href="https://twitter.com/BrianGoetz/status/708350584294920193">March 11, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>More info about Kotlin idioms:
+<a href="https://kotlinlang.org/docs/reference/idioms.html">https://kotlinlang.org/docs/reference/idioms.html</a></p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>

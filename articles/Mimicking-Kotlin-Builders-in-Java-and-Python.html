@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mimicking Kotlin Builders in Java and Python</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel='stylesheet' href='./styles.css'>
+  <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="layout" class="layout">
+  <header class="article-nav">
+    <button class="menu-link">
+      <!-- Hamburger icon -->
+      <span></span>
+    </button>
+    <div class="article-nav-links">
+      <a href="My-Kotlin-Adventure.html" class="article-nav-link article-nav-link--prev">previous</a>
+      <a href="Android-development-with-Kotlin.html" class="article-nav-link article-nav-link--next">next</a>
+    </div>
+  </header>
+
+  <aside id="menu" class="menu">
+    <div class="pure-menu">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-list-date">Apr 18, 2016</li><li><a href="./Exercises-in-Kotlin-Part-1-Getting-Started.html">Exercises in Kotlin: Part 1 - Getting Started</a></li>
+<li class="pure-menu-list-date">Apr 17, 2016</li><li><a href="./Code-improvements-with-Kotlin.html">Code improvements with Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 15, 2016</li><li><a href="./Few-thoughts-about-Kotlin-and-why-I-like-it-so-much.html">Few thoughts about Kotlin and why I like it so much</a></li>
+<li class="pure-menu-list-date">Apr 14, 2016</li><li><a href="./Kotlin-for-Scala-Developers.html">Kotlin for Scala Developers</a></li>
+<li><a href="./Kotlin-Post-1-0-Roadmap.html">Kotlin Post-1.0 Roadmap</a></li>
+<li class="pure-menu-list-date">Apr 11, 2016</li><li><a href="./Making-Android-Development-Easier.html">Making Android Development Easier</a></li>
+<li class="pure-menu-list-date">Apr 09, 2016</li><li><a href="./Keddit — Part-7-Infinite-Scroll-Higher-Order-functions-Lambdas.html">Keddit — Part 7: Infinite Scroll: Higher-Order functions & Lambdas</a></li>
+<li><a href="./The-Kobalt-diaries-Automatic-Android-SDK-management.html">The Kobalt diaries: Automatic Android SDK management</a></li>
+<li class="pure-menu-list-date">Apr 06, 2016</li><li><a href="./Kotlin-Digest-2016-Q1.html">Kotlin Digest 2016.Q1</a></li>
+<li><a href="./Kotlin-DSL-Anko.html">Kotlin DSL: Anko</a></li>
+<li class="pure-menu-list-date">Apr 04, 2016</li><li><a href="./Kotlin-Practical-Experience.html">Kotlin: Practical Experience</a></li>
+<li><a href="./Kotlin’s-killer-features.html">Kotlin’s killer features</a></li>
+<li><a href="./Exploring-Delegation-in-Kotlin.html">Exploring Delegation in Kotlin</a></li>
+<li class="pure-menu-list-date">Apr 03, 2016</li><li><a href="./Experimental-Kotlin-and-mutation-testing.html">Experimental: Kotlin and mutation testing</a></li>
+<li class="pure-menu-list-date">Mar 31, 2016</li><li><a href="./10-Features-I-Wish-Java-Would-Steal-From-the-Kotlin-Language.html">10 Features I Wish Java Would Steal From the Kotlin Language</a></li>
+<li class="pure-menu-list-date">Mar 30, 2016</li><li><a href="./Ubuntu-Make-16-03-Released-With-Eclipse-JEE-And-IntelliJ-IDEA-EAP-Support-More.html">Ubuntu Make 16.03 Released With Eclipse JEE And IntelliJ IDEA EAP Support, More</a></li>
+<li><a href="./Kotlin’s-Android-Roadmap.html">Kotlin’s Android Roadmap</a></li>
+<li class="pure-menu-list-date">Mar 29, 2016</li><li><a href="./Rest-API-plumbing-with-kotlin.html">Rest API plumbing with kotlin</a></li>
+<li class="pure-menu-list-date">Mar 28, 2016</li><li><a href="./Creating-an-AndroidWear-watchface-using-Kotlin.html">Creating an AndroidWear watchface using Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 22, 2016</li><li><a href="./Writing-a-RESTful-backend-using-Kotlin-and-Spring-Boot.html">Writing a RESTful backend using Kotlin and Spring Boot</a></li>
+<li><a href="./How-to-Hot-Deploy-Java-Kotlin-classes-in-Dev.html">How to Hot Deploy Java/Kotlin classes in Dev</a></li>
+<li><a href="./RU-Андрей-Бреслав-и-Дмитрий-Жемеров-о-Kotlin-1-0-на-jug-msk-ru.html">(RU) Андрей Бреслав и Дмитрий Жемеров о Kotlin 1.0 на jug.msk.ru</a></li>
+<li class="pure-menu-list-date">Mar 20, 2016</li><li><a href="./A-Geospatial-Messenger-with-Kotlin-Spring-Boot-and-PostgreSQL.html">A Geospatial Messenger with Kotlin, Spring Boot and PostgreSQL</a></li>
+<li class="pure-menu-list-date">Mar 19, 2016</li><li><a href="./Algebraic-Data-Types-In-Kotlin.html">Algebraic Data Types In Kotlin</a></li>
+<li><a href="./Kotlin-Month-Post-4-Properties.html">Kotlin Month Post 4: Properties</a></li>
+<li class="pure-menu-list-date">Mar 17, 2016</li><li><a href="./Kotlin-Educational-Plugin.html">Kotlin Educational Plugin</a></li>
+<li class="pure-menu-list-date">Mar 16, 2016</li><li><a href="./Using-Kotlin-For-Tests-in-Android.html">Using Kotlin For Tests in Android</a></li>
+<li><a href="./Kotlin-1-0-1-is-Here.html">Kotlin 1.0.1 is Here!</a></li>
+<li><a href="./Kotlin-recipes-for-Android-I-OnGlobalLayoutListener.html">Kotlin recipes for Android (I): OnGlobalLayoutListener</a></li>
+<li class="pure-menu-list-date">Mar 15, 2016</li><li><a href="./Kotlin-Retrofit-RxAndroid-Realm.html">Kotlin : Retrofit + RxAndroid + Realm</a></li>
+<li class="pure-menu-list-date">Mar 14, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Wrap-Up.html">Kotlin & Android: A Brass Tacks Experiment Wrap-Up</a></li>
+<li class="pure-menu-list-date">Mar 13, 2016</li><li><a href="./Kotlin-Month-Post-3-Safety.html">Kotlin Month Post 3: Safety</a></li>
+<li><a href="./Feedback-on-the-Josephus-problem.html">Feedback on the Josephus problem</a></li>
+<li class="pure-menu-list-date">Mar 11, 2016</li><li><a href="./RU-SDCast-41-в-гостях-Андрей-Бреслав-руководитель-проекта-Kotlin-в-компании-JetBrains.html">(RU) SDCast #41: в гостях Андрей Бреслав, руководитель проекта Kotlin в компании JetBrains</a></li>
+<li><a href="./Why-I-don-t-want-to-use-Kotlin-for-Android-Development-yet.html">Why I don't want to use Kotlin for Android Development yet</a></li>
+<li class="pure-menu-list-date">Mar 09, 2016</li><li><a href="./Getting-Started-with-Kotlin-and-Anko-on-Android.html">Getting Started with Kotlin and Anko on Android</a></li>
+<li class="pure-menu-list-date">Mar 08, 2016</li><li><a href="./A-DSL-Workbench-with-Gradle-and-Kotlin.html">A DSL Workbench with Gradle and Kotlin</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-6.html">Kotlin & Android: A Brass Tacks Experiment, Part 6</a></li>
+<li class="pure-menu-list-date">Mar 06, 2016</li><li><a href="./Solving-the-Josephus-problem-in-Kotlin.html">Solving the Josephus problem in Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 05, 2016</li><li><a href="./Kotlin-Month-Post-2-Inheritance-and-Defaults.html">Kotlin Month Post 2: Inheritance and Defaults</a></li>
+<li class="pure-menu-list-date">Mar 04, 2016</li><li><a href="./Building-a-Kotlin-project-2-2.html">Building a Kotlin project 2/2</a></li>
+<li><a href="./Building-a-Kotlin-project-1-2.html">Building a Kotlin project 1/2</a></li>
+<li><a href="./RU-Видео-со-встречи-JUG-ru-с-разработчиками-Kotlin.html">(RU) Видео со встречи JUG.ru с разработчиками Kotlin</a></li>
+<li class="pure-menu-list-date">Mar 03, 2016</li><li><a href="./Kotlin-a-new-JVM-language-you-should-try.html">Kotlin: a new JVM language you should try</a></li>
+<li class="pure-menu-list-date">Mar 02, 2016</li><li><a href="./RU-Kotlin-для-начинающих.html">(RU) Kotlin для начинающих</a></li>
+<li class="pure-menu-list-date">Mar 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-5.html">Kotlin & Android: A Brass Tacks Experiment, Part 5</a></li>
+<li><a href="./Developing-on-Android-sucks-a-lot-less-with-Kotlin.html">Developing on Android sucks a lot less with Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 29, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-3-Data-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 3: Data Classes</a></li>
+<li><a href="./Как-себе-выстрелить-в-ногу-в-Kotlin.html">Как себе выстрелить в ногу в Kotlin</a></li>
+<li class="pure-menu-list-date">Feb 28, 2016</li><li><a href="./Kotlin-and-Ceylon.html">Kotlin and Ceylon</a></li>
+<li class="pure-menu-list-date">Feb 27, 2016</li><li><a href="./Kotlin-Month-Post-1-Assorted-Features.html">Kotlin Month Post 1: Assorted Features</a></li>
+<li class="pure-menu-list-date">Feb 24, 2016</li><li><a href="./Kotlin-2-Years-On.html">Kotlin - 2 Years On</a></li>
+<li class="pure-menu-list-date">Feb 23, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-part-2-Configuration-Classes.html">The Journey of a Spring Boot application from Java 8 to Kotlin, part 2: Configuration Classes</a></li>
+<li><a href="./An-Introduction-to-Kotlin.html">An Introduction to Kotlin</a></li>
+<li><a href="./Kotlin-1-0-is-finally-released.html">Kotlin 1.0 is finally released!</a></li>
+<li class="pure-menu-list-date">Feb 22, 2016</li><li><a href="./More-Kotlin-Features-to-Love.html">More Kotlin Features to Love</a></li>
+<li><a href="./A-Very-Peculiar-but-Possibly-Cunning-Kotlin-Language-Feature.html">A Very Peculiar, but Possibly Cunning Kotlin Language Feature.</a></li>
+<li><a href="./Kotlin-Easily-storing-a-list-in-SharedPreferences-with-Custom-Accessors.html">Kotlin: Easily storing a list in SharedPreferences with Custom Accessors</a></li>
+<li class="pure-menu-list-date">Feb 21, 2016</li><li><a href="./Kotlin — Love-at-first-line.html">Kotlin — Love at first line</a></li>
+<li class="pure-menu-list-date">Feb 20, 2016</li><li><a href="./RU-Радио-Т-484.html">(RU) Радио-Т 484</a></li>
+<li><a href="./RU-DevZen-Podcast-Kotlin-и-Vulkan-1-0-—-Episode-0080.html">(RU) DevZen Podcast: Kotlin и Vulkan 1.0 — Episode 0080.</a></li>
+<li><a href="./The-Kobalt-diaries-testing.html">The Kobalt diaries: testing</a></li>
+<li><a href="./RU-Немного-о-Kotlin.html">(RU) Немного о Kotlin.</a></li>
+<li><a href="./Weekend-resources-for-new-Kotlin-programmers.html">Weekend resources for new Kotlin programmers</a></li>
+<li><a href="./Using-Mockito-for-unit-testing-with-Kotlin-1-x.html">Using Mockito for unit testing with Kotlin (1/x)</a></li>
+<li class="pure-menu-list-date">Feb 19, 2016</li><li><a href="./RU-Kotlin-1-0-Задай-вопрос-команде.html">(RU) Kotlin 1.0. Задай вопрос команде.</a></li>
+<li class="pure-menu-list-date">Feb 16, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-3.html">Kotlin & Android: A Brass Tacks Experiment, Part 3.</a></li>
+<li><a href="./Kotlin-1-0-The-good-the-bad-and-the-evident.html">Kotlin 1.0: The good, the bad and the evident.</a></li>
+<li><a href="./RU-Релиз-Kotlin-1-0-языка-программирования-для-JVM-и-Android.html">(RU) Релиз Kotlin 1.0, языка программирования для JVM и Android.</a></li>
+<li class="pure-menu-list-date">Feb 15, 2016</li><li><a href="./JVM-Newcomer-Kotlin-1-0-is-GA.html">JVM Newcomer Kotlin 1.0 is GA</a></li>
+<li><a href="./Developing-Spring-Boot-applications-with-Kotlin.html">Developing Spring Boot applications with Kotlin.</a></li>
+<li><a href="./Kotlin-1-0-Released-Pragmatic-Language-for-JVM-and-Android.html">Kotlin 1.0 Released: Pragmatic Language for JVM and Android</a></li>
+<li class="pure-menu-list-date">Feb 13, 2016</li><li><a href="./The-Journey-of-a-Spring-Boot-application-from-Java-8-to-Kotlin-The-Application-Class.html">The Journey of a Spring Boot application from Java 8 to Kotlin: The Application Class</a></li>
+<li class="pure-menu-list-date">Feb 04, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-4.html">Kotlin & Android: A Brass Tacks Experiment, Part 4</a></li>
+<li><a href="./RU-Podcast-Разбор-Полетов-Episode-102-—-Kotlin-тесты-и-здоровый-сон.html">(RU) Podcast Разбор Полетов: Episode 102 — Kotlin, тесты и здоровый сон.</a></li>
+<li><a href="./Kotlin-1-0-Release-Candidate-is-Out.html">Kotlin 1.0 Release Candidate is Out!</a></li>
+<li class="pure-menu-list-date">Feb 03, 2016</li><li><a href="./Kotlin-Coding.html">Kotlin Coding</a></li>
+<li class="pure-menu-list-date">Feb 02, 2016</li><li><a href="./10-Kotlin-Tutorials-for-Beginners-Dive-Into-Kotlin-Programming.html">10 Kotlin Tutorials for Beginners: Dive Into Kotlin Programming</a></li>
+<li class="pure-menu-list-date">Feb 01, 2016</li><li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-2.html">Kotlin & Android: A Brass Tacks Experiment, Part 2.</a></li>
+<li><a href="./Kotlin-Android-A-Brass-Tacks-Experiment-Part-1.html">Kotlin & Android: A Brass Tacks Experiment, Part 1.</a></li>
+<li class="pure-menu-list-date">Jan 25, 2016</li><li><a href="./KillerTask-the-solution-to-AsyncTask-implementation.html">KillerTask, the solution to AsyncTask implementation</a></li>
+<li class="pure-menu-list-date">Jan 23, 2016</li><li><a href="./My-Kotlin-Adventure.html">My Kotlin Adventure</a></li>
+<li class="pure-menu-list-date">Jan 16, 2016</li><li><a href="./Mimicking-Kotlin-Builders-in-Java-and-Python.html">Mimicking Kotlin Builders in Java and Python</a></li>
+<li class="pure-menu-list-date">Jan 15, 2016</li><li><a href="./Android-development-with-Kotlin.html">Android development with Kotlin</a></li>
+<li><a href="./Kotlin-the-somewhat-obscure-modern-Android-friendly-programming-language.html">Kotlin, the somewhat obscure modern Android-friendly programming language</a></li>
+<li class="pure-menu-list-date">Jan 14, 2016</li><li><a href="./Fun-with-Kotlin.html">Fun with Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 10, 2016</li><li><a href="./Playing-with-Spring-Boot-Vaadin-and-Kotlin.html">Playing with Spring Boot, Vaadin and Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 06, 2016</li><li><a href="./Kotlin-XML-Binding.html">Kotlin XML Binding</a></li>
+<li class="pure-menu-list-date">Dec 12, 2015</li><li><a href="./Kotlin-for-Java-Developers-10-Features-You-Will-Love-About-Kotlin.html">Kotlin for Java Developers: 10 Features You Will Love About Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 11, 2015</li><li><a href="./Setting-up-Kotlin-with-Android-and-tests.html">Setting up Kotlin with Android and tests</a></li>
+<li class="pure-menu-list-date">Nov 05, 2015</li><li><a href="./Functional-Programming-with-Kotlin.html">Functional Programming with Kotlin</a></li>
+<li class="pure-menu-list-date">Oct 30, 2015</li><li><a href="./Exploring-the-Kotlin-standard-library.html">Exploring the Kotlin standard library</a></li>
+<li class="pure-menu-list-date">Oct 22, 2015</li><li><a href="./Kotlin-NoSQL-for-MongoDB-in-Action.html">Kotlin NoSQL for MongoDB in Action</a></li>
+<li class="pure-menu-list-date">Sep 21, 2015</li><li><a href="./Quasar-Efficient-and-Elegant-Fibers-Channels-and-Actors.html">Quasar: Efficient and Elegant Fibers, Channels and Actors</a></li>
+<li class="pure-menu-list-date">Sep 18, 2015</li><li><a href="./Kotlin-❤-FP.html">Kotlin ❤ FP</a></li>
+<li class="pure-menu-list-date">Aug 12, 2015</li><li><a href="./JVMLS-2015-Flexible-Types-in-Kotlin.html">JVMLS 2015 - Flexible Types in Kotlin</a></li>
+<li class="pure-menu-list-date">Aug 06, 2015</li><li><a href="./Building-APIs-on-the-JVM-Using-Kotlin-and-Spark-–-Part-1.html">Building APIs on the JVM Using Kotlin and Spark – Part 1</a></li>
+<li class="pure-menu-list-date">Jul 31, 2015</li><li><a href="./RU-Без-слайдов-интервью-с-Дмитрием-Жемеровым-из-JetBrains.html">(RU) Без слайдов: интервью с Дмитрием Жемеровым из JetBrains</a></li>
+<li class="pure-menu-list-date">Jul 20, 2015</li><li><a href="./Android-Kotlin-3.html">Android + Kotlin = <3</a></li>
+<li class="pure-menu-list-date">Jul 06, 2015</li><li><a href="./Why-Kotlin-is-my-next-programming-language.html">Why Kotlin is my next programming language</a></li>
+<li class="pure-menu-list-date">Jun 27, 2015</li><li><a href="./Exploring-Kotlin.html">Exploring Kotlin</a></li>
+<li><a href="./RxAndroid-and-Kotlin-Part-1.html">RxAndroid and Kotlin (Part 1)</a></li>
+<li class="pure-menu-list-date">Jun 04, 2015</li><li><a href="./Quasar-and-Kotlin-a-Powerful-Match.html">Quasar and Kotlin - a Powerful Match</a></li>
+<li class="pure-menu-list-date">May 09, 2015</li><li><a href="./Kotlin-New-Hope-in-a-Java-6-Wasteland.html">Kotlin: New Hope in a Java 6 Wasteland</a></li>
+<li class="pure-menu-list-date">Dec 11, 2014</li><li><a href="./Kotlin-for-Java-developers.html">Kotlin for Java developers</a></li>
+<li class="pure-menu-list-date">Dec 01, 2014</li><li><a href="./Non-trivial-constructors-in-Kotlin.html">Non-trivial constructors in Kotlin</a></li>
+<li class="pure-menu-list-date">Nov 03, 2014</li><li><a href="./GeeCON-Prague-2014-Andrey-Cheptsov-A-Reactive-and-Type-safe-Kotlin-DSL-for-NoSQL-and-SQL.html">GeeCON Prague 2014: Andrey Cheptsov - A Reactive and Type-safe Kotlin DSL for NoSQL and SQL</a></li>
+<li class="pure-menu-list-date">Sep 10, 2014</li><li><a href="./Kotlin-vs-Java-puzzlers.html">Kotlin vs Java puzzlers</a></li>
+<li class="pure-menu-list-date">Apr 02, 2013</li><li><a href="./The-Advent-of-Kotlin-A-Conversation-with-JetBrains-Andrey-Breslav.html">The Advent of Kotlin: A Conversation with JetBrains' Andrey Breslav</a></li>
+<li class="pure-menu-list-date">Feb 07, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-3.html">Exploring the Kotlin Standard Library - Part 3</a></li>
+<li class="pure-menu-list-date">Jan 25, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-2.html">Exploring the Kotlin Standard Library - Part 2</a></li>
+<li class="pure-menu-list-date">Jan 23, 2013</li><li><a href="./The-Adventurous-Developer’s-Guide-to-JVM-languages-–-Kotlin.html">The Adventurous Developer’s Guide to JVM languages – Kotlin</a></li>
+<li class="pure-menu-list-date">Jan 22, 2013</li><li><a href="./Exploring-the-Kotlin-Standard-Library-Part-1.html">Exploring the Kotlin Standard Library - Part 1</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <section id="main" class="main">
+    <div class="main-content">
+      <h1>
+        <a href="https://programmingideaswithjake.wordpress.com/2016/01/16/mimicking-kotlin-builders-in-java-and-python/">Mimicking Kotlin Builders in Java and Python</a> - <span class="main-title-date">Jan 16, 2016</span>
+      </h1>
+      <h2>by Jacob Zimmerman</h2>
+      <h2><strong>Intro</strong></h2>
+<p>Kotlin is probably my favorite language right now, and possibly one of the coolest things it has to offer is type-safe builders, built upon several features (explained in a bit). I find myself really <em>really</em> wanting to have this feature in my other two primary languages, Java and Python. This article explains what I believe to be the closest we can get to having type-safe builders in those languages</p>
+<h2><strong>Kotlin</strong></h2>
+<p>To start, I need to explain Kotlin&rsquo;s ability to do type-safe builders. For a quick explanation of what these builders are, you should check out <a href="https://kotlinlang.org/docs/reference/type-safe-builders.html">their page about them</a>. In this article, we&rsquo;ll be implementing a tiny subset of their html builder.</p>
+<p>Kotlin&rsquo;s ability to create type-safe builders is due to many small features. The first is the lambda syntax; <code>{param, list -&gt; block.of.code()}</code>. If the lambda has zero parameters, you can ignore the parameter list and the arrow. The same is true when it only has one parameter, as that parameter is implicitly called <code>it</code>. For example, <code>{doSomethingWith(it)}</code> is a legitimate lambda, assuming <code>doSomethingWith()</code> takes an object that is the same type as what is being passed into the lambda.</p>
+<p>The next feature is how to pass lambdas into functions. If the last argument is a lambda, it can be passed <em>after</em> the parentheses of the function call. For example, <code>myFunc(arg1){lambdaArg()}</code>. If the lambda is the <em>only</em> argument, the parentheses can be ignored altogether: <code>aFunc{lambdaArg()}</code>. This allows you to define functions that can look like language features. You could technically define your own if-else blocks, or any of the loops, if it weren&rsquo;t for the fact that those keywords are reserved.</p>
+<p>Next is extension methods and the fact that you can define lambdas that work like them. Extension methods are new methods that are defined for a class or interface <em>outside</em> the class of the interface. For example, you could create new methods for the <code>String</code> class. In actuality, they&rsquo;re just static methods that take an implicit first parameter of the type they&rsquo;re for. In the Kotlin code, that first parameter is assigned to the <code>this</code> identifier, which is used implicitly, just like in a real method.</p>
+<p>You can define lambdas that work like extension methods (<code>SomeClass.() -&gt; Unit</code> instead of <code>(SomeClass) -&gt; Unit</code>, too, so that inside the lambda, you can make calls on the object without explicitly referencing it.</p>
+<p>All these features, plus really good type inferencing, come together to create the ability to make type-safe builders from functions taking extension lambdas. So, we can write this:</p>
+<pre><code class="hljs language-kotlin">html {
+   head {
+      title(<span class="hljs-string">"A Title"</span>)
+   }
+   body {
+      p = <span class="hljs-string">"paragraph"</span>
+      p = <span class="hljs-string">"'nother one"</span>
+      p = <span class="hljs-string">"last paragraph"</span>
+   }
+}</code></pre>
+<p>To return an <code>Html</code> object that contains a <code>Head</code> and a <code>Body</code>, the <code>Head</code> containing a <code>Title</code> with the text, &ldquo;A Title&rdquo;. The <code>Body</code> contains 3 <code>Paragraphs</code>.</p>
+<p>You may note that <code>title</code> and [p] are different in how they&rsquo;re defined. It probably would have been smarter to have <code>title</code> to use the <code>=</code> syntax instead of <code>p</code>, but <code>p</code> shows off how creative these builders can be better than <code>title</code>. I did a similar thing with Python, since it also supports properties.</p>
+<p>Let&rsquo;s look at the Kotlin code that allows up to create these objects</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">html</span><span class="hljs-params">(htmlBuilder: <span class="hljs-type">Html</span>.()</span></span> -&gt; <span class="hljs-built_in">Unit</span>): Html {
+   <span class="hljs-keyword">val</span> html = Html()
+   html.htmlBuilder()
+   <span class="hljs-keyword">return</span> html
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Html</span> </span>{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> head: Head? = <span class="hljs-literal">null</span>
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> body: Body? = <span class="hljs-literal">null</span>
+
+   <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">head</span><span class="hljs-params">(headBuilder: <span class="hljs-type">Head</span>.()</span></span> -&gt; <span class="hljs-built_in">Unit</span>) {
+      head = Head()
+      head?.headBuilder()
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">body</span><span class="hljs-params">(bodyBuilder: <span class="hljs-type">Body</span>.()</span></span> -&gt; <span class="hljs-built_in">Unit</span>) {
+      body = Body()
+      body?.bodyBuilder()
+   }
+}</code></pre>
+<p>We start with the <code>Html</code> class and the <code>html()</code> function used to start the builder. The <code>html</code> function isn&rsquo;t necessary, since the code could be used as an <code>Html</code> constructor, but it allows us to keep the constructor simple and all the functions lowercase without going against naming conventions.</p>
+<p>You&rsquo;ll note that everything is actually pretty darn short. Only the <code>html</code> function is 3 lines, and that&rsquo;s only because it has to return the result at the end. If we used a constructor on <code>Html</code> instead, it would only have the line <code>htmlBuilder()</code>.</p>
+<p>Here&rsquo;s <code>Head</code> and <code>Title</code>.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Head</span> </span>{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> title: Title? = <span class="hljs-literal">null</span>
+
+   <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">title</span><span class="hljs-params">(text: <span class="hljs-type">String</span>)</span></span> {
+      title = Title(text)
+   }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Title</span> </span>(<span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> text: String) { }</code></pre>
+<p>Still going pretty nicely. <code>Title</code> doesn&rsquo;t require a builder, since it just holds text. If it weren&rsquo;t for the fact that there would need to be some more complex build mechanics, I&rsquo;d actually have <code>Head</code> just hold the <code>String</code> itself instead of creating a <code>Title</code> class and object.</p>
+<pre><code class="hljs language-kotlin"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Body</span> </span>{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> paragraphs: ArrayList&lt;Paragraph&gt; = ArrayList()
+
+   <span class="hljs-keyword">var</span> p: String
+      <span class="hljs-keyword">private</span> <span class="hljs-keyword">get</span>() = <span class="hljs-literal">null</span>!!
+      <span class="hljs-keyword">set</span>(value) {
+         paragraphs.add(Paragraph(value))
+      }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Paragraph</span> </span>(<span class="hljs-keyword">private</span> <span class="hljs-keyword">val</span> text: String) { }</code></pre>
+<p>Here&rsquo;s the really interesting thing. Instead of having a <code>p()</code> method, like we did for <code>Title</code>, we used <code>p</code>&lsquo;s setter to keep adding <code>Paragraph</code> objects to the list. In this case, it&rsquo;s not the most intuitive; it&rsquo;s just there to show you how creative one could get with these builders.</p>
+<p>Keep in mind, too that these classes are just the builder classes, so they&rsquo;re allowed to be stateful. There should be a <code>build()</code> method that recursively calls the <code>build()</code> methods of all the the enclosed objects to create a nice, immutable object.</p>
+<h2><strong>Java</strong></h2>
+<p>In Java, you can pretty much create the exact same classes, except that the builder doesn&rsquo;t look as clean, since it doesn&rsquo;t have all the lovely features above. So, to start you off, here&rsquo;s what the builder code ends up looking like.</p>
+<pre><code class="hljs language-kotlin">html(html -&gt; {
+   html.head(head -&gt;
+      head.title(<span class="hljs-string">"A Title"</span>)
+   );
+   ht.body(body -&gt; {
+      body.p(<span class="hljs-string">"paragraph"</span>);
+      body.p(<span class="hljs-string">"'nother one"</span>);
+      body.p(<span class="hljs-string">"last paragraph"</span>);
+   });
+});</code></pre>
+<p>And <em>that</em> is as close to the builder syntax that you can get in Java. Note that there&rsquo;s no difference in the way that <code>title()</code> and <code>p()</code> are called, since Java doesn&rsquo;t provide any property-like construct. Also, notice that you need to have a name for everything. With the implicit <code>this</code>, you must write something like <code>hd.title(...)</code> rather than just <code>title(...)</code>, and that&rsquo;s not even mentioning the fact that we have to define the parameter list for the lambda.</p>
+<p>There&rsquo;s a couple other things you could do, but those are even worse, the first being just using normal code:</p>
+<pre><code class="hljs language-java">Html html = <span class="hljs-keyword">new</span> Html();
+   Head head = html.head();
+      head.title(<span class="hljs-string">"A Title"</span>);
+   Body body = html.body();
+      body.p(<span class="hljs-string">"paragraph"</span>);
+      body.p(<span class="hljs-string">"'nother one"</span>);
+      body.p(<span class="hljs-string">"last paragraph"</span>);</code></pre>
+<p>This isn&rsquo;t <em>terrible</em>, but it ends up being relatively verbose because of the lack of full type inference (I have to specify that <code>head</code> and <code>body</code> are of their respective types), and the extra tabbing is purely for looks, since no brackets are used. The other way I thought of doing it will be shown after the Python version, since it tries to sort of replicate <em>that</em> version.</p>
+<p>So, let&rsquo;s look at the code</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Html</span> </span>{
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Html <span class="hljs-title">html</span><span class="hljs-params">(Consumer&lt;Html&gt; htmlBuilder)</span>
+   </span>{
+      Html html = <span class="hljs-keyword">new</span> Html();
+      htmlBuilder.accept(html);
+      <span class="hljs-keyword">return</span> html;
+   }
+
+   <span class="hljs-keyword">private</span> Head head = <span class="hljs-keyword">null</span>;
+   <span class="hljs-keyword">private</span> Body body = <span class="hljs-keyword">null</span>;
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">head</span><span class="hljs-params">(Consumer&lt;Head&gt; headBuilder)</span> </span>{
+      head = <span class="hljs-keyword">new</span> Head();
+      headBuilder.accept(head);
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">body</span><span class="hljs-params">(Consumer&lt;Body&gt; bodyBuilder)</span> </span>{
+      body = <span class="hljs-keyword">new</span> Body();
+      bodyBuilder.accept(body);
+   }
+}</code></pre>
+<p>This is as direct of a port to Java as it gets. The <code>html()</code> function was moved into the <code>Html</code> class as static method, since it has to go <em>somewhere</em> in Java. We used a <code>Consumer&lt;Html&gt;</code>, since that&rsquo;s the closest thing Java has to the kind of lambdas we want.</p>
+<p>Here are <code>Head</code> and <code>Title</code>:</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Head</span> </span>{
+   <span class="hljs-keyword">private</span> Title title = <span class="hljs-keyword">null</span>;
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">title</span><span class="hljs-params">(String text)</span> </span>{
+      title = <span class="hljs-keyword">new</span> Title(text);
+   }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Title</span> </span>{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String text;
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Title</span><span class="hljs-params">(String text)</span> </span>{
+      <span class="hljs-keyword">this</span>.text = text;
+   }
+}</code></pre>
+<p>Not much of note here. It&rsquo;s probably about what you expected. Now to finish off with <code>Body</code> <code>Paragraph</code>.</p>
+<pre><code class="hljs language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Body</span> </span>{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> List paragraphs = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">p</span><span class="hljs-params">(String text)</span> </span>{
+      paragraphs.add(<span class="hljs-keyword">new</span> Paragraph(text));
+   }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Paragraph</span> </span>{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String text;
+
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Paragraph</span><span class="hljs-params">(String text)</span> </span>{
+      <span class="hljs-keyword">this</span>.text = text;
+   }
+}</code></pre>
+<p>It almost feels like it&rsquo;s not worth writing these classes, doesn&rsquo;t it, they&rsquo;re so simple. Keep in mind, this is the bare-bones builder part. Again, this code doesn&rsquo;t actually include the functionality for building the actual, immutable DOM tree.</p>
+<p>That&rsquo;s what it takes to build the Java version. Other that some of the syntax verbosity, it&rsquo;s almost easier to create in Java than in Kotlin because there aren&rsquo;t any extra features to think about and apply<img src="https://s0.wp.com/wp-content/mu-plugins/emoji/twemoji/svg/1f61b.svg" alt="&#x1F61B;"></p>
+<h2><strong>Python</strong></h2>
+<p>Trying to figure out a way to do something like this in Python required me to get lucky enough to see a video that showed a novel (but unintuitive) way of using context managers (<code>with</code> statements). The problem in Python is that lambdas are only allowed to have a single expression or statement. Context managers allow a (very limited) way of getting around single-line lambdas by effectively allowing you to return an object (or nothing) at entry that can be used while within the context manager as if being within lambda.</p>
+<p>So, for example, the builder would look like this in Python:</p>
+<pre><code class="hljs language-python">myhtml = Html()
+<span class="hljs-keyword">with</span> myhtml <span class="hljs-keyword">as</span> html:
+    <span class="hljs-keyword">with</span> html.head() <span class="hljs-keyword">as</span> head:
+        head.title(<span class="hljs-string">"A Title"</span>)
+    <span class="hljs-keyword">with</span> html.body() <span class="hljs-keyword">as</span> body:
+        body.p = <span class="hljs-string">"paragraph"</span>
+        body.p = <span class="hljs-string">"'nother one"</span>
+        body.p = <span class="hljs-string">"last paragraph"</span></code></pre>
+<p>This may actually look like a waste because this can written as the following almost as easily:</p>
+<pre><code class="hljs language-python">html = Html()
+head = html.head()
+head.title(<span class="hljs-string">"A Title"</span>)
+body = html.body()
+body.p = <span class="hljs-string">"paragraph"</span>
+body.p = <span class="hljs-string">"'nother one"</span>
+body.p = <span class="hljs-string">"last paragraph"</span></code></pre>
+<p>The biggest benefit of the <code>with</code> blocks is the indentation, since Python has indentation restrictions due to it using indentation over curly braces. Context managers are possibly worth it just for <em>that</em> benefit. But there&rsquo;s another benefit that I&rsquo;ll bring up near the end, after showing you the basic code required for making these in Python</p>
+<pre><code class="hljs language-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Html</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__enter__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__exit__</span><span class="hljs-params">(self, exc_type, exc_val, exc_tb)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">head</span><span class="hljs-params">(self)</span>:</span>
+        self._head = Head()
+        <span class="hljs-keyword">return</span> self._head
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">body</span><span class="hljs-params">(self)</span>:</span>
+        self._body = Body()
+        <span class="hljs-keyword">return</span> self._body</code></pre>
+<p>Here, you can see that the <code>Html</code> class has the required <code>__enter__()</code> and <code>__exit__()</code> methods to be a context manager. They do practically nothing; <code>__enter__()</code> only returns <code>self</code>, and <code>__exit__()</code> simply signifies that it didn&rsquo;t deal with any exceptions that may have been passed in. The <code>head()</code> and <code>body()</code> methods do pretty much what you&rsquo;d expect by now, with the assumption that <code>Head</code> and <code>Body</code> are also context manager types.</p>
+<pre><code class="hljs language-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Head</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__enter__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__exit__</span><span class="hljs-params">(self, exc_type, exc_val, exc_tb)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">title</span><span class="hljs-params">(self, text)</span>:</span>
+        self._title = Title(text)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Title</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, text)</span>:</span>
+        self.text = text
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Body</span>:</span>
+    p = property()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__enter__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__exit__</span><span class="hljs-params">(self, exc_type, exc_val, exc_tb)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+
+<span class="hljs-meta">    @p.setter</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">p</span><span class="hljs-params">(self, text)</span>:</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> hasattr(self, <span class="hljs-string">'paragraphs'</span>):
+            self.paragraphs = []
+        self.paragraphs.append(Paragraph(text))
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Paragraph</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, text)</span>:</span>
+        self.text = text</code></pre>
+<p>The only new thing here to bother looking at is the use of <code>property</code> on <code>Body</code> for its <code>p</code> tag. Luckily, we can don&rsquo;t need getters on <code>property</code>s that we need to have return <code>None</code>, like in Kotlin.</p>
+<p>Okay, now we look at the interesting, less obvious reason why it&rsquo;s helpful to use context managers for this situation. In Java and Kotlin, we would have needed an additional call at the end to a <code>build()</code> method (or else have the <code>html()</code> function do it for us) and have it do a recursive traversal all at once in the end to take care of it. With the context manager, the <code>__enter__()</code> and <code>__exit__()</code> methods could pass out the builder version of the object upon entry, then build it on exit. That means that each intermediate stage of the builders already contain the fully built versions by the time they exit.</p>
+<p>This can actually be a little difficult to wrap your head around. Here&rsquo;s an example that does a partial implementation using <code>Html</code>, <code>HtmlBuilder</code>, and <code>Head</code>:</p>
+<pre><code class="hljs language-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Html</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__enter__</span><span class="hljs-params">(self)</span>:</span>
+        self._builder = HtmlBuilder()
+        <span class="hljs-keyword">return</span> self._builder
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__exit__</span><span class="hljs-params">(self, exc_type, exc_val, exc_tb)</span>:</span>
+        self.head = self._builder._head
+        self.body = self._builder._body
+        <span class="hljs-keyword">del</span> self._builder
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HtmlBuilder</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">head</span><span class="hljs-params">(self)</span>:</span>
+        self._head = Head()
+        <span class="hljs-keyword">return</span> self._head
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">body</span><span class="hljs-params">(self)</span>:</span>
+        ...
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Head</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__enter__</span><span class="hljs-params">(self)</span>:</span>
+        self._builder = HeadBuilder()
+        <span class="hljs-keyword">return</span> self._builder
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__exit__</span><span class="hljs-params">(self, exc_type, exc_val, exc_tb)</span>:</span>
+        self.title = self._builder._title
+        <span class="hljs-keyword">del</span> self._builder
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span></code></pre>
+<p>Here, the <code>Html</code> object&rsquo;s <code>__enter__()</code> method creates and saves a builder on itself, then returns it. Upon <code>__exit__()</code>, it builds itself from values stored on the builder and deletes the builder from itself. Upon first thought, at least for me, one might think that the objects stored on the builder aren&rsquo;t finished objects, but they are. The methods on the builder object return a proper class with its own <code>__enter__()</code> and <code>__exit__()</code> methods which will also guarantee that it&rsquo;s built properly, as is seen with <code>HtmlBuilder</code>&lsquo;s <code>head()</code> method and with the implementation of <code>Head</code>. With this setup, the calling code is actually still the same as it was the first time.</p>
+<p>Last thing: now that we know that we can use context managers to do this, you might think that Java&rsquo;s <code>try</code> resource manager might actually work okay for it. And you&rsquo;d be right. In fact, it ends up with a cleaner syntax (other than the random <code>try</code> keywords) than the lambda version, too. Here&rsquo;s what the resource manager version would look like when called:</p>
+<pre><code class="hljs language-java">Html html = Html();
+<span class="hljs-keyword">try</span>(html) {
+   <span class="hljs-keyword">try</span>(Head head = html.head()) {
+      head.title(<span class="hljs-string">"A Title"</span>);
+   }
+   <span class="hljs-keyword">try</span>(Body body = html.body()) {
+      body.p(<span class="hljs-string">"paragraph"</span>);
+      body.p(<span class="hljs-string">"'nother one"</span>);
+      body.p(<span class="hljs-string">"last paragraph"</span>);
+   }
+}</code></pre>
+<p>At this point, I&rsquo;ll leave it to you to try and figure out how to implement this. Hint: I don&rsquo;t think it can work like the second version of the Python build, where it builds as it goes. I think everything in this Java version of the code requires builders until, at the end, you call the <code>build()</code> method on <code>html</code> to create the true versions.</p>
+<h2><strong>Outro</strong></h2>
+<p>Holy cow, this thing ended up being kind of long, didn&rsquo;t it? I hope that you had some fun with this exercise, since I&rsquo;m not sure how useful it really is (other than learning that you could potentially simulate 0- or 1-parameter lambdas with context managers.</p>
+<p>Sadly, I never did get around to talking about adding the additional parameters like the Kotlin site&rsquo;s example does, such as assigning a class, id, etc in the function calls. There are additional features that Kotlin has that makes this really clean and easy, but this article clearly doesn&rsquo;t have room for it. I&rsquo;ll tackle it next week.</p>
+<p>Thanks for reading!</p>
+<p>Note: As of yesterday, all editing is finished. From here, I &ldquo;just&rdquo; need to get a cover designed, which I have an idea for; get all the formatting figured out for both print and e-book versions; write the appendix (mostly just a collection of code snippets from the book, fleshed out more); and finish writing the GitHub repo that will have all the super helpful classes and functions for building your own descriptors more quickly, easily, and with fewer problems. I expect to get all of this done by the end of summer, but hopefully sooner. My life is about to get a little busier, so I don&rsquo;t know how much time I&rsquo;ll be able to devote to all of this.</p>
+
+      
+      <div class="main-content-backlink">
+        <hr/>
+        <a href='http://kotlin.link/'>&larr; Back to kotlin.link</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var menuLink = document.querySelector('.menu-link');
+
+    var listener = function() {
+      this.class = 'active';
+      this.layout = document.getElementById('layout');
+      this.handleEvent = function() {
+        this.layout.classList.toggle(this.class);
+      };
+      this.handleEvent();
+    };
+
+    menuLink.addEventListener("click", function(){listener();}, false);
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter35722810 = new Ya.Metrika({id:35722810,
+            webvisor:true,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true});
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="//mc.yandex.ru/watch/35722810" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>
